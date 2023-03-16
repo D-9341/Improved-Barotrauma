@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="Силовой рюкзак" identifier="power-backpack" category="Equipment" tags="mediumitem" scale="0.4" fireproof="true" waterproof="true" description="Портативный излучатель света с портами для зарядки аккумуляторов." impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="engcab" minamount="0" maxamount="2" spawnprobability="0.5" />
+    <PreferredContainer primary="wreckstoragecab" minamount="0" maxamount="1" spawnprobability="0.06" />
+    <PreferredContainer primary="outpostcrewcabinet" minamount="0" maxamount="1" spawnprobability="0.5" />
+    <Price baseprice="350">
+      <Price locationtype="outpost" multiplier="1" minavailable="1" />
+      <Price locationtype="city" multiplier="1" minavailable="4" />
+      <Price locationtype="research" multiplier="1.25" minavailable="4" />
+      <Price locationtype="military" multiplier="1.25" minavailable="2" />
+      <Price locationtype="mine" multiplier="0.8" minavailable="2" />
+    </Price>
+    <Deconstruct time="30">
+      <Item identifier="aluminium" />
+      <Item identifier="lightcomponent" />
+      <Item identifier="fpgacircuit" />
+      <Item identifier="batterycell" />
+      <Item identifier="steel" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+      <RequiredSkill identifier="mechanical" level="40" />
+      <RequiredItem identifier="aluminium" />
+      <RequiredItem identifier="lightcomponent" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="batterycell" />
+      <RequiredItem identifier="steel" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir%/Power-Backpack/Power-Backpack.png" sourcerect="95,9,129,216" />
+    <Sprite texture="%ModDir%/Power-Backpack/Power-Backpack.png" sourcerect="95,9,129,216" depth="0.7" origin="0.5,0.8" />
+    <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.12,0.08" anchor="TopRight" absoluteoffset="20,128" style="ItemUI" />
+      <TickBox text="Освещение" IsOn="true">
+        <StatusEffect type="OnUse" target="This" IsOn="true" />
+        <StatusEffect type="OnSecondaryUse" target="This" IsOn="false" />
+      </TickBox>
+    </CustomInterface>
+    <Body radius="45" width="34" density="15" />
+    <Wearable slots="Bag" msg="ItemMsgEquipSelect">
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.9" setvalue="true" />
+      <sprite texture="%ModDir%/Power-Backpack/Power-Backpack.png" limb="Torso" inheritlimbdepth="true" hidelimb="false" inheritorigin="false" inherittexturescale="true" sourcerect="0,0,61,137" origin="1.1,0.5">
+        <LightComponent range="2048.0" lightcolor="255,255,255,255" powerconsumption="0" IsOn="true">
+          <StatusEffect type="OnWearing" target="This,Character" Voltage="0.5" setvalue="true" comparison="Or">
+            <Conditional IsDead="false" />
+          </StatusEffect>
+          <LightTexture texture="%ModDir%/Power-Backpack/Power-Backpack light.png" origin="0.52, 0.48" size="0.5,0.5" />
+        </LightComponent>
+      </sprite>
+      <StatusEffect type="OnWearing" targettype="Contained" Condition="0.5">
+        <RequiredItem items="batterycell" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" targettype="Contained" Condition="1.5">
+        <RequiredItem items="fulguriumbatterycell" type="Contained" />
+      </StatusEffect>
+    </Wearable>
+    <ItemContainer capacity="12" hideitems="true">
+      <Containable items="batterycell,fulguriumbatterycell,smallitem,weapon,gun" excludeditems="toolbelt,toolbox,backpack,medicalbackpack,power-backpack,duffelbag" />
+    </ItemContainer>
+  </Item>
+</Items>

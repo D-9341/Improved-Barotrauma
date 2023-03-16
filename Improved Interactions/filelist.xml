@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Improved Interactions" modversion="1.0.3" corepackage="False" steamworkshopid="2643867353" gameversion="0.20.16.1">
+  <Item file="%ModDir%/Backpack/Backpack.xml" />
+  <Item file="%ModDir%/Heavy Backpack/Heavy Backpack.xml" />
+  <Item file="%ModDir%/Power-Backpack/Power-Backpack.xml" />
+  <Item file="%ModDir%/Medical Backpack/Medical Backpack.xml" />
+  <Other file="%ModDir%/Backpack/Backpack.png" />
+  <Other file="%ModDir%/Heavy Backpack/Heavy Backpack.png" />
+  <Other file="%ModDir%/Power-Backpack/Power-Backpack light.png" />
+  <Other file="%ModDir%/Power-Backpack/Power-Backpack.png" />
+  <Other file="%ModDir%/Medical Backpack/Medical Backpack.png" />
+  <Other file="%ModDir%/mapGenOverride.xml" />
+  <Item file="%ModDir%/instruments.xml" />
+  <Other file="%ModDir%/sounds/piano.ogg" />
+  <Other file="%ModDir%/sounds/banjo.ogg" />
+  <Other file="%ModDir%/sounds/harmonica.ogg" />
+  <Other file="%ModDir%/sounds/flute.ogg" />
+  <Other file="%ModDir%/sounds/drum.ogg" />
+  <Other file="%ModDir%/Misc.png" />
+  <Other file="%ModDir%/flute.png" />
+  <Other file="%ModDir%/mflute.png" />
+  <Other file="%ModDir%/whistle.png" />
+  <Other file="%ModDir%/sounds/whistle.ogg" />
+  <Other file="%ModDir%/sounds/theremin.ogg" />
+  <Other file="%ModDir%/theremin.png" />
+</contentpackage>
