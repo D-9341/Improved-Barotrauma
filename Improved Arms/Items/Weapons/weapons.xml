@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+<Item name="Пуля 5.7mm" identifier="57" description="Патрон высокого калибра, способный успокоить буйный экипаж. Наносит двойной заброневой урон." category="Weapon" maxstacksize="20" interactthroughwalls="true" cargocontaineridentifier="metalcrate" allowasextracargo="true" Scale="0.5" tags="smallitem,handcannonammo,pistolammoitem" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="secarmcab" secondary="armcab"/>
+    <PreferredContainer primary="handcannon" amount="6" spawnprobability="1.0"/>
+    <PreferredContainer secondary="wrecksecarmcab" minamount="1" maxamount="6" spawnprobability="0.02"/>    
+    <Price baseprice="70" sold="false" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="20" requiresrecipe="true" amount="6">
+      <RequiredSkill identifier="weapons" level="45" />
+      <RequiredItem identifier="magnesium" />
+      <RequiredItem identifier="lead" amount="2" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+    </Fabricate>
+    <InventoryIcon texture="%ModDir%/Items/Weapons/5.7.png" sourcerect="92,71,100,119" origin="0.49509034,0.49609518" />
+    <Sprite texture="%ModDir%/Items/Weapons/5.7.png" sourcerect="92,71,100,119" depth="0.55" origin="0.49509034,0.49798575" />
+    <Body width="34" height="14" density="30" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+    <Projectile characterusable="false" hitscan="true" removeonhit="true">
+      <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,200,115,200" scalemultiplier="1,1" />
+      <Attack structuredamage="20" targetforce="20" itemdamage="40" severlimbsprobability="1.0" penetration="1">
+        <Affliction identifier="gunshotwound" strength="70" />
+        <Affliction identifier="bleeding" strength="50" />
+        <Affliction identifier="stun" strength="1.5" />
+      </Attack>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="6,6" colormultiplier="255,200,115,200" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.75" scalemax="1" />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+<Item name="FN Five seveN" identifier="FN" description="Пистолет, способный посеять раздор в украинском поезде" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem,weapon,gun,pistolitem,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="weaponholder,secarmcab" />
+    <Price baseprice="600" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.5" sold="false" />
+      <Price locationtype="city" multiplier="1.25" sold="false" />
+      <Price locationtype="research" multiplier="1.25" sold="false" />
+      <Price locationtype="military" multiplier="0.9" sold="false" />
+      <Price locationtype="mine" multiplier="1.25" sold="false" />
+    </Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="70" requiresrecipe="true">
+      <RequiredSkill identifier="weapons" level="60" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+    </Fabricate>
+    <Deconstruct time="30">
+      <Item identifier="titaniumaluminiumalloy" />
+      <Item identifier="titaniumaluminiumalloy" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/Items/Weapons/FN.png" sourcerect="0,0,100,80" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Weapons/FN.png" sourcerect="0,0,100,80" depth="0.55" origin="0.5,0.5" />
+    <Body width="106" height="49" density="70" />
+    <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="90,10" handle1="-30,-4" handle2="-50,-15" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon reload="0.45" barrelpos="20,6" spread="0" unskilledspread="8" combatPriority="90" drawhudwhenequipped="true" crosshairscale="0.2">
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <Sound file="Content/Items/JobGear/Captain/WEAPONS_handCannon.ogg" type="OnUse" range="3000" selectionmode="Random" />
+      <Sound file="Content/Items/JobGear/Captain/WEAPONS_handCannon_1.ogg" type="OnUse" range="3000" />
+      <Sound file="Content/Items/JobGear/Captain/WEAPONS_handCannon_2.ogg" type="OnUse" range="3000" />
+      <Sound file="Content/Items/JobGear/Captain/WEAPONS_handCannon_3.ogg" type="OnUse" range="3000" />
+      <Sound file="Content/Items/JobGear/Captain/WEAPONS_handCannon_4.ogg" type="OnUse" range="3000" />
+      <Sound file="Content/Items/JobGear/Captain/WEAPONS_handCannon_5.ogg" type="OnUse" range="3000" />
+      <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="7.0,7.0" colormultiplier="255,200,115,200" />
+      <StatusEffect type="OnUse">
+        <Explosion range="300.0" force="50" shockwave="false" smoke="false" flames="false" sparks="false" underwaterbubble="false" camerashake="12.0" />
+      </StatusEffect>
+      <RequiredItems items="handcannonammo" type="Contained" msg="ItemMsgAmmoRequired" />
+      <RequiredSkill identifier="weapons" level="60" />
+    </RangedWeapon>
+    <ItemContainer capacity="1" maxstacksize="20" hideitems="true" containedstateindicatorstyle="bullet">
+      <Containable items="handcannonammo" />
+    </ItemContainer>
+    <aitarget sightrange="2000" soundrange="5000" fadeouttime="5" />
+    <Quality>
+      <QualityStat stattype="FirepowerMultiplier" value="0.1" />
+    </Quality>
+  </Item>
+  <Item name="MP-155" identifier="MP" description='Самозарядное ружьё, основанное на базе MP-153' category="Equipment" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,gunsmith" Scale="0.5" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="secarmcab" minamount="0" maxamount="2" spawnprobability="1" />
+    <PreferredContainer primary="wrecksecarmcab" minamount="0" maxamount="2" spawnprobability="0.2" />
+    <PreferredContainer primary="abandonedsecarmcab" minamount="1" maxamount="1" spawnprobability="0.33" />
+    <Price baseprice="500">
+      <Price minavailable="2" multiplier="1" locationtype="outpost" />
+      <Price minavailable="6" multiplier="0.9" locationtype="city" />
+      <Price minavailable="2" multiplier="1.25" locationtype="research" />
+      <Price minavailable="1" multiplier="1.25" locationtype="military" />
+      <Price minavailable="8" multiplier=".9" locationtype="mine" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="steel" />
+      <Item identifier="titaniumaluminiumalloy" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/Items/Weapons/mp-155.png" sourcerect="0,0,250,65" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Weapons/mp-155.png" sourcerect="0,0,250,65" depth="0.55" origin="0.5,0.25" />
+    <Body width="180" height="30" density="50" />
+    <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="40,-10" aimpos="55,5" handle1="-25,-16" handle2="26,0" holdangle="-40" msg="ItemMsgPickUpSelect" />
+    <RangedWeapon barrelpos="80,5" spread="1" unskilledspread="10" combatPriority="80" reload="1.5" drawhudwhenequipped="true" crosshairscale="0.2">
+      <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+      <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+      <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" />
+      <Sound file="Content/Items/Weapons/ShotgunShot1.ogg" type="OnUse" range="3000" selectionmode="Random" />
+      <Sound file="Content/Items/Weapons/ShotgunShot2.ogg" type="OnUse" range="3000" />
+      <Sound file="Content/Items/Weapons/ShotgunShot3.ogg" type="OnUse" range="3000" />
+      <Sound file="Content/Items/Weapons/ShotgunShot4.ogg" type="OnUse" range="3000" />
+      <StatusEffect type="OnUse">
+        <Explosion range="150.0" force="2.5" shockwave="false" smoke="false" flash="true" sparks="false" flames="false" underwaterbubble="false" camerashake="6.0" />
+      </StatusEffect>
+      <!-- Cocking sound, delayed by 1.0 seconds. -->
+      <StatusEffect type="OnUse" delay="1.0">
+        <Sound file="Content/Items/Weapons/ShotgunLoad1.ogg" type="OnUse" range="3000" selectionmode="Random" />
+        <Sound file="Content/Items/Weapons/ShotgunLoad2.ogg" type="OnUse" range="3000" />
+        <Sound file="Content/Items/Weapons/ShotgunLoad3.ogg" type="OnUse" range="3000" />
+      </StatusEffect>
+      <RequiredItems items="shotgunammo" type="Contained" msg="ItemMsgAmmoRequired" />
+      <RequiredSkill identifier="weapons" level="60" />
+    </RangedWeapon>
+    <ItemContainer capacity="1" maxstacksize="6" itempos="27,10" iteminterval="0,-4" hideitems="true" containedstateindicatorstyle="bullet">
+      <Containable items="shotgunammo" />
+    </ItemContainer>
+    <aitarget sightrange="3000" soundrange="5000" fadeouttime="5" />
+    <Quality>
+      <QualityStat stattype="FirepowerMultiplier" value="0.1" />
+    </Quality>
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+    <Item name="Магазин 7.62x39mm" identifier="762mag" cargocontaineridentifier="metalcrate" scale="0.5" tags="smallitem" category="Equipment" linkable="true" impactsoundtag="impact_metal_light">
+      <Price locationtype="Outpost" buyprice="1500" />
+      <Price locationtype="Military" buyprice="900" />
+      <Price locationtype="City" buyprice="1000" />
+      <Deconstruct time="15">
+        <Item identifier="steel" />
+        <Item identifier="aluminium" />
+      </Deconstruct>
+      <Fabricate suitablefabricators="fabricator" requiredtime="20">
+        <RequiredSkill identifier="mechanical" level="55" />
+        <RequiredItem identifier="steel" />
+        <RequiredItem identifier="aluminium" />
+        <RequiredItem identifier="aluminium" />
+      </Fabricate>
+      <Sprite texture="%ModDir%/Items/Weapons/магазин.png" depth="0.54" sourcerect="6,2,35,46" origin="0.5,0.5" />
+      <Body width="115" height="88" density="50" />
+      <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+      <ItemContainer hideitems="true" capacity="1" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true">
+        <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="2,121,53,22" />
+        <StatusEffect type="OnUse" target="This" condition="-1" disabledeltatime="true">
+          <SpawnItem identifiers="762r" spawnposition="ThisInventory" />
+        </StatusEffect>
+        <Containable identifiers="762r" />
+      </ItemContainer>
+      <Holdable canBeCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
+    </Item>
+    <Item name="7.62x39 БП гж" identifier="762r" category="Equipment" interactthroughwalls="true" hideinmenus="true" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_metal_light">
+      <Sprite texture="%ModDir%/Items/Weapons/weapons.png" sourcerect="2,1,14,8" depth="0.55" origin="0.5,0.5" />
+      <InventoryIcon texture="weapons.png" sourcerect="571,960,64,64" origin="0.5,0.5" />
+      <Body width="8" height="3" density="40" />
+      <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+      <Projectile characterusable="false" hitscan="true" removeonhit="true">
+        <Attack structuredamage="25" stun="0.1" targetforce="10" penetration="2">
+          <Affliction identifier="lacerations" strength="12" />
+          <Affliction identifier="gunshotwound" strength="20" />
+          <Affliction identifier="stun" strength="0.35" />
+          <Affliction identifier="bleeding" strength="3" />
+        </Attack>
+      </Projectile>
+    </Item>
+    <Item name="Mk47" identifier="mk47" description="Основанный на базе AR-10 автомат, стреляющий патронами калибра 7.62x39." category="Equipment" cargocontaineridentifier="metalcrate" tags="meduimitem, weapon" Scale="0.35" impactsoundtag="impact_metal_light">
+      <Price baseprice="1500">
+        <Price minavailable="2" multiplier="1" locationtype="outpost" />
+        <Price minavailable="6" multiplier="0.9" locationtype="city" />
+        <Price minavailable="2" multiplier="1.25" locationtype="research" />
+        <Price minavailable="1" multiplier="1.25" locationtype="mine" />
+        <Price minavailable="8" multiplier=".9" locationtype="military" />
+      </Price>
+      <Fabricate suitablefabricators = 'fabricator' requiredtime = '60'>
+        <RequiredSkill identifier = 'mechanical' level = '40'/>
+        <RequiredItem identifier="steel" />
+        <RequiredItem identifier="titaniumaluminiumalloy" />
+      </Fabricate>
+      <Deconstruct time="25">
+        <Item identifier="steel" />
+        <Item identifier="titaniumaluminiumalloy" />
+      </Deconstruct>
+      <Sprite texture="%ModDir%/Items/Weapons/mk47.png" sourcerect="35,99,414,96" depth="0.55" origin="0.5,0.5" />
+      <Body width="90" height="30" density="50" />
+      <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="55,-10" aimpos="55,0" handle1="-60,-13" handle2="42,4" holdangle="-40" msg="ItemMsgPickUpSelect" />
+      <RangedWeapon barrelpos="141,13" spread="1" unskilledspread="5" combatPriority="50" reload="0.1" drawhudwhenequipped="true" crosshairscale="0.2">
+        <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+        <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
+        <Sound file="%ModDir%/Items/Weapons/Fire-1.ogg" type="OnUse" range="3000" selectionmode="Random" />
+        <Sound file="%ModDir%/Items/Weapons/Fire-2.ogg" type="OnUse" range="3000" />
+        <Sound file="%ModDir%/Items/Weapons/Fire-3.ogg" type="OnUse" range="3000" />
+        <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,200,115,200" scalemultiplier="6,6" />
+        <Explosion range="150.0" force="5" shockwave="false" smoke="false" flames="false" flash="false" sparks="false" underwaterbubble="false" camerashake="6.0" />
+        <StatusEffect type="OnUse" target="Contained">
+          <RequiredItem identifiers="762mag" type="Contained" />
+          <Use />
+        </StatusEffect>
+        <RequiredItems identifiers="762mag" type="Contained" msg="ItemMsgAmmoRequired" />
+        <RequiredSkill identifier="weapons" level="30" />
+      </RangedWeapon>
+      <ItemContainer capacity="1" hideitems="false" itempos="-15,-28" depth="0.55">
+        <Containable identifiers="762mag" />
+      </ItemContainer>
+      <aitarget sightrange="2000" soundrange="4000" fadeouttime="5" />
+      <Quality>
+        <QualityStat stattype="FirepowerMultiplier" value="0.5" />
+      </Quality>
+    </Item>
+</Items>
