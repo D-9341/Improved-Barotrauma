@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Improved Events" modversion="1.0.6" corepackage="False" steamworkshopid="2640295754" gameversion="0.20.16.1">
+  <EventManagerSettings file="%ModDir%/EventManagerSettings.xml" />
+  <Item file="%ModDir%/Artifacts/artifacts.xml" />
+  <Item file="%ModDir%/Artifacts/trinkets.xml" />
+  <Missions file="%ModDir%/Missions/missions.xml" />
+  <Other file="%ModDir%/Artifacts/AlienArtifact1.png" />
+  <Text file="%ModDir%/Language/Russian/artifacts.xml" />
+  <Text file="%ModDir%/Language/Russian/trinkets.xml" />
+</contentpackage>

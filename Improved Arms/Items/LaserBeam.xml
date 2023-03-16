@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item name="Шахтёрский лазер" description="Газ мне ни к чему, ведь у меня есть лазеры!" impactsoundtag="impact_metal_light" Scale="0.5" cargocontaineridentifier="metalcrate" tags="smallitem,cuttingequipment,tool" category="Equipment" identifier="laser">
+    <PreferredContainer primary="engcab" />
+    <PreferredContainer primary="supplycab" spawnprobability="0.01" maxamount="2" minamount="0" />
+    <PreferredContainer primary="outpostcrewcabinet" spawnprobability="0.25" maxamount="2" minamount="0" />
+    <Deconstruct time="10">
+      <Item identifier="steel" />
+      <Item identifier="plastic" />
+      <Item identifier="fpgacircuit" />
+    </Deconstruct>
+    <Fabricate requiredtime="20" suitablefabricators="fabricator" requiresrecipe="false">
+      <RequiredSkill identifier="electrical" level="30" />
+      <Item identifier="steel" />
+      <Item identifier="plastic" />
+      <Item identifier="fpgacircuit" />
+    </Fabricate>
+    <Price baseprice="80">
+      <Price minavailable="2" multiplier="1" locationtype="outpost" />
+      <Price minavailable="6" multiplier="0.9" locationtype="city" />
+      <Price minavailable="2" multiplier="1.25" locationtype="research" />
+      <Price minavailable="1" multiplier="1.25" locationtype="military" />
+      <Price minavailable="8" multiplier=".9" locationtype="mine" />
+    </Price>
+    <InventoryIcon origin="0.5,0.5" sourcerect="0,0,148,68" texture="%ModDir%/Items/LaserTool.png" />
+    <Sprite origin="0.5,0.5" sourcerect="0,0,252,120" texture="%ModDir%/Items/LaserToolSmall.png" depth="0.55" />
+    <Body density="20" height="10" width="40" scale=".5" radius="40" />
+    <Holdable msg="ItemMsgPickUpSelect" slots="Any,RightHand+LeftHand" handle2="16,-14" handle1="-14,-8" aimpos="50,0" controlpose="true" />
+    <RepairTool firedamage="30" combatpriority="30" range="250" repairthroughwalls="true" repairmultiple="true" particles="laserbeam" barrelpos="134,4" structurefixamount="-10.0">
+      <!-- Check if repair trough walls is a good idea or not -->
+      <RequiredItems msg="ItemMsgBatteryCellRequired" items="mobilebattery" type="Contained" />
+      <ParticleEmitter copyentityangle="true" particlespersecond="50" particle="laserbeam" />
+      <ParticleEmitterHitItem particlespersecond="100" particle="weldspark" velocitymax="800" velocitymin="100" anglemax="40" anglemin="-40" identifiers="door,hatch,ductblock" />
+      <ParticleEmitterHitItem particlespersecond="3" particle="weldsmoke" velocitymax="100" velocitymin="10" anglemax="5" anglemin="-5" identifiers="door,hatch,ductblock" />
+      <ParticleEmitterHitItem identifiers="ore" particle="iceshards" particlespersecond="5" anglemin="-40" anglemax="40" velocitymin="10" velocitymax="300" scalemin="0.5" scalemax="1.0" />
+      <ParticleEmitterHitCharacter particlespersecond="3" particle="fleshsmoke" velocitymax="100" velocitymin="10" anglemax="5" anglemin="-5" />
+      <!-- when using, the contained battery tank will detoriate (= deplete -->
+      <StatusEffect type="OnUse" Condition="-2.5" targets="batterycell" targettype="Contained" />
+      <StatusEffect type="OnUse" Condition="-1.0" targets="fulguriumbatterycell" targettype="Contained" />
+      <!-- welding a door, it will get stuck after a while -->
+      <StatusEffect type="OnUse" Condition="3.0" targets="door,ductblock" targettype="UseTarget" Stuck="5.0" />
+      <!-- do burn damage to characters -->
+      <StatusEffect type="OnUse" targettype="Limb">
+        <Affliction identifier="burn" amount="10" />
+      </StatusEffect>
+      <!-- the tool can fix structures, i.e. walls and windows -->
+      <Fixable identifier="structure" />
+      <LightComponent Flicker="0.5" LightColor="1.0,0.3,0.4,1.0">
+        <sprite origin="0.5,0.5" texture="Content/Items/Electricity/lightsprite.png" />
+      </LightComponent>
+    </RepairTool>
+    <ItemContainer capacity="1" maxstacksize="1" containedspritedepth="0.56" itempos="-70,5" hideitems="false">
+      <ContainedStateIndicator sourcerect="1,70,107,31" texture="Content/UI/ContainerIndicators.png" />
+      <Containable items="batterycell,fulguriumbatterycell" />
+    </ItemContainer>
+    <RepairTool>
+      <RequiredItems msg="ItemMsgBatteryCellRequired" items="batterycell,fulguriumbatterycell" type="Contained" />
+    </RepairTool>
+    <aitarget fadeouttime="3" soundrange="500" sightrange="2000" />
+    <Quality>
+      <QualityStat stattype="RepairToolStructureRepairMultiplier" value="0.1" />
+      <QualityStat stattype="RepairToolDeattachTimeMultiplier" value="0.1" />
+    </Quality>
+    <Upgrade scale="0.35" gameversion="0.10.0.0" />
+  </Item>
+</Items>

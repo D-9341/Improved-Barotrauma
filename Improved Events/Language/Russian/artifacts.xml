@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Russian" nowhitespace="false" translatedname="Русский">
+  <entityname.oasisartifact>Артефакт "Оазиз"</entityname.oasisartifact>
+  <entitydescription.oasisartifact>Вы чувствуете себя лучше - восторг и умиротворение переполняют вас.</entitydescription.oasisartifact>
+  <entityname.rustartifact>Ржавый артефакт</entityname.rustartifact>
+  <entitydescription.rustartifact>Может когда-то он и имел какую-то ценность, но похоже он полностью проржавел.</entitydescription.rustartifact>
+  <entityname.infrasonicartifact>Ультразвуковой артефакт</entityname.infrasonicartifact>
+  <entitydescription.infrasonicartifact>Он испускает едва уловимый шум.</entitydescription.infrasonicartifact>
+  <entityname.bloodmoonartifact>Артефакт кровавой луны</entityname.bloodmoonartifact>
+  <entitydescription.bloodmoonartifact>Он.. кровоточит!?</entitydescription.bloodmoonartifact>
+  <entityname.heartoftheswarmartifact>Артефакт "Сердце роя"</entityname.heartoftheswarmartifact>
+  <entitydescription.heartoftheswarmartifact>Внути что-то шевелится.</entitydescription.heartoftheswarmartifact>
+  <entityname.bentrealityartifact>Артефакт искаженной реальности</entityname.bentrealityartifact>
+  <entitydescription.bentrealityartifact>По всей видимости, искривляет пространственно-временной континуум.</entitydescription.bentrealityartifact>
+  <entityname.sparkartifact>Искрящийся артефакт</entityname.sparkartifact>
+  <entitydescription.sparkartifact>Искрится..</entitydescription.sparkartifact>
+  <entityname.pulseartifact>Пульсирующий артефакт</entityname.pulseartifact>
+  <entitydescription.pulseartifact>Периодически испускает мощные испульсы.</entitydescription.pulseartifact>
+  <entityname.vacuumartifact>Вакуумный артефакт</entityname.vacuumartifact>
+  <entitydescription.vacuumartifact>Он вечно голоден.</entitydescription.vacuumartifact>
+  <entityname.biohazardartifact>Биоактивный артефакт</entityname.biohazardartifact>
+  <entitydescription.biohazardartifact>Фу!</entitydescription.biohazardartifact>
+  <entityname.meltingartifact>Плавящийся артефакт</entityname.meltingartifact>
+  <entitydescription.meltingartifact>Он светится оранжевым, однако на ощупь он совершенно холодный.</entitydescription.meltingartifact>
+  <entityname.integrityartifact>Целостный артефакт</entityname.integrityartifact>
+  <entitydescription.integrityartifact>Он постоянно меняет свою форму.</entitydescription.integrityartifact>
+</infotexts>

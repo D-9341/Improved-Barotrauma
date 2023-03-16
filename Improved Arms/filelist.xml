@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Improved Arms" modversion="1.0.7" corepackage="False" steamworkshopid="2645873021" gameversion="0.20.16.1">
+  <Item file="%ModDir%/Items/Weapons/weapons.xml" />
+  <Other file="%ModDir%/Items/Weapons/mk47.png" />
+  <Other file="%ModDir%/Items/Weapons/магазин.png" />
+  <Other file="%ModDir%/Items/Weapons/Fire-1.ogg" />
+  <Other file="%ModDir%/Items/Weapons/Fire-2.ogg" />
+  <Other file="%ModDir%/Items/Weapons/Fire-3.ogg" />
+  <Other file="%ModDir%/Items/Weapons/weapons.png" />
+  <Other file="%ModDir%/Items/Weapons/FN.png" />
+  <Other file="%ModDir%/Items/Weapons/mp-155.png" />
+  <Other file="%ModDir%/Items/Weapons/5.7.png" />
+  <Item file="%ModDir%/Items/LaserBeam.xml" />
+  <Other file="%ModDir%/Items/LaserTool.png" />
+  <Other file="%ModDir%/Items/LaserToolSmall.png" />
+  <Particles file="%ModDir%/Particles/LaserParticlesBeam.xml" />
+  <Other file="%ModDir%/Particles/LaserParticles.png" />
+  <Other file="%ModDir%/Particles/LaserParticlesSmall.png" />
+  <Item file="%ModDir%/Items/LaserWelding.xml" />
+  <Other file="%ModDir%/Items/LaserWeldingTool.png" />
+  <Other file="%ModDir%/Items/LaserWeldingToolSmall.png" />
+  <Particles file="%ModDir%/Particles/LaserParticles.xml" />
+  <Other file="%ModDir%/Particles/LaserWeldingParticles.png" />
+  <Other file="%ModDir%/Particles/LaserWeldingParticlesSmall.png" />
+</contentpackage>

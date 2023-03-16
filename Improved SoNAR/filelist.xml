@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Improved SoNAR" modversion="1.0.2" corepackage="False" steamworkshopid="2640092634" gameversion="1.0.7.0">
+  <Item file="%ModDir%/Content/Items/Command/command.xml" />
+  <Other file="%ModDir%/Content/Items/Command/sonarBlip.png" />
+  <Other file="%ModDir%/Content/Items/Command/SonarPing.ogg" />
+  <Item file="%ModDir%/wrecklocator.xml" />
+  <Other file="%ModDir%/Content/Items/Command/sonarOverlay.png" />
+</contentpackage>
