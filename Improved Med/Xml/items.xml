@@ -17,7 +17,7 @@
     <SuitableTreatment type="burn" suitability="50" />
     <SuitableTreatment identifier="opiatewithdrawal" suitability="-30" />
     <Fabricate suitablefabricators="medicalfabricator" requiredtime="30">
-      <RequiredSkill identifier="medical" level="18" />
+      <RequiredSkill identifier="medical" level="80" />
       <RequiredItem identifier="opium" />
     </Fabricate>
     <Deconstruct time="20">
@@ -32,8 +32,7 @@
       <RequiredSkill identifier="medical" level="30" />
       <StatusEffect tags="medical" type="OnUse" target="UseTarget" duration="10">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier='damage' amount='15'/>
-        <ReduceAffliction identifier='burn' amount='15'/>
+        <Affliction identifier='propitaleffect' amount='15'/>
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove />
@@ -44,8 +43,7 @@
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnImpact" target="UseTarget" duration="10">
-        <ReduceAffliction identifier='damage' amount='2'/>
-        <ReduceAffliction identifier='burn' amount='2'/>
+        <Affliction identifier='propitaleffect' amount='2'/>
       </StatusEffect>
     </Projectile>
   </Item>
@@ -2019,7 +2017,7 @@
       </StatusEffect>
     </Projectile>
   </Item>
-  <Item name="Нерабочая правая рука" identifier="armlock1" description="Рука заблокирована." scale="0.5" nonplayerteaminteractable="True" category="hidden">
+  <Item name="Нерабочая правая рука" identifier="armlock1" description="Рука заблокирована" scale="0.5" nonplayerteaminteractable="True" category="hidden">
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5" />
     <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
     <Holdable selectkey="Action" pickkey="Use" slots="RightHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
@@ -2036,7 +2034,7 @@
       </StatusEffect>
     </Holdable>
   </Item>
-  <Item name="Нерабочая левая рука" identifier="armlock2" description="Рука заблокирована." scale="0.5" nonplayerteaminteractable="True" category="hidden">
+  <Item name="Нерабочая левая рука" identifier="armlock2" description="Рука заблокирована" scale="0.5" nonplayerteaminteractable="True" category="hidden">
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5" />
     <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
     <Holdable selectkey="Action" pickkey="Use" slots="LeftHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
@@ -2090,9 +2088,6 @@
       <StatusEffect tags="medical" type="OnFailure" target="This, Limb" targetlimb="Torso">
         <Affliction identifier="organdamage" amount="10" />
         <Affliction identifier="bleeding" amount="10" />
-      </StatusEffect>
-      <StatusEffect type="OnBroken" target="This">
-        <Remove />
       </StatusEffect>
     </MeleeWeapon>
   </Item>
