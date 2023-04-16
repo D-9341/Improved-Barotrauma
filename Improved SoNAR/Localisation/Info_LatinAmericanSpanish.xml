@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Latinamerican Spanish" nowhitespace="false" translatedname="Español Latinoamericano">
+  <loadingscreentip>La intensidad de un ping sonar activo es lo suficientemente poderosa como para hervir agua alrededor de los transductores.</loadingscreentip>
+  <loadingscreentip>Es recomendado usar un traje de buceo anecoico cuando se trabaja alrededor de un submarino. Un traje de buceo comun no te protejerá de un sonar activo.</loadingscreentip>
+  <loadingscreentip>El sonar activo de un submarino puede alcanzar volúmenes de 235db, lo que es mas o menos 724 veces mas fuerte, y 3.16 billiones de veces mas intenso que un motor a reacción.</loadingscreentip>
+  <loadingscreentip>Las ondas sonoras viajan cuatro veces más rápido en el agua. Sonidos de baja frecuencia, como los pings del sonar activo de un submarino son aún mas rápidos.</loadingscreentip>
+  <loadingscreentip>Cuando el sonido se propaga del agua al aire, la intensidad se reduce por 80db (256x mas silencioso). Esto, combinado con el casco anecoico de un submarino keeps submariners safe from active sonar.</loadingscreentip>
+  <loadingscreentip>Los cascos de un submarino estan recubiertos con placas anecoicas, placas de caucho que contienen miles de pequeños vacíos, diseñadas para absorver un sonar activo y atenuar soindos emitidos desde dentro del buque.</loadingscreentip>
+  <loadingscreentip>A corto rango, la intensidad de un ping sonar activo es suficiente para penetrar órganos y causar hemorragia interna.</loadingscreentip>
+  <loadingscreentip>Asegúrate que ninguno de tus compañeros de tripulación esten fuera de la seguridad del casco antes de encender el sonar activo.</loadingscreentip>
+  <loadingscreentip>Dentro de las paredes de un submarino, la tripulación esta protegida del sonar activo. Sin embargo, ese blindaje desaparece una vez que se rompe el casco y el agua fluye al interior.</loadingscreentip>
+  <loadingscreentip>apaga el sonar activo si se rompe el casco. Tus ingenieros tendrán dificultades reparando la fuga si se perforan sus tímpanos.</loadingscreentip>
+  <loadingscreentip>Se cuidadoso al bucear cerca de un submarino. Solo un ping sonar puede causar pérdida de la audición, daño a los tejidos, y en casos extremos, órganos perforados y hemorragia cerebral.</loadingscreentip>
+  <loadingscreentip>Se recomienda traer un traje de buceo anecoico al activar estaciones de balizas. Aunque no tan poderoso como el de un submarino, el ping sonar de una baliza puede causar heridas serias.</loadingscreentip>
+  <loadingscreentip>Cortizida es la única forma de salvar a un paciente de hemorragia cerbral causada por sonar.</loadingscreentip>
+  <loadingscreentip>El extracto de maná puede detener el avance de la hemorragia cerebral causada por sonar. Después de eso, Cortizida es la única opcion.</loadingscreentip>
+  <loadingscreentip>No se recomienda administrar Extracto de Maná si el paciente already ya tiene rastros en su cuerpo.</loadingscreentip>
+  <loadingscreentip>Mantente alejado de los lastres mientras el sonar activo esté funcionando. las ondas sonoras fácilmente pueden propagarse a través de las tuberías llenas de agua.</loadingscreentip>
+  <loadingscreentip>Si no es tratado, el daño por vibración del sonar activo puede causar daño a los nervios y rabdomiólisis en los músculos afectados.</loadingscreentip>
+  <loadingscreentip>Ya que los submarinos son una forma de vida en Europa, la medicina ha avanzado para tratar heridas causadas por sonar. Injertos Inteligentes para órganos perforados, Cortizida para hemorragia cerebral y Extracto de Maná para daño a los tejidos.</loadingscreentip>
+  <!-- Active sonar -->
+  <afflictionname.activesonar>Sonar activo</afflictionname.activesonar>
+  <!-- Beacon station sonar -->
+  <afflictionname.activesonarbeacon>Sonar estación de baliza</afflictionname.activesonarbeacon>
+  <!-- Acoustic Trauma -->
+  <afflictionname.acoustictrauma>Trauma Acústico</afflictionname.acoustictrauma>
+  <afflictiondescription.acoustictrauma>Los tímpanos del paciente se han perforado, causando sangrado y tinnitus.</afflictiondescription.acoustictrauma>
+  <afflictiondescription.acoustictrauma.self>Tus oídos estan zumbando y goteando sangre, te sientes mareado y confundido.</afflictiondescription.acoustictrauma.self>
+  <afflictioncauseofdeath.acoustictrauma>Muerte otogénica</afflictioncauseofdeath.acoustictrauma>
+  <afflictioncauseofdeathself.acoustictrauma>Te desangraste hasta morir por las orejas.</afflictioncauseofdeathself.acoustictrauma>
+  <!-- Vibration Damage -->
+  <afflictionname.vibrationdamage>Daño por Vibración</afflictionname.vibrationdamage>
+  <afflictiondescription.vibrationdamage>El paciente sufre de daños menores a su sistema circulatorio causado por vibraciones intensas del sonar.</afflictiondescription.vibrationdamage>
+  <afflictiondescription.vibrationdamage.medium>El paciente ha sufrido daños serios a sus arterias, nervios y músculos.</afflictiondescription.vibrationdamage.medium>
+  <afflictiondescription.vibrationdamage.high>El interior del paciente esta arruinado. Hay daños devastadores en sus arterias, músculos y huesos.</afflictiondescription.vibrationdamage.high>
+  <afflictiondescription.vibrationdamage.self>Sientes un dolor sordo por todo tu cuerpo. Tu piel hormiguea.</afflictiondescription.vibrationdamage.self>
+  <afflictiondescription.vibrationdamage.medium.self>Tus extremidades estan entumecidas y sientes pinchazos agudos por todo el cuerpo.</afflictiondescription.vibrationdamage.medium.self>
+  <afflictiondescription.vibrationdamage.high.self>No puedes sentir tus extremidades. Todo lo que sientes es dolor agudo, como si cada célula de tu cuerpo hubiera sido destrozada.</afflictiondescription.vibrationdamage.high.self>
+  <afflictioncauseofdeath.vibrationdamage>Daño interno catastrófico</afflictioncauseofdeath.vibrationdamage>
+  <afflictioncauseofdeathself.vibrationdamage>Tu interior fue destrozado.</afflictioncauseofdeathself.vibrationdamage>
+  <!-- Nerve Damage -->
+  <afflictionname.nervedamage>Daño a los nervios</afflictionname.nervedamage>
+  <afflictiondescription.nervedamage>Los nervios del paciente fueron dañados por vibraciones. Tareas diarias son más difíciles.</afflictiondescription.nervedamage>
+  <afflictiondescription.nervedamage.self>Tus manos estan entumecidas, tu torpeza te puede hacer menos eficiente.</afflictiondescription.nervedamage.self>
+  <!-- Rhabdomyolysis -->
+  <afflictionname.muscledamage>Rabdomiólisis</afflictionname.muscledamage>
+  <afflictiondescription.muscledamage>Los músculos del paciente estan rupturandose y se estan derramando en el flujo sanguíneo.</afflictiondescription.muscledamage>
+  <afflictiondescription.muscledamage.high>La gran mayoría de músculos del paciente sufren de necrosis y peligrosas cantidades de proteínas se estan derramando en el flujo sanguíneo.</afflictiondescription.muscledamage.high>
+  <afflictiondescription.muscledamage.self>Te sientes lento, tus piernas estan hinchadas y adoloridas.</afflictiondescription.muscledamage.self>
+  <afflictiondescription.muscledamage.high.self>Tus piernas se sienten fragíles. Caminar es casi imposible, el dolor es inconmensurable.</afflictiondescription.muscledamage.high.self>
+  <afflictioncauseofdeath.muscledamage>Fallo Renal</afflictioncauseofdeath.muscledamage>
+  <afflictioncauseofdeathself.muscledamage>Tus músculos liberaron cantidades letales de proteínas en tu flujo sanguíneo.</afflictioncauseofdeathself.muscledamage>
+  <!-- Ruptured Lung -->
+  <afflictionname.rupturedlung>Pulmón Perforado</afflictionname.rupturedlung>
+  <afflictiondescription.rupturedlung>Los pulmones del paciente fueron perforados por vibraciones del sonar.</afflictiondescription.rupturedlung>
+  <afflictiondescription.rupturedlung.high>Los pulmones del paciente han sido perforados por vibraciones extremas, causando hipoxemia y una alta probabilidad de asfixia.</afflictiondescription.rupturedlung.high>
+  <afflictiondescription.rupturedlung.self>Hay un dolor agudo en tu pecho. Respirar es más difícil.</afflictiondescription.rupturedlung.self>
+  <afflictiondescription.rupturedlung.high.self>Apenas puedes respirar entre toser sangre, cada inhalación es una agonía.</afflictiondescription.rupturedlung.high.self>
+  <afflictioncauseofdeath.rupturedlung>Ahogado en su propia sangre</afflictioncauseofdeath.rupturedlung>
+  <afflictioncauseofdeathself.rupturedlung>Te ahogaste en tu propia sangre por el daño severo a tus pulmones.</afflictioncauseofdeathself.rupturedlung>
+  <!-- Brain Hemorrhage -->
+  <afflictionname.brainhemorrhage>Hemorragia Cerebral</afflictionname.brainhemorrhage>
+  <afflictiondescription.brainhemorrhage>El cerebro del paciente esta sangrando por la exposición a un sonar activo. Afortunadamente no parece estar empeorando.</afflictiondescription.brainhemorrhage>
+  <afflictiondescription.brainhemorrhage.medium>Gran parte del cerebro del paciente se ha hecho papilla. El cerebro se esta ahogando en su propia sangre y solo sigue empeorando.</afflictiondescription.brainhemorrhage.medium>
+  <afflictiondescription.brainhemorrhage.high>El cerebro del paciente se hizo papilla por exposición a un sonar activo.</afflictiondescription.brainhemorrhage.high>
+  <afflictiondescription.brainhemorrhage.self>Tu visión esta borrosa y tu mente se siente nublada.</afflictiondescription.brainhemorrhage.self>
+  <afflictiondescription.brainhemorrhage.medium.self>No puedes pensar. ves destellos y saboreas metal. Quieres gritar, pero no puedes. estas perdiendo el control de todas tus funciones motoras y la realidad se aleja lentamente.</afflictiondescription.brainhemorrhage.medium.self>
+  <afflictioncauseofdeath.brainhemorrhage>Muerte Cerebral</afflictioncauseofdeath.brainhemorrhage>
+  <afflictioncauseofdeathself.brainhemorrhage>Tu cerebro fue hecho papilla por un sonar activo.</afflictioncauseofdeathself.brainhemorrhage>
+  <!-- Manna Influence -->
+  <afflictionname.mannainjection>Influencia del Maná</afflictionname.mannainjection>
+  <afflictiondescription.mannainjection>Esta extremidad esta bajo la influencia curativa del Extracto de Maná.</afflictiondescription.mannainjection>
+  <afflictiondescription.mannainjection.self>Sientes una gentil presión y calor reconfortante debajo de tu piel.</afflictiondescription.mannainjection.self>
+  <!-- Manna Overdose -->
+  <afflictionname.mannaoverdose>Sobredosis de Maná</afflictionname.mannaoverdose>
+  <afflictiondescription.mannaoverdose>El paciente tiene cantidades peligrosas de Maná en la sangre.</afflictiondescription.mannaoverdose>
+  <afflictiondescription.mannaoverdose.self>Te sientes fantástico.</afflictiondescription.mannaoverdose.self>
+  <afflictioncauseofdeath.mannaoverdose>Murió en éxtasis</afflictioncauseofdeath.mannaoverdose>
+  <afflictioncauseofdeathself.mannaoverdose>Lo hiciste, bienvenido al cielo.</afflictioncauseofdeathself.mannaoverdose>
+  <!-- Photopsia -->
+  <afflictionname.photopsia>Fotopsia</afflictionname.photopsia>
+  <afflictiondescription.photopsia>El paciente sufre de anomalías visuales en forma de luces parpadeantes y destellos brillantes.</afflictiondescription.photopsia>
+  <afflictiondescription.photopsia.self>Las luces parecen parpadear, ¿estás imaginando cosas? Destellos de luz llenan tu visíon periferal. Algo esta mal.</afflictiondescription.photopsia.self>
+  <!-- Ataxia -->
+  <afflictionname.ataxia>Ataxia</afflictionname.ataxia>
+  <afflictiondescription.ataxia>El cerebelo del paciente esta lesionado, causando espasmos musculares y coordinación terrible.</afflictiondescription.ataxia>
+  <afflictiondescription.ataxia.self>Tus músculos parecen tener mente propia. Te tambaleas sin aviso, y cuando intentas caminar terminas justo donde empezaste.</afflictiondescription.ataxia.self>
+  <!-- Aphasia -->
+  <afflictionname.aphasia>Afasia</afflictionname.aphasia>
+  <afflictiondescription.aphasia>El paciente ha recibido daños en la area de Broca del cerebro. Lo que le impide hablar en oraciones completas.</afflictiondescription.aphasia>
+  <afflictiondescription.aphasia.self>Eres incapaz de terminar oraciones básicas y tienes dificultades extremas para formar palabras, a veces recurriendo a murmullos incoherentes.</afflictiondescription.aphasia.self>
+  <!-- Blindness -->
+  <afflictionname.opticneuritis>Neuritis Óptica</afflictionname.opticneuritis>
+  <afflictiondescription.opticneuritis>El lóbulo occipital del paciente esta dañado de gravedad. Periodicamente cegando y desorientando al paciente.</afflictiondescription.opticneuritis>
+  <afflictiondescription.opticneuritis.self>Tu visión se oscurece constantemente. ¿Este es el final?</afflictiondescription.opticneuritis.self>
+  <!-- Treatments -->
+  <entityname.manna>Extracto de Maná</entityname.manna>
+  <entitydescription.manna>Líquido milagroso que combina la hemoglobina humana con plasma alien para conseguir la resistencia natural y propiedades curativas de los habitantes subacuáticos de Europa. Usada para tratar daños internos al sistema muscular y nervioso. Y es capaz de detener la hemoraggia cerebral temporalmente. Múltiples usos son menos efectivos y arriesgan sobredosis.</entitydescription.manna>
+  <entityname.cortizide>Cortizida</entityname.cortizide>
+  <entitydescription.cortizide>Una potente mezcla de medicamentos para aliviar el dolor y la presión con una serie de efectos secundarios desagradables. Normalmente se inyecta directo al cráneo como último recurso para tratar la hemorragia cerebral.
+Cuidado: Administrarla a un cerebro sano puede causar acumulaciones de presión peligrosas en el cráneo.</entitydescription.cortizide>
+  <entityname.smartgraft>Injerto Inteligente</entityname.smartgraft>
+  <entitydescription.smartgraft>Tejido conectivo diseñado genéticamente que hereda el adn del paciente para estimular la regeneración de sistemas anatómicos complejos. usada para reparar órganos perforados.</entitydescription.smartgraft>
+  <!-- Items -->
+  <entityname.anechoicdivingsuit>Traje de Buceo Anecoico</entityname.anechoicdivingsuit>
+  <entitydescription.anechoicdivingsuit>Un traje ligero y sigiloso diseñado para absorver ondas sonoras de un sonar activo con sus placas anecoicas. Ofrece protección minima contra los daños y puede soportar presiones de hasta 6.000 metros.</entitydescription.anechoicdivingsuit>
+  <entityname.navremote>Control remoto de navegación</entityname.navremote>
+  <entitydescription.navremote>Un dispositivo de mano que se puede utilizar para controlar de forma remota el sonar y los motores del submarino.</entitydescription.navremote>
+  <!-- Menu -->
+  <realsonarsettings>Opciones Real Sonar</realsonarsettings>
+  <sonarpingvolume>Volumen del Ping Sonar</sonarpingvolume>
+  <airpingvolume>Volumen del Ping por Aire</airpingvolume>
+  <waterpingvolume>Volumen del Ping por Agua</waterpingvolume>
+  <suitpingvolume>Volumen del Ping en Traje</suitpingvolume>
+  <tinnitusvolume>Volumen de Tinnitus</tinnitusvolume>
+  <distortionvolume>Volumen de Distorsión</distortionvolume>
+  <!-- Dialogue -->
+  <dialoggetanechoicsuit>¡Necesito equipo de buceo anecoico!</dialoggetanechoicsuit>
+  <dialoggetanechoicsuit>¡Necesito un traje de buceo anecoico para hacer reparaciones con el sonar encendido!</dialoggetanechoicsuit>
+  <dialoggetanechoicsuit>¡Debo encontrar un traje anecoico!</dialoggetanechoicsuit>
+  <dialogcantfindanechoicsuit>¡No puedo encontrar un traje anecoico! ¡Apaguen el sonar!</dialogcantfindanechoicsuit>
+  <dialogcantfindanechoicsuit>¡No quedan trajes anecoicos! ¡No entraré ahí!</dialogcantfindanechoicsuit>
+  <dialogcantfindanechoicsuit>¡No iré hasta que el sonar este aapagado!</dialogcantfindanechoicsuit>
+  <dialogcantfindanechoicsuit>¡No tengo proteccion! ¡Apaguen el sonar!</dialogcantfindanechoicsuit>
+  <dialogcantfindanechoicsuit>¡No puedo hacer reparaciones hasta que el sonar este apagado!</dialogcantfindanechoicsuit>
+  <dialogturnoffsonar>¡Apaguen el sonar!</dialogturnoffsonar>
+  <dialogturnoffsonar>¡Mis oídos sangran gracias a ese maldito sonar!</dialogturnoffsonar>
+  <dialogturnoffsonar>¡Me atrapó el sonar!</dialogturnoffsonar>
+  <dialogturnoffsonar>¡Dios, ese sonar es ruidoso!</dialogturnoffsonar>
+  <dialogturnoffsonar>¡Estoy en el agua, apaguen el sonar!</dialogturnoffsonar>
+  <dialogturnoffsonar>¡Oh dios, apaguen el sonar!</dialogturnoffsonar>
+  <dialogturnoffsonar>¡Alguien apague el sonar!</dialogturnoffsonar>
+</infotexts>

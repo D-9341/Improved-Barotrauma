@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Conversations identifier="sonarconversations" Language="Latinamerican Spanish">
+  <!-- Sonar-->
+  <Conversation line="¡Apaguen el sonar!" speaker="0" flags="SonarHigh" />
+  <Conversation line="¡Mis oídos sangran gracias a ese maldito sonar!" speaker="0" flags="SonarHigh" speakertags="rude" />
+  <Conversation line="¡Apaguen el sonar!" speaker="0" flags="SonarHigh" />
+  <Conversation line="¡Me atrapó el sonar!" speaker="0" flags="SonarHigh" />
+  <Conversation line="¡Dios, ese sonar es ruidoso!" speaker="0" flags="SonarHigh" />
+  <Conversation line="¡Estoy en el agua, apaguen el sonar!" speaker="0" flags="SonarHigh" speakertags="professional,tough" />
+  <Conversation line="¡Oh dios, apaguen el sonar!" speaker="0" flags="SonarHigh" speakertags="fearful" />
+  <Conversation line="¡Hey, aun estoy afuera!" speaker="0" flags="SonarMedium" speakertags="crazy,joker" />
+  <Conversation line="¡Alguien apague el sonar!" speaker="0" flags="SonarMedium" />
+  <Conversation line="¡Cuidado con el sonar activo, Estoy dentro del rango!" speaker="0" flags="SonarLow" />
+  <Conversation line="¡Atentos, estoy en el rango del sonar activo!" speaker="0" flags="SonarLow" />
+  <!-- Brain hemorrhage low -->
+  <Conversation line="Hey, no me siento bien..." speaker="0" flags="BrainHemorrhageLow" />
+  <Conversation line="Creo que algo anda mal conmigo..." speaker="0" flags="BrainHemorrhageLow" speakertags="fearful" />
+  <Conversation line="Me duele la cabeza..." speaker="0" flags="BrainHemorrhageLow" />
+  <Conversation line="¿Soy solo yo, o las luces parpadean?" speaker="0" flags="BrainHemorrhageLow" />
+  <Conversation line="¿Por que todo esta borroso de repente?" speaker="0" flags="BrainHemorrhageLow" />
+  <Conversation line="Algo anda mal..." speaker="0" flags="BrainHemorrhageLow" />
+  <!-- Brain hemorrhage medium -->
+  <Conversation line="Necesito Cortizida, por favor..." speaker="0" flags="BrainHemorrhageMedium" allowedjobs="medicaldoctor" />
+  <Conversation line="¡Alguien ayúdeme!" speaker="0" flags="BrainHemorrhageMedium" speakertags="fearful" />
+  <Conversation line="¿Que me está pasando?" speaker="0" flags="BrainHemorrhageMedium" />
+  <Conversation line="Oh dios, mi cabeza..." speaker="0" flags="BrainHemorrhageMedium" />
+  <Conversation line="¿Oh dios, esta empeorando!" speaker="0" flags="BrainHemorrhageMedium" speakertags="crazy,fearful" />
+  <Conversation line="Mi cabeza..." speaker="0" flags="BrainHemorrhageMedium" />
+  <Conversation line="¡Sigo chocando contra cosas!" speaker="0" flags="BrainHemorrhageMedium" speakertags="crazy,fearful,brokenenglish" />
+  <!-- Brain hemorrhage high -->
+  <Conversation line="Recuerdenme..." speaker="0" flags="BrainHemorrhageHigh" />
+  <Conversation line="Estoy acabado..." speaker="0" flags="BrainHemorrhageHigh" speakertags="fearful" />
+  <Conversation line="Adiós." speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough" />
+  <Conversation line="Cortizida... por favor..." speaker="0" flags="BrainHemorrhageHigh" allowedjobs="medicaldoctor" />
+  <Conversation line="Por favor..." speaker="0" flags="BrainHemorrhageHigh" />
+  <Conversation line="Ayuda..." speaker="0" flags="BrainHemorrhageHigh" />
+  <Conversation line="¿Quien..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="Apagó..." speaker="0" flags="BrainHemorrhageHigh" />
+    <Conversation line="las... luces?.." speaker="0" flags="BrainHemorrhageHigh" />
+  </Conversation>
+  <Conversation line="¿Donde..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="estoy?..." speaker="0" flags="BrainHemorrhageHigh" />
+  </Conversation>
+  <Conversation line="¿Papá?..." speaker="0" flags="BrainHemorrhageHigh" speakertags="joker,fearful">
+    <Conversation line="pero como?..." speaker="0" flags="BrainHemorrhageHigh" speakertags="joker,fearful" />
+  </Conversation>
+  <Conversation line="No puedo..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="más..." speaker="0" flags="BrainHemorrhageHigh" speakertags="joker,rude" />
+  </Conversation>
+  <Conversation line="Salven..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="me..." speaker="0" flags="BrainHemorrhageHigh" />
+  </Conversation>
+  <Conversation line="¿Fui..." speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough">
+    <Conversation line="suficiente?.." speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough" />
+  </Conversation>
+  <Conversation line="No me..." speaker="0" flags="BrainHemorrhageHigh" speakertags="crazy,fearful,joker">
+    <Conversation line="olviden..." speaker="0" flags="BrainHemorrhageHigh" speakertags="crazy,fearful,joker" />
+  </Conversation>
+  <Conversation line="Esta..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="tan oscuro..." speaker="0" flags="BrainHemorrhageHigh" />
+  </Conversation>
+  <Conversation line="Tengo..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="frío..." speaker="0" flags="BrainHemorrhageHigh" />
+  </Conversation>
+  <Conversation line="Buen..." speaker="0" flags="BrainHemorrhageHigh" speakertags="rude">
+    <Conversation line="viaje..." speaker="0" flags="BrainHemorrhageHigh" speakertags="rude" />
+  </Conversation>
+  <Conversation line="Ayuden..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="me..." speaker="0" flags="BrainHemorrhageHigh">
+      <Conversation line="por favor..." speaker="0" flags="BrainHemorrhageHigh" speakertags="fearful" />
+    </Conversation>
+  </Conversation>
+  <Conversation line="No me..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="dejen..." speaker="0" flags="BrainHemorrhageHigh">
+      <Conversation line="morir..." speaker="0" flags="BrainHemorrhageHigh" />
+    </Conversation>
+  </Conversation>
+  <Conversation line="It's..." speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough">
+    <Conversation line="my..." speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough">
+      <Conversation line="time..." speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough" />
+    </Conversation>
+  </Conversation>
+  <Conversation line="No puedo..." speaker="0" flags="BrainHemorrhageHigh" speakertags="brokenenglish,crazy,joker">
+    <Conversation line="recordar..." speaker="0" flags="BrainHemorrhageHigh" speakertags="brokenenglish,crazy,joker">
+      <Conversation line="mis últimas palabras..." speaker="0" flags="BrainHemorrhageHigh" speakertags="brokenenglish,crazy,joker" />
+    </Conversation>
+  </Conversation>
+  <Conversation line="Ya..." speaker="0" flags="BrainHemorrhageHigh" speakertags="crazy,joker,tough,rude">
+    <Conversation line="era..." speaker="0" flags="BrainHemorrhageHigh" speakertags="crazy,joker,tough,rude">
+      <Conversation line="hora..." speaker="0" flags="BrainHemorrhageHigh" speakertags="crazy,joker,tough,rude" />
+    </Conversation>
+  </Conversation>
+</Conversations>

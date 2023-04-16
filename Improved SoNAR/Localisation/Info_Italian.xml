@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Italian" nowhitespace="false" translatedname="Italiano (Real Sonar)">
+  <loadingscreentip>L'intensità di un segnale sonar attivo è abbastanza potente da far bollire l'acqua attorno ai trasduttori.</loadingscreentip>
+  <loadingscreentip>Si consiglia di indossare una muta da sub anecoica quando si lavora intorno a un sottomarino. Una tipica muta da sub non ti proteggerà dal sonar attivo.</loadingscreentip>
+  <loadingscreentip>Il sonar attivo di un sottomarino può raggiungere volumi di 235 dB, che è circa 724 volte più forte e 3,16 miliardi di volte l'intensità di un motore a reazione.</loadingscreentip>
+  <loadingscreentip>Le onde sonore viaggiano quattro volte più lontano nell'acqua. I suoni a bassa frequenza, come i ping del sonar attivo di un sottomarino, penetrano ancora di più.</loadingscreentip>
+  <loadingscreentip>Quando il suono si propaga dall'acqua all'aria, l'intensità si riduce di 80 dB (256 volte più silenziosa). Questo, combinato con lo scafo piastrellato anecoico di un sottomarino, protegge il personale dal sonar attivo.</loadingscreentip>
+  <loadingscreentip>Gli scafi dei sottomarini sono rivestiti con piastrelle anecoiche, piastrelle di gomma contenenti migliaia di minuscoli vuoti, progettati per assorbire il sonar attivo e attenuare i suoni emessi dall'interno della nave.</loadingscreentip>
+  <loadingscreentip>A distanza ravvicinata, l'intensità di un segnale sonar attivo è sufficiente per rompere gli organi e causare un'emorragia interna.</loadingscreentip>
+  <loadingscreentip>Assicurati che nessuno dei tuoi compagni sia al di fuori del sottomarino prima di abilitare il sonar.</loadingscreentip>
+  <loadingscreentip>All'interno delle mura di un sottomarino, l'equipaggio è protetto dal suo sonar attivo. Tuttavia, quella schermatura scompare una volta che lo scafo viene sfondato e l'acqua scorre all'interno.</loadingscreentip>
+  <loadingscreentip>Spegnere il sonar se lo scafo è rotto. I tuoi ingegneri avranno difficoltà a riparare lo scafo se i loro timpani sono rotti.</loadingscreentip>
+  <loadingscreentip>Fai attenzione quando ti immergi vicino a un sottomarino. Un singolo ping del sonar può causare perdita dell'udito, danni ai tessuti e, in casi estremi, rotture di organi ed emorragie cerebrali.</loadingscreentip>
+  <loadingscreentip>Si consiglia di portare una muta da sub anecoica quando si attivano le stazioni radiofaro. Sebbene non siano potenti come quello di un sottomarino, un sonar proveniente da un faro può comunque causare gravi lesioni.</loadingscreentip>
+  <loadingscreentip>La cortizide è l'unico modo per salvare un paziente da un'emorragia cerebrale indotta dal sonar.</loadingscreentip>
+  <loadingscreentip>L'estratto di manna può fermare temporaneamente la progressione di un'emorragia cerebrale indotta dal sonar. Dopo di che, Cortizide è l'unica opzione.</loadingscreentip>
+  <loadingscreentip>Non è consigliabile somministrare l'estratto di manna se il paziente ne ha già tracce nel proprio sistema.</loadingscreentip>
+  <loadingscreentip>Stare lontano dai serbatoi di zavorra quando il sonar attivo è abilitato. Le onde sonore possono facilmente propagarsi attraverso i tubi pieni d'acqua.</loadingscreentip>
+  <loadingscreentip>Se non trattato, il danno da vibrazione del sonar attivo può causare danni ai nervi e rabdomiolisi nei muscoli interessati.</loadingscreentip>
+  <loadingscreentip>Con i sottomarini che sono uno stile di vita in Europa, la medicina è avanzata per curare lesioni legate al sonar. Innesti intelligenti per organi perforati, Cortizide per emorragie cerebrali ed Estratto di manna per danni tissutali.</loadingscreentip>
+  <!-- Active sonar -->
+  <afflictionname.activesonar>Sonar sottomarino</afflictionname.activesonar>
+  <!-- Beacon station sonar -->
+  <afflictionname.activesonarbeacon>Sonar stazion radiofaro</afflictionname.activesonarbeacon>
+  <!-- Acoustic Trauma -->
+  <afflictionname.acoustictrauma>Acoustic trauma</afflictionname.acoustictrauma>
+  <afflictiondescription.acoustictrauma>I timpani del paziente sono stati perforati, causando sanguinamento e tinnito.</afflictiondescription.acoustictrauma>
+  <afflictiondescription.acoustictrauma.self>Ti fischiano le orecchie e gocciola sangue, ti senti stordito e confuso.</afflictiondescription.acoustictrauma.self>
+  <afflictioncauseofdeath.acoustictrauma>Morte otogena</afflictioncauseofdeath.acoustictrauma>
+  <afflictioncauseofdeathself.acoustictrauma>Sei morto dissanguato dalle orecchie.</afflictioncauseofdeathself.acoustictrauma>
+  <!-- Vibration Damage -->
+  <afflictionname.vibrationdamage>Vibration damage</afflictionname.vibrationdamage>
+  <afflictiondescription.vibrationdamage>Il paziente soffre di lievi danni al sistema circolatorio causati dalle intense vibrazioni del sonar.</afflictiondescription.vibrationdamage>
+  <afflictiondescription.vibrationdamage.medium>Il paziente ha subito gravi danni alle arterie, ai nervi e ai muscoli.</afflictiondescription.vibrationdamage.medium>
+  <afflictiondescription.vibrationdamage.high>Le viscere del paziente sono a brandelli. Ci sono danni devastanti alle loro arterie, nervi, muscoli e ossa.</afflictiondescription.vibrationdamage.high>
+  <afflictiondescription.vibrationdamage.self>Senti un dolore continuo in tutto il corpo. La tua pelle formicola come se avessi spilli e aghi.</afflictiondescription.vibrationdamage.self>
+  <afflictiondescription.vibrationdamage.medium.self>Le tue estremità sono intorpidite e senti dolori acuti delle dimensioni di un ago in tutto il corpo.</afflictiondescription.vibrationdamage.medium.self>
+  <afflictiondescription.vibrationdamage.high.self>Non riesci a sentire i tuoi arti. Tutto quello che senti è un dolore lancinante, come se ogni cellula del tuo corpo fosse stata fatta a pezzi.</afflictiondescription.vibrationdamage.high.self>
+  <afflictioncauseofdeath.vibrationdamage>Danno interno catastrofico</afflictioncauseofdeath.vibrationdamage>
+  <afflictioncauseofdeathself.vibrationdamage>Le tue viscere sono state fatte a pezzi.</afflictioncauseofdeathself.vibrationdamage>
+  <!-- Nerve Damage -->
+  <afflictionname.nervedamage>Nerve damage</afflictionname.nervedamage>
+  <afflictiondescription.nervedamage>I nervi del paziente sono stati danneggiati dalle vibrazioni. Le attività quotidiane sono più difficili.</afflictiondescription.nervedamage>
+  <afflictiondescription.nervedamage.self>Le tue mani si sentono intorpidite, la tua goffaggine ti fa lavorare in modo meno efficiente</afflictiondescription.nervedamage.self>
+  <!-- Rhabdomyolysis -->
+  <afflictionname.muscledamage>Rhabdomyolysis</afflictionname.muscledamage>
+  <afflictiondescription.muscledamage>I muscoli del paziente hanno iniziato a rompersi ea riversarsi nel flusso sanguigno.</afflictiondescription.muscledamage>
+  <afflictiondescription.muscledamage.high>La maggior parte dei muscoli del paziente è necrotica e quantità pericolose di proteine ??si stanno riversando nel flusso sanguigno.</afflictiondescription.muscledamage.high>
+  <afflictiondescription.muscledamage.self>Ti senti debole, le tue gambe sono gonfie e doloranti.</afflictiondescription.muscledamage.self>
+  <afflictiondescription.muscledamage.high.self>Le tue gambe si sentono fragili. Camminare è quasi impossibile e il dolore è incommensurabile.</afflictiondescription.muscledamage.high.self>
+  <afflictioncauseofdeath.muscledamage>Kidney failure</afflictioncauseofdeath.muscledamage>
+  <afflictioncauseofdeathself.muscledamage>I tuoi muscoli hanno rilasciato una quantità letale di proteine ??nel flusso sanguigno.</afflictioncauseofdeathself.muscledamage>
+  <!-- Ruptured Lung -->
+  <afflictionname.rupturedlung>Ruptured lung</afflictionname.rupturedlung>
+  <afflictiondescription.rupturedlung>I polmoni del paziente si sono rotti a causa delle vibrazioni del sonar.</afflictiondescription.rupturedlung>
+  <afflictiondescription.rupturedlung.high>I polmoni del paziente sono stati lacerati da vibrazioni estreme, che hanno provocato ipossiemia e un'alta probabilità di asfissia.</afflictiondescription.rupturedlung.high>
+  <afflictiondescription.rupturedlung.self>C'è un forte dolore al petto. La respirazione è più difficile.</afflictiondescription.rupturedlung.self>
+  <afflictiondescription.rupturedlung.high.self>Riesci a malapena a respirare tra la tosse e il sangue, ogni respiro incontra agonia.</afflictiondescription.rupturedlung.high.self>
+  <afflictioncauseofdeath.rupturedlung>Annegato nel suo stesso sangue.</afflictioncauseofdeath.rupturedlung>
+  <afflictioncauseofdeathself.rupturedlung>Sei annegato nel tuo stesso sangue a causa di gravi danni ai polmoni.</afflictioncauseofdeathself.rupturedlung>
+  <!-- Brain Hemorrhage -->
+  <afflictionname.brainhemorrhage>Brain hemorrhage</afflictionname.brainhemorrhage>
+  <afflictiondescription.brainhemorrhage>Il cervello del paziente sta sanguinando per l'esposizione al sonar attivo. Per fortuna non sembra peggiorare.</afflictiondescription.brainhemorrhage>
+  <afflictiondescription.brainhemorrhage.medium>Ampie porzioni del cervello del paziente si sono sciolte in melma. Il cervello sta annegando nel suo stesso sangue, e sta solo peggiorando.</afflictiondescription.brainhemorrhage.medium>
+  <afflictiondescription.brainhemorrhage.high>Il cervello del paziente è stato fuso dal sonar attivo.</afflictiondescription.brainhemorrhage.high>
+  <afflictiondescription.brainhemorrhage.self>La tua vista è offuscata e la tua mente è annebbiata.</afflictiondescription.brainhemorrhage.self>
+  <afflictiondescription.brainhemorrhage.medium.self>Non puoi pensare. Vedi lampi e senti il sapore di metallo. Vorresti urlare, ma non puoi. Stai perdendo il controllo di tutte le tue funzioni motorie e la realtà sta lentamente scivolando via.</afflictiondescription.brainhemorrhage.medium.self>
+  <afflictioncauseofdeath.brainhemorrhage>Brain death</afflictioncauseofdeath.brainhemorrhage>
+  <afflictioncauseofdeathself.brainhemorrhage>Il tuo cervello è stato sciolto dal sonar attivo.</afflictioncauseofdeathself.brainhemorrhage>
+  <!-- Manna Influence -->
+  <afflictionname.mannainjection>Influenza della manna</afflictionname.mannainjection>
+  <afflictiondescription.mannainjection>Questo arto è sotto l'influenza curativa dell'estratto di manna.</afflictiondescription.mannainjection>
+  <afflictiondescription.mannainjection.self>Senti una leggera pressione e un calore confortante sotto la pelle.</afflictiondescription.mannainjection.self>
+  <!-- Manna Overdose -->
+  <afflictionname.mannaoverdose>Overdose di manna</afflictionname.mannaoverdose>
+  <afflictiondescription.mannaoverdose>Il paziente ha una quantità pericolosa di Manna nel sangue.</afflictiondescription.mannaoverdose>
+  <afflictiondescription.mannaoverdose.self>Ti senti fantastico.</afflictiondescription.mannaoverdose.self>
+  <afflictioncauseofdeath.mannaoverdose>Morto in estasi</afflictioncauseofdeath.mannaoverdose>
+  <afflictioncauseofdeathself.mannaoverdose>Ce l'hai fatta, benvenuto in paradiso.</afflictioncauseofdeathself.mannaoverdose>
+  <!-- Photopsia -->
+  <afflictionname.photopsia>Fotopsia</afflictionname.photopsia>
+  <afflictiondescription.photopsia>Il paziente sta vivendo anomalie visive sotto forma di luci tremolanti e lampi luminosi.</afflictiondescription.photopsia>
+  <afflictiondescription.photopsia.self>Le luci sembrano tremolare, vedi delle cose? Lampi di luce riempiono la tua visione periferica. Qualcosa è decisamente sbagliato.</afflictiondescription.photopsia.self>
+  <!-- Ataxia -->
+  <afflictionname.ataxia>Atassia</afflictionname.ataxia>
+  <afflictiondescription.ataxia>Il cervelletto del paziente è paralizzato, provocando spasmi muscolari involontari e una terribile coordinazione.</afflictiondescription.ataxia>
+  <afflictiondescription.ataxia.self>I tuoi muscoli sembrano avere una mente propria. Continui a barcollare in avanti senza preavviso e quando provi a camminare, torni al punto di partenza.</afflictiondescription.ataxia.self>
+  <!-- Aphasia -->
+  <afflictionname.aphasia>Afasia</afflictionname.aphasia>
+  <afflictiondescription.aphasia>Il paziente ha subito un danno all'area Broca del cervello, rendendolo incapace di pronunciare frasi complete.</afflictiondescription.aphasia>
+  <afflictiondescription.aphasia.self>Non sei in grado di finire frasi di base e hai estrema difficoltà a formare le parole, ricorrendo a volte a borbottii incoerenti.</afflictiondescription.aphasia.self>
+  <!-- Blindness -->
+  <afflictionname.opticneuritis>Neurite ottica</afflictionname.opticneuritis>
+  <afflictiondescription.opticneuritis>Il lobo occipitale del paziente è gravemente danneggiato, periodicamente accecando e disorientando il paziente.</afflictiondescription.opticneuritis>
+  <afflictiondescription.opticneuritis.self>La tua vista è periodicamente offuscata dall'oscurità. È questa la fine?</afflictiondescription.opticneuritis.self>
+  <!-- Treatments -->
+  <entityname.manna>estratto di manna</entityname.manna>
+  <entitydescription.manna>Liquido miracoloso che fonde emoglobine umane con plasma alieno per sfruttare la resilienza naturale e le proprietà curative degli abitanti sottomarini di Europa. Utilizzato per il trattamento di danni interni ai sistemi muscolare e nervoso ed è in grado di arrestare temporaneamente un'emorragia cerebrale. Va notato che l'uso ripetuto produce rendimenti decrescenti e rischi di overdose.</entitydescription.manna>
+  <entityname.cortizide>Cortizide</entityname.cortizide>
+  <entitydescription.cortizide>Una potente miscela di farmaci per alleviare il dolore e la pressione con una serie di sgradevoli effetti collaterali. Tipicamente iniettato nel cranio come ultima risorsa per curare un'emorragia cerebrale.
+ATTENZIONE: la somministrazione in un ambiente cerebrale sano può causare un pericoloso accumulo di pressione nel cranio.</entitydescription.cortizide>
+  <entityname.smartgraft>Innesto intelligente</entityname.smartgraft>
+  <entitydescription.smartgraft>Tessuto connettivo geneticamente modificato che eredita il DNA del paziente per stimolare la rigenerazione di sistemi anatomici complessi. Tipicamente utilizzato per la riparazione di organi perforati.</entitydescription.smartgraft>
+  <!-- Items -->
+  <entityname.anechoicdivingsuit>Muta da sub anecoica</entityname.anechoicdivingsuit>
+  <entitydescription.anechoicdivingsuit>Una tuta furtiva e leggera progettata per assorbire le onde sonore del sonar attivo con la sua placcatura anecoica. Offre una protezione minore contro i danni e può resistere a pressioni fino a 6.000 metri.</entitydescription.anechoicdivingsuit>
+  <entityname.navremote>Telecomando di navigazione</entityname.navremote>
+  <entitydescription.navremote>Un dispositivo portatile che può essere utilizzato per controllare a distanza il sonar e i motori del sottomarino.</entitydescription.navremote>
+  <!-- Menu -->
+  <realsonarsettings>Impostazioni Real Sonar</realsonarsettings>
+  <sonarpingvolume>Volume del Segnale del Sonar</sonarpingvolume>
+  <airpingvolume>Volume del segnale dell'Aria</airpingvolume>
+  <waterpingvolume>Volume del segnale dell'acqua</waterpingvolume>
+  <suitpingvolume>Volume del segnale della Tuta</suitpingvolume>
+  <tinnitusvolume>Volume del Tintinnio</tinnitusvolume>
+  <distortionvolume>Volume della Distorsione</distortionvolume>
+  <!-- Dialogue -->
+  <dialoggetanechoicsuit>Ho bisogno di attrezzatura subacquea anecoica!</dialoggetanechoicsuit>
+  <dialoggetanechoicsuit>Mi serve una tuta anecoica per riparare con il sonar acceso!</dialoggetanechoicsuit>
+  <dialoggetanechoicsuit>Devo trovare una tuta anecoica!</dialoggetanechoicsuit>
+  <dialogcantfindanechoicsuit>Non riesco a trovare una tuta anecoica! Spegni il sonar!</dialogcantfindanechoicsuit>
+  <dialogcantfindanechoicsuit>Non ci sono tute anecoiche!Non andrò lì dentro!</dialogcantfindanechoicsuit>
+  <dialogcantfindanechoicsuit>Non andrò lì fino a quando il sonar non sarà spento!</dialogcantfindanechoicsuit>
+  <dialogcantfindanechoicsuit>Non ho nessuna protezione!Spegni il Sonar!</dialogcantfindanechoicsuit>
+  <dialogcantfindanechoicsuit>Non posso fare riparazioni se il sonar rimane attivo!</dialogcantfindanechoicsuit>
+  <dialogturnoffsonar>Spegni il sonar!</dialogturnoffsonar>
+  <dialogturnoffsonar>Le mie orecchie stanno sanguinando per quel maledetto sonar!</dialogturnoffsonar>
+  <dialogturnoffsonar>Isolate quel sonar!</dialogturnoffsonar>
+  <dialogturnoffsonar>Sono nell'area del sonar!</dialogturnoffsonar>
+  <dialogturnoffsonar>Gesù, quel sonar è forte!</dialogturnoffsonar>
+  <dialogturnoffsonar>Sono in acqua, disattiva il sonar!</dialogturnoffsonar>
+  <dialogturnoffsonar>Oh dio,disattivate quel sonar!</dialogturnoffsonar>
+  <dialogturnoffsonar>Qualcuno spenga il sonar!</dialogturnoffsonar>
+</infotexts>

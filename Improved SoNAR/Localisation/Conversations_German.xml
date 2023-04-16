@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Conversations identifier="sonarconversations" Language="German">
+  <!-- Sonar-->
+  <Conversation line="Mach das Sonar aus!" speaker="0" flags="SonarHigh" />
+  <Conversation line="Meine Ohren bluten vom scheiss Sonar!" speaker="0" flags="SonarHigh" speakertags="rude" />
+  <Conversation line="Schalt das Sonar ab!" speaker="0" flags="SonarHigh" />
+  <Conversation line="Ich bin im Sonarfeld!" speaker="0" flags="SonarHigh" />
+  <Conversation line="Himmel, Arsch und Zwirn, ist das Sonar laut!" speaker="0" flags="SonarHigh" />
+  <Conversation line="Ich bin im Wasser, mach das Sonar aus!" speaker="0" flags="SonarHigh" speakertags="professional,tough" />
+  <Conversation line="Herrgott nochmal, mach das aus!" speaker="0" flags="SonarHigh" speakertags="fearful" />
+  <Conversation line="Ich bin noch hier draussen, verdammt nochmal!" speaker="0" flags="SonarMedium" speakertags="crazy,joker" />
+  <Conversation line="Irgendwer, mach das aus!" speaker="0" flags="SonarMedium" />
+  <Conversation line="Ich bin in Reichweite vom Sonar!" speaker="0" flags="SonarLow" />
+  <Conversation line="Achtung, ich bin in der Reichweite vom Sonar" speaker="0" flags="SonarLow" />
+  <!-- Brain hemorrhage low -->
+  <Conversation line="Mir gehts nicht so gut..." speaker="0" flags="BrainHemorrhageLow" />
+  <Conversation line="Ich glaub, irgendwas stimmt mit mir nicht.." speaker="0" flags="BrainHemorrhageLow" speakertags="fearful" />
+  <Conversation line="Ich hab Kopfweh..." speaker="0" flags="BrainHemorrhageLow" />
+  <Conversation line="Bin das nur ich, oder flackert das Licht..?" speaker="0" flags="BrainHemorrhageLow" />
+  <Conversation line="Why is everything blurry all of a sudden?" speaker="0" flags="BrainHemorrhageLow" />
+  <Conversation line="Irgendwas stimmt nicht..." speaker="0" flags="BrainHemorrhageLow" />
+  <!-- Brain hemorrhage medium -->
+  <Conversation line="Ich brauche Kortizid!" speaker="0" flags="BrainHemorrhageMedium" allowedjobs="medicaldoctor" />
+  <Conversation line="Hilf mir, Irgendwer!" speaker="0" flags="BrainHemorrhageMedium" speakertags="fearful" />
+  <Conversation line="Was passiert mit mir..?" speaker="0" flags="BrainHemorrhageMedium" />
+  <Conversation line="Mein Kopf.." speaker="0" flags="BrainHemorrhageMedium" />
+  <Conversation line="Es wird schlimmer.." speaker="0" flags="BrainHemorrhageMedium" speakertags="crazy,fearful" />
+  <Conversation line="Mein Kopf tut weh..." speaker="0" flags="BrainHemorrhageMedium" />
+  <Conversation line="Ich knall überall rein!" speaker="0" flags="BrainHemorrhageMedium" speakertags="crazy,fearful,brokenenglish" />
+  <!-- Brain hemorrhage high -->
+  <Conversation line="Vergisst mich... nicht.." speaker="0" flags="BrainHemorrhageHigh" />
+  <Conversation line="Ich bin am Ende..." speaker="0" flags="BrainHemorrhageHigh" speakertags="fearful" />
+  <Conversation line="Auf wiedersehen..." speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough" />
+  <Conversation line="Kor..Kortizid.." speaker="0" flags="BrainHemorrhageHigh" allowedjobs="medicaldoctor" />
+  <Conversation line="Bitte..." speaker="0" flags="BrainHemorrhageHigh" />
+  <Conversation line="Hilfe..." speaker="0" flags="BrainHemorrhageHigh" />
+  <Conversation line="Wer..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="Hat die Lichter..." speaker="0" flags="BrainHemorrhageHigh" />
+    <Conversation line="..Ausgeschaltet..?" speaker="0" flags="BrainHemorrhageHigh" />
+  </Conversation>
+  <Conversation line="Wo..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="Bin..." speaker="0" flags="BrainHemorrhageHigh" />
+    <Conversation line="Ich..?" speaker="0" flags="BrainHemorrhageHigh" />
+  </Conversation>
+  <Conversation line="Papa..?" speaker="0" flags="BrainHemorrhageHigh" speakertags="joker,fearful">
+    <Conversation line="Wie...?" speaker="0" flags="BrainHemorrhageHigh" speakertags="joker,fearful" />
+  </Conversation>
+  <Conversation line="Ich bin durch..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="Endlich...." speaker="0" flags="BrainHemorrhageHigh" speakertags="joker,rude" />
+  </Conversation>
+  <Conversation line="Helft..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="Mir..." speaker="0" flags="BrainHemorrhageHigh" />
+  </Conversation>
+  <Conversation line="War ich..." speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough">
+    <Conversation line="gut..?" speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough" />
+  </Conversation>
+  <Conversation line="Vergisst.." speaker="0" flags="BrainHemorrhageHigh" speakertags="crazy,fearful,joker">
+    <Conversation line="Mich nicht..." speaker="0" flags="BrainHemorrhageHigh" speakertags="crazy,fearful,joker" />
+  </Conversation>
+  <Conversation line="So..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="Dunkel..." speaker="0" flags="BrainHemorrhageHigh" />
+  </Conversation>
+  <Conversation line="So..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="Kalt..." speaker="0" flags="BrainHemorrhageHigh" />
+  </Conversation>
+  <Conversation line="Endlich..." speaker="0" flags="BrainHemorrhageHigh" speakertags="rude">
+    <Conversation line="Frei...." speaker="0" flags="BrainHemorrhageHigh" speakertags="rude" />
+  </Conversation>
+  <Conversation line="Helf..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="Mir..." speaker="0" flags="BrainHemorrhageHigh">
+      <Conversation line="Bitte..." speaker="0" flags="BrainHemorrhageHigh" speakertags="fearful" />
+    </Conversation>
+  </Conversation>
+  <Conversation line="Ich will..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="Nicht.." speaker="0" flags="BrainHemorrhageHigh">
+      <Conversation line="Sterben..." speaker="0" flags="BrainHemorrhageHigh" />
+    </Conversation>
+  </Conversation>
+  <Conversation line="Es...." speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough">
+    <Conversation line="Ist..." speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough">
+      <Conversation line="Soweit..." speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough" />
+    </Conversation>
+  </Conversation>
+  <Conversation line="Was waren..." speaker="0" flags="BrainHemorrhageHigh" speakertags="brokenenglish,crazy,joker">
+    <Conversation line="Meine..." speaker="0" flags="BrainHemorrhageHigh" speakertags="brokenenglish,crazy,joker">
+      <Conversation line="Letzten Worte..." speaker="0" flags="BrainHemorrhageHigh" speakertags="brokenenglish,crazy,joker" />
+    </Conversation>
+  </Conversation>
+  <Conversation line="Endlich" speaker="0" flags="BrainHemorrhageHigh" speakertags="crazy,joker,tough,rude">
+    <Conversation line="Verdammt" speaker="0" flags="BrainHemorrhageHigh" speakertags="crazy,joker,tough,rude">
+      <Conversation line="Soweit..." speaker="0" flags="BrainHemorrhageHigh" speakertags="crazy,joker,tough,rude" />
+    </Conversation>
+  </Conversation>
+  <!-- Bonus Lines -->
+  <Conversation line="Wann machen wir Kaffeekränzen?" speaker="0" maxintensity="0.2" />
+  <Conversation line="Wenn das Sonar nicht gleich aus ist, klatscht es!" speaker="0" flags="SonarHigh" speakertags="rude,tough,joker" />
+  <Conversation line="Wann wurde das Schiff zuletzt vom TÜV angeschaut?" speaker="0" minintensity="0.3" speakertags="joker">
+    <Conversation line="Keine ahnung." speaker="1" />
+    <Conversation line="Wieso?" speaker="1" speakertags="crazy,joker" />
+    <Conversation line="Ist doch egal." speaker="1" speakertags="professional,tough,rude" />
+  </Conversation>
+  <Conversation line="Wette: Wer am längstem sich an das Sonar klebt, kriegt 10 mark!" speaker="0" maxintensity="0.2" speakertags="joker,crazy">
+    <Conversation line="Ich bin eh privat versichert." speaker="1" speakertags="joker,crazy" />
+    <Conversation line="Kostet Kortizid soviel?" speaker="1" />
+    <Conversation line="Aber WARUM?" speaker="1" speakertags="professional,tough,rude" />
+  </Conversation>
+</Conversations>

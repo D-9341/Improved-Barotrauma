@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Conversations identifier="sonarconversations" Language="Japanese">
+  <!-- Sonar-->
+  <Conversation line="ソナーを切れ！" speaker="0" flags="SonarHigh" />
+  <Conversation line="あのソナーで耳から血が出そうだ！" speaker="0" flags="SonarHigh" speakertags="rude" />
+  <Conversation line="ソナーを止めろ！" speaker="0" flags="SonarHigh" />
+  <Conversation line="ソナーに引っかかった！？" speaker="0" flags="SonarHigh" />
+  <Conversation line="なんだ、あのソナー音は！？" speaker="0" flags="SonarHigh" />
+  <Conversation line="水中にいるんだ、ソナーをオフにしろ！" speaker="0" flags="SonarHigh" speakertags="professional,tough" />
+  <Conversation line="ソナーをオフに！" speaker="0" flags="SonarHigh" speakertags="fearful" />
+  <Conversation line="おい、俺はまだここにいるぞ！" speaker="0" flags="SonarMedium" speakertags="crazy,joker" />
+  <Conversation line="誰かソナーを止めて！" speaker="0" flags="SonarMedium" />
+  <Conversation line="アクティブソナーを見ろ、射程距離に入った！" speaker="0" flags="SonarLow" />
+  <Conversation line="気をつけろ、ソナー範囲内だ！" speaker="0" flags="SonarLow" />
+  <!-- Brain hemorrhage low -->
+  <Conversation line="ちょっと、体調が…。" speaker="0" flags="BrainHemorrhageLow" />
+  <Conversation line="何か間違っているような…。" speaker="0" flags="BrainHemorrhageLow" speakertags="fearful" />
+  <Conversation line="頭痛がする…。" speaker="0" flags="BrainHemorrhageLow" />
+  <Conversation line="照明がチカチカするのは私だけでしょうか？" speaker="0" flags="BrainHemorrhageLow" />
+  <Conversation line="なんでいきなり、すべてぼやけて見える？" speaker="0" flags="BrainHemorrhageLow" />
+  <Conversation line="何か変だな…。" speaker="0" flags="BrainHemorrhageLow" />
+  <!-- Brain hemorrhage medium -->
+  <Conversation line="コルチザイドを用意して…。" speaker="0" flags="BrainHemorrhageMedium" allowedjobs="medicaldoctor" />
+  <Conversation line="誰か助けて！" speaker="0" flags="BrainHemorrhageMedium" speakertags="fearful" />
+  <Conversation line="私に何が起きた！？" speaker="0" flags="BrainHemorrhageMedium" />
+  <Conversation line="神様、頭が…。" speaker="0" flags="BrainHemorrhageMedium" />
+  <Conversation line="神よ、悪化しています…！" speaker="0" flags="BrainHemorrhageMedium" speakertags="crazy,fearful" />
+  <Conversation line="私の頭が…。" speaker="0" flags="BrainHemorrhageMedium" />
+  <Conversation line="モノにぶつかりまくる！" speaker="0" flags="BrainHemorrhageMedium" speakertags="crazy,fearful,brokenenglish" />
+  <!-- Brain hemorrhage high -->
+  <Conversation line="覚えていてくれ..." speaker="0" flags="BrainHemorrhageHigh" />
+  <Conversation line="もうおしまいだ..." speaker="0" flags="BrainHemorrhageHigh" speakertags="fearful" />
+  <Conversation line="さらばだ。" speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough" />
+  <Conversation line="コルチザイドを...頼む..." speaker="0" flags="BrainHemorrhageHigh" allowedjobs="medicaldoctor" />
+  <Conversation line="頼む..." speaker="0" flags="BrainHemorrhageHigh" />
+  <Conversation line="助けて..." speaker="0" flags="BrainHemorrhageHigh" />
+  <Conversation line="誰..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="切れ..." speaker="0" flags="BrainHemorrhageHigh" />
+    <Conversation line="…光...？" speaker="0" flags="BrainHemorrhageHigh" />
+  </Conversation>
+  <Conversation line="今..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="どこに..." speaker="0" flags="BrainHemorrhageHigh" />
+    <Conversation line="いる？" speaker="0" flags="BrainHemorrhageHigh" />
+  </Conversation>
+  <Conversation line="父さん...？" speaker="0" flags="BrainHemorrhageHigh" speakertags="joker,fearful">
+    <Conversation line="でもなんで...？" speaker="0" flags="BrainHemorrhageHigh" speakertags="joker,fearful" />
+  </Conversation>
+  <Conversation line="ようやく..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="完成だ..." speaker="0" flags="BrainHemorrhageHigh" speakertags="joker,rude" />
+  </Conversation>
+  <Conversation line="助..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="けて..." speaker="0" flags="BrainHemorrhageHigh" />
+  </Conversation>
+  <Conversation line="私は..." speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough">
+    <Conversation line="よくやっただろうか..." speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough" />
+  </Conversation>
+  <Conversation line="私を..." speaker="0" flags="BrainHemorrhageHigh" speakertags="crazy,fearful,joker">
+    <Conversation line="忘れないでくれ..." speaker="0" flags="BrainHemorrhageHigh" speakertags="crazy,fearful,joker" />
+  </Conversation>
+  <Conversation line="とても..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="真っ暗だ..." speaker="0" flags="BrainHemorrhageHigh" />
+  </Conversation>
+  <Conversation line="ああ..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="とても寒い..." speaker="0" flags="BrainHemorrhageHigh" />
+  </Conversation>
+  <Conversation line="いいぞ..." speaker="0" flags="BrainHemorrhageHigh" speakertags="rude">
+    <Conversation line="厄介払いだ..." speaker="0" flags="BrainHemorrhageHigh" speakertags="rude" />
+  </Conversation>
+  <Conversation line="助けて..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="私を..." speaker="0" flags="BrainHemorrhageHigh">
+      <Conversation line="お願い..." speaker="0" flags="BrainHemorrhageHigh" speakertags="fearful" />
+    </Conversation>
+  </Conversation>
+  <Conversation line="私を..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="見殺しに..." speaker="0" flags="BrainHemorrhageHigh">
+      <Conversation line="しないで..." speaker="0" flags="BrainHemorrhageHigh" />
+    </Conversation>
+  </Conversation>
+  <Conversation line="これが..." speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough">
+    <Conversation line="私の..." speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough">
+      <Conversation line="人生か..." speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough" />
+    </Conversation>
+  </Conversation>
+  <Conversation line="最後の..." speaker="0" flags="BrainHemorrhageHigh" speakertags="brokenenglish,crazy,joker">
+    <Conversation line="言葉..." speaker="0" flags="BrainHemorrhageHigh" speakertags="brokenenglish,crazy,joker">
+      <Conversation line="思い出せない..." speaker="0" flags="BrainHemorrhageHigh" speakertags="brokenenglish,crazy,joker" />
+    </Conversation>
+  </Conversation>
+  <Conversation line="クソ..." speaker="0" flags="BrainHemorrhageHigh" speakertags="crazy,joker,tough,rude">
+    <Conversation line="みてぇな..." speaker="0" flags="BrainHemorrhageHigh" speakertags="crazy,joker,tough,rude">
+      <Conversation line="人生..." speaker="0" flags="BrainHemorrhageHigh" speakertags="crazy,joker,tough,rude" />
+    </Conversation>
+  </Conversation>
+</Conversations>

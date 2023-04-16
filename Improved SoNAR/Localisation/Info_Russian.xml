@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Russian" nowhitespace="false" translatedname="Русский">
+  <loadingscreentip>Мощность пинга активного сонара настолько высока, что вокруг передатчиков испаряется вода.</loadingscreentip>
+  <loadingscreentip>При работе поблизости подлодки или её корпуса рекомендуется носить звукоизолирующий скафандр. Обычные водолазные скафандры не защищают их пользователей от активного сонара.</loadingscreentip>
+  <loadingscreentip>Активный сонар подводной лодки может достигать 235дБ, что примерно в 724 раза громче, и в 3 миллиарда раз мощнее работающего реактивного двигателя.</loadingscreentip>
+  <loadingscreentip>Звуковые волны распространяются до четырёх раз дальше под водой, тем временем низкочастотные звуки, например от импульсов активного сонара подлодки, проникают ещё дальше.</loadingscreentip>
+  <loadingscreentip>Когда звук из воды попадает в воздушную среду, его громкость понижается на 80дБ (в 256 раз). Вместе с противоэховым покрытием корпуса подлодки, громкость активного сонара падает до безопасных для подводников уровней.</loadingscreentip>
+  <loadingscreentip>Корпуса подводных лодок покрыты звукоизолирующими плитками из резины с тысячами пустот. Такая конструкция была специально разработана для поглощения активного сонара и погашения звуков изнутри подлодки.</loadingscreentip>
+  <loadingscreentip>На близкой дистанции, импульс активного сонара может разорвать внутренние органы и вызвать внутреннее кровотечение.</loadingscreentip>
+  <loadingscreentip>Убедитесь, что за бортом нет ни одного из ваших соратников перед включением активного сонара.</loadingscreentip>
+  <loadingscreentip>Внутри подлодки экипаж защищён от активного сонара. Однако, эта защита пропадает при бреше корпуса и затоплении.</loadingscreentip>
+  <loadingscreentip>Выключите активный сонар, если корпус разорван. Вашим механикам будет трудно справится с брешами, если у них лопнули барабанные перепонки.</loadingscreentip>
+  <loadingscreentip>Будьте осторожны при выходе в воду вблизи подлодки. Хватит лишь одного пинга сонара, чтобы потерять слух, повредить себе внутренние ткани, и в исключительных случаях, внутренние органы и мозг.</loadingscreentip>
+  <loadingscreentip>При активации маяков рекомендуется носить звукоизолирующий скафандр. Хоть сонар маяков не настолько мощен, как у подлодок, он всё равно может вас сильно покалечить.</loadingscreentip>
+  <loadingscreentip>От кровоизлияний в мозг, вызванных сонаром, пациента может спасти только кортизид.</loadingscreentip>
+  <loadingscreentip>Экстракт Манны может временно остановить сонарное кровоизлияние в мозг. После этого пациенту может помочь только кортизид.</loadingscreentip>
+  <loadingscreentip>Медикам не рекомендуется давать дозу экстракта Манны пациенту, у которого в кровеносной системе есть его примеси.</loadingscreentip>
+  <loadingscreentip>Оберегайтесь балластных отсеков при работе активного сонара. Звуковые волны легко проходят через заполненные водой трубы.</loadingscreentip>
+  <loadingscreentip>Если долго не лечить последствия вибраций активного сонара, у пострадавшего могут развиться повреждения нервной системы и рабдомиолиз в некоторых мышцах.</loadingscreentip>
+  <loadingscreentip>В связи с высоким распространением подлодок для выживания в водах Европы, медицина прогрессировала в области лечения уникальных звуковых травм. Умные тканезаменители для перфорированных органов, кортизид для кровоизлияний в мозг, и экстракт Манны для повреждённых тканей.</loadingscreentip>
+  <!-- Active sonar -->
+  <afflictionname.activesonar>Воздействие сонара подлодок</afflictionname.activesonar>
+  <!-- Beacon station sonar -->
+  <afflictionname.activesonarbeacon>Воздействие сонара маяков</afflictionname.activesonarbeacon>
+  <!-- Acoustic Trauma -->
+  <afflictionname.acoustictrauma>Акустическая травма</afflictionname.acoustictrauma>
+  <afflictiondescription.acoustictrauma>Барабанные перепонки пациента были перфорированы, вызывая кровотечение и тиннитус.</afflictiondescription.acoustictrauma>
+  <afflictiondescription.acoustictrauma.self>Ваши уши звенят, роняя время от времени капли крови, у вас кружится голова.</afflictiondescription.acoustictrauma.self>
+  <afflictioncauseofdeath.acoustictrauma>Отогенная смерть</afflictioncauseofdeath.acoustictrauma>
+  <afflictioncauseofdeathself.acoustictrauma>Ты истек кровью через уши.</afflictioncauseofdeathself.acoustictrauma>
+  <!-- Vibration Damage -->
+  <afflictionname.vibrationdamage>Вибрационная травма</afflictionname.vibrationdamage>
+  <afflictiondescription.vibrationdamage>Пациент страдает от повреждений кровеносной системы, вероятно, из-за попадания в зону активности сонара.</afflictiondescription.vibrationdamage>
+  <afflictiondescription.vibrationdamage.medium>Пациент пережил сильные повреждения артерий, нервов и мышц.</afflictiondescription.vibrationdamage.medium>
+  <afflictiondescription.vibrationdamage.high>Внутренности пациента в плачевном состоянии. Крайне сильно повреждены артерии, нервная система, мышцы, кости.</afflictiondescription.vibrationdamage.high>
+  <afflictiondescription.vibrationdamage.self>Вы чувствуете себя вяло из-за боли по всему телу. Вы чувствуете, что по коже проходят множество иголок.</afflictiondescription.vibrationdamage.self>
+  <afflictiondescription.vibrationdamage.medium.self>Ваши конечности онемели, и вы чувствуете колящую боль повсюду по вашему телу.</afflictiondescription.vibrationdamage.medium.self>
+  <afflictiondescription.vibrationdamage.high.self>Вы не чувствуете свои конечности, лишь нескончаемую боль, будто каждую клетку тела разорвало.</afflictiondescription.vibrationdamage.high.self>
+  <afflictioncauseofdeath.vibrationdamage>Погибает от внутренних повреждений</afflictioncauseofdeath.vibrationdamage>
+  <afflictioncauseofdeathself.vibrationdamage>Ваши внутренности были разорваны.</afflictioncauseofdeathself.vibrationdamage>
+  <!-- Nerve Damage -->
+  <afflictionname.nervedamage>Повреждение нервной системы</afflictionname.nervedamage>
+  <afflictiondescription.nervedamage>Нервная система пациента была повреждена вибрациями. Ежедневная рутина выполняется с трудом.</afflictiondescription.nervedamage>
+  <afflictiondescription.nervedamage.self>Ваши руки онемели, из-за неуклюжести вы менее эффективно работаете.</afflictiondescription.nervedamage.self>
+  <!-- Rhabdomyolysis -->
+  <afflictionname.muscledamage>Рабдомиолиз</afflictionname.muscledamage>
+  <afflictiondescription.muscledamage>Мышцы пациента начали распадаться в кровеносную систему.</afflictiondescription.muscledamage>
+  <afflictiondescription.muscledamage.high>Большинство мышц пациента некрозировали, в крови опасное количество белков.</afflictiondescription.muscledamage.high>
+  <afflictiondescription.muscledamage.self>Вы чувствуете замедленность, ваши ноги вспухли, вызывая боль.</afflictiondescription.muscledamage.self>
+  <afflictiondescription.muscledamage.high.self>Ваши ноги хрупко чувствуются. Ходить практически невозможно, из-за неуморимой боли.</afflictiondescription.muscledamage.high.self>
+  <afflictioncauseofdeath.muscledamage>Погибает от почечного разрушения</afflictioncauseofdeath.muscledamage>
+  <afflictioncauseofdeathself.muscledamage>Ваши мышцы выпустили летальное количество белков в кровь.</afflictioncauseofdeathself.muscledamage>
+  <!-- Ruptured Lung -->
+  <afflictionname.rupturedlung>Лопнутые лёгкие</afflictionname.rupturedlung>
+  <afflictiondescription.rupturedlung>Лёгкие пациента лопнули из-за воздействия импульса сонара.</afflictiondescription.rupturedlung>
+  <afflictiondescription.rupturedlung.high>Лёгкие пациента были уничтожены мощными вибрациями, вызывая гипоксемию, у пациента высокий шанс гибели от удушья.</afflictiondescription.rupturedlung.high>
+  <afflictiondescription.rupturedlung.self>Вы чувствуете боль в туловище. Вам трудно дышать.</afflictiondescription.rupturedlung.self>
+  <afflictiondescription.rupturedlung.high.self>Вы еле дышите между выкашливанием крови, каждый вдох вызывает агонию.</afflictiondescription.rupturedlung.high.self>
+  <afflictioncauseofdeath.rupturedlung>Утонул в своей крови</afflictioncauseofdeath.rupturedlung>
+  <afflictioncauseofdeathself.rupturedlung>Вы утонули в своей крови из-за лопнутых лёгких.</afflictioncauseofdeathself.rupturedlung>
+  <!-- Brain Hemorrhage -->
+  <afflictionname.brainhemorrhage>Кровоизлияние в мозг</afflictionname.brainhemorrhage>
+  <afflictiondescription.brainhemorrhage>Мозг пациента кровоточит из-за воздействия активного сонара. К счастью, хуже оно не становится.</afflictiondescription.brainhemorrhage>
+  <afflictiondescription.brainhemorrhage.medium>Большая часть мозговой выемки превратилась в сжиженную жидкость. Мозг пациента тонет в своей крови, состояние быстро ухудшается.</afflictiondescription.brainhemorrhage.medium>
+  <afflictiondescription.brainhemorrhage.high>Мозг пациента был сжижен активным сонаром.</afflictiondescription.brainhemorrhage.high>
+  <afflictiondescription.brainhemorrhage.self>Ваше зрение и мысли будто туманные.</afflictiondescription.brainhemorrhage.self>
+  <afflictiondescription.brainhemorrhage.medium.self>Вы не можете думать. Виднеются вспышки, чувствуется парализующий, металлический вкус. Вы хотите крикнуть, но не можете. Вы теряете контроль над движением, реальность будто медленно от вас уходит.</afflictiondescription.brainhemorrhage.medium.self>
+  <afflictiondescription.brainhemorrhage.high.self>Вы ничего не можете воспринять или почувствовать, кроме туманной пустоты.</afflictiondescription.brainhemorrhage.high.self>
+  <afflictioncauseofdeath.brainhemorrhage>Погибает от смерти мозга</afflictioncauseofdeath.brainhemorrhage>
+  <afflictioncauseofdeathself.brainhemorrhage>Ваш мозг расплавил активный сонар.</afflictioncauseofdeathself.brainhemorrhage>
+  <!-- Manna Influence -->
+  <afflictionname.mannainjection>Действие Манны</afflictionname.mannainjection>
+  <afflictiondescription.mannainjection>На эту конечность действуют целебные свойства экстракта Манны.</afflictiondescription.mannainjection>
+  <afflictiondescription.mannainjection.self>Вы чувствуете слабый напор и успокаивающую теплоту в глубине.</afflictiondescription.mannainjection.self>
+  <!-- Manna Overdose -->
+  <afflictionname.mannaoverdose>Передоз Манны</afflictionname.mannaoverdose>
+  <afflictiondescription.mannaoverdose>У пациента опасное количество Манны в крови.</afflictiondescription.mannaoverdose>
+  <afflictiondescription.mannaoverdose.self>Вы чувствуете себя превосходно.</afflictiondescription.mannaoverdose.self>
+  <afflictioncauseofdeath.mannaoverdose>Умер в экстазе</afflictioncauseofdeath.mannaoverdose>
+  <afflictioncauseofdeathself.mannaoverdose>Вы сделали это, добро пожаловать в рай.</afflictioncauseofdeathself.mannaoverdose>
+  <!-- Photopsia -->
+  <afflictionname.photopsia>Фотопсия</afflictionname.photopsia>
+  <afflictiondescription.photopsia>Пациент испытывает визуальные аномалии, главным образом мерцание и яркие вспышки.</afflictiondescription.photopsia>
+  <afflictiondescription.photopsia.self>Свет сильно мерцает, хотя, может, вам кажется? Редкие вспышки света заполняют вашу периферию. Что-то определённо не так.</afflictiondescription.photopsia.self>
+  <!-- Ataxia -->
+  <afflictionname.ataxia>Атаксия</afflictionname.ataxia>
+  <afflictiondescription.ataxia>Мозжечок пациента подавлен, случайным образом спазмируют мышцы, координация нарушена.</afflictiondescription.ataxia>
+  <afflictiondescription.ataxia.self>Ваши конечности будто думают сами. Вы постоянно дёргаетесь, а когда пытаетесь двигаться, оказываетесь там же, где начали.</afflictiondescription.ataxia.self>
+  <!-- Aphasia -->
+  <afflictionname.aphasia>Афазия</afflictionname.aphasia>
+  <afflictiondescription.aphasia>Пациент не способен составлять полные предложения из-за повреждения мозга.</afflictiondescription.aphasia>
+  <afflictiondescription.aphasia.self>Вы не способны закончить простые предложения, возникают проблемы с составлением слов, иногда вместо этого вы выдаёте непонятное бормотание.</afflictiondescription.aphasia.self>
+  <!-- Blindness -->
+  <afflictionname.opticneuritis>Воспаление зрительного нерва</afflictionname.opticneuritis>
+  <afflictiondescription.opticneuritis>Затылочная доля мозга пациента повреждена, периодически ослепляя и дизоиентируя его.</afflictiondescription.opticneuritis>
+  <afflictiondescription.opticneuritis.self>Ваше зрение периодически затуманивается темнотой. Это конец?</afflictiondescription.opticneuritis.self>
+  <!-- Treatments -->
+  <entityname.manna>Экстракт Манны</entityname.manna>
+  <entitydescription.manna>Манна - "чудо-жидкость", смешиваюшая человеческие гемоглобины с ксено-плазмой, в целях перенять естественную устойчивость и регенерирующие свойства у подводной фауны Европы. Используется для лечения внутренних повреждений мышечной и нервной систем, и способна временно остановить кровоизлияния в мозг. Следует заметить, что повторное использование более слабо укрепляет эффект, есть риск передоза.</entitydescription.manna>
+  <entityname.cortizide>Кортизид</entityname.cortizide>
+  <entitydescription.cortizide>Концентрированная смесь противоболевых и противобаровых препаратов с кучей неприятных последствий. Обычно иньецируется в голову последним шансом для лечения кровоизлияний в мозг.
+Внимание: Введение в здоровую мозговую среду может привести к опасному повышению давления в черепе.</entitydescription.cortizide>
+  <entityname.smartgraft>Умный тканезаменитель</entityname.smartgraft>
+  <entitydescription.smartgraft>Созданная генной инженерией соединительная ткань, принимающая на себя ДНК пациента, стимулирующая регенерацию сложных анатомических систем. Обычно используется для восстановления перфорированных органов.</entitydescription.smartgraft>
+  <!-- Items -->
+  <entityname.anechoicdivingsuit>Звукоизолирующий скафандр</entityname.anechoicdivingsuit>
+  <entitydescription.anechoicdivingsuit>Скрытный, легковесный скафандр, созданный для поглощения звуковых волн активного сонара, используя безэховое покрытие. В некоторой степени защищает и выдерживает давление на глубине до 6 000 м.</entitydescription.anechoicdivingsuit>
+  <entityname.navremote>Пульт навигации</entityname.navremote>
+  <entitydescription.navremote>Портативное устройство, позволяющее дистанционно контролировать сонар и двигатели подлодки.</entitydescription.navremote>
+  <!-- Menu -->
+  <realsonarsettings>Настройки</realsonarsettings>
+  <sonarpingvolume>Громкость сонара</sonarpingvolume>
+  <airpingvolume>Громкость пинга в воздухе:</airpingvolume>
+  <waterpingvolume>Громкость пинга под водой:</waterpingvolume>
+  <suitpingvolume>Громкость пинга в костюме:</suitpingvolume>
+  <tinnitusvolume>Громкость тиннитуса:</tinnitusvolume>
+  <distortionvolume>Громкость искажений:</distortionvolume>
+  <!-- Dialogue -->
+  <dialoggetanechoicsuit>Надо найти звукоизолирующий скафандр!</dialoggetanechoicsuit>
+  <dialoggetanechoicsuit>Мне нужен безэховый скафандр, чтобы чинить со включенным сонаром!</dialoggetanechoicsuit>
+  <dialoggetanechoicsuit>Мне нужно изолирующее снаряжение!</dialoggetanechoicsuit>
+  <dialogcantfindanechoicsuit>Я не нахожу изолирующих скафандров! Отключите сонар!</dialogcantfindanechoicsuit>
+  <dialogcantfindanechoicsuit>У нас нет безэховых скафандров! Я туда не полезу!</dialogcantfindanechoicsuit>
+  <dialogcantfindanechoicsuit>Я не пойду туда, пока сонар включён!</dialogcantfindanechoicsuit>
+  <dialogcantfindanechoicsuit>Мне нечем изолироваться! Выключите сонар!</dialogcantfindanechoicsuit>
+  <dialogcantfindanechoicsuit>Я не смогу ничего починить, выключите сонар!</dialogcantfindanechoicsuit>
+  <dialogturnoffsonar>ВЫКЛЮЧИТЕ СОНАР!</dialogturnoffsonar>
+  <dialogturnoffsonar>МОИ УШИ БОЛЯТ ОТ СОНАРА!</dialogturnoffsonar>
+  <dialogturnoffsonar>ОТКЛЮЧИТЕ СОНАР!</dialogturnoffsonar>
+  <dialogturnoffsonar>Я ПОЛУЧИЛ УРОН ОТ СОНАРА!</dialogturnoffsonar>
+  <dialogturnoffsonar>КАКОЙ ЖЕ ОН ГРОМКИЙ!</dialogturnoffsonar>
+  <dialogturnoffsonar>Я СНАРУЖИ, ОТКЛЮЧИТЕ СОНАР!</dialogturnoffsonar>
+  <dialogturnoffsonar>ОТКЛЮЧИТЕ СОНАР!</dialogturnoffsonar>
+  <dialogturnoffsonar>СОНАР! ПОЖАЛУЙСТА!</dialogturnoffsonar>
+</infotexts>

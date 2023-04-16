@@ -1,0 +1,1915 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Afflictions>
+  <!-- 
+  ↓↓↓ Unique per-player sound system ↓↓↓ 
+  This system allows for each player to hear sonar pings differently by playing the sound locally for each player in the radius.
+  A different ping will be played depending on the player's circumstances e.g. In/out of water, distance, sonar protection.
+  -->
+  <Affliction identifier="sonarsounds" maxstrength="100" showiconthreshold="1000">
+    <!-- Distance: Far. -->
+    <Effect minstrength="0" maxstrength="25">
+      <!-- Apply air sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional InWater="false" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingAirFar" strength="1" />
+      </StatusEffect>
+      <!-- Apply water sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingWaterFar" strength="1" />
+      </StatusEffect>
+      <!-- Apply suit sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="sonarprotection" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingSuitFar" strength="1" />
+      </StatusEffect>
+      <!-- Remove affliction. -->
+      <StatusEffect target="Character" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarsounds" amount="1000" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Medium. -->
+    <Effect minstrength="25" maxstrength="50">
+      <!-- Apply air sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional InWater="false" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingAirMedium" strength="1" />
+      </StatusEffect>
+      <!-- Apply water sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingWaterMedium" strength="1" />
+      </StatusEffect>
+      <!-- Apply suit sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="sonarprotection" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingSuitMedium" strength="1" />
+      </StatusEffect>
+      <!-- Remove affliction. -->
+      <StatusEffect target="Character" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarsounds" amount="1000" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Close. -->
+    <Effect minstrength="50" maxstrength="75">
+      <!-- Apply air sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional InWater="false" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingAirMedium" strength="1" />
+      </StatusEffect>
+      <!-- Apply water sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingWaterClose" strength="1" />
+      </StatusEffect>
+      <!-- Apply suit sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="sonarprotection" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingSuitClose" strength="1" />
+      </StatusEffect>
+      <!-- Remove affliction. -->
+      <StatusEffect target="Character" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarsounds" amount="1000" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Very Close. -->
+    <Effect minstrength="75" maxstrength="100">
+      <!-- Apply air sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional sonarsounds="gt 95" />
+        <Conditional InWater="false" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingAirClose" strength="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional sonarsounds="lteq 95" />
+        <Conditional InWater="false" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingAirMedium" strength="1" />
+      </StatusEffect>
+      <!-- Apply water sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingWaterVeryClose" strength="1" />
+      </StatusEffect>
+      <!-- Apply suit sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="sonarprotection" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingSuitVeryClose" strength="1" />
+      </StatusEffect>
+      <!-- Remove affliction. -->
+      <StatusEffect target="Character" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarsounds" amount="1000" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Air pings. -->
+  <Affliction identifier="sonarPingAirClose" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarPingAirClose1.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarPingAirClose2.ogg" volume="1.0" />
+        <Affliction identifier="sonarTailAirClose" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingAirClose" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingAirMedium" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarPingAirMedium1.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarPingAirMedium2.ogg" volume="1.0" />
+        <Affliction identifier="sonarTailAirMedium" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingAirMedium" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingAirFar" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarPingAirFar1.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarPingAirFar2.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarPingAirFar3.ogg" volume="1.0" />
+        <Affliction identifier="sonarTailAirFar" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingAirFar" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Water pings. -->
+  <Affliction identifier="sonarPingWaterVeryClose" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterVeryClose1.ogg" volume="0.30" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterVeryClose2.ogg" volume="0.30" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterVeryClose3.ogg" volume="0.30" dontmuffle="true" />
+        <Affliction identifier="sonarTailWaterVeryClose" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingWaterVeryClose" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingWaterClose" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterClose1.ogg" volume="0.50" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterClose2.ogg" volume="0.50" dontmuffle="true" />
+        <Affliction identifier="sonarTailWaterClose" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingWaterClose" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingWaterMedium" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterMedium1.ogg" volume="0.60" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterMedium2.ogg" volume="0.60" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterMedium3.ogg" volume="0.60" dontmuffle="true" />
+        <Affliction identifier="sonarTailWaterMedium" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingWaterMedium" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingWaterFar" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterFar1.ogg" volume="0.65" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterFar2.ogg" volume="0.65" dontmuffle="true" />
+        <Affliction identifier="sonarTailWaterFar" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingWaterFar" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Suit pings. -->
+  <Affliction identifier="sonarPingSuitVeryClose" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitVeryClose1.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitVeryClose2.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitVeryClose3.ogg" volume="1.2" dontmuffle="true" />
+        <Affliction identifier="sonarTailSuitVeryClose" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingSuitVeryClose" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingSuitClose" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitClose1.ogg" volume="0.70" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitClose2.ogg" volume="0.70" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitClose3.ogg" volume="0.70" dontmuffle="true" />
+        <Affliction identifier="sonarTailSuitClose" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingSuitClose" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingSuitMedium" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitMedium1.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitMedium2.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitMedium3.ogg" volume="1.1" dontmuffle="true" />
+        <Affliction identifier="sonarTailSuitMedium" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingSuitMedium" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingSuitFar" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitFar1.ogg" volume="0.55" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitFar2.ogg" volume="0.55" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitFar3.ogg" volume="0.55" dontmuffle="true" />
+        <Affliction identifier="sonarTailSuitFar" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingSuitFar" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- 
+    The afflictions below only play sounds. Specifically, the last 2 seconds, or "Tail", of a ping. 
+    Each sound is set to play after a delay of 2 seconds. This is to allow the first half of the sound, the "Ping", to be played first.
+       
+    Why is it necessary to split the sounds into two parts? 
+    For 3 reasons.
+    1. Active sonar pings every 2.0 seconds (hard-coded).
+    2. Our ping sounds are longer than 2.0 seconds (3.99 seconds). 
+    3. After a Status Effect plays a sound, it can only play it again once it's finished; in other words, the sounds don't stack.
+
+    So, if you play a 4-second sound every 2 seconds, it won't work. Instead, it will play a 4-second sound every 4 seconds, missing every 2nd ping.
+    Interestingly, an exception to this rule is the sounds played within the <Sonar> tag, likely for this exact reason. (The vanilla sonarPing.ogg files are also 3.99 seconds in length).
+    But unfortunately, because we're using an explosion to apply sounds to players, it takes us outside the <Sonar> tag, and we're forced to devise our own solution for playing 4-second sounds in a 2-second interval.
+       
+    The solution is cutting the 4-second sounds in half to fit the 2.0-second ping interval. This means we're playing two different 2-second sounds every 2.0 seconds.
+    To prevent them playing on top of each other, add a 2-second delay on the 2nd sound, so it plays at the end of the first sound, creating a seamless 4-second sound being played every 2.0 seconds.
+    
+    It should be noted that achieving this technique with sounds longer than 4.0 seconds would require cutting it into additional pieces.
+    For example, a 6-second sound would require three 2-second sounds to be played at once, one with a 2-second delay, and one with a 4-second delay.
+  -->
+  <!-- Air tails. -->
+  <Affliction identifier="sonarTailAirClose" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarTailAirClose1.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarTailAirClose2.ogg" volume="1.0" />
+        <ReduceAffliction identifier="sonarTailAirClose" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailAirMedium" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarTailAirMedium1.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarTailAirMedium2.ogg" volume="1.0" />
+        <ReduceAffliction identifier="sonarTailAirMedium" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailAirFar" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarTailAirFar1.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarTailAirFar2.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarTailAirFar3.ogg" volume="1.0" />
+        <ReduceAffliction identifier="sonarTailAirFar" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Water tails. -->
+  <Affliction identifier="sonarTailWaterVeryClose" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterVeryClose1.ogg" volume="0.30" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterVeryClose2.ogg" volume="0.30" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterVeryClose3.ogg" volume="0.30" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailWaterVeryClose" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailWaterClose" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterClose1.ogg" volume="0.50" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterClose2.ogg" volume="0.50" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailWaterClose" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailWaterMedium" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterMedium1.ogg" volume="0.60" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterMedium2.ogg" volume="0.60" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterMedium3.ogg" volume="0.60" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailWaterMedium" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailWaterFar" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterFar1.ogg" volume="0.65" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterFar2.ogg" volume="0.65" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailWaterFar" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Suit tails. -->
+  <Affliction identifier="sonarTailSuitVeryClose" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitVeryClose1.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitVeryClose2.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitVeryClose3.ogg" volume="1.2" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailSuitVeryClose" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailSuitClose" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitClose1.ogg" volume="0.70" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitClose2.ogg" volume="0.70" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitClose3.ogg" volume="0.70" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailSuitClose" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailSuitMedium" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitMedium1.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitMedium2.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitMedium3.ogg" volume="1.1" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailSuitMedium" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailSuitFar" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitFar1.ogg" volume="0.55" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitFar2.ogg" volume="0.55" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitFar3.ogg" volume="0.55" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailSuitFar" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarsoundsdirectional" maxstrength="100" showiconthreshold="1000">
+    <!-- Distance: Far. -->
+    <Effect minstrength="0" maxstrength="25">
+      <!-- Apply directional air sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional InWater="false" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingAirFarDirectional" strength="1" />
+      </StatusEffect>
+      <!-- Apply directional water sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingWaterFarDirectional" strength="1" />
+      </StatusEffect>
+      <!-- Apply directional suit sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="sonarprotection" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingSuitFarDirectional" strength="1" />
+      </StatusEffect>
+      <!-- Remove affliction. -->
+      <StatusEffect target="Character" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarsoundsdirectional" amount="1000" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Medium. -->
+    <Effect minstrength="25" maxstrength="50">
+      <!-- Apply directional air sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional InWater="false" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingAirMediumDirectional" strength="1" />
+      </StatusEffect>
+      <!-- Apply directional water sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingWaterMediumDirectional" strength="1" />
+      </StatusEffect>
+      <!-- Apply directional suit sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="sonarprotection" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingSuitMediumDirectional" strength="1" />
+      </StatusEffect>
+      <!-- Remove affliction. -->
+      <StatusEffect target="Character" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarsoundsdirectional" amount="1000" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Close. -->
+    <Effect minstrength="50" maxstrength="75">
+      <!-- Apply directional air sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional InWater="false" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingAirMediumDirectional" strength="1" />
+      </StatusEffect>
+      <!-- Apply directional water sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingWaterCloseDirectional" strength="1" />
+      </StatusEffect>
+      <!-- Apply directional suit sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="sonarprotection" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingSuitCloseDirectional" strength="1" />
+      </StatusEffect>
+      <!-- Remove affliction. -->
+      <StatusEffect target="Character" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarsoundsdirectional" amount="1000" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Very Close. -->
+    <Effect minstrength="75" maxstrength="100">
+      <!-- Apply directional air sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional sonarsoundsdirectional="gt 95" />
+        <Conditional InWater="false" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingAirCloseDirectional" strength="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional sonarsoundsdirectional="lteq 95" />
+        <Conditional InWater="false" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingAirMediumDirectional" strength="1" />
+      </StatusEffect>
+      <!-- Apply directional water sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingWaterVeryCloseDirectional" strength="1" />
+      </StatusEffect>
+      <!-- Apply directional suit sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="sonarprotection" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingSuitVeryCloseDirectional" strength="1" />
+      </StatusEffect>
+      <!-- Remove affliction. -->
+      <StatusEffect target="Character" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarsoundsdirectional" amount="1000" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- ↓↓↓ DIRECTIONAL SOUNDS ↓↓↓ -->
+  <!-- Directional Air pings. -->
+  <Affliction identifier="sonarPingAirCloseDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarPingAirClose1_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarPingAirClose2_Directional.ogg" volume="1.0" />
+        <Affliction identifier="sonarTailAirCloseDirectional" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingAirCloseDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingAirMediumDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarPingAirMedium1_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarPingAirMedium2_Directional.ogg" volume="1.0" />
+        <Affliction identifier="sonarTailAirMediumDirectional" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingAirMediumDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingAirFarDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarPingAirFar1_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarPingAirFar2_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarPingAirFar3_Directional.ogg" volume="1.0" />
+        <Affliction identifier="sonarTailAirFarDirectional" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingAirFarDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Directional Water pings. -->
+  <Affliction identifier="sonarPingWaterVeryCloseDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterMedium1_Directional.ogg" volume="0.9" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterMedium2_Directional.ogg" volume="0.9" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterMedium3_Directional.ogg" volume="0.9" dontmuffle="true" />
+        <Affliction identifier="sonarTailWaterVeryCloseDirectional" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingWaterVeryCloseDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingWaterCloseDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterMedium1_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterMedium2_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterMedium3_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <Affliction identifier="sonarTailWaterCloseDirectional" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingWaterCloseDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingWaterMediumDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterFar1_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterFar2_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <Affliction identifier="sonarTailWaterMediumDirectional" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingWaterMediumDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingWaterFarDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterFar1_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterFar2_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <Affliction identifier="sonarTailWaterFarDirectional" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingWaterFarDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Directional Suit pings. -->
+  <Affliction identifier="sonarPingSuitVeryCloseDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitMedium1_Directional.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitMedium2_Directional.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitMedium3_Directional.ogg" volume="1.2" dontmuffle="true" />
+        <Affliction identifier="sonarTailSuitVeryCloseDirectional" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingSuitVeryCloseDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingSuitCloseDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitMedium1_Directional.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitMedium2_Directional.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitMedium3_Directional.ogg" volume="1.1" dontmuffle="true" />
+        <Affliction identifier="sonarTailSuitCloseDirectional" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingSuitCloseDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingSuitMediumDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitFar1_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitFar2_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitFar3_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <Affliction identifier="sonarTailSuitMediumDirectional" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingSuitMediumDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingSuitFarDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitFar1_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitFar2_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitFar3_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <Affliction identifier="sonarTailSuitFarDirectional" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingSuitFarDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Directional Air tails. -->
+  <Affliction identifier="sonarTailAirCloseDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarTailAirClose1_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarTailAirClose2_Directional.ogg" volume="1.0" />
+        <ReduceAffliction identifier="sonarTailAirCloseDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailAirMediumDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarTailAirMedium1_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarTailAirMedium2_Directional.ogg" volume="1.0" />
+        <ReduceAffliction identifier="sonarTailAirMediumDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailAirFarDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarTailAirFar1_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarTailAirFar2_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarTailAirFar3_Directional.ogg" volume="1.0" />
+        <ReduceAffliction identifier="sonarTailAirFarDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Directional Water tails. -->
+  <Affliction identifier="sonarTailWaterVeryCloseDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterMedium1_Directional.ogg" volume="0.9" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterMedium2_Directional.ogg" volume="0.9" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterMedium3_Directional.ogg" volume="0.9" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailWaterVeryCloseDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailWaterCloseDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterMedium1_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterMedium2_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterMedium3_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailWaterCloseDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailWaterMediumDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterFar1_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterFar2_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailWaterMediumDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailWaterFarDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterFar1_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterFar2_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailWaterFarDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Directional Suit tails. -->
+  <Affliction identifier="sonarTailSuitVeryCloseDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitMedium1_Directional.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitMedium2_Directional.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitMedium3_Directional.ogg" volume="1.2" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailSuitVeryCloseDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailSuitCloseDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitMedium1_Directional.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitMedium2_Directional.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitMedium3_Directional.ogg" volume="1.1" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailSuitCloseDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailSuitMediumDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitFar1_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitFar2_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitFar3_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailSuitMediumDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailSuitFarDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitFar1_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitFar2_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitFar3_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailSuitFarDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- END OF SOUND SYSTEM -->
+  <!-- The following afflictions represents a single sonar ping. It applies other afflictions based on the player's distance from the ping. -->
+  <!-- Nav Terminal ping -->
+  <Affliction name="Воздействие сонара" identifier="activesonar" type="activesonar" maxstrength="100" karmachangeonapplied="-1" showiconthreshold="1000" limbspecific="false">
+    <!-- Distance: Far. -->
+    <Effect minstrength="0" maxstrength="25" strengthchange="-65">
+      <StatusEffect target="Character" targetlimb="Head" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="acoustictrauma" strength="6" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Medium. -->
+    <Effect minstrength="25" maxstrength="50" strengthchange="-65">
+      <StatusEffect target="Character" targetlimb="Head" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="acoustictrauma" strength="11" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="Torso" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="vibrationdamage" strength="7" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="false" />
+        <Affliction identifier="creaturedamage" strength="6.5" />
+      </StatusEffect>
+      <StatusEffect target = 'Character' comparison = 'and'>
+        <Conditional InWater="true" />
+        <Conditional speciesgroup="Moloch"/>
+        <Affliction identifier='creaturedamage' strength='30'/>
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Close. -->
+    <Effect minstrength="50" maxstrength="75" strengthchange="-65">
+      <StatusEffect target="Character" targetlimb="Head" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="acoustictrauma" strength="16" />
+        <Affliction identifier="brainhemorrhage" strength="3" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="Torso" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="oxygenlow" strength="20" />
+        <Affliction identifier="rupturedlung" strength="12" />
+        <Affliction identifier="vibrationdamage" strength="10" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="male" />
+        <Conditional InWater="True" />
+        <Conditional IsLocalPlayer="true" />
+        <Conditional ishuman="true" />
+        <Conditional activesonar="gteq 50" />
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="%ModDir%/Sounds/male_drown1.ogg" loop="false" volume="1.0" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/male_drown2.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/male_drown3.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/male_drown4.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/male_drown5.ogg" loop="false" volume="1.0" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="female" />
+        <Conditional InWater="true" />
+        <Conditional IsLocalPlayer="true" />
+        <Conditional ishuman="true" />
+        <Conditional activesonar="gteq 50" />
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="%ModDir%/Sounds/female_drown1.ogg" loop="false" volume="1.0" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/female_drown2.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/female_drown3.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/female_drown4.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/female_drown5.ogg" loop="false" volume="1.0" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="false" />
+        <Affliction identifier="creaturedamage" strength="12.5" />
+      </StatusEffect>
+      <StatusEffect target = 'Character' comparison = 'and'>
+        <Conditional InWater="true" />
+        <Conditional speciesgroup="Moloch"/>
+        <Affliction identifier='creaturedamage' strength='50'/>
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Very close. -->
+    <Effect minstrength="75" maxstrength="100" strengthchange="-65">
+      <StatusEffect target="Character" targetlimb="Head" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="acoustictrauma" strength="20" />
+        <Affliction identifier="brainhemorrhage" strength="22" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="Torso" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="oxygenlow" strength="30" />
+        <Affliction identifier="rupturedlung" strength="16" />
+        <Affliction identifier="vibrationdamage" strength="12" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional InWater="true" />
+        <Conditional IsLocalPlayer="true" />
+        <Conditional activesonar="gteq 75" />
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Sound file="%ModDir%/Sounds/sonarDistortion1.ogg" loop="false" volume="1.0" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/sonarDistortion2.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/sonarDistortion3.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/sonarDistortion4.ogg" loop="false" volume="1.0" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="false" />
+        <Affliction identifier="creaturedamage" strength="20" />
+      </StatusEffect>
+      <StatusEffect target = 'Character' comparison = 'and'>
+        <Conditional InWater="true" />
+        <Conditional speciesgroup="Moloch"/>
+        <Affliction identifier='creaturedamage' strength='80'/>
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Sonar Monitor ping. -->
+  <Affliction name="Воздействие сонара" identifier="activesonarbeacon" type="activesonar" maxstrength="100" karmachangeonapplied="-1" showiconthreshold="1000" limbspecific="false">
+    <!-- Distance: Far. -->
+    <Effect minstrength="0" maxstrength="25" strengthchange="-65">
+      <StatusEffect target="Character" targetlimb="Head" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="acoustictrauma" strength="3" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Medium. -->
+    <Effect minstrength="25" maxstrength="50" strengthchange="-65">
+      <StatusEffect target="Character" targetlimb="Head" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="acoustictrauma" strength="5.5" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="Torso" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="vibrationdamage" strength="3.5" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="false" />
+        <Affliction identifier="creaturedamage" strength="3.25" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Close. -->
+    <Effect minstrength="50" maxstrength="75" strengthchange="-65">
+      <StatusEffect target="Character" targetlimb="Head" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="acoustictrauma" strength="8" />
+        <Affliction identifier="brainhemorrhage" strength="1.5" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="Torso" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="oxygenlow" strength="20" />
+        <Affliction identifier="rupturedlung" strength="6" />
+        <Affliction identifier="vibrationdamage" strength="5" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="male" />
+        <Conditional InWater="True" />
+        <Conditional IsLocalPlayer="true" />
+        <Conditional ishuman="true" />
+        <Conditional activesonarbeacon="gteq 50" />
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="%ModDir%/Sounds/male_drown1.ogg" loop="false" volume="1.0" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/male_drown2.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/male_drown3.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/male_drown4.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/male_drown5.ogg" loop="false" volume="1.0" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="female" />
+        <Conditional InWater="true" />
+        <Conditional IsLocalPlayer="true" />
+        <Conditional ishuman="true" />
+        <Conditional activesonarbeacon="gteq 50" />
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="%ModDir%/Sounds/female_drown1.ogg" loop="false" volume="1.0" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/female_drown2.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/female_drown3.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/female_drown4.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/female_drown5.ogg" loop="false" volume="1.0" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="false" />
+        <Affliction identifier="creaturedamage" strength="6.25" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Very close. -->
+    <Effect minstrength="75" maxstrength="100" strengthchange="-65">
+      <StatusEffect target="Character" targetlimb="Head" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="acoustictrauma" strength="20" />
+        <Affliction identifier="brainhemorrhage" strength="10" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="Torso" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="oxygenlow" strength="30" />
+        <Affliction identifier="rupturedlung" strength="8" />
+        <Affliction identifier="vibrationdamage" strength="6" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional InWater="true" />
+        <Conditional IsLocalPlayer="true" />
+        <Conditional activesonarbeacon="gteq 75" />
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Sound file="%ModDir%/Sounds/sonarDistortion1.ogg" loop="false" volume="0.8" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/sonarDistortion2.ogg" loop="false" volume="0.8" />
+        <Sound file="%ModDir%/Sounds/sonarDistortion3.ogg" loop="false" volume="0.8" />
+        <Sound file="%ModDir%/Sounds/sonarDistortion4.ogg" loop="false" volume="0.8" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="false" />
+        <Affliction identifier="creaturedamage" strength="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Sonar impact FX for Nav Terminal. -->
+  <Affliction identifier="sonarimpact" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
+    <Effect minstrength="0" maxstrength="50" dialogflag="sonardialoglow">
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarimpact" strength="1000" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="50" maxstrength="75" dialogflag="sonardialogmedium">
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true" stackable="false" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional InWater="true" />
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Affliction identifier="sonarslow" strength="48" />
+        <Affliction identifier="sonaroverlay" strength="25" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true" stackable="false" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional InWater="true" />
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional isLocalPlayer="true" />
+        <Explosion range="1" flash="false" stun="0.2" force="5" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="45" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarimpact" strength="1000" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="75" maxstrength="100" dialogflag="sonardialoghigh">
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true" stackable="false" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional InWater="true" />
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Affliction identifier="sonarslow" strength="100" />
+        <Affliction identifier="sonaroverlay" strength="60" />
+        <ParticleEmitter particle="waterblood" copyentityangle="false" anglemin="0" anglemax="0" particlespersecond="100" velocitymin="10" velocitymax="20" scalemin="2" scalemax="3" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true" stackable="false" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional InWater="true" />
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional isLocalPlayer="true" />
+        <Explosion range="1" flash="false" stun="0.4" force="10" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="80" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarimpact" strength="1000" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Sonar impact FX for Sonar Monitors. -->
+  <Affliction identifier="sonarimpactbeacon" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
+    <Effect minstrength="0" maxstrength="50">
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarimpactbeacon" strength="1000" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="50" maxstrength="75">
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true" stackable="false" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional InWater="true" />
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Affliction identifier="sonarslow" strength="30" />
+        <Affliction identifier="sonaroverlay" strength="15" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true" stackable="false" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional InWater="true" />
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional isLocalPlayer="true" />
+        <Explosion range="1" flash="false" stun="0.0" force="3" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="30" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarimpactbeacon" strength="1000" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="75" maxstrength="100">
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true" stackable="false" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional InWater="true" />
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Affliction identifier="sonarslow" strength="70" />
+        <Affliction identifier="sonaroverlay" strength="40" />
+        <ParticleEmitter particle="waterblood" copyentityangle="false" anglemin="0" anglemax="0" particlespersecond="100" velocitymin="10" velocitymax="20" scalemin="2" scalemax="3" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true" stackable="false" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional InWater="true" />
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional isLocalPlayer="true" />
+        <Explosion range="1" flash="false" stun="0.0" force="7" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="60" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarimpactbeacon" strength="1000" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Sonar hit -->
+  <Affliction identifier="sonaroverlay" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="false">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-75" mingrainstrength="0" maxgrainstrength="20" minscreenblur="0" maxscreenblur="20" minradialdistort="0" maxradialdistort="20" minscreendistort="0" maxscreendistort="20" minafflictionoverlayalphamultiplier="0" maxafflictionoverlayalphamultiplier="2"></Effect>
+    <AfflictionOverlay texture="%ModDir%/Icons/sonarImpact.png" />
+  </Affliction>
+  <!-- Temporary slow effect after being hit by sonar -->
+  <Affliction identifier="sonarslow" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
+    <Effect minstrength="0" maxstrength="50" minspeedmultiplier="1" maxspeedmultiplier="0.3">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="sonarslow" strength="7" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="50" maxstrength="100" minspeedmultiplier="0.3" maxspeedmultiplier="0.25">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="sonarslow" strength="5" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- ↓↓↓ Main afflictions/injuries applied by sonar. ↓↓↓ -->
+  <!-- Acoustic trauma. -->
+  <Affliction name="Акустическая травма" identifier="acoustictrauma" type="acoustictrauma" maxstrength="100" treatmentthreshold="1000" limbspecific="true" indicatorlimb="Head">
+    <icon texture="%ModDir%/Icons/Afflictions.png" sourcerect="0,0,128,128" origin="0,0" />
+    <Description textidentifier="afflictiondescription.acoustictrauma" target="OtherCharacter" />
+    <Description textidentifier="afflictiondescription.acoustictrauma.self" target="Self" />
+    <Effect minstrength="0" maxstrength="1" multiplybymaxvitality="true">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="tinnitus1" strength="100" />
+        <ReduceAffliction identifier="acoustictrauma" strength="0.2" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="1" maxstrength="25" multiplybymaxvitality="true" minvitalitydecrease="0.0" maxvitalitydecrease="0.025">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <Affliction identifier="tinnitus1" strength="100" />
+        <ReduceAffliction identifier="tinnitus2" strength="100" />
+        <ReduceAffliction identifier="acoustictrauma" strength="0.2" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="25" maxstrength="50" multiplybymaxvitality="true" minvitalitydecrease="0.025" maxvitalitydecrease="0.050">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <Affliction identifier="tinnitus2" strength="100" />
+        <ReduceAffliction identifier="tinnitus1" strength="100" />
+        <ReduceAffliction identifier="tinnitus3" strength="100" />
+        <ReduceAffliction identifier="acoustictrauma" strength="0.2" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="50" maxstrength="75" multiplybymaxvitality="true" minvitalitydecrease="0.050" maxvitalitydecrease="0.075">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <Affliction identifier="tinnitus3" strength="100" />
+        <ReduceAffliction identifier="tinnitus2" strength="100" />
+        <ReduceAffliction identifier="tinnitus4" strength="100" />
+        <ReduceAffliction identifier="acoustictrauma" strength="0.2" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="75" maxstrength="100" multiplybymaxvitality="true" minvitalitydecrease="0.075" maxvitalitydecrease="0.1">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <Affliction identifier="tinnitus4" strength="100" />
+        <ReduceAffliction identifier="tinnitus3" strength="100" />
+        <ReduceAffliction identifier="acoustictrauma" strength="0.2" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Sound loops for Acoustic Trauma -->
+  <Affliction identifier="tinnitus1" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <!-- The reason each sound effect is in an affliction of its own is so the sounds stop playing temporarily when cortizide is injected. No idea why this is necessary. -->
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" comparison="and">
+        <Conditional IsLocalPlayer="True" />
+        <Conditional cortizideinjection="lteq 0" />
+        <Sound file="%ModDir%/Sounds/Tinnitus1.ogg" loop="true" volume="0.7" dontmuffle="true" />
+      </StatusEffect>
+      <!-- Remove tinnitus if accoustictrauma is cured by outpost doctor. -->
+      <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <Conditional acoustictrauma="lteq 0" />
+        <Affliction identifier="tinnitus1" strength="-10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="tinnitus2" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" comparison="and">
+        <Conditional IsLocalPlayer="True" />
+        <Conditional cortizideinjection="lteq 0" />
+        <Sound file="%ModDir%/Sounds/Tinnitus2.ogg" loop="true" volume="0.6" dontmuffle="true" />
+      </StatusEffect>
+      <!-- Remove tinnitus if accoustictrauma is cured by outpost doctor. -->
+      <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <Conditional acoustictrauma="lteq 0" />
+        <Affliction identifier="tinnitus2" strength="-10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="tinnitus3" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" comparison="and">
+        <Conditional IsLocalPlayer="True" />
+        <Conditional cortizideinjection="lteq 0" />
+        <Sound file="%ModDir%/Sounds/Tinnitus3.ogg" loop="true" volume="0.7" dontmuffle="true" />
+      </StatusEffect>
+      <!-- Remove tinnitus if accoustictrauma is cured by outpost doctor. -->
+      <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <Conditional acoustictrauma="lteq 0" />
+        <Affliction identifier="tinnitus3" strength="-10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="tinnitus4" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" comparison="and">
+        <Conditional IsLocalPlayer="True" />
+        <Conditional cortizideinjection="lteq 0" />
+        <Sound file="%ModDir%/Sounds/Tinnitus4.ogg" loop="true" volume="0.7" dontmuffle="true" />
+      </StatusEffect>
+      <!-- Remove tinnitus if accoustictrauma is cured by outpost doctor. -->
+      <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <Conditional acoustictrauma="lteq 0" />
+        <Affliction identifier="tinnitus4" strength="-10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Vibration damage -->
+  <Affliction name="Урон от вибраций" identifier="vibrationdamage" type="damage" limbspecific="true" indicatorlimb="Torso" healcostmultiplier="2.5" maxstrength="100" treatmentthreshold="30" showiconthreshold="0" showinhealthscannerthreshold="0" damageoverlayalpha="1" causeofdeathdescription="afflictioncauseofdeath.vibrationdamage" selfcauseofdeathdescription="afflictioncauseofdeathself.vibrationdamage">
+    <icon texture="%ModDir%/Icons/Afflictions.png" sourcerect="128,0,128,128" origin="0,0" />
+    <Description textidentifier="afflictiondescription.vibrationdamage" target="OtherCharacter" minstrength="0" maxstrength="33" />
+    <Description textidentifier="afflictiondescription.vibrationdamage.medium" target="OtherCharacter" minstrength="33" maxstrength="66" />
+    <Description textidentifier="afflictiondescription.vibrationdamage.high" target="OtherCharacter" minstrength="66" maxstrength="100" />
+    <Description textidentifier="afflictiondescription.vibrationdamage.self" target="Self" minstrength="0" maxstrength="33" />
+    <Description textidentifier="afflictiondescription.vibrationdamage.medium.self" target="Self" minstrength="33" maxstrength="66" />
+    <Description textidentifier="afflictiondescription.vibrationdamage.high.self" target="Self" minstrength="66" maxstrength="100" />
+    <Effect minstrength="0" maxstrength="5" multiplybymaxvitality="true" minvitalitydecrease="0.0" maxvitalitydecrease="0.05">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="vibrationdamage" strength="0.09" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="5" maxstrength="33" multiplybymaxvitality="true" minvitalitydecrease="0.05" maxvitalitydecrease="0.3" minbodytint="110,0,0,0" maxbodytint="110,0,0,85" minspeedmultiplier="1.0" maxspeedmultiplier="0.93">
+      <StatusEffect target="Character" targetlimb="LeftLeg,RightLeg" disabledeltatime="true" interval="1" delay="60">
+        <Affliction identifier="muscledamage" strength="0.15" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="LeftArm,RightArm" disabledeltatime="true" interval="1">
+        <Affliction identifier="nervedamage" strength="0.2" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="vibrationdamage" strength="0.08" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="33" maxstrength="66" multiplybymaxvitality="true" minvitalitydecrease="0.3" maxvitalitydecrease="0.6" minbodytint="110,0,0,85" maxbodytint="110,0,0,170" minspeedmultiplier="0.93" maxspeedmultiplier="0.86">
+      <StatusEffect target="Character" targetlimb="LeftLeg,RightLeg" disabledeltatime="true" interval="1" delay="45">
+        <Affliction identifier="muscledamage" strength="0.25" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="LeftArm,RightArm" disabledeltatime="true" interval="1">
+        <Affliction identifier="nervedamage" strength="0.25" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="vibrationdamage" strength="0.06" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="66" maxstrength="100" multiplybymaxvitality="true" minvitalitydecrease="0.6" maxvitalitydecrease="0.9" minbodytint="110,0,0,170" maxbodytint="110,0,0,255" minspeedmultiplier="0.86" maxspeedmultiplier="0.75">
+      <StatusEffect target="Character" targetlimb="LeftLeg,RightLeg" disabledeltatime="true" interval="1">
+        <Affliction identifier="muscledamage" strength="0.4" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="LeftArm,RightArm" disabledeltatime="true" interval="1">
+        <Affliction identifier="nervedamage" strength="0.4" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="vibrationdamage" strength="0.04" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Nerve damage -->
+  <Affliction name="Повреждение нервной системы" identifier="nervedamage" type="sonardamage" limbspecific="true" indicatorlimb="LeftArm,RightArm" healcostmultiplier="2.5" maxstrength="100" treatmentthreshold="1000" showiconthreshold="1" showinhealthscannerthreshold="0">
+    <icon texture="%ModDir%/Icons/Afflictions.png" sourcerect="128,128,128,128" origin="0,0" />
+    <Description textidentifier="afflictiondescription.nervedamage" target="OtherCharacter" />
+    <Description textidentifier="afflictiondescription.nervedamage.self" target="Self" />
+    <Effect minstrength="0" maxstrength="100" multiplybymaxvitality="true" minskillmultiplier="0.95" maxskillmultiplier="0.5">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="nervedamage" strength="0.02" />
+      </StatusEffect>
+      <!-- Integration with Neurotrauma amputation. -->
+      <StatusEffect target="Character" targetlimbs="RightArm" interval="1" disabledeltatime="true" comparison="or">
+        <Conditional tra_amputation="gt 0" />
+        <Conditional sra_amputation="gt 0" />
+        <Affliction identifier="nervedamage" strength="-1000" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimbs="LeftArm" interval="1" disabledeltatime="true" comparison="or">
+        <Conditional tla_amputation="gt 0" />
+        <Conditional sla_amputation="gt 0" />
+        <Affliction identifier="nervedamage" strength="-1000" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Rhabdomyolysis -->
+  <Affliction name="Рабдомиолиз" identifier="muscledamage" type="sonardamage" limbspecific="true" indicatorlimb="LeftLeg,RightLeg" healcostmultiplier="4" maxstrength="100" treatmentthreshold="25" showiconthreshold="10" showinhealthscannerthreshold="5">
+    <icon texture="%ModDir%/Icons/Afflictions.png" sourcerect="0,128,128,128" origin="0,0" />
+    <Description textidentifier="afflictiondescription.muscledamage" target="OtherCharacter" minstrength="0" maxstrength="60" />
+    <Description textidentifier="afflictiondescription.muscledamage.high" target="OtherCharacter" minstrength="60" maxstrength="100" />
+    <Description textidentifier="afflictiondescription.muscledamage.self" target="Self" minstrength="0" maxstrength="60" />
+    <Description textidentifier="afflictiondescription.muscledamage.high.self" target="Self" minstrength="60" maxstrength="100" />
+    <Effect minstrength="5" maxstrength="20" multiplybymaxvitality="true" minvitalitydecrease="0.0" maxvitalitydecrease="0.1" minspeedmultiplier="0.85" maxspeedmultiplier="0.75">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="muscledamage" strength="0.02" />
+      </StatusEffect>
+      <!-- Integration with Neurotrauma amputation. -->
+      <StatusEffect target="Character" targetlimbs="RightLeg" interval="1" disabledeltatime="true" comparison="or">
+        <Conditional trl_amputation="gt 0" />
+        <Conditional srl_amputation="gt 0" />
+        <Affliction identifier="muscledamage" strength="-1000" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimbs="LeftLeg" interval="1" disabledeltatime="true" comparison="or">
+        <Conditional tll_amputation="gt 0" />
+        <Conditional sll_amputation="gt 0" />
+        <Affliction identifier="muscledamage" strength="-1000" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="20" maxstrength="100" strengthchange="0.02" multiplybymaxvitality="true" minvitalitydecrease="0.1" maxvitalitydecrease="0.5" minspeedmultiplier="0.75" maxspeedmultiplier="0.10">
+      <!-- Integration with Neurotrauma amputation. -->
+      <StatusEffect target="Character" targetlimbs="RightLeg" interval="1" disabledeltatime="true" comparison="or">
+        <Conditional trl_amputation="gt 0" />
+        <Conditional srl_amputation="gt 0" />
+        <Affliction identifier="muscledamage" strength="-1000" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimbs="LeftLeg" interval="1" disabledeltatime="true" comparison="or">
+        <Conditional tll_amputation="gt 0" />
+        <Conditional sll_amputation="gt 0" />
+        <Affliction identifier="muscledamage" strength="-1000" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Ruptured lung -->
+  <Affliction name="Разорванные лёгкие" identifier="rupturedlung" type="rupturedlung" maxstrength="100" treatmentthreshold="30" limbspecific="true" indicatorlimb="Torso" healcostmultiplier="3.5" showiconthreshold="5" showinhealthscannerthreshold="5" causeofdeathdescription="afflictioncauseofdeath.rupturedlung" selfcauseofdeathdescription="afflictioncauseofdeathself.rupturedlung">
+    <icon texture="%ModDir%/Icons/Afflictions.png" sourcerect="256,0,128,128" origin="0,0" />
+    <Description textidentifier="afflictiondescription.rupturedlung" target="OtherCharacter" minstrength="0" maxstrength="25" />
+    <Description textidentifier="afflictiondescription.rupturedlung.high" target="OtherCharacter" minstrength="25" maxstrength="100" />
+    <Description textidentifier="afflictiondescription.rupturedlung.self" target="Self" minstrength="0" maxstrength="25" />
+    <Description textidentifier="afflictiondescription.rupturedlung.high.self" target="Self" minstrength="25" maxstrength="100" />
+    <Effect minstrength="0" maxstrength="100" multiplybymaxvitality="true" minvitalitydecrease="0.0" maxvitalitydecrease="1.0">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="rupturedlung" strength="0.03" />
+      </StatusEffect>
+      <!-- Integration with Neurotrauma organ transplants. -->
+      <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <Conditional lungremoved="gt 0" />
+        <ReduceAffliction identifier="rupturedlung" strength="1000" />
+      </StatusEffect>
+    </Effect>
+    <!-- Coughing up blood -->
+    <PeriodicEffect mininterval="15" maxinterval="27">
+      <StatusEffect target="Character" SpeedMultiplier="0.2" setvalue="true" duration="1.1" />
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="male" />
+        <Conditional IsUnconscious="false" />
+        <Conditional rupturedlung="gteq 25" />
+        <Sound file="%ModDir%/Sounds/male_cough1.ogg" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/male_cough2.ogg" />
+        <Sound file="%ModDir%/Sounds/male_cough3.ogg" />
+        <Sound file="%ModDir%/Sounds/male_cough4.ogg" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="female" />
+        <Conditional IsUnconscious="false" />
+        <Conditional rupturedlung="gteq 25" />
+        <Sound file="%ModDir%/Sounds/female_cough1.ogg" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/female_cough2.ogg" />
+        <Sound file="%ModDir%/Sounds/female_cough3.ogg" />
+        <Sound file="%ModDir%/Sounds/female_cough4.ogg" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional rupturedlung="gteq 25" />
+        <Conditional IsUnconscious="false" />
+        <Affliction identifier="stun" strength="0.25" />
+        <Affliction identifier="bloodloss" strength="6" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimbs="Head" duration="1" comparison="and">
+        <Conditional rupturedlung="gteq 25" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="Content/Sounds/Damage/Gore1.ogg" selectionmode="Random" />
+        <Sound file="Content/Sounds/Damage/Gore5.ogg" />
+        <Sound file="Content/Sounds/Damage/Gore8.ogg" />
+        <ParticleEmitter particle="bloodsplash" copyentityangle="true" anglemin="-10" anglemax="10" particlespersecond="50" velocitymin="50" velocitymax="200" scalemin="0.1" scalemax="0.2" />
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="1.25" shockwave="false" underwaterbubble="false" />
+        <Conditional HideFace="eq False" />
+        <Conditional IsUnconscious="false" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <!-- Wheezing and reduced oxygen -->
+    <PeriodicEffect mininterval="6" maxinterval="7">
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="male" />
+        <Conditional rupturedlung="gteq 10" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="%ModDir%/Sounds/male_wheeze1.ogg" volume="0.7" range="300" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/male_wheeze2.ogg" volume="0.7" range="300" />
+        <Sound file="%ModDir%/Sounds/male_wheeze3.ogg" volume="0.7" range="300" />
+        <Sound file="%ModDir%/Sounds/male_wheeze4.ogg" volume="0.7" range="300" />
+        <Sound file="%ModDir%/Sounds/male_wheeze5.ogg" volume="0.7" range="300" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="female" />
+        <Conditional rupturedlung="gteq 10" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="%ModDir%/Sounds/female_wheeze1.ogg" volume="0.7" range="300" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/female_wheeze2.ogg" volume="0.7" range="300" />
+        <Sound file="%ModDir%/Sounds/female_wheeze3.ogg" volume="0.7" range="300" />
+        <Sound file="%ModDir%/Sounds/female_wheeze4.ogg" volume="0.7" range="300" />
+        <Sound file="%ModDir%/Sounds/female_wheeze5.ogg" volume="0.7" range="300" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional rupturedlung="gteq 10" />
+        <Conditional IsUnconscious="false" />
+        <Affliction identifier="oxygenlow" strength="17" />
+      </StatusEffect>
+    </PeriodicEffect>
+  </Affliction>
+  <!-- Brain hemorrhage -->
+  <Affliction name="Кровоизлияние в мозг" identifier="brainhemorrhage" type="brainhemorrhage" maxstrength="100" treatmentthreshold="40" limbspecific="true" indicatorlimb="Head" healcostmultiplier="0" basehealcost="650" showiconthreshold="33" showinhealthscannerthreshold="0" causeofdeathdescription="afflictioncauseofdeath.brainhemorrhage" selfcauseofdeathdescription="afflictioncauseofdeathself.brainhemorrhage">
+    <icon texture="%ModDir%/Icons/Afflictions.png" sourcerect="384,0,128,128" origin="0,0" />
+    <Description textidentifier="afflictiondescription.brainhemorrhage" target="OtherCharacter" minstrength="0" maxstrength="25" />
+    <Description textidentifier="afflictiondescription.brainhemorrhage.medium" target="OtherCharacter" minstrength="25" maxstrength="99" />
+    <Description textidentifier="afflictiondescription.brainhemorrhage.high" target="OtherCharacter" minstrength="99" maxstrength="100" />
+    <Description textidentifier="afflictiondescription.brainhemorrhage.self" target="Self" minstrength="0" maxstrength="25" />
+    <Description textidentifier="afflictiondescription.brainhemorrhage.medium.self" target="Self" minstrength="25" maxstrength="100" />
+    <Effect minstrength="0" maxstrength="15" multiplybymaxvitality="true" minvitalitydecrease="0.0" maxvitalitydecrease="0.15" minscreendistort="0.0" maxscreendistort="0.15" minscreenblur="0.0" maxscreenblur="0.15" minradialdistort="0.0" maxradialdistort="0.15" minspeedmultiplier="1" maxspeedmultiplier="0.8">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="brainhemorrhage" strength="0.02" />
+      </StatusEffect>
+      <!-- Integration with Neurotrauma brain transplants & amputations. -->
+      <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="or">
+        <Conditional brainremoved="gt 0" />
+        <Conditional th_amputation="gt 0" />
+        <Conditional sh_amputation="gt 0" />
+        <ReduceAffliction type="brainhemorrhage" strength="1000" />
+        <Affliction identifier="removecortizidefx" strength="1000" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="15" maxstrength="99" multiplybymaxvitality="true" dialogflag="BrainHemorrhageLow" minvitalitydecrease="0.15" maxvitalitydecrease="1.0" minscreendistort="0.15" maxscreendistort="1.7" minscreenblur="0.15" maxscreenblur="2.0" mingrainstrength="0.15" maxgrainstrength="2.0" minradialdistort="0.15" maxradialdistort="1.7" minspeedmultiplier="0.8" maxspeedmultiplier="0.25">
+      <!-- Integration with Neurotrauma brain transplants & amputations. -->
+      <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="or">
+        <Conditional brainremoved="gt 0" />
+        <Conditional th_amputation="gt 0" />
+        <Conditional sh_amputation="gt 0" />
+        <ReduceAffliction type="brainhemorrhage" strength="1000" />
+        <Affliction identifier="removecortizidefx" strength="1000" />
+      </StatusEffect>
+      <!-- After 15%, the hemorrhaging advances by itself, leaving the patient with ~5 minutes to live. -->
+      <StatusEffect target="Character" targetlimb="Head" disabledeltatime="true" interval="1">
+        <Conditional mannainjectionhead="lteq 0" />
+        <Affliction identifier="brainhemorrhage" strength="0.28" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="Head" disabledeltatime="true" interval="1">
+        <Conditional brainhemorrhage="gteq 25" />
+        <Affliction identifier="photopsia" strength="0.9" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="Head" disabledeltatime="true" interval="1">
+        <Conditional brainhemorrhage="gteq 30" />
+        <Affliction identifier="ataxia" strength="0.8" />
+      </StatusEffect>
+      <StatusEffect target="Character">
+        <Conditional brainhemorrhage="gteq 40" />
+        <Affliction identifier="border" strength="1" />
+      </StatusEffect>
+      <StatusEffect target="Character">
+        <Conditional brainhemorrhage="gteq 50" />
+        <Affliction identifier="psychosis" strength="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="Head">
+        <Conditional brainhemorrhage="gteq 60" />
+        <Affliction identifier="myodesopsias" strength="2" />
+        <Affliction identifier="aphasia" strength="0.8" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="LeftArm,RightArm">
+        <Conditional brainhemorrhage="gteq 70" />
+        <Affliction identifier="nervedamage" strength="0.1" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="Head">
+        <Conditional brainhemorrhage="gteq 80" />
+        <Affliction identifier="opticneuritis" strength="3.5" />
+      </StatusEffect>
+      <!-- Sound loops -->
+      <StatusEffect target="Character" comparison="and">
+        <Conditional isLocalPlayer="true" />
+        <Conditional brainhemorrhage="gteq 15" />
+        <Conditional brainhemorrhage="lt 32" />
+        <Sound file="%ModDir%/Sounds/brainHemorrhageStage1.ogg" volume="1.0" dontmuffle="true" loop="true" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional isLocalPlayer="true" />
+        <Conditional brainhemorrhage="gteq 32" />
+        <Conditional brainhemorrhage="lt 49" />
+        <Sound file="%ModDir%/Sounds/brainHemorrhageStage2.ogg" volume="1.2" dontmuffle="true" loop="true" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional isLocalPlayer="true" />
+        <Conditional brainhemorrhage="gteq 49" />
+        <Conditional brainhemorrhage="lt 66" />
+        <Sound file="%ModDir%/Sounds/brainHemorrhageStage3.ogg" volume="1.4" dontmuffle="true" loop="true" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional isLocalPlayer="true" />
+        <Conditional brainhemorrhage="gteq 66" />
+        <Conditional brainhemorrhage="lt 83" />
+        <Sound file="%ModDir%/Sounds/brainHemorrhageStage4.ogg" volume="1.6" dontmuffle="true" loop="true" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional isLocalPlayer="true" />
+        <Conditional brainhemorrhage="gteq 83" />
+        <Sound file="%ModDir%/Sounds/brainHemorrhageStage5.ogg" volume="1.8" dontmuffle="true" loop="true" />
+      </StatusEffect>
+    </Effect>
+    <!-- Kills the patient at 100% -->
+    <Effect minstrength="99" maxstrength="100" multiplybymaxvitality="true" minvitalitydecrease="1.0" maxvitalitydecrease="2.0" minscreendistort="2" maxscreendistort="10" minscreenblur="2" maxscreenblur="10" minchromaticaberration="2" maxchromaticaberration="10" mingrainstrength="2" maxgrainstrength="10" minradialdistort="2" maxradialdistort="10">
+      <StatusEffect target="Character" targetlimb="Head" disabledeltatime="true" interval="1">
+        <Affliction identifier="brainhemorrhage" strength="0.35" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional brainhemorrhage="gteq 97" />
+        <Conditional IsLocalPlayer="True" />
+        <ReduceAffliction identifier="blindness" strength="1000" />
+        <Sound file="%ModDir%/Sounds/brainDeath.ogg" loop="false" dontmuffle="true" volume="1.4" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Manna Extract overdose -->
+  <Affliction name="Передоз Манной" identifier="mannaoverdose" type="poison" maxstrength="200" limbspecific="false" indicatorlimb="Torso" healcostmultiplier="1.5" karmachangeonapplied="-10" showiconthreshold="3" showinhealthscannerthreshold="0" iconcolors="199,90,176,255;210,45,45,255">
+    <icon texture="%ModDir%/Icons/Afflictions.png" sourcerect="256,128,128,128" origin="0,0" />
+    <Description textidentifier="afflictiondescription.mannaoverdose" target="OtherCharacter" />
+    <Description textidentifier="afflictiondescription.mannaoverdose.self" target="Self" />
+    <Effect minstrength="0" maxstrength="100" multiplybymaxvitality="true" minchromaticaberration="0" maxchromaticaberration="1" minvitalitydecrease="0" maxvitalitydecrease="1" minspeedmultiplier="1" maxspeedmultiplier="1.3">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="mannaoverdose" strength="0.5" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="100" maxstrength="200" multiplybymaxvitality="true" minchromaticaberration="1" maxchromaticaberration="10" minvitalitydecrease="1" maxvitalitydecrease="2" minspeedmultiplier="1" maxspeedmultiplier="0">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="mannaoverdose" strength="0.2" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Cortizide injection -->
+  <Affliction identifier="cortizideinjection" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-50" minscreenblur="0" maxscreenblur="100" minchromaticaberration="0" maxchromaticaberration="100">
+      <StatusEffect target="Character" interval="0.1" comparison="and">
+        <Conditional isLocalPlayer="true" />
+        <Conditional cortizideinjection="gteq 90" />
+        <Explosion range="1" force="1" smoke="false" sparks="false" flames="false" shockwave="false" underwaterbubble="false" camerashake="100" camerashakerange="3000" flashrange="1000" flashduration="0.15" screencolor="255,0,0,80" screencolorrange="1000" screencolorduration="0.2" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="removecortizidefx" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character">
+        <ReduceAffliction identifier="blindness" strength="100" />
+        <ReduceAffliction identifier="invertcontrols" strength="100" />
+        <ReduceAffliction identifier="psychosis" amount="100" />
+        <ReduceAffliction identifier="hallucinating" amount="100" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="removecortizidefx" strength="0.5" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Instant death -->
+  <Affliction identifier="cortizidedeath" maxstrength="2" limbspecific="true" indicatorlimb="head" karmachangeonapplied="-35" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" targetlimbs="Head" delay="0.0" comparison="and">
+        <Conditional isLocalPlayer="true" />
+        <Conditional ishuman="true" />
+        <Sound file="%ModDir%/Sounds/cortizideDeath.ogg" dontmuffle="true" volume="1.5" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimbs="Head" delay="0.1">
+        <Explosion range="1" decal="blood" decalsize="2.8" flashrange="0" stun="0" force="0" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="100" camerashake="0">
+          <Affliction identifier="cortizidedeath" strength="1" />
+        </Explosion>
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="1" maxstrength="2" multiplybymaxvitality="true" minvitalitydecrease="2" maxvitalitydecrease="2" />
+  </Affliction>
+  <!-- ↓↓↓ Cosmetic Afflictions ↓↓↓ -->
+  <!-- Photopsia : Flash-like vision disturbances. -->
+  <Affliction name="Фотопсия" identifier="photopsia" type="brainhemorrhage" maxstrength="100" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" showinhealthscannerthreshold="0" healableinmedicalclinic="false">
+    <icon texture="%ModDir%/Icons/Afflictions.png" sourcerect="640,0,128,128" origin="0,0" />
+    <Effect minstrength="0" maxstrength="100">
+      <!-- Remove photopsia if brainhemorrhage is cured by outpost doctor. -->
+      <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <Conditional brainhemorrhage="lteq 0" />
+        <Affliction identifier="photopsia" strength="-10" />
+      </StatusEffect>
+    </Effect>
+    <Description textidentifier="afflictiondescription.photopsia" target="OtherCharacter" />
+    <Description textidentifier="afflictiondescription.photopsia.self" target="Self" />
+    <PeriodicEffect mininterval="1" maxinterval="5">
+      <StatusEffect target="Character">
+        <Conditional brainhemorrhage="gteq 25" />
+        <Affliction identifier="flicker" strength="100" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <PeriodicEffect mininterval="9" maxinterval="18">
+      <StatusEffect target="Character">
+        <Conditional brainhemorrhage="gteq 35" />
+        <Affliction identifier="bigflash" strength="100" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <PeriodicEffect mininterval="8" maxinterval="14">
+      <StatusEffect target="Character">
+        <Conditional brainhemorrhage="gteq 45" />
+        <Affliction identifier="tallflash1" strength="100" />
+        <Affliction identifier="tallflash2" strength="100" />
+        <Affliction identifier="tallflash3" strength="100" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <PeriodicEffect mininterval="16" maxinterval="30">
+      <StatusEffect target="Character">
+        <Conditional brainhemorrhage="gteq 55" />
+        <Affliction identifier="peripheralorb" strength="100" />
+      </StatusEffect>
+    </PeriodicEffect>
+  </Affliction>
+  <!-- Aphasia : Trouble speaking or understanding speech. -->
+  <Affliction name="Афазия" identifier="aphasia" type="brainhemorrhage" maxstrength="100" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" showinhealthscannerthreshold="0" healableinmedicalclinic="false">
+    <icon texture="%ModDir%/Icons/Afflictions.png" sourcerect="768,0,128,128" origin="0,0" />
+    <Description textidentifier="afflictiondescription.aphasia" target="OtherCharacter" />
+    <Description textidentifier="afflictiondescription.aphasia.self" target="Self" />
+    <Effect minstrength="0" maxstrength="100" dialogflag="BrainHemorrhageMedium">
+      <!-- Remove aphasia if brainhemorrhage is cured by outpost doctor. -->
+      <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <Conditional brainhemorrhage="lteq 0" />
+        <Affliction identifier="aphasia" strength="-6" />
+      </StatusEffect>
+    </Effect>
+    <PeriodicEffect mininterval="3" maxinterval="6">
+      <StatusEffect target="Character" SpeechImpediment="100" setvalue="true" duration="2"></StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="male" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="Content/Characters/Human/male_damage1.ogg" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/male_damage2.ogg" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="female" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="Content/Characters/Human/female_damage1.ogg" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/female_damage2.ogg" />
+      </StatusEffect>
+    </PeriodicEffect>
+  </Affliction>
+  <!-- Ataxia : Poor muslce control that leads to clumsy voluntary movements. -->
+  <Affliction name="Атаксия" identifier="ataxia" type="brainhemorrhage" maxstrength="100" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" showinhealthscannerthreshold="0" healableinmedicalclinic="false">
+    <icon texture="%ModDir%/Icons/Afflictions.png" sourcerect="896,0,128,128" origin="0,0" />
+    <Description textidentifier="afflictiondescription.ataxia" target="OtherCharacter" />
+    <Description textidentifier="afflictiondescription.ataxia.self" target="Self" />
+    <Effect minstrength="0" maxstrength="100">
+      <!-- Remove ataxia if brainhemorrhage is cured by outpost doctor. -->
+      <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <Conditional brainhemorrhage="lteq 0" />
+        <Affliction identifier="aphasia" strength="-8" />
+      </StatusEffect>
+    </Effect>
+    <!-- Repeatedly inverts the characters movement. -->
+    <PeriodicEffect mininterval="9" maxinterval="18">
+      <Conditional cortizideinjection="lteq 0" />
+      <StatusEffect target="Character">
+        <Affliction identifier="invertcontrols" strength="10" />
+      </StatusEffect>
+      <StatusEffect target="Character">
+        <Conditional invertcontrols="gteq 11" />
+        <ReduceAffliction identifier="invertcontrols" strength="1000" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <!-- Convulsions -->
+    <PeriodicEffect mininterval="0.5" maxinterval="1.5">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false" delay="0" checkconditionalalways="false" comparison="and">
+        <Conditional brainhemorrhage="gteq 65" />
+        <Conditional isLocalPlayer="true" />
+        <Explosion range="1" flashrange="3000" flashduration="0.15" stun="0" structuredamage="0" itemdamage="0" force="20" severlimbsprobability="0.0" ballastfloradamage="0" smoke="false" flash="true" flames="false" shockwave="false" sparks="false" underwaterbubble="false" />
+      </StatusEffect>
+    </PeriodicEffect>
+  </Affliction>
+  <!-- Optic Neuritis : Temporary vision loss. -->
+  <Affliction name="Временная слепота" identifier="opticneuritis" type="brainhemorrhage" maxstrength="100" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" showinhealthscannerthreshold="0" healableinmedicalclinic="false">
+    <icon texture="%ModDir%/Icons/Afflictions.png" sourcerect="512,0,128,128" origin="0,0" />
+    <Description textidentifier="afflictiondescription.opticneuritis" target="OtherCharacter" />
+    <Description textidentifier="afflictiondescription.opticneuritis.self" target="Self" />
+    <Effect minstrength="0" maxstrength="100" dialogflag="BrainHemorrhageHigh">
+      <!-- Remove opticneuritis if brainhemorrhage is cured by outpost doctor. -->
+      <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <Conditional brainhemorrhage="lteq 0" />
+        <Affliction identifier="opticneuritis" strength="-4" />
+      </StatusEffect>
+    </Effect>
+    <PeriodicEffect mininterval="11" maxinterval="18">
+      <StatusEffect target="Character" comparison="and">
+        <Conditional brainhemorrhage="lt 97" />
+        <Conditional cortizideinjection="lteq 0" />
+        <Affliction identifier="blindness" strength="100" />
+      </StatusEffect>
+    </PeriodicEffect>
+  </Affliction>
+  <!-- ↓↓↓ Elements of cosmetic afflictions ↓↓↓ -->
+  <!-- Big flash -->
+  <Affliction identifier="bigflash" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
+    <Effect minstrength="0" maxstrength="25" strengthchange="-200">
+      <StatusEffect target="Character">
+        <Affliction identifier="photopsia1" strength="100" />
+        <ReduceAffliction identifier="photopsia2" strength="1000" />
+      </StatusEffect>
+      <StatusEffect target="Character">
+        <Conditional bigflash="lteq 1" />
+        <ReduceAffliction identifier="photopsia1" strength="1000" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="25" maxstrength="50" strengthchange="-200">
+      <StatusEffect target="Character">
+        <Affliction identifier="photopsia2" strength="100" />
+        <ReduceAffliction identifier="photopsia3" strength="1000" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="50" maxstrength="75" strengthchange="-200">
+      <StatusEffect target="Character">
+        <Affliction identifier="photopsia3" strength="100" />
+        <ReduceAffliction identifier="photopsia4" strength="1000" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="75" maxstrength="100" strengthchange="-200">
+      <StatusEffect target="Character">
+        <Affliction identifier="photopsia4" strength="100" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Flickering -->
+  <Affliction identifier="flicker" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-300">
+      <StatusEffect target="Character">
+        <Affliction identifier="flickeroverlay" strength="100" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Flicker overlay -->
+  <Affliction identifier="flickeroverlay" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-300" />
+    <AfflictionOverlay texture="%ModDir%/Icons/flicker.png" />
+  </Affliction>
+  <!-- Optic Neuritis overlay -->
+  <Affliction identifier="blindness" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="false">
+    <Effect minstrength="0" maxstrength="10" strengthchange="-5" minafflictionoverlayalphamultiplier="0" maxafflictionoverlayalphamultiplier="1" />
+    <Effect minstrength="10" maxstrength="100" strengthchange="-25" />
+    <AfflictionOverlay texture="%ModDir%/Icons/blindness.png" />
+  </Affliction>
+  <!-- Photopsia frame overlays -->
+  <Affliction identifier="photopsia1" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true">
+    <Effect minstrength="0" maxstrength="100" />
+    <AfflictionOverlay texture="%ModDir%/Icons/PhotopsiaOverlay1.png" />
+  </Affliction>
+  <Affliction identifier="photopsia2" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" />
+    <AfflictionOverlay texture="%ModDir%/Icons/PhotopsiaOverlay2.png" />
+  </Affliction>
+  <Affliction identifier="photopsia3" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" />
+    <AfflictionOverlay texture="%ModDir%/Icons/PhotopsiaOverlay3.png" />
+  </Affliction>
+  <Affliction identifier="photopsia4" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true">
+    <Effect minstrength="0" maxstrength="100" />
+    <AfflictionOverlay texture="%ModDir%/Icons/PhotopsiaOverlay4.png" />
+  </Affliction>
+  <!-- Tall flash -->
+  <Affliction identifier="tallflash1" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-450" />
+    <AfflictionOverlay texture="%ModDir%/Icons/TallFlash1.png" />
+  </Affliction>
+  <Affliction identifier="tallflash2" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-350" />
+    <AfflictionOverlay texture="%ModDir%/Icons/TallFlash2.png" />
+  </Affliction>
+  <Affliction identifier="tallflash3" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-250" />
+    <AfflictionOverlay texture="%ModDir%/Icons/TallFlash3.png" />
+  </Affliction>
+  <!-- Peripheral orb -->
+  <Affliction identifier="peripheralorb" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-800" />
+    <AfflictionOverlay texture="%ModDir%/Icons/PeripheralOrbOverlay.png" />
+  </Affliction>
+  <!-- Manna Extract active -->
+  <Affliction name="Воздействие манны" identifier="mannainjection" type="mannainjection" limbspecific="true" isbuff="true" showiconthreshold="0" showinhealthscannerthreshold="0" maxstrength="1" iconcolors="184,125,224,255;199,90,176,255" afflictionoverlayalphaislinear="true">
+    <icon texture="%ModDir%/Icons/Afflictions.png" sourcerect="0,512,128,128" origin="0,0" />
+    <Description textidentifier="afflictiondescription.mannainjection" target="OtherCharacter" />
+    <Description textidentifier="afflictiondescription.mannainjection.self" target="Self" />
+    <Effect minstrength="0" maxstrength="1" minchromaticaberration="0" maxchromaticaberration="1">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="mannainjection" strength="0.5" />
+      </StatusEffect>
+    </Effect>
+    <AfflictionOverlay texture="%ModDir%/Icons/MannaOverlay.png" />
+  </Affliction>
+  <!-- Affliction that tracks the usage of Manna and begins an overdose if used too frequently. -->
+  <Affliction identifier="mannausage" type="poison" limbspecific="false" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
+    <Effect minstrength="0" maxstrength="30">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="mannausage" strength="0.8" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="30" maxstrength="40">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <Affliction identifier="mannaoverdose" amount="0.4" />
+        <ReduceAffliction identifier="mannausage" strength="0.8" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="40" maxstrength="50">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <Affliction identifier="mannaoverdose" amount="0.7" />
+        <ReduceAffliction identifier="mannausage" strength="1" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="50" maxstrength="60">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <Affliction identifier="mannaoverdose" amount="1.1" />
+        <ReduceAffliction identifier="mannausage" strength="1" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="60" maxstrength="70">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <Affliction identifier="mannaoverdose" amount="1.6" />
+        <ReduceAffliction identifier="mannausage" strength="1.2" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="70" maxstrength="80">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <Affliction identifier="mannaoverdose" amount="2.2" />
+        <ReduceAffliction identifier="mannausage" strength="1.2" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="80" maxstrength="90">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <Affliction identifier="mannaoverdose" amount="2.9" />
+        <ReduceAffliction identifier="mannausage" strength="1.4" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="90" maxstrength="100">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <Affliction identifier="mannaoverdose" amount="3.6" />
+        <ReduceAffliction identifier="mannausage" strength="1.5" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Manna Extract active on head -->
+  <Affliction name="Действие Манны" identifier="mannainjectionhead" type="mannainjection" limbspecific="true" isbuff="true" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" minchromaticaberration="0" maxchromaticaberration="2">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="mannainjectionhead" strength="0.5" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Myodesopsias overlay -->
+  <Affliction identifier="myodesopsias" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true">
+    <Effect minstrength="0" maxstrength="100">
+      <!-- Remove myodesopsias if brainhemorrhage is cured by outpost doctor. -->
+      <StatusEffect target="Character" interval="0.1" disabledeltatime="true">
+        <Conditional brainhemorrhage="lteq 0" />
+        <Affliction identifier="myodesopsias" strength="-2" />
+      </StatusEffect>
+    </Effect>
+    <AfflictionOverlay texture="%ModDir%/Icons/MyodesopsiasOverlay.png" />
+  </Affliction>
+  <!-- Brain hemorrhage border overlay -->
+  <Affliction identifier="border" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true">
+    <Effect minstrength="0" maxstrength="100">
+      <!-- Remove border if brainhemorrhage is cured by outpost doctor. -->
+      <StatusEffect target="Character" interval="0.1" disabledeltatime="true">
+        <Conditional brainhemorrhage="lteq 0" />
+        <Affliction identifier="border" strength="-1.5" />
+      </StatusEffect>
+    </Effect>
+    <AfflictionOverlay texture="%ModDir%/Icons/BrainHemorrhageOverlay.png" />
+  </Affliction>
+  <!-- Creature damage -->
+  <Affliction identifier="creaturedamage" showiconthreshold="10000" showinhealthscannerthreshold="10000" maxstrength="10000">
+    <Effect minstrength="0" maxstrength="10000" minvitalitydecrease="100" maxvitalitydecrease="17000"></Effect>
+  </Affliction>
+</Afflictions>
