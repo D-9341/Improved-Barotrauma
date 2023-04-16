@@ -22,7 +22,7 @@
       <Price minavailable="1" multiplier="1.25" locationtype="military" />
       <Price minavailable="8" multiplier=".9" locationtype="mine" />
     </Price>
-    <InventoryIcon origin="0.5,0.5" sourcerect="0,0,148,68" texture="%ModDir%/Items/LaserTool.png" />
+    <InventoryIcon origin="0.5,0.5" sourcerect="0,0,252,120" texture="%ModDir%/Items/LaserTool.png" />
     <Sprite origin="0.5,0.5" sourcerect="0,0,252,120" texture="%ModDir%/Items/LaserToolSmall.png" depth="0.55" />
     <Body density="20" height="10" width="40" scale=".5" radius="40" />
     <Holdable msg="ItemMsgPickUpSelect" slots="Any,RightHand+LeftHand" handle2="16,-14" handle1="-14,-8" aimpos="50,0" controlpose="true" />
@@ -49,8 +49,7 @@
         <sprite origin="0.5,0.5" texture="Content/Items/Electricity/lightsprite.png" />
       </LightComponent>
     </RepairTool>
-    <ItemContainer capacity="1" maxstacksize="1" containedspritedepth="0.56" itempos="-70,5" hideitems="false">
-      <ContainedStateIndicator sourcerect="1,70,107,31" texture="Content/UI/ContainerIndicators.png" />
+    <ItemContainer capacity="1" maxstacksize="1" containedspritedepth="0.56" itempos="-70,5" hideitems="false" containedstateindicatorstyle="battery">
       <Containable items="batterycell,fulguriumbatterycell" />
     </ItemContainer>
     <RepairTool>

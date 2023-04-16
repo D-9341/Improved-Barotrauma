@@ -57,8 +57,7 @@
       </LightComponent>
     </RepairTool>
     <!-- one welding fuel or oxygen tank can be contained inside the welding tool -->
-    <ItemContainer capacity="1" maxstacksize="1" containedspritedepth="0.56" itempos="-70,5" hideitems="false">
-      <ContainedStateIndicator sourcerect="1,70,107,31" texture="Content/UI/ContainerIndicators.png" />
+    <ItemContainer capacity="1" maxstacksize="1" containedspritedepth="0.56" itempos="-70,5" hideitems="false" containedstateindicatorstyle="battery">
       <Containable items="batterycell,fulguriumbatterycell" />
     </ItemContainer>
     <RepairTool>
