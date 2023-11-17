@@ -2,6 +2,8 @@ local easySettings = {}
 
 easySettings.Settings = {}
 
+local GUIComponent = LuaUserData.CreateStatic("Barotrauma.GUIComponent")
+
 local function GetChildren(comp)
     local tbl = {}
     for value in comp.GetAllChildren() do
@@ -23,6 +25,11 @@ Hook.Patch("Barotrauma.GUI", "TogglePauseMenu", {}, function ()
                 value.OnOpen(frame)
             end
         end
+    else
+        if Game.IsMultiplayer then
+            local message = Networking.Start("reloadserverconfig")
+            Networking.Send(message)
+        end
     end
 end, Hook.HookMethodType.After)
 
@@ -42,7 +49,7 @@ easySettings.AddMenu = function (name, onOpen)
 end
 
 easySettings.BasicList = function (parent, size)
-    local menuContent = GUI.Frame(GUI.RectTransform(size or Vector2(0.25, 0.33), parent.RectTransform, GUI.Anchor.Center))
+    local menuContent = GUI.Frame(GUI.RectTransform(size or Vector2(0.3, 0.5), parent.RectTransform, GUI.Anchor.Center))
     local menuList = GUI.ListBox(GUI.RectTransform(Vector2(0.9, 0.8), menuContent.RectTransform, GUI.Anchor.Center))
 
     easySettings.CloseButton(menuContent)
@@ -59,6 +66,18 @@ easySettings.Slider = function (parent, min, max, onSelected, value)
     end
 
     return scrollBar
+end
+
+easySettings.TickBox = function (parent, text, onSelected, state)
+    if state == nil then state = true end
+
+    local tickBox = GUI.TickBox(GUI.RectTransform(Vector2(1, 0.2), parent.RectTransform), text)
+    tickBox.Selected = state
+    tickBox.OnSelected = function ()
+        onSelected(tickBox.State == GUIComponent.ComponentState.Selected)
+    end
+
+    return tickBox
 end
 
 easySettings.CloseButton = function (parent)

@@ -1,6 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-  <Item name="Регенеративный препарат Пропитал" identifier="propital" description="Стимулирует процессы регенерации за счет усиления биосинтеза пуриновых и пиримидиновых оснований, РНК, функциональных и ферментативных клеточных элементов. Повышает метаболизм, здоровье и жизнеспособность." category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+  <Item name="Коктейль Обдолбос" identifier="obdolbos" description="Коктейль из множества медикаментов. Есть побочный эффект!" category="Medicine" maxstacksize="8" cargocontaineridentifier="mediccrate" tags="smallitem,medical,syringe" useinhealthinterface="true" scale="0.5" RequireAimToUse="true">
+    <InventoryIcon texture="%ModDir%/Images/obdolbos.png" sourcerect="13,11,60,60" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,140,37,69" depth="0.6" origin="0.5,0.5" />
+    <Body width="35" height="65" density="20" />
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+      <RequiredSkill identifier="medical" level="30" />
+      <StatusEffect tags="medical" type="OnUse" target="UseTarget" duration="10">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <Affliction identifier="obdolboseffect" amount="1" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
+    <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" launchrotation="-90">
+      <StatusEffect type="OnImpact" target="UseTarget" Condition="-100.0" disabledeltatime="true">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnImpact" target="UseTarget" duration="10">
+        <Affliction identifier="obdolboseffect" amount="2" />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="Регенеративный препарат Пропитал" identifier="propital" description="Стимулирует процессы регенерации за счет усиления биосинтеза пуриновых и пиримидиновых оснований, РНК, функциональных и ферментативных клеточных элементов. Повышает метаболизм, здоровье и жизнеспособность." category="Medicine" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <PreferredContainer primary="medcab" minamount="2" maxamount="5" />
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="3" spawnprobability="0.4" />
@@ -15,7 +40,6 @@
     </Price>
     <SuitableTreatment type="damage" suitability="50" />
     <SuitableTreatment type="burn" suitability="50" />
-    <SuitableTreatment identifier="opiatewithdrawal" suitability="-30" />
     <Fabricate suitablefabricators="medicalfabricator" requiredtime="30">
       <RequiredSkill identifier="medical" level="80" />
       <RequiredItem identifier="opium" />
@@ -24,7 +48,7 @@
       <Item identifier="opium" copycondition="true" mincondition="0.1" />
     </Deconstruct>
     <InventoryIcon texture="%ModDir%/Images/propital.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="112,139,37,69" depth="0.6" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="112,140,37,69" depth="0.6" origin="0.5,0.5" />
     <Body width="35" height="65" density="20" />
     <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
@@ -32,7 +56,7 @@
       <RequiredSkill identifier="medical" level="30" />
       <StatusEffect tags="medical" type="OnUse" target="UseTarget" duration="10">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <Affliction identifier='propitaleffect' amount='15'/>
+        <Affliction identifier="propitaleffect" amount="15" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove />
@@ -43,7 +67,7 @@
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnImpact" target="UseTarget" duration="10">
-        <Affliction identifier='propitaleffect' amount='2'/>
+        <Affliction identifier="propitaleffect" amount="2" />
       </StatusEffect>
     </Projectile>
   </Item>
@@ -81,17 +105,16 @@
       <StatusEffect type="OnUse" target="This" Condition="-100" />
       <StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="5" stackable="false" />
       <StatusEffect type="OnUse" target="UseTarget" setvalue="true" delay="3.2" comparison="Or">
-        <Conditional сondition="gt 99" vf="gte 0.01" vt="gte 0.01" />
-        <ReduceAffliction identifier="vf" amount="30" />
+        <Conditional сondition="gt 99" vt="gte 0.01" />
         <ReduceAffliction identifier="vt" amount="100" />
         <Affliction identifier="stun" amount="2" />
       </StatusEffect>
       <StatusEffect type="OnUse" target="UseTarget" setvalue="true" delay="0" comparison="Or">
-        <Conditional vf="gte 0.01" vt="gte 0.01" />
+        <Conditional vt="gte 0.01" />
         <Sound file="%ModDir%/Sound/Defib1.ogg" range="1000" />
       </StatusEffect>
       <StatusEffect type="OnUse" target="UseTarget" setvalue="true" delay="0" comparison="And">
-        <Conditional vf="eq 0" vt="eq 0" />
+        <Conditional vt="eq 0" />
         <Sound file="%ModDir%/Sound/Defib2.ogg" range="500" />
       </StatusEffect>
     </MeleeWeapon>
@@ -233,7 +256,6 @@
       <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="379,452,27,58" depth="0.55" origin="0.5,0.5" />
       <Body width="25" height="55" density="20" />
       <SuitableTreatment identifier="hypotension" suitability="250" />
-      <SuitableTreatment identifier="asys" suitability="50" />
       <SuitableTreatment identifier="aritmia" suitability="45" />
       <SuitableTreatment identifier="hypoxia" suitability="15" />
       <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
@@ -284,8 +306,8 @@
       <RequiredSkill identifier="medical" level="40" />
       <StatusEffect type="OnUse" target="Limb" comparison="and">
         <Conditional analgesia="gte 1" />
-        <Affliction identifier="surgeryincision1" amount="1" />
-        <Affliction identifier="surgeryincision2" amount="1" />
+        <Affliction identifier="ll_si" amount="1" />
+        <Affliction identifier="rl_si" amount="1" />
         <Affliction identifier="surgeryincision3" amount="1" />
         <Affliction identifier="surgeryincision4" amount="1" />
         <Affliction identifier="surgeryincision5" amount="1" />
@@ -340,16 +362,16 @@
     <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,-5" holdangle="-90" reload="1.0">
       <RequiredSkill identifier="medical" level="30" />
       <StatusEffect type="OnUse" target="Limb" comparison="and">
-        <Conditional surgeryincision1="gte 99" />
+        <Conditional ll_si="gte 99" />
         <Conditional analgesia="gte 1" />
         <Affliction identifier="clampedbleeders1" amount="1" />
-        <ReduceAffliction identifier="surgeryincision1" amount="9999" />
+        <ReduceAffliction identifier="ll_si" amount="9999" />
       </StatusEffect>
       <StatusEffect type="OnUse" target="Limb" comparison="and">
-        <Conditional surgeryincision2="gte 99" />
+        <Conditional rl_si="gte 99" />
         <Conditional analgesia="gte 1" />
         <Affliction identifier="clampedbleeders2" amount="1" />
-        <ReduceAffliction identifier="surgeryincision2" amount="9999" />
+        <ReduceAffliction identifier="rl_si" amount="9999" />
       </StatusEffect>
       <StatusEffect type="OnUse" target="Limb" comparison="and">
         <Conditional surgeryincision3="gte 99" />
@@ -596,7 +618,7 @@
   <Item name="Хирургическая пила" identifier="surgerysaw" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="Инструмент, используемый для распиливания костей" useinhealthinterface="True" scale="0.4">
     <PreferredContainer primary="toxcontainer" spawnprobability="0.2" />
     <PreferredContainer primary="locker" />
-    <Fabricate suitablefabricators="fabricator" outcondition="100.0">
+    <Fabricate suitablefabricators="fabricator">
       <RequiredItem identifier="titaniumaluminiumalloy" />
     </Fabricate>
     <Deconstruct time="10">
@@ -617,7 +639,7 @@
       <StatusEffect type="OnUse" target="Limb" comparison="And">
         <Conditional analgesia="gte 1" />
         <Conditional retractedskin1="gte 99" />
-        <Affliction identifier="boncut1" amount="1" />
+        <Affliction identifier="ll_boncut" amount="1" />
         <sound file="%ModDir%/Sound/bonebreak4.ogg" selectionmode="random" range="500" />
         <sound file="%ModDir%/Sound/bonebreak3.ogg" range="500" />
         <sound file="%ModDir%/Sound/bonebreak2.ogg" range="500" />
@@ -626,7 +648,7 @@
       <StatusEffect type="OnUse" target="Limb" comparison="And">
         <Conditional analgesia="gte 1" />
         <Conditional retractedskin2="gte 99" />
-        <Affliction identifier="boncut2" amount="1" />
+        <Affliction identifier="rl_boncut" amount="1" />
         <sound file="%ModDir%/Sound/bonebreak4.ogg" selectionmode="random" range="500" />
         <sound file="%ModDir%/Sound/bonebreak3.ogg" range="500" />
         <sound file="%ModDir%/Sound/bonebreak2.ogg" range="500" />
@@ -635,7 +657,7 @@
       <StatusEffect type="OnUse" target="Limb" comparison="And">
         <Conditional analgesia="gte 1" />
         <Conditional retractedskin3="gte 99" />
-        <Affliction identifier="boncut3" amount="1" />
+        <Affliction identifier="la_boncut" amount="1" />
         <sound file="%ModDir%/Sound/bonebreak4.ogg" selectionmode="random" range="500" />
         <sound file="%ModDir%/Sound/bonebreak3.ogg" range="500" />
         <sound file="%ModDir%/Sound/bonebreak2.ogg" range="500" />
@@ -644,7 +666,7 @@
       <StatusEffect type="OnUse" target="Limb" comparison="And">
         <Conditional analgesia="gte 1" />
         <Conditional retractedskin4="gte 99" />
-        <Affliction identifier="boncut4" amount="1" />
+        <Affliction identifier="ra_boncut" amount="1" />
         <sound file="%ModDir%/Sound/bonebreak4.ogg" selectionmode="random" range="500" />
         <sound file="%ModDir%/Sound/bonebreak3.ogg" range="500" />
         <sound file="%ModDir%/Sound/bonebreak2.ogg" range="500" />
@@ -696,22 +718,22 @@
         <Sound file="%ModDir%/Sound/suture.ogg" range="500" />
       </StatusEffect>
       <StatusEffect type="OnUse" tags="medical" target="Limb, This" comparison="Or">
-        <Conditional boncut1="gte 99" />
+        <Conditional ll_boncut="gte 99" />
         <Affliction identifier="sll_amputation" amount="1000" />
         <ReduceAffliction identifier="tll_amputation" amount="1000" />
       </StatusEffect>
       <StatusEffect type="OnUse" tags="medical" target="Limb, This" comparison="Or">
-        <Conditional boncut2="gte 99" />
+        <Conditional rl_boncut="gte 99" />
         <Affliction identifier="srl_amputation" amount="1000" />
         <ReduceAffliction identifier="trl_amputation" amount="1000" />
       </StatusEffect>
       <StatusEffect type="OnUse" tags="medical" target="Limb, This" comparison="Or">
-        <Conditional boncut3="gte 99" />
+        <Conditional la_boncut="gte 99" />
         <Affliction identifier="sla_amputation" amount="1000" />
         <ReduceAffliction identifier="tla_amputation" amount="1000" />
       </StatusEffect>
       <StatusEffect type="OnUse" tags="medical" target="Limb, This" comparison="Or">
-        <Conditional boncut4="gte 99" />
+        <Conditional ra_boncut="gte 99" />
         <Affliction identifier="sra_amputation" amount="1000" />
         <ReduceAffliction identifier="tra_amputation" amount="1000" />
       </StatusEffect>
@@ -751,36 +773,36 @@
         <ReduceAffliction identifier="internalbleeding" amount="1000" />
       </StatusEffect>
       <StatusEffect type="OnUse" tags="medical" target="Limb, This" comparison="Or">
-        <Conditional surgeryincision1="gte 1" retractedskin1="gte 1" clampedbleeders1="gte 1" drilledbones1="gte 1" boncut1="gte 1" />
-        <ReduceAffliction identifier="surgeryincision1" amount="1000" />
-        <ReduceAffliction identifier="boncut1" amount="1000" />
+        <Conditional ll_si="gte 1" retractedskin1="gte 1" clampedbleeders1="gte 1" drilledbones1="gte 1" ll_boncut="gte 1" />
+        <ReduceAffliction identifier="ll_si" amount="1000" />
+        <ReduceAffliction identifier="ll_boncut" amount="1000" />
         <ReduceAffliction identifier="clampedbleeders1" amount="1000" />
         <ReduceAffliction identifier="drilledbones1" amount="1000" />
         <ReduceAffliction identifier="retractedskin1" amount="1000" />
         <Affliction identifier="suturedi1" amount="100" />
       </StatusEffect>
       <StatusEffect type="OnUse" tags="medical" target="Limb, This" comparison="Or">
-        <Conditional surgeryincision2="gte 1" retractedskin2="gte 1" clampedbleeders2="gte 1" drilledbones2="gte 1" boncut2="gte 1" />
-        <ReduceAffliction identifier="surgeryincision2" amount="1000" />
-        <ReduceAffliction identifier="boncut2" amount="1000" />
+        <Conditional rl_si="gte 1" retractedskin2="gte 1" clampedbleeders2="gte 1" drilledbones2="gte 1" rl_boncut="gte 1" />
+        <ReduceAffliction identifier="rl_si" amount="1000" />
+        <ReduceAffliction identifier="rl_boncut" amount="1000" />
         <ReduceAffliction identifier="clampedbleeders2" amount="1000" />
         <ReduceAffliction identifier="drilledbones2" amount="1000" />
         <ReduceAffliction identifier="retractedskin2" amount="1000" />
         <Affliction identifier="suturedi2" amount="100" />
       </StatusEffect>
       <StatusEffect type="OnUse" tags="medical" target="Limb, This" comparison="Or">
-        <Conditional surgeryincision3="gte 1" retractedskin3="gte 1" clampedbleeders3="gte 1" drilledbones3="gte 1" boncut3="gte 1" />
+        <Conditional surgeryincision3="gte 1" retractedskin3="gte 1" clampedbleeders3="gte 1" drilledbones3="gte 1" la_boncut="gte 1" />
         <ReduceAffliction identifier="surgeryincision3" amount="1000" />
-        <ReduceAffliction identifier="boncut3" amount="1000" />
+        <ReduceAffliction identifier="la_boncut" amount="1000" />
         <ReduceAffliction identifier="clampedbleeders3" amount="1000" />
         <ReduceAffliction identifier="drilledbones3" amount="1000" />
         <ReduceAffliction identifier="retractedskin3" amount="1000" />
         <Affliction identifier="suturedi3" amount="100" />
       </StatusEffect>
       <StatusEffect type="OnUse" tags="medical" target="Limb, This" comparison="Or">
-        <Conditional surgeryincision4="gte 1" retractedskin4="gte 1" clampedbleeders4="gte 1" drilledbones4="gte 1" boncut4="gte 1" />
+        <Conditional surgeryincision4="gte 1" retractedskin4="gte 1" clampedbleeders4="gte 1" drilledbones4="gte 1" ra_boncut="gte 1" />
         <ReduceAffliction identifier="surgeryincision4" amount="1000" />
-        <ReduceAffliction identifier="boncut4" amount="1000" />
+        <ReduceAffliction identifier="ra_boncut" amount="1000" />
         <ReduceAffliction identifier="clampedbleeders4" amount="1000" />
         <ReduceAffliction identifier="drilledbones4" amount="1000" />
         <ReduceAffliction identifier="retractedskin4" amount="1000" />
@@ -895,7 +917,7 @@
   <Item name="Турникет" identifier="tourniquet" category="Equipment" maxstacksize="4" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="Используется для остановки кровотока по вене или артерии" useinhealthinterface="True" scale="0.250">
     <PreferredContainer primary="toxcontainer" spawnprobability="0.2" />
     <PreferredContainer primary="medcab" minamount="1" maxamount="2" spawnprobability="1" />
-    <Fabricate suitablefabricators="medicalfabricator" outcondition="100.0" amount="2">
+    <Fabricate suitablefabricators="medicalfabricator" amount="2">
       <RequiredItem identifier="organicfiber" />
     </Fabricate>
     <Deconstruct time="10">
@@ -950,7 +972,7 @@
   <Item name="РЭБОА" identifier="REBOA" category="Equipment" maxstacksize="1" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery,syringe" description="Предмет, который включает размещение эндоваскулярного баллона в аорте для контроля кровотечения, увеличения постнагрузки и временного поддержания кровяного давления при травматическом геморрагическом шоке." useinhealthinterface="True" scale="0.250">
     <PreferredContainer primary="toxcontainer" spawnprobability="0.2" />
     <PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="0.5" />
-    <Fabricate suitablefabricators="medicalfabricator" outcondition="100.0" amount="1">
+    <Fabricate suitablefabricators="medicalfabricator" amount="1">
       <RequiredItem identifier="organicfiber" />
       <RequiredItem identifier="plastic" />
       <RequiredItem identifier="rubber" />
@@ -988,7 +1010,7 @@
   <Item name="Дренаж" identifier="drainage" category="Equipment" maxstacksize="1" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery,syringe" description="Дренаж легочных выделений. Он используется для лечения различных состояний, которые вызывают накопление секрета в легких." useinhealthinterface="True" scale="0.250">
     <PreferredContainer primary="toxcontainer" spawnprobability="0.2" />
     <PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="0.5" />
-    <Fabricate suitablefabricators="medicalfabricator" outcondition="100.0" amount="1">
+    <Fabricate suitablefabricators="medicalfabricator" amount="1">
       <RequiredItem identifier="plastic" />
       <RequiredItem identifier="plastic" />
     </Fabricate>
@@ -1718,8 +1740,6 @@
         <Conditional IsDead="false" />
         <RequiredItem items="mobilebattery" type="Contained" />
         <ReduceAffliction identifier="hypotension" amount="1.5" />
-        <ReduceAffliction identifier="vf" amount="1" />
-        <ReduceAffliction identifier="asys" amount="0.65" />
         <ReduceAffliction identifier="vt" amount="2.25" />
         <ReduceAffliction identifier="oxygenlow" amount="3" />
       </StatusEffect>
@@ -1873,63 +1893,6 @@
     </Holdable>
   </Item>
   <Override>
-    <Item name="" identifier="healthscanner" scale="0.27" category="Equipment" tags="smallitem,tool" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
-      <Price baseprice="150" soldeverywhere="false" minleveldifficulty="15">
-        <Price locationtype="outpost" multiplier="1.3" sold="false" />
-        <Price locationtype="city" multiplier="1.2" minavailable="1" />
-        <Price locationtype="research" multiplier="1" minavailable="8" />
-        <Price locationtype="military" multiplier="1.25" minavailable="1" />
-        <Price locationtype="mine" multiplier="1" sold="false" />
-      </Price>
-      <Deconstruct time="20">
-        <Item identifier="fpgacircuit" />
-        <Item identifier="aluminium" />
-      </Deconstruct>
-      <Fabricate suitablefabricators="fabricator" requiredtime="10">
-        <RequiredSkill identifier="medical" level="40" />
-        <RequiredItem identifier="fpgacircuit" />
-        <RequiredItem identifier="aluminium" />
-      </Fabricate>
-      <!--<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="704,256,64,64" origin="0.5,0.5" />-->
-      <InventoryIcon texture="%ModDir%/Images/InventoryItemIconAtlas.png" sourcerect="448,64,64,64" origin="0.5,0.5" />
-      <Sprite texture="%ModDir%/Images/InGameItemIconAtlas.png" sourcerect="768,0,128,128" depth="0.6" origin="0.5,0.5" />
-      <Body width="112" height="96" density="25" />
-      <Holdable slots="Any,RightHand,LeftHand" holdpos="30,-15" aimpos="100,0" handle1="-13,0" handle2="-13,0" msg="ItemMsgPickUpSelect" />
-      <RepairTool firedamage="0.0" structurefixamount="0.0" range="150" repairmultiple="false" repairthroughwalls="false" combatpriority="10" levelwallfixamount="0">
-        <LightComponent LightColor="255,255,255,200" Flicker="0.25" range="45" powerconsumption="1" IsOn="true">
-          <LightTexture texture="%ModDir%/Images/Lights/scanner_Light.png" origin="0.5, 0.27" size="0.5,0.5" />
-        </LightComponent>
-        <StatusHUD range="150">
-          <StatusEffect type="Always" target="This,Character" drawhudwhenequipped="true" setvalue="true" comparison="And">
-            <Conditional voltage="gte 0.3" />
-          </StatusEffect>
-          <StatusEffect type="Always" target="This,Character" drawhudwhenequipped="false" setvalue="true" comparison="And">
-            <Conditional Voltage="eq 0" />
-          </StatusEffect>
-        </StatusHUD>
-        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
-        <StatusEffect type="OnUse" target="This" Condition="-100" disabledeltatime="true" />
-        <StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="3" stackable="false" />
-        <StatusEffect type="OnUse" targettype="Contained" Condition="-1" disabledeltatime="true">
-          <RequiredItem items="batterycell" type="Contained" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" targettype="Contained" Condition="-0.5" disabledeltatime="true">
-          <RequiredItem items="fulguriumbatterycell" type="Contained" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" targettype="Contained" Condition="-0.2" disabledeltatime="true">
-          <RequiredItem excludedidentifiers="batterycell,fulguriumbatterycell" type="Contained" />
-        </StatusEffect>
-        <StatusEffect type="OnUse" target="This" voltage="1.0" setvalue="true">
-          <Conditional Condition="gt 0.01" />
-        </StatusEffect>
-        <StatusEffect type="Always" target="This" voltage="-0.35" />
-      </RepairTool>
-      <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
-        <Containable items="mobilebattery" />
-      </ItemContainer>
-    </Item>
-  </Override>
-  <Override>
     <Item name="" identifier="alienblood" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,medical" useinhealthinterface="true" scale="0.5">
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <PreferredContainer primary="storageorgan" minamount="1" maxamount="2" spawnprobability="1" />
@@ -2017,40 +1980,6 @@
       </StatusEffect>
     </Projectile>
   </Item>
-  <Item name="Нерабочая правая рука" identifier="armlock1" description="Рука заблокирована" scale="0.5" nonplayerteaminteractable="True" category="hidden">
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
-    <Holdable selectkey="Action" pickkey="Use" slots="RightHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
-      <StatusEffect tags="rlock" type="Always" target="Character" duration="0.1" stackable="false" />
-      <StatusEffect type="OnWearing" target="Character" lockhands="true" setvalue="true" comparison="And">
-        <Conditional HasStatusTag="llock" />
-      </StatusEffect>
-      <StatusEffect type="onnotcontained" target="This" disabledeltatime="true">
-        <Remove />
-      </StatusEffect>
-      <StatusEffect type="Always" target="Character,This" disabledeltatime="true" comparison="And">
-        <Conditional tra_amputation="eq 0" sra_amputation="eq 0" ra_fracture="eq 0" nervecut4="eq 0" clampcut4="eq 0" dislocation3="eq 0" t_paralysis="eq 0" />
-        <Remove />
-      </StatusEffect>
-    </Holdable>
-  </Item>
-  <Item name="Нерабочая левая рука" identifier="armlock2" description="Рука заблокирована" scale="0.5" nonplayerteaminteractable="True" category="hidden">
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
-    <Holdable selectkey="Action" pickkey="Use" slots="LeftHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
-      <StatusEffect tags="llock" type="Always" target="Character" duration="0.1" stackable="false" />
-      <StatusEffect type="Always" target="Character" lockhands="true" setvalue="true" comparison="And">
-        <Conditional HasStatusTag="rlock" />
-      </StatusEffect>
-      <StatusEffect type="onnotcontained" target="This" disabledeltatime="true">
-        <Remove />
-      </StatusEffect>
-      <StatusEffect type="Always" target="Character,This" disabledeltatime="true" comparison="And">
-        <Conditional tla_amputation="eq 0" sla_amputation="eq 0" la_fracture="eq 0" nervecut4="eq 0" clampcut4="eq 0" dislocation4="eq 0" t_paralysis="eq 0" />
-        <Remove />
-      </StatusEffect>
-    </Holdable>
-  </Item>
   <Item name="Игла" identifier="needle" category="Material" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,syringe" description="Игла с декомпрессионным клапаном для отвода воздуха или жидкости из плевральной полости или перикарда" useinhealthinterface="true" scale="0.2" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.5" />
@@ -2100,9 +2029,9 @@
         <Sound file="%ModDir%/Sound/severed.ogg" range="500" />
       </StatusEffect>
       <StatusEffect type="OnUse" target="Limb, This" Condition="-100.0" disabledeltatime="true" comparison="And">
-        <Conditional boncut4="gt 50" />
+        <Conditional ra_boncut="gt 50" />
         <ReduceAffliction identifier="tra_amputation" amount="100" />
-        <ReduceAffliction identifier="boncut4" amount="100" />
+        <ReduceAffliction identifier="ra_boncut" amount="100" />
       </StatusEffect>
       <StatusEffect type="Always" target="This" comparison="And" condition="-0.1"></StatusEffect>
       <StatusEffect type="OnBroken" target="This">
@@ -2119,9 +2048,9 @@
         <Sound file="%ModDir%/Sound/severed.ogg" range="500" />
       </StatusEffect>
       <StatusEffect type="OnUse" target="Limb, This" Condition="-100.0" disabledeltatime="true" comparison="And">
-        <Conditional boncut3="gt 50" />
+        <Conditional la_boncut="gt 50" />
         <ReduceAffliction identifier="tla_amputation" amount="100" />
-        <ReduceAffliction identifier="boncut3" amount="100" />
+        <ReduceAffliction identifier="la_boncut" amount="100" />
       </StatusEffect>
       <StatusEffect type="Always" target="This" comparison="And" condition="-0.1"></StatusEffect>
       <StatusEffect type="OnBroken" target="This">
@@ -2138,9 +2067,9 @@
         <Sound file="%ModDir%/Sound/severed.ogg" range="500" />
       </StatusEffect>
       <StatusEffect Condition="-100.0" type="OnUse" target="Limb, This" disabledeltatime="true" comparison="And">
-        <Conditional boncut2="gt 50" />
+        <Conditional rl_boncut="gt 50" />
         <ReduceAffliction identifier="trl_amputation" amount="100" />
-        <ReduceAffliction identifier="boncut2" amount="100" />
+        <ReduceAffliction identifier="rl_boncut" amount="100" />
       </StatusEffect>
       <StatusEffect type="Always" target="This" comparison="And" condition="-0.1"></StatusEffect>
       <StatusEffect type="OnBroken" target="This">
@@ -2157,9 +2086,9 @@
         <Sound file="%ModDir%/Sound/severed.ogg" range="500" />
       </StatusEffect>
       <StatusEffect Condition="-100.0" type="OnUse" target="Limb, This" disabledeltatime="true" comparison="And">
-        <Conditional boncut1="gt 50" />
+        <Conditional ll_boncut="gt 50" />
         <ReduceAffliction identifier="tll_amputation" amount="100" />
-        <ReduceAffliction identifier="boncut1" amount="100" />
+        <ReduceAffliction identifier="ll_boncut" amount="100" />
       </StatusEffect>
       <StatusEffect type="Always" target="This" comparison="And" condition="-0.1"></StatusEffect>
       <StatusEffect type="OnBroken" target="This">
@@ -2286,27 +2215,27 @@
         </Attack>
         <RequiredSkill identifier="medical" level="35" />
         <StatusEffect target="Limb" tags="medical" type="OnUse">
-          <Conditional dislocation1="gt 0" />
-          <ReduceAffliction identifier="dislocation1" amount="100" />
+          <Conditional rl_dislocation="gt 0" />
+          <ReduceAffliction identifier="rl_dislocation" amount="100" />
         </StatusEffect>
         <StatusEffect target="Limb" tags="medical" type="OnUse">
-          <Conditional dislocation2="gt 0" />
-          <ReduceAffliction identifier="dislocation2" amount="100" />
+          <Conditional ll_dislocation="gt 0" />
+          <ReduceAffliction identifier="ll_dislocation" amount="100" />
         </StatusEffect>
         <StatusEffect target="Limb" tags="medical" type="OnUse">
-          <Conditional dislocation3="gt 0" />
-          <ReduceAffliction identifier="dislocation3" amount="100" />
+          <Conditional ra_dislocation="gt 0" />
+          <ReduceAffliction identifier="ra_dislocation" amount="100" />
         </StatusEffect>
         <StatusEffect target="Limb" tags="medical" type="OnUse">
-          <Conditional dislocation4="gt 0" />
-          <ReduceAffliction identifier="dislocation4" amount="100" />
+          <Conditional la_dislocation="gt 0" />
+          <ReduceAffliction identifier="la_dislocation" amount="100" />
         </StatusEffect>
         <StatusEffect target="Limb" tags="medical" type="OnUse">
-          <Conditional dislocation4="gt 0" />
-          <ReduceAffliction identifier="dislocation4" amount="100" />
+          <Conditional la_dislocation="gt 0" />
+          <ReduceAffliction identifier="la_dislocation" amount="100" />
         </StatusEffect>
         <StatusEffect target="Limb" tags="OnFailure" type="OnUse" comparison="Or">
-          <Conditional dislocation1="gt 0" dislocation2="gt 0" dislocation3="gt 0" dislocation4="gt 0" />
+          <Conditional rl_dislocation="gt 0" ll_dislocation="gt 0" ra_dislocation="gt 0" la_dislocation="gt 0" />
           <Affliction identifier="la_fracture" amount="1" />
           <Affliction identifier="ra_fracture" amount="1" />
           <Affliction identifier="ll_fracture" amount="1" />
@@ -2346,7 +2275,7 @@
       <SuitableTreatment identifier="opiateaddiction" suitability="60" />
       <SuitableTreatment identifier="opiatewithdrawal" suitability="60" />
       <SuitableTreatment identifier="opiateoverdose" suitability="60" />
-      <SuitableTreatment identifier="analgesia" suitability='60'/>
+      <SuitableTreatment identifier="analgesia" suitability="60" />
       <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="704,448,64,64" origin="0.5,0.5" />
       <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="186,0,38,69" depth="0.6" origin="0.5,0.5" />
       <Body width="35" height="70" density="20" />

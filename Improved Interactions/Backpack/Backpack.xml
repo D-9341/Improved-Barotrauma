@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-  <Item name="Рюкзак" identifier="backpack1" category="Equipment" tags="mediumitem" fireproof="true" waterproof="true" cargocontaineridentifier="metalcrate" scale="0.28" impactsoundtag="impact_soft" description="Для освобождения рук и страдания спины.">
+  <Item name="Калзак" identifier="backpack1" category="Equipment" tags="mediumitem" fireproof="true" waterproof="true" cargocontaineridentifier="metalcrate" scale="0.28" impactsoundtag="impact_soft" description="Для кала">
     <PreferredContainer primary="engcab" />
     <PreferredContainer primary="wreckstoragecab" minamount="0" maxamount="3" spawnprobability="0.06" />
     <PreferredContainer primary="outpostcrewcabinet" minamount="0" maxamount="1" spawnprobability="0.5" />

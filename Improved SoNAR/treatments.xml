@@ -23,8 +23,8 @@
     <InventoryIcon texture="%ModDir%/Icons/medicineIcons.png" sourcerect="64,0,64,64" origin="0.5,0.5" />
     <Sprite texture="%ModDir%/Icons/medicines.png" sourcerect="37,0,37,69" depth="0.6" origin="0.5,0.5" />
     <Body width="25" height="40" density="15" />
-    <SuitableTreatment type="rupturedlung" suitability="100" />
-    <SuitableTreatment type="acoustictrauma" suitability="90" />
+    <SuitableTreatment identifier="rupturedlung" suitability="100" />
+    <SuitableTreatment identifier="acoustictrauma" suitability="90" />
     <SuitableTreatment type="lacerations" suitability="50" />
     <SuitableTreatment type="bleeding" suitability="25" />
     <SuitableTreatment type="burn" suitability="20" />
@@ -96,36 +96,75 @@
       <StatusEffect type="OnFailure" target="UseTarget, Limb" comparison="and">
         <Conditional isLocalPlayer="true" />
         <Conditional limbtype="eq head" />
-        <Conditional cortizideinjection="lteq 0" />
         <Sound file="%ModDir%/Sounds/cortizideInjection.ogg" dontmuffle="true" volume="1.6" />
       </StatusEffect>
       <StatusEffect type="OnSuccess" target="UseTarget, Limb" comparison="and">
         <Conditional isLocalPlayer="true" />
         <Conditional limbtype="eq head" />
-        <Conditional cortizideinjection="lteq 0" />
         <Sound file="%ModDir%/Sounds/cortizideInjection.ogg" dontmuffle="true" volume="1.6" />
+      </StatusEffect>
+      <!-- Apply "cortizideinjection" if administered to the head. This affliction handles the visuals. -->
+      <StatusEffect tags="medical" type="OnSuccess" target="This, Limb" disabledeltatime="true" interval="1" multiplyafflictionsbymaxvitality="true" comparison="and">
+        <Conditional serversidelua="lteq 0" />
+        <Conditional limbtype="eq head" />
+        <Affliction identifier="cortizideinjection" amount="100" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="This, Limb" disabledeltatime="true" interval="1" multiplyafflictionsbymaxvitality="true" comparison="and">
+        <Conditional serversidelua="lteq 0" />
+        <Conditional limbtype="eq head" />
+        <Affliction identifier="cortizideinjection" amount="100" />
       </StatusEffect>
       <!-- On success, with affliction -->
       <StatusEffect tags="medical" type="OnSuccess" target="This, Limb" disabledeltatime="true" interval="0.1" delay="2" duration="10" multiplyafflictionsbymaxvitality="true" comparison="and">
-        <Conditional brainhemorrhage="gteq 1" />
+        <Conditional brainhemorrhage="gt 0" />
         <Conditional limbtype="eq head" />
         <ReduceAffliction type="brainhemorrhage" amount="1" />
         <ReduceAffliction type="bleeding" amount="0.3" />
         <Affliction identifier="damageimmunity" amount="1" />
         <Affliction identifier="stun" amount="0.01" />
-        <Affliction identifier="cortizideinjection" amount="100" />
-        <Affliction identifier="removecortizidefx" amount="1" />
+        <Affliction identifier="removehemorrhagefx" amount="1" />
       </StatusEffect>
       <!-- On failure, with affliction -->
       <StatusEffect tags="medical" type="OnFailure" target="This, Limb" disabledeltatime="true" interval="0.1" delay="2" duration="10" multiplyafflictionsbymaxvitality="true" comparison="and">
-        <Conditional brainhemorrhage="gteq 1" />
+        <Conditional brainhemorrhage="gt 0" />
         <Conditional limbtype="eq head" />
         <ReduceAffliction type="brainhemorrhage" amount="1" />
         <ReduceAffliction type="bleeding" amount="0.2" />
         <Affliction identifier="damageimmunity" amount="1" />
         <Affliction identifier="stun" amount="0.01" />
-        <Affliction identifier="cortizideinjection" amount="100" />
-        <Affliction identifier="removecortizidefx" amount="1" />
+        <Affliction identifier="removehemorrhagefx" amount="1" />
+      </StatusEffect>
+      <!-- On success, with affliction LOWFX-->
+      <StatusEffect tags="medical" type="OnSuccess" target="This, Limb" disabledeltatime="true" interval="0.1" delay="2" duration="10" multiplyafflictionsbymaxvitality="true" comparison="and">
+        <Conditional limbtype="eq head" />
+        <ReduceAffliction type="bleeding" amount="0.3" />
+        <Affliction identifier="damageimmunity" amount="1" />
+        <Affliction identifier="stun" amount="0.01" />
+        <Affliction identifier="removehemorrhagefx" amount="1" />
+      </StatusEffect>
+      <!-- On failure, with affliction LOWFX-->
+      <StatusEffect tags="medical" type="OnFailure" target="This, Limb" disabledeltatime="true" interval="0.1" delay="2" duration="10" multiplyafflictionsbymaxvitality="true" comparison="and">
+        <Conditional limbtype="eq head" />
+        <ReduceAffliction type="bleeding" amount="0.2" />
+        <Affliction identifier="damageimmunity" amount="1" />
+        <Affliction identifier="stun" amount="0.01" />
+        <Affliction identifier="removehemorrhagefx" amount="1" />
+      </StatusEffect>
+      <!-- On success, with affliction NOFX-->
+      <StatusEffect tags="medical" type="OnSuccess" target="This, Limb" disabledeltatime="true" interval="0.1" delay="2" duration="10" multiplyafflictionsbymaxvitality="true" comparison="and">
+        <Conditional limbtype="eq head" />
+        <ReduceAffliction type="bleeding" amount="0.3" />
+        <Affliction identifier="damageimmunity" amount="1" />
+        <Affliction identifier="stun" amount="0.01" />
+        <Affliction identifier="removehemorrhagefx" amount="1" />
+      </StatusEffect>
+      <!-- On failure, with affliction NOFX-->
+      <StatusEffect tags="medical" type="OnFailure" target="This, Limb" disabledeltatime="true" interval="0.1" delay="2" duration="10" multiplyafflictionsbymaxvitality="true" comparison="and">
+        <Conditional limbtype="eq head" />
+        <ReduceAffliction type="bleeding" amount="0.2" />
+        <Affliction identifier="damageimmunity" amount="1" />
+        <Affliction identifier="stun" amount="0.01" />
+        <Affliction identifier="removehemorrhagefx" amount="1" />
       </StatusEffect>
       <!-- On success, no affliction -->
       <StatusEffect tags="medical" type="OnSuccess" target="This, Limb" disabledeltatime="true" interval="0.1" delay="2" duration="10" multiplyafflictionsbymaxvitality="true" comparison="and">
@@ -134,13 +173,12 @@
         <ReduceAffliction type="bleeding" amount="0.3" />
         <Affliction identifier="burn" amount="0.07" />
         <Affliction identifier="stun" amount="0.01" />
-        <Affliction identifier="cortizideinjection" amount="100" />
-        <Affliction identifier="psychosis" amount="0.3" />
+        <Affliction identifier="psychosis" amount="0.1" />
       </StatusEffect>
+      <!-- Delayed head explosion -->
       <StatusEffect tags="medical" type="OnSuccess" target="This, Limb" disabledeltatime="true" delay="15.5" multiplyafflictionsbymaxvitality="true" comparison="and">
         <Conditional brainhemorrhage="lteq 0" />
         <Conditional limbtype="eq head" />
-        <Conditional cortizideinjection="lteq 0" />
         <Affliction identifier="cortizidedeath" amount="1" />
       </StatusEffect>
       <!-- On failure, no affliction -->
@@ -150,8 +188,7 @@
         <ReduceAffliction type="bleeding" amount="0.2" />
         <Affliction identifier="burn" amount="0.09" />
         <Affliction identifier="stun" amount="0.01" />
-        <Affliction identifier="cortizideinjection" amount="100" />
-        <Affliction identifier="psychosis" amount="0.3" />
+        <Affliction identifier="psychosis" amount="0.1" />
       </StatusEffect>
       <!-- For some reason, just doing limbtype="! head" doesn't work. And at the time of writing this, neither does "eq leftleg" or "eq rightleg". -->
       <!-- On success, body injection -->
@@ -203,9 +240,6 @@
       <Item identifier="pomegrenadeextract " />
     </Deconstruct>
     <SuitableTreatment identifier="vibrationdamage" suitability="100" />
-    <SuitableTreatment type="sonardamage" suitability="90" />
-    <SuitableTreatment type="bloodloss" suitability="20" />
-    <SuitableTreatment type="damage" suitability="10" />
     <SuitableTreatment identifier="brainhemorrhage" suitability="20" />
     <SuitableTreatment identifier="mannausage" suitability="-90" />
     <SuitableTreatment identifier="mannaoverdose" suitability="-100" />
@@ -218,61 +252,65 @@
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
       </StatusEffect>
       <!-- If Manna is given to the head. -->
-      <StatusEffect tags="medical" type="OnSuccess" target="This, Limb" disabledeltatime="true" interval="1" duration="36">
+      <StatusEffect tags="medical" type="OnSuccess" target="This, Limb" duration="36">
         <Conditional limbtype="eq head" />
-        <Affliction identifier="mannainjectionhead" amount="100" />
+        <Affliction identifier="mannainfluencehead" amount="100" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnFailure" target="This, Limb" disabledeltatime="true" interval="1" duration="36">
+      <StatusEffect tags="medical" type="OnFailure" target="This, Limb" duration="36">
         <Conditional limbtype="eq head" />
-        <Affliction identifier="mannainjectionhead" amount="100" />
+        <Affliction identifier="mannainfluencehead" amount="100" />
       </StatusEffect>
       <!-- If Manna is given to the head and brain hemorrhagge is less than 15%. -->
-      <StatusEffect tags="medical" type="OnSuccess" target="This, Limb" disabledeltatime="true" duration="36" comparison="and">
+      <StatusEffect tags="medical" type="OnSuccess" target="This, Limb" duration="36" comparison="and">
         <Conditional limbtype="eq head" />
         <Conditional brainhemorrhage="lteq 15" />
-        <ReduceAffliction identifier="brainhemorrhage" amount="0.005" />
+        <ReduceAffliction identifier="brainhemorrhage" amount="0.3" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnFailure" target="This, Limb" disabledeltatime="true" duration="36" comparison="and">
+      <StatusEffect tags="medical" type="OnFailure" target="This, Limb" duration="36" comparison="and">
         <Conditional limbtype="eq head" />
         <Conditional brainhemorrhage="lteq 15" />
-        <ReduceAffliction identifier="brainhemorrhage" amount="0.003" />
+        <ReduceAffliction identifier="brainhemorrhage" amount="0.18" />
       </StatusEffect>
       <!-- If Manna is not active on the patient. -->
-      <StatusEffect tags="medical" type="OnSuccess" target="This, Limb" SpeedMultiplier="1.3" setvalue="true" disabledeltatime="true" duration="36">
-        <Conditional mannainjection="lteq 0" />
-        <Affliction identifier="mannainjection" amount="100" />
+      <StatusEffect tags="medical" type="OnSuccess" target="This, Limb" SpeedMultiplier="1.3" setvalue="true" duration="36">
+        <Conditional mannainfluence="lteq 0" />
+        <Affliction identifier="mannainfluence" amount="100" />
         <Affliction identifier="mannausage" amount="0.024" />
-        <ReduceAffliction identifier="vibrationdamage" amount="0.008" />
+        <ReduceAffliction identifier="vibrationdamage" amount="0.007" />
         <ReduceAffliction type="sonardamage" amount="0.008" />
-        <ReduceAffliction type="bloodloss" amount="0.006" />
+        <Affliction identifier="oxygenlow" amount="-0.008" />
+        <Affliction identifier="bloodloss" amount="-0.008" />
         <ReduceAffliction type="damage" amount="0.004" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnFailure" target="This, Limb" SpeedMultiplier="1.2" setvalue="true" disabledeltatime="true" duration="36">
-        <Conditional mannainjection="lteq 0" />
-        <Affliction identifier="mannainjection" amount="100" />
+      <StatusEffect tags="medical" type="OnFailure" target="This, Limb" SpeedMultiplier="1.2" setvalue="true" duration="36">
+        <Conditional mannainfluence="lteq 0" />
+        <Affliction identifier="mannainfluence" amount="100" />
         <Affliction identifier="mannausage" amount="0.024" />
         <ReduceAffliction identifier="vibrationdamage" amount="0.006" />
         <ReduceAffliction type="sonardamage" amount="0.006" />
-        <ReduceAffliction type="bloodloss" amount="0.004" />
+        <Affliction identifier="oxygenlow" amount="-0.006" />
+        <Affliction identifier="bloodloss" amount="-0.006" />
         <ReduceAffliction type="damage" amount="0.002" />
       </StatusEffect>
       <!-- If Manna is already active on the patient. -->
-      <StatusEffect tags="medical" type="OnSuccess" target="This, Limb" SpeedMultiplier="1.3" setvalue="true" disabledeltatime="true" duration="36">
-        <Conditional mannainjection="gt 0" />
-        <Affliction identifier="mannainjection" amount="100" />
+      <StatusEffect tags="medical" type="OnSuccess" target="This, Limb" SpeedMultiplier="1.3" setvalue="true" duration="36">
+        <Conditional mannainfluence="gt 0" />
+        <Affliction identifier="mannainfluence" amount="100" />
         <Affliction identifier="mannausage" amount="0.025" />
         <ReduceAffliction identifier="vibrationdamage" amount="0.004" />
         <ReduceAffliction type="sonardamage" amount="0.004" />
-        <ReduceAffliction type="bloodloss" amount="0.003" />
+        <Affliction identifier="oxygenlow" amount="-0.004" />
+        <Affliction identifier="bloodloss" amount="-0.004" />
         <ReduceAffliction type="damage" amount="0.0015" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnFailure" target="This, Limb" SpeedMultiplier="1.2" setvalue="true" disabledeltatime="true" duration="36">
-        <Conditional mannainjection="gt 0" />
-        <Affliction identifier="mannainjection" amount="100" />
+      <StatusEffect tags="medical" type="OnFailure" target="This, Limb" SpeedMultiplier="1.2" setvalue="true" duration="36">
+        <Conditional mannainfluence="gt 0" />
+        <Affliction identifier="mannainfluence" amount="100" />
         <Affliction identifier="mannausage" amount="0.025" />
         <ReduceAffliction identifier="vibrationdamage" amount="0.002" />
         <ReduceAffliction type="sonardamage" amount="0.002" />
-        <ReduceAffliction type="bloodloss" amount="0.002" />
+        <Affliction identifier="oxygenlow" amount="-0.002" />
+        <Affliction identifier="bloodloss" amount="-0.002" />
         <ReduceAffliction type="damage" amount="0.001" />
       </StatusEffect>
       <!-- Remove the item when fully used -->
@@ -281,5 +319,5 @@
       </StatusEffect>
     </Holdable>
     <AiTarget sightrange="1000" static="true" />
-  </MannaExtract>
+    </MannaExtract>
 </Items>

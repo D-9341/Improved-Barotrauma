@@ -13,7 +13,7 @@
   <loadingscreentip>Будьте осторожны при выходе в воду вблизи подлодки. Хватит лишь одного пинга сонара, чтобы потерять слух, повредить себе внутренние ткани, и в исключительных случаях, внутренние органы и мозг.</loadingscreentip>
   <loadingscreentip>При активации маяков рекомендуется носить звукоизолирующий скафандр. Хоть сонар маяков не настолько мощен, как у подлодок, он всё равно может вас сильно покалечить.</loadingscreentip>
   <loadingscreentip>От кровоизлияний в мозг, вызванных сонаром, пациента может спасти только кортизид.</loadingscreentip>
-  <loadingscreentip>Экстракт Манны может временно остановить сонарное кровоизлияние в мозг. После этого пациенту может помочь только кортизид.</loadingscreentip>
+  <loadingscreentip>Экстракт Манны может временно остановить кровоизлияние в мозг. После этого пациенту может помочь только кортизид.</loadingscreentip>
   <loadingscreentip>Медикам не рекомендуется давать дозу экстракта Манны пациенту, у которого в кровеносной системе есть его примеси.</loadingscreentip>
   <loadingscreentip>Оберегайтесь балластных отсеков при работе активного сонара. Звуковые волны легко проходят через заполненные водой трубы.</loadingscreentip>
   <loadingscreentip>Если долго не лечить последствия вибраций активного сонара, у пострадавшего могут развиться повреждения нервной системы и рабдомиолиз в некоторых мышцах.</loadingscreentip>
@@ -33,8 +33,8 @@
   <afflictiondescription.vibrationdamage>Пациент страдает от повреждений кровеносной системы, вероятно, из-за попадания в зону активности сонара.</afflictiondescription.vibrationdamage>
   <afflictiondescription.vibrationdamage.medium>Пациент пережил сильные повреждения артерий, нервов и мышц.</afflictiondescription.vibrationdamage.medium>
   <afflictiondescription.vibrationdamage.high>Внутренности пациента в плачевном состоянии. Крайне сильно повреждены артерии, нервная система, мышцы, кости.</afflictiondescription.vibrationdamage.high>
-  <afflictiondescription.vibrationdamage.self>Вы чувствуете себя вяло из-за боли по всему телу. Вы чувствуете, что по коже проходят множество иголок.</afflictiondescription.vibrationdamage.self>
-  <afflictiondescription.vibrationdamage.medium.self>Ваши конечности онемели, и вы чувствуете колящую боль повсюду по вашему телу.</afflictiondescription.vibrationdamage.medium.self>
+  <afflictiondescription.vibrationdamage.self>Вы чувствуете себя вяло из-за боли по всему телу, будто по коже проходят множество иголок.</afflictiondescription.vibrationdamage.self>
+  <afflictiondescription.vibrationdamage.medium.self>Ваши конечности онемели, и вы чувствуете колящую боль по всему вашему телу.</afflictiondescription.vibrationdamage.medium.self>
   <afflictiondescription.vibrationdamage.high.self>Вы не чувствуете свои конечности, лишь нескончаемую боль, будто каждую клетку тела разорвало.</afflictiondescription.vibrationdamage.high.self>
   <afflictioncauseofdeath.vibrationdamage>Погибает от внутренних повреждений</afflictioncauseofdeath.vibrationdamage>
   <afflictioncauseofdeathself.vibrationdamage>Ваши внутренности были разорваны.</afflictioncauseofdeathself.vibrationdamage>
@@ -52,7 +52,7 @@
   <afflictioncauseofdeathself.muscledamage>Ваши мышцы выпустили летальное количество белков в кровь.</afflictioncauseofdeathself.muscledamage>
   <!-- Ruptured Lung -->
   <afflictionname.rupturedlung>Лопнутые лёгкие</afflictionname.rupturedlung>
-  <afflictiondescription.rupturedlung>Лёгкие пациента лопнули из-за воздействия импульса сонара.</afflictiondescription.rupturedlung>
+  <afflictiondescription.rupturedlung>Лёгкие пациента лопнули из-за воздействия пинга сонара.</afflictiondescription.rupturedlung>
   <afflictiondescription.rupturedlung.high>Лёгкие пациента были уничтожены мощными вибрациями, вызывая гипоксемию, у пациента высокий шанс гибели от удушья.</afflictiondescription.rupturedlung.high>
   <afflictiondescription.rupturedlung.self>Вы чувствуете боль в туловище. Вам трудно дышать.</afflictiondescription.rupturedlung.self>
   <afflictiondescription.rupturedlung.high.self>Вы еле дышите между выкашливанием крови, каждый вдох вызывает агонию.</afflictiondescription.rupturedlung.high.self>
@@ -69,9 +69,12 @@
   <afflictioncauseofdeath.brainhemorrhage>Погибает от смерти мозга</afflictioncauseofdeath.brainhemorrhage>
   <afflictioncauseofdeathself.brainhemorrhage>Ваш мозг расплавил активный сонар.</afflictioncauseofdeathself.brainhemorrhage>
   <!-- Manna Influence -->
-  <afflictionname.mannainjection>Действие Манны</afflictionname.mannainjection>
-  <afflictiondescription.mannainjection>На эту конечность действуют целебные свойства экстракта Манны.</afflictiondescription.mannainjection>
-  <afflictiondescription.mannainjection.self>Вы чувствуете слабый напор и успокаивающую теплоту в глубине.</afflictiondescription.mannainjection.self>
+  <afflictionname.mannainfluence>Действие Манны</afflictionname.mannainfluence>
+  <afflictiondescription.mannainfluence>На эту конечность действуют целебные свойства экстракта Манны.</afflictiondescription.mannainfluence>
+  <afflictiondescription.mannainfluence.self>Вы чувствуете слабый напор и успокаивающую теплоту в глубине.</afflictiondescription.mannainfluence.self>
+  <afflictionname.mannainfluencehead>Действие Манны на голову</afflictionname.mannainfluencehead>
+  <afflictiondescription.mannainfluencehead>Экстракт Манны был вколен в голову как средство предотвращения развития мозгового кровоизлияния.</afflictiondescription.mannainfluencehead>
+  <afflictiondescription.mannainfluencehead.self>Ваша голова раскалывалась секунду назад, но теперь вы чувствуете слабый напор и теплоту в глубине.</afflictiondescription.mannainfluencehead.self>
   <!-- Manna Overdose -->
   <afflictionname.mannaoverdose>Передоз Манны</afflictionname.mannaoverdose>
   <afflictiondescription.mannaoverdose>У пациента опасное количество Манны в крови.</afflictiondescription.mannaoverdose>
@@ -92,35 +95,62 @@
   <afflictiondescription.aphasia.self>Вы не способны закончить простые предложения, возникают проблемы с составлением слов, иногда вместо этого вы выдаёте непонятное бормотание.</afflictiondescription.aphasia.self>
   <!-- Blindness -->
   <afflictionname.opticneuritis>Воспаление зрительного нерва</afflictionname.opticneuritis>
-  <afflictiondescription.opticneuritis>Затылочная доля мозга пациента повреждена, периодически ослепляя и дизоиентируя его.</afflictiondescription.opticneuritis>
+  <afflictiondescription.opticneuritis>Затылочная доля мозга пациента повреждена, периодически ослепляя и дизориентируя его.</afflictiondescription.opticneuritis>
   <afflictiondescription.opticneuritis.self>Ваше зрение периодически затуманивается темнотой. Это конец?</afflictiondescription.opticneuritis.self>
   <!-- Treatments -->
   <entityname.manna>Экстракт Манны</entityname.manna>
   <entitydescription.manna>Манна - "чудо-жидкость", смешиваюшая человеческие гемоглобины с ксено-плазмой, в целях перенять естественную устойчивость и регенерирующие свойства у подводной фауны Европы. Используется для лечения внутренних повреждений мышечной и нервной систем, и способна временно остановить кровоизлияния в мозг. Следует заметить, что повторное использование более слабо укрепляет эффект, есть риск передоза.</entitydescription.manna>
   <entityname.cortizide>Кортизид</entityname.cortizide>
-  <entitydescription.cortizide>Концентрированная смесь противоболевых и противобаровых препаратов с кучей неприятных последствий. Обычно иньецируется в голову последним шансом для лечения кровоизлияний в мозг.
-Внимание: Введение в здоровую мозговую среду может привести к опасному повышению давления в черепе.</entitydescription.cortizide>
+  <entitydescription.cortizide>Концентрированная смесь противоболевых и противобаровых препаратов с кучей неприятных последствий. Обычно иньецируется в голову последним шансом для лечения кровоизлияний в мозг. Внимание: Введение в здоровую мозговую среду может привести к опасному повышению давления в черепе.</entitydescription.cortizide>
   <entityname.smartgraft>Умный тканезаменитель</entityname.smartgraft>
   <entitydescription.smartgraft>Созданная генной инженерией соединительная ткань, принимающая на себя ДНК пациента, стимулирующая регенерацию сложных анатомических систем. Обычно используется для восстановления перфорированных органов.</entitydescription.smartgraft>
   <!-- Items -->
   <entityname.anechoicdivingsuit>Звукоизолирующий скафандр</entityname.anechoicdivingsuit>
-  <entitydescription.anechoicdivingsuit>Скрытный, легковесный скафандр, созданный для поглощения звуковых волн активного сонара, используя безэховое покрытие. В некоторой степени защищает и выдерживает давление на глубине до 6 000 м.</entitydescription.anechoicdivingsuit>
+  <entitydescription.anechoicdivingsuit>Скрытный, легковесный скафандр, созданный для поглощения звуковых волн активного сонара, используя безэховое покрытие. В некоторой степени защищает и выдерживает давление на глубине до 6 000 м. Делает носителя невидимым для сонара.</entitydescription.anechoicdivingsuit>
   <entityname.navremote>Пульт навигации</entityname.navremote>
   <entitydescription.navremote>Портативное устройство, позволяющее дистанционно контролировать сонар и двигатели подлодки.</entitydescription.navremote>
   <!-- Menu -->
   <realsonarsettings>Настройки</realsonarsettings>
-  <sonarpingvolume>Громкость сонара</sonarpingvolume>
-  <airpingvolume>Громкость пинга в воздухе:</airpingvolume>
-  <waterpingvolume>Громкость пинга под водой:</waterpingvolume>
-  <suitpingvolume>Громкость пинга в костюме:</suitpingvolume>
-  <tinnitusvolume>Громкость тиннитуса:</tinnitusvolume>
-  <distortionvolume>Громкость искажений:</distortionvolume>
+  <volumesettings>Настройки громкости</volumesettings>
+  <airpingvolume>Громкость пинга в воздухе</airpingvolume>
+  <waterpingvolume>Громкость пинга под водой</waterpingvolume>
+  <suitpingvolume>Громкость пинга</suitpingvolume>
+  <tinnitusvolume>Громкость эффекта тиннитуса</tinnitusvolume>
+  <distortionvolume>Громкость оглушения</distortionvolume>
+  <networksettings>Сетевые настройки - Клиент (требуют "cl_reloadlua")</networksettings>
+  <lowlatencymode>Режим пониженной задержки (экспериментальный)</lowlatencymode>
+  <lowlatencymodetooltip>Исправляет задержки, созданные высоким пингом к серверу. Может вызвать рассинхрон при несовпадающих конфигурациях.</lowlatencymodetooltip>
+  <gameplaysettingsserver>Настройки геймплея - Сервер</gameplaysettingsserver>
+  <gameplaysettingsclient>Настройки геймплея</gameplaysettingsclient>
+  <sonarrange>Радиус сонара (только для singleplayer)</sonarrange>
+  <sonardamage>Урон сонара (нелинейный)</sonardamage>
+  <submarinesonar>Сонар подлодок</submarinesonar>
+  <submarinesonartooltip>Урон от активного сонара навигационных терминалов.</submarinesonartooltip>
+  <beaconsonar>Сонар радиомаяков</beaconsonar>
+  <beaconsonartooltip>Урон от активного сонара радиомаяков (через монитор сонара).</beaconsonartooltip>
+  <shuttlesonar>Сонар челноков</shuttlesonar>
+  <shuttlesonartooltip>Урон от активного сонара навигационных терминалов шаттла.</shuttlesonartooltip>
+  <targetcreatures>Урон существам</targetcreatures>
+  <targetcreaturestooltip>Включить урон нечеловеческим сущностям.</targetcreaturestooltip>
+  <targetplayers>Урон игрокам</targetplayers>
+  <targetplayerstooltip>Включить урон игрокам.</targetplayerstooltip>
+  <targetbots>Урон NPC-подводникам</targetbots>
+  <targetbotstooltip>Включить урон ботам.</targetbotstooltip>
+  <creaturehulldetection>Урон существам внутри подлодок</creaturehulldetection>
+  <creaturehulldetectiontooltip>Включает точные расчёты пингов активного сонара для существ. Выключение может улучшить производительность.</creaturehulldetectiontooltip>
+  <humanhulldetection>Урон людям внутри подлодок</humanhulldetection>
+  <humanhulldetectiontooltip>Включает точные расчёты пингов активного сонара для людей. Защищает людей от сонара в балластах.</humanhulldetectiontooltip>
+  <impactvisuals>Визуальная мощность эффектов сонара</impactvisuals>
+  <sonarslow>Замедление после пинга сонаром</sonarslow>
+  <defaultfx>Другие эффекты (кровоизлияний в мозг, кортизида, и т.д.):\nСтандартные</defaultfx>
+  <lowfx>Другие эффекты (кровоизлияний в мозг, кортизида, и т.д.):\nСнижены</lowfx>
+  <nofx>Другие эффекты (кровоизлияний в мозг, кортизида, и т.д.):\nВыключены</nofx>
   <!-- Dialogue -->
   <dialoggetanechoicsuit>Надо найти звукоизолирующий скафандр!</dialoggetanechoicsuit>
-  <dialoggetanechoicsuit>Мне нужен безэховый скафандр, чтобы чинить со включенным сонаром!</dialoggetanechoicsuit>
+  <dialoggetanechoicsuit>Мне нужен звукоизолирующий скафандр, чтобы чинить со включенным сонаром!</dialoggetanechoicsuit>
   <dialoggetanechoicsuit>Мне нужно изолирующее снаряжение!</dialoggetanechoicsuit>
-  <dialogcantfindanechoicsuit>Я не нахожу изолирующих скафандров! Отключите сонар!</dialogcantfindanechoicsuit>
-  <dialogcantfindanechoicsuit>У нас нет безэховых скафандров! Я туда не полезу!</dialogcantfindanechoicsuit>
+  <dialogcantfindanechoicsuit>Я не нахожу звукоизолирующих скафандров! Отключите сонар!</dialogcantfindanechoicsuit>
+  <dialogcantfindanechoicsuit>У нас нет звукоизолирующих скафандров! Я туда не поплыву!</dialogcantfindanechoicsuit>
   <dialogcantfindanechoicsuit>Я не пойду туда, пока сонар включён!</dialogcantfindanechoicsuit>
   <dialogcantfindanechoicsuit>Мне нечем изолироваться! Выключите сонар!</dialogcantfindanechoicsuit>
   <dialogcantfindanechoicsuit>Я не смогу ничего починить, выключите сонар!</dialogcantfindanechoicsuit>
@@ -132,4 +162,5 @@
   <dialogturnoffsonar>Я СНАРУЖИ, ОТКЛЮЧИТЕ СОНАР!</dialogturnoffsonar>
   <dialogturnoffsonar>ОТКЛЮЧИТЕ СОНАР!</dialogturnoffsonar>
   <dialogturnoffsonar>СОНАР! ПОЖАЛУЙСТА!</dialogturnoffsonar>
+  <dialogturnoffsonar>КТО ТАК ОРЁТ!? ВЕРНИТЕ ДЕДОДЕДА В КОРЕЮ!</dialogturnoffsonar>
 </infotexts>

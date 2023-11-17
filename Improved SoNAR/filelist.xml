@@ -1,9 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Improved SoNAR" modversion="1.0.8" corepackage="False" steamworkshopid="2640092634" gameversion="1.0.8.0">
+<contentpackage name="Improved SoNAR" modversion="1.0.10" corepackage="False" steamworkshopid="2640092634" gameversion="1.0.21.0">
   <Item file="%ModDir%/Content/Items/Command/command.xml" />
   <Item file="%ModDir%/wrecklocator.xml" />
+  <Item file="%ModDir%/items.xml" />
   <Item file="%ModDir%/treatments.xml" />
   <Afflictions file="%ModDir%/afflictions.xml" />
+  <Afflictions file="%ModDir%/soundplayer_nav.xml" />
+  <Afflictions file="%ModDir%/soundplayer_shuttle.xml" />
+  <Afflictions file="%ModDir%/sonarpingclient.xml" />
+  <Afflictions file="%ModDir%/sonarpingserver.xml" />
   <Text file="%ModDir%/Localisation/Info_Russian.xml" />
   <NPCConversations file="%ModDir%/Localisation/Conversations_Russian.xml" />
 </contentpackage>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-  <Item name="Сонарный маяк" description='Излучает сигнал SOS, будто последняя надежда давно потерянного экипажа' identifier="wrecklocator" category="Equipment" maxstacksize="8" Tags="smallitem,sonar,provocative" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="Сонарный маяк" description='Излучает сигнал SOS, являясь последней надеждой давно потерянного экипажа.' identifier="wrecklocator" category="Equipment" maxstacksize="8" Tags="smallitem,sonar,provocative" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="wreckreactorcab" minamount="1" maxamount="1" spawnprobability="1" />
     <Price baseprice="150" soldeverywhere="false">
       <Price locationtype="outpost" multiplier="1" sold="false" />
@@ -17,7 +17,7 @@
     <Sprite texture="Content/Items/Tools/tools.png" sourcerect="473,1,29,65" depth="0.55" origin="0.5,0.5" />
     <Body width="27" height="60" density="12" />
     <Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="0,-15" msg="ItemMsgPickUpSelect" />
-    <AiTarget soundrange="100000" sonarlabel="SOS" sight="500" staticsight="true" />
+    <AiTarget soundrange="100000" sonarlabel="Save.Our.Souls" sight="500" staticsight="true" />
     <LightComponent LightColor="0.0,1.0,0.0,1.0" range="50" powerconsumption="0" blinkfrequency="2" IsOn="false" canbeselected="false">
       <StatusEffect type="OnActive" targettype="This" SoundRange="100000" setvalue="true">
         <Conditional Voltage="gt 0.5" targetitemcomponent="LightComponent" />

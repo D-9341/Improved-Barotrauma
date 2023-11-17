@@ -1,4 +1,3 @@
-
 -- Makes bots try to get an anechoic suit before repairing leaks when in dangerous range of an active sonar.
 Hook.Patch(
     "Barotrauma.AIObjectiveGetItem",
@@ -36,3 +35,37 @@ Hook.Patch(
     end
 end, Hook.HookMethodType.Before)
 
+
+-- Prevent bots from treating vibrationdamage/muscledamage with more than one manna extract at a time.
+Hook.Patch(
+    "Barotrauma.CharacterHealth",
+    "GetPredictedStrength",
+    {
+        "Barotrauma.Affliction",
+        "System.Single",
+        "Barotrauma.Limb"
+    },
+    function(instance, ptable)
+    
+    if ptable["affliction"].Prefab.Identifier == "vibrationdamage" or ptable["affliction"].Prefab.Identifier == "muscledamage" then
+        local vibrationdamage = false
+        local muscledamage = false
+        local mannainfluence = false
+        local afflictions = instance.GetAllAfflictions()
+
+        for affliction in afflictions do
+            if affliction.Prefab.Identifier == "vibrationdamage" then
+                vibrationdamage = true
+            elseif affliction.Prefab.Identifier == "mannainfluence" then
+                mannainfluence = true
+            elseif affliction.Prefab.Identifier == "muscledamage" then
+                muscledamage = true
+            end
+        end
+
+        if mannainfluence and vibrationdamage or mannainfluence and muscledamage then
+            ptable.PreventExecution = true
+            return 0
+        end
+    end
+end, Hook.HookMethodType.Before)

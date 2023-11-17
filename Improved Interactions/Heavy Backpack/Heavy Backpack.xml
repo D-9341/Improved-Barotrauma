@@ -32,7 +32,7 @@
       <ItemContainer capacity="20" hideitems="true">
         <Containable items="alienartifact,mediumitem,smallitem,coilgunequipment,coilgunammo,ammobox,railgunammo,diving" excludeditems="toolbelt,toolbox,backpack,medicalbackpack,power-backpack,duffelbag" />
       </ItemContainer>
-      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.5" setvalue="true" />
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="0.7" setvalue="true" />
     </Wearable>
   </Item>
 </Items>

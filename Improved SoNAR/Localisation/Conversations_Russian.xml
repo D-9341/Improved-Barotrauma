@@ -31,7 +31,7 @@
   <Conversation line="Запомните меня..." speaker="0" flags="BrainHemorrhageHigh" />
   <Conversation line="Мне однозначно конец..." speaker="0" flags="BrainHemorrhageHigh" speakertags="fearful" />
   <Conversation line="Прощайте." speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough" />
-  <Conversation line="Кортизид... пожалуйста..." speaker="0" flags="BrainHemorrhageHigh" allowedjobs="medicaldoctor" />
+  <Conversation line="Кортизид..." speaker="0" flags="BrainHemorrhageHigh" allowedjobs="medicaldoctor" />
   <Conversation line="Прошу..." speaker="0" flags="BrainHemorrhageHigh" />
   <Conversation line="Помогите..." speaker="0" flags="BrainHemorrhageHigh" />
   <Conversation line="Кто..." speaker="0" flags="BrainHemorrhageHigh">
