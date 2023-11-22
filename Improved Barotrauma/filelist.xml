@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Improved Barotrauma" modversion="1.0.0" corepackage="False" steamworkshopid="2645873021" gameversion="1.1.19.3">
+  <Item file="%ModDir%/Improved Arms/Items/Weapons/weapons.xml" />
+  <Particles file="%ModDir%/Improved Arms/Particles/LaserParticlesBeam.xml" />
+  <Particles file="%ModDir%/Improved Arms/Particles/LaserParticles.xml" />
+  <Afflictions file="%ModDir%/Improved Arms/Items/Weapons/afflictions.xml" />
+  <EventManagerSettings file="%ModDir%/Improved Events/EventManagerSettings.xml" />
+  <RandomEvents file="%ModDir%/Improved Events/randomevents.xml" />
+  <Item file="%ModDir%/Improved Interactions/Backpacks/Backpacks.xml" />
+  <Item file="%ModDir%/Improved Interactions/items/antidamage_belt.xml" />
+  <Afflictions file="%ModDir%/Improved Interactions/items/afflictions.xml" />
+  <Item file="%ModDir%/Improved Interactions/instruments.xml" />
+  <Afflictions file="%ModDir%/Improved Med/Xml/Afflictions.xml" />
+  <Item file="%ModDir%/Improved Med/Xml/items.xml" />
+  <Character file="%ModDir%/Improved Med/Characters/Human/Human.xml" />
+  <Item file="%ModDir%/Improved SoNAR/command.xml" />
+  <Item file="%ModDir%/Improved SoNAR/wrecklocator.xml" />
+  <Item file="%ModDir%/Improved SoNAR/items.xml" />
+  <Item file="%ModDir%/Improved SoNAR/treatments.xml" />
+  <Afflictions file="%ModDir%/Improved SoNAR/afflictions.xml" />
+  <Afflictions file="%ModDir%/Improved SoNAR/soundplayer_nav.xml" />
+  <Afflictions file="%ModDir%/Improved SoNAR/soundplayer_shuttle.xml" />
+  <Afflictions file="%ModDir%/Improved SoNAR/sonarping_client.xml" />
+  <Afflictions file="%ModDir%/Improved SoNAR/sonarping_server.xml" />
+  <Text file="%ModDir%/Improved SoNAR/Localisation/Info_Russian.xml" />
+  <NPCConversations file="%ModDir%/Improved SoNAR/Localisation/Conversations_Russian.xml" />
+</contentpackage>

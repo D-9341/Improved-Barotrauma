@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Improved Interactions" modversion="1.0.4" corepackage="False" steamworkshopid="2643867353" gameversion="1.0.21.0">
-  <Item file="%ModDir%/Backpack/Backpack.xml" />
-  <Item file="%ModDir%/Heavy Backpack/Heavy Backpack.xml" />
-  <Item file="%ModDir%/Power-Backpack/Power-Backpack.xml" />
-  <Item file="%ModDir%/Medical Backpack/Medical Backpack.xml" />
-  <Item file="%ModDir%/instruments.xml" />
-</contentpackage>

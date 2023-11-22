@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Japanese" nowhitespace="false" translatedname="日本語">
+  <loadingscreentip>アクティブソナーのピンガーの強さは、トランスデューサー周辺の水を沸騰させるほど強力です。</loadingscreentip>
+  <loadingscreentip>潜水艦の周りで作業するときは、無響音潜水服の着用をお勧めします。一般的な潜水服ではアクティブソナーから身を守ることはできません。</loadingscreentip>
+  <loadingscreentip>潜水艦のアクティブソナーの音量は235dbに達し、これはジェットエンジンのおよそ724倍、31億6000万倍の音量です。</loadingscreentip>
+  <loadingscreentip>音波は水中では4倍も遠くまで伝わります。潜水艦のアクティブソナーから発せられるピンのような低周波音は、さらに遠くまで伝わります。</loadingscreentip>
+  <loadingscreentip>音が水中から空中に伝搬するとき、強度は80db減少します（256倍静かになる）。これが潜水艦の無響タイル張りの船体と組み合わさることで、乗員はアクティブソナーから安全に身を守ることができるのです。</loadingscreentip>
+  <loadingscreentip>潜水艦の船体には、無響タイルという小さな空洞を何千個も持つゴム製のタイルが貼られており、アクティブソナーを吸収して船内から発せられる音を減衰させるよう設計されている。</loadingscreentip>
+  <loadingscreentip>近距離のアクティブソナー照射には、臓器を破裂させ、内出血を起こすほどの強度があります。</loadingscreentip>
+  <loadingscreentip>アクティブソナーを有効にする前に、船体の安全な場所にクルーが１人もいないことを確認してください。</loadingscreentip>
+  <loadingscreentip>潜水艦内部の乗組員は外殻によってアクティブソナーから防護されていますが、船体を破損して水が流入すると、その防護は消えてしまいます。</loadingscreentip>
+  <loadingscreentip>船体に穴が開いたらアクティブソナーを切りましょう。鼓膜が破れてしまっては、エンジニアは漏水を修復するのに苦労するでしょう。</loadingscreentip>
+  <loadingscreentip>潜水艦の近くで潜るときは、注意が必要です。ソナー1発で難聴や組織損傷、ひどい場合は臓器破裂や脳出血を引き起こすことがあります。</loadingscreentip>
+  <loadingscreentip>ビーコンステーションを作動させるときは、無響潜水服の持参をお勧めします。潜水艦ほど強力ではありませんが、ビーコンからのソナー信号で大怪我をする可能性があります。</loadingscreentip>
+  <loadingscreentip>ソナーによる脳出血から患者を救うには、コルチザイドが唯一の手段です。</loadingscreentip>
+  <loadingscreentip>マナエキスは、ソナーによる脳出血の進行を一時的に止めることができます。その後は、コルチザイドが唯一の選択肢となります。</loadingscreentip>
+  <loadingscreentip>患者がすでにマナエキスを接種していた場合は、マナエキスを投与することは推奨されません。</loadingscreentip>
+  <loadingscreentip>アクティブソナーが有効なときは、バラストタンクに近づかないようにしてください。音波は水を張ったパイプの中を伝わりやすくなっています。</loadingscreentip>
+  <loadingscreentip>アクティブソナーによる振動被害を放置すると、神経損傷や患部の筋肉の横紋筋融解を引き起こす可能性があります。</loadingscreentip>
+  <loadingscreentip>潜水艦が生活の一部となっているエウロパでは、ソナーによる特異な傷害を治療するための医療が発達しています。穿孔した臓器にはスマートグラフト、脳出血にはコルチザイド、組織損傷にはマナエキス。</loadingscreentip>
+  <!-- Active sonar -->
+  <afflictionname.activesonar>潜水艦ソナー</afflictionname.activesonar>
+  <!-- Beacon station sonar -->
+  <afflictionname.activesonarbeacon>ビーコンソナー</afflictionname.activesonarbeacon>
+  <!-- Acoustic Trauma -->
+  <afflictionname.acoustictrauma>音響外傷 </afflictionname.acoustictrauma>
+  <afflictiondescription.acoustictrauma>患者の鼓膜に穴が開き、出血と耳鳴りが生じている。</afflictiondescription.acoustictrauma>
+  <afflictiondescription.acoustictrauma.self>耳鳴りがして血が滴り、めまいがして混乱する。</afflictiondescription.acoustictrauma.self>
+  <!-- Vibration Damage -->
+  <afflictionname.vibrationdamage>振動による損傷</afflictionname.vibrationdamage>
+  <afflictiondescription.vibrationdamage>ソナーの激しい振動により、循環器系に軽い損傷を受けた状態。</afflictiondescription.vibrationdamage>
+  <afflictiondescription.vibrationdamage.medium>患者は動脈、神経、筋肉に深刻なダメージを受けている。</afflictiondescription.vibrationdamage.medium>
+  <afflictiondescription.vibrationdamage.high>患者の内蔵はボロボロだ。動脈、神経、筋肉、骨に壊滅的なダメージを受けている。</afflictiondescription.vibrationdamage.high>
+  <afflictiondescription.vibrationdamage.self>全身に鈍い痛みを感じる。皮膚がピンと張ったようにヒリヒリする。</afflictiondescription.vibrationdamage.self>
+  <afflictiondescription.vibrationdamage.medium.self>四肢がしびれ、全身に針のような鋭い痛みを感じる。</afflictiondescription.vibrationdamage.medium.self>
+  <afflictiondescription.vibrationdamage.high.self>手足の感覚がない。感じるのは耐えがたい痛みだけで、体中の細胞が引き裂かれたような感覚。</afflictiondescription.vibrationdamage.high.self>
+  <afflictioncauseofdeath.vibrationdamage>壊滅的な臓器損傷</afflictioncauseofdeath.vibrationdamage>
+  <afflictioncauseofdeathself.vibrationdamage>体内が振動でズタズタになった</afflictioncauseofdeathself.vibrationdamage>
+  <!-- Nerve Damage -->
+  <afflictionname.nervedamage>神経障害</afflictionname.nervedamage>
+  <afflictiondescription.nervedamage>神経が振動で傷ついている。日常的な作業が困難になるだろう。</afflictiondescription.nervedamage>
+  <afflictiondescription.nervedamage.self>手がしびれたり、不器用なために仕事の能率が低下する。</afflictiondescription.nervedamage.self>
+  <!-- Rhabdomyolysis -->
+  <afflictionname.muscledamage>横紋筋融解症</afflictionname.muscledamage>
+  <afflictiondescription.muscledamage>患者の筋肉が分解され、血中に流出し始めている。</afflictiondescription.muscledamage>
+  <afflictiondescription.muscledamage.high>患者の大半の筋肉が壊死し、危険な量のタンパク質が血液中に流出している。</afflictiondescription.muscledamage.high>
+  <afflictiondescription.muscledamage.self>体がだるく、足がむくんで痛くなる。</afflictiondescription.muscledamage.self>
+  <afflictiondescription.muscledamage.high.self>足が弱ったように感じる。歩くことはほとんど不可能で、痛みは計り知れない。</afflictiondescription.muscledamage.high.self>
+  <afflictioncauseofdeath.muscledamage>腎不全</afflictioncauseofdeath.muscledamage>
+  <afflictioncauseofdeathself.muscledamage>筋肉が致死量のタンパク質を血中に放出した</afflictioncauseofdeathself.muscledamage>
+  <!-- Ruptured Lung -->
+  <afflictionname.rupturedlung>肺破裂</afflictionname.rupturedlung>
+  <afflictiondescription.rupturedlung>ソナーの振動で肺が破裂した患者。</afflictiondescription.rupturedlung>
+  <afflictiondescription.rupturedlung.high>患者の肺は極端な振動で引き裂かれ、低酸素血症を引き起こし、窒息する可能性が高い。</afflictiondescription.rupturedlung.high>
+  <afflictiondescription.rupturedlung.self>胸に鋭い痛みがある。呼吸がより困難になる。</afflictiondescription.rupturedlung.self>
+  <afflictiondescription.rupturedlung.high.self>血を吐いてやっと息ができ、息を吸うたびに苦しくなる。</afflictiondescription.rupturedlung.high.self>
+  <afflictioncauseofdeath.rupturedlung>吐血で窒息した。</afflictioncauseofdeath.rupturedlung>
+  <afflictioncauseofdeathself.rupturedlung>肺に深刻なダメージを受け、血で窒息した。</afflictioncauseofdeathself.rupturedlung>
+  <!-- Brain Hemorrhage -->
+  <afflictionname.brainhemorrhage>脳出血</afflictionname.brainhemorrhage>
+  <afflictiondescription.brainhemorrhage>患者の脳はアクティブソナーへの暴露により出血しています。幸いにも、これ以上悪化することはないようです。</afflictiondescription.brainhemorrhage>
+  <afflictiondescription.brainhemorrhage.medium>患者の大脳の大部分はどろどろに溶けている。脳は自分の血で溺れており、悪化の一途をたどっている。</afflictiondescription.brainhemorrhage.medium>
+  <afflictiondescription.brainhemorrhage.high>アクティブソナーで患者の脳が溶けてしまった。</afflictiondescription.brainhemorrhage.high>
+  <afflictiondescription.brainhemorrhage.self>視界がぼやけ、頭がぼんやりしている。</afflictiondescription.brainhemorrhage.self>
+  <afflictiondescription.brainhemorrhage.medium.self>考えることはできない。閃光を見たり、金属の味を感じたり。叫びたいのに、叫べない。運動機能の制御を失い 現実は徐々に失われていく...</afflictiondescription.brainhemorrhage.medium.self>
+  <afflictioncauseofdeath.brainhemorrhage>脳死</afflictioncauseofdeath.brainhemorrhage>
+  <afflictioncauseofdeathself.brainhemorrhage>ソナーで脳が溶けた</afflictioncauseofdeathself.brainhemorrhage>
+  <!-- Manna Influence -->
+  <afflictionname.mannainjection>マナの影響</afflictionname.mannainjection>
+  <afflictiondescription.mannainjection>この手足は、マナエキスの癒しの影響下にあります。</afflictiondescription.mannainjection>
+  <afflictiondescription.mannainjection.self>肌の下に優しい圧力と心地よい温もりを感じることができます。</afflictiondescription.mannainjection.self>
+  <!-- Manna Overdose -->
+  <afflictionname.mannaoverdose>マナ過剰摂取</afflictionname.mannaoverdose>
+  <afflictiondescription.mannaoverdose>患者の血中には危険な量のマナが含まれている。</afflictiondescription.mannaoverdose>
+  <afflictiondescription.mannaoverdose.self>超・サイコー！！</afflictiondescription.mannaoverdose.self>
+  <!-- Photopsia -->
+  <afflictionname.photopsia>視力障害</afflictionname.photopsia>
+  <afflictiondescription.photopsia>チカチカする光や明るい閃光のような視覚異常がある。</afflictiondescription.photopsia>
+  <afflictiondescription.photopsia.self>照明がチカチカしているように見えるが、何か見えているのだろうか？周辺視野に光の点滅が充満している。確かに何かおかしい。</afflictiondescription.photopsia.self>
+  <!-- Ataxia -->
+  <afflictionname.ataxia>運動失調症</afflictionname.ataxia>
+  <afflictiondescription.ataxia>小脳が麻痺しているため、不随意筋の痙攣やひどい協調運動が起こる。</afflictiondescription.ataxia>
+  <afflictiondescription.ataxia.self>筋肉が勝手に動いているようだ。前触れもなく前に進み続け、歩こうとしても元の場所に戻ってしまうのです。</afflictiondescription.ataxia.self>
+  <!-- Aphasia -->
+  <afflictionname.aphasia>失語症</afflictionname.aphasia>
+  <afflictiondescription.aphasia>脳の運動性言語中枢に障害があり、完全な言葉を話すことができない患者。</afflictiondescription.aphasia>
+  <afflictiondescription.aphasia.self>基本的な文章を書き上げることができず、言葉を作るのが非常に困難で、時には支離滅裂なつぶやきをすることもある。</afflictiondescription.aphasia.self>
+  <!-- Blindness -->
+  <afflictionname.opticneuritis>視神経炎</afflictionname.opticneuritis>
+  <afflictiondescription.opticneuritis>患者の後頭葉はひどく損傷しており、周期的に目が見えなくなり、見当識障害に陥る。</afflictiondescription.opticneuritis>
+  <afflictiondescription.opticneuritis.self>視界は定期的に暗闇に覆われる。これで終わりなのか？</afflictiondescription.opticneuritis.self>
+  <!-- Treatments -->
+  <entityname.manna>マナエキス</entityname.manna>
+  <entitydescription.manna>人間のヘモグロビンとエイリアンの血漿を融合させ、エウロパの海中生物が持つ自然回復力と治癒力を利用した奇跡の液体。筋肉や神経系の内部損傷に使用され、脳出血を一時的に止めることができる。繰り返し使用すると効果が薄れ、過剰摂取の危険性があることに注意する必要がある。</entitydescription.manna>
+  <entityname.cortizide>コルチザイド</entityname.cortizide>
+  <entitydescription.cortizide>痛みと圧力を和らげる強力な混合薬で、多くの厄介な副作用がある。脳出血の治療のため、最終手段として頭蓋内に注射されるのが一般的。
+警告 健康な脳環境に投与すると、頭蓋骨に危険な圧力がかかることがある。</entitydescription.cortizide>
+  <entityname.smartgraft>スマートグラフト</entityname.smartgraft>
+  <entitydescription.smartgraft>患者のDNAを受け継いだ遺伝子工学的結合組織で、複雑な解剖学的システムの再生を促進する。一般的に、穴のあいた臓器の修復に用いられる。</entitydescription.smartgraft>
+  <!-- Items -->
+  <entityname.anechoicdivingsuit>対振動潜水服</entityname.anechoicdivingsuit>
+  <entitydescription.anechoicdivingsuit>アクティブソナーの音波を対振動メッキで吸収するように設計された、ステルス性の高い軽量スーツ。ダメージから身を守り、6,000mまでの圧力に耐えることができる。</entitydescription.anechoicdivingsuit>
+  <entityname.navremote>リモートナビ</entityname.navremote>
+  <entitydescription.navremote>潜水艦のソナーやエンジンを遠隔操作するための携帯端末。</entitydescription.navremote>
+  <dialogturnoffsonar>ソナーを切れ！</dialogturnoffsonar>
+  <dialogturnoffsonar>あのソナーで耳から血が出そうだ！</dialogturnoffsonar>
+  <dialogturnoffsonar>ソナーを止めろ！</dialogturnoffsonar>
+  <dialogturnoffsonar>ソナーに引っかかった！？</dialogturnoffsonar>
+  <dialogturnoffsonar>なんだ、あのソナー音は！？</dialogturnoffsonar>
+  <dialogturnoffsonar>水中にいるんだ、ソナーをオフにしろ！</dialogturnoffsonar>
+  <dialogturnoffsonar>ソナーをオフに！</dialogturnoffsonar>
+  <dialogturnoffsonar>誰かソナーを止めて！</dialogturnoffsonar>
+</infotexts>

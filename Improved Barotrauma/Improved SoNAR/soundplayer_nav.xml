@@ -1,0 +1,835 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+  ↓↓↓ Unique per-player sound system ↓↓↓ 
+  This system allows for each player to hear sonar pings differently by playing the sound locally for each player in the radius.
+  A different ping will be played depending on the player's circumstances e.g. In/out of water, distance, sonar protection.
+  -->
+<Afflictions>
+  <Affliction identifier="sonarsounds" maxstrength="100" showiconthreshold="1000">
+    <!-- Distance: Far. -->
+    <Effect minstrength="0" maxstrength="25">
+      <!-- Apply air sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional serversidelua="lteq 0" />
+        <Conditional InWater="false" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingAirFar" strength="1" />
+      </StatusEffect>
+      <!-- Apply water sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional serversidelua="lteq 0" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingWaterFar" strength="1" />
+      </StatusEffect>
+      <!-- Apply suit sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="sonarprotection" />
+        <Conditional serversidelua="lteq 0" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingSuitFar" strength="1" />
+      </StatusEffect>
+      <!-- Remove affliction. -->
+      <StatusEffect target="Character" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarsounds" amount="1000" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Medium. -->
+    <Effect minstrength="25" maxstrength="50">
+      <!-- Apply air sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional serversidelua="lteq 0" />
+        <Conditional InWater="false" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingAirMedium" strength="1" />
+      </StatusEffect>
+      <!-- Apply water sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional serversidelua="lteq 0" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingWaterMedium" strength="1" />
+      </StatusEffect>
+      <!-- Apply suit sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="sonarprotection" />
+        <Conditional serversidelua="lteq 0" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingSuitMedium" strength="1" />
+      </StatusEffect>
+      <!-- Remove affliction. -->
+      <StatusEffect target="Character" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarsounds" amount="1000" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Close. -->
+    <Effect minstrength="50" maxstrength="75">
+      <!-- Apply air sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional serversidelua="lteq 0" />
+        <Conditional InWater="false" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingAirMedium" strength="1" />
+      </StatusEffect>
+      <!-- Apply water sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional serversidelua="lteq 0" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingWaterClose" strength="1" />
+      </StatusEffect>
+      <!-- Apply suit sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="sonarprotection" />
+        <Conditional serversidelua="lteq 0" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingSuitClose" strength="1" />
+      </StatusEffect>
+      <!-- Remove affliction. -->
+      <StatusEffect target="Character" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarsounds" amount="1000" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Very Close. -->
+    <Effect minstrength="75" maxstrength="100">
+      <!-- Apply air sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional serversidelua="lteq 0" />
+        <Conditional sonarsounds="gt 95" />
+        <Conditional InWater="false" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingAirClose" strength="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional serversidelua="lteq 0" />
+        <Conditional sonarsounds="lteq 95" />
+        <Conditional InWater="false" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingAirMedium" strength="1" />
+      </StatusEffect>
+      <!-- Apply water sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional serversidelua="lteq 0" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingWaterVeryClose" strength="1" />
+      </StatusEffect>
+      <!-- Apply suit sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="sonarprotection" />
+        <Conditional serversidelua="lteq 0" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingSuitVeryClose" strength="1" />
+      </StatusEffect>
+      <!-- Remove affliction. -->
+      <StatusEffect target="Character" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarsounds" amount="1000" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Air pings. -->
+  <Affliction identifier="sonarPingAirClose" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingAirClose1.ogg" volume="1.0" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingAirClose2.ogg" volume="1.0" />
+        <Affliction identifier="sonarTailAirClose" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingAirClose" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingAirMedium" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingAirMedium1.ogg" volume="1.0" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingAirMedium2.ogg" volume="1.0" />
+        <Affliction identifier="sonarTailAirMedium" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingAirMedium" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingAirFar" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingAirFar1.ogg" volume="1.0" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingAirFar2.ogg" volume="1.0" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingAirFar3.ogg" volume="1.0" />
+        <Affliction identifier="sonarTailAirFar" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingAirFar" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Water pings. -->
+  <Affliction identifier="sonarPingWaterVeryClose" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingWaterVeryClose1.ogg" volume="0.30" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingWaterVeryClose2.ogg" volume="0.30" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingWaterVeryClose3.ogg" volume="0.30" dontmuffle="true" />
+        <Affliction identifier="sonarTailWaterVeryClose" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingWaterVeryClose" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingWaterClose" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingWaterClose1.ogg" volume="0.50" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingWaterClose2.ogg" volume="0.50" dontmuffle="true" />
+        <Affliction identifier="sonarTailWaterClose" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingWaterClose" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingWaterMedium" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingWaterMedium1.ogg" volume="0.60" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingWaterMedium2.ogg" volume="0.60" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingWaterMedium3.ogg" volume="0.60" dontmuffle="true" />
+        <Affliction identifier="sonarTailWaterMedium" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingWaterMedium" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingWaterFar" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingWaterFar1.ogg" volume="0.65" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingWaterFar2.ogg" volume="0.65" dontmuffle="true" />
+        <Affliction identifier="sonarTailWaterFar" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingWaterFar" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Suit pings. -->
+  <Affliction identifier="sonarPingSuitVeryClose" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingSuitVeryClose1.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingSuitVeryClose2.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingSuitVeryClose3.ogg" volume="1.2" dontmuffle="true" />
+        <Affliction identifier="sonarTailSuitVeryClose" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingSuitVeryClose" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingSuitClose" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingSuitClose1.ogg" volume="0.70" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingSuitClose2.ogg" volume="0.70" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingSuitClose3.ogg" volume="0.70" dontmuffle="true" />
+        <Affliction identifier="sonarTailSuitClose" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingSuitClose" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingSuitMedium" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingSuitMedium1.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingSuitMedium2.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingSuitMedium3.ogg" volume="1.1" dontmuffle="true" />
+        <Affliction identifier="sonarTailSuitMedium" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingSuitMedium" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingSuitFar" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingSuitFar1.ogg" volume="0.55" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingSuitFar2.ogg" volume="0.55" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingSuitFar3.ogg" volume="0.55" dontmuffle="true" />
+        <Affliction identifier="sonarTailSuitFar" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingSuitFar" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- 
+    The afflictions below only play sounds. Specifically, the last 2 seconds, or "Tail", of a ping. 
+    Each sound is set to play after a delay of 2 seconds. This is to allow the first half of the sound, the "Ping", to be played first.
+       
+    Why is it necessary to split the sounds into two parts? 
+    For 3 reasons.
+    1. Active sonar pings every 2.0 seconds (hard-coded).
+    2. Our ping sounds are longer than 2.0 seconds (3.99 seconds). 
+    3. After a Status Effect plays a sound, it can only play it again once it's finished; in other words, the sounds don't stack.
+
+    So, if you play a 4-second sound every 2 seconds, it won't work. Instead, it will play a 4-second sound every 4 seconds, missing every 2nd ping.
+    An exception to this rule is sounds played within item tags, but unfortunately, because we're using an explosion to apply sounds to players, 
+    it takes us outside the <Sonar> tag, and we're forced to devise our own solution for playing 4-second sounds in a 2-second interval.
+       
+    The solution is cutting the 4-second sounds in half to fit the 2.0-second ping interval. This means we're playing two different 2-second sounds every 2.0 seconds.
+    To prevent them playing on top of each other, add a 2-second delay on the 2nd sound, so it plays at the end of the first sound, creating a seamless 4-second sound being played every 2.0 seconds.
+    
+    It should be noted that achieving this technique with sounds longer than 4.0 seconds would require cutting it into additional pieces.
+    For example, a 6-second sound would require three 2-second sounds to be played at once, one with a 2-second delay, and one with a 4-second delay.
+  -->
+  <!-- Air tails. -->
+  <Affliction identifier="sonarTailAirClose" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailAirClose1.ogg" volume="1.0" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailAirClose2.ogg" volume="1.0" />
+        <ReduceAffliction identifier="sonarTailAirClose" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailAirMedium" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailAirMedium1.ogg" volume="1.0" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailAirMedium2.ogg" volume="1.0" />
+        <ReduceAffliction identifier="sonarTailAirMedium" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailAirFar" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailAirFar1.ogg" volume="1.0" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailAirFar2.ogg" volume="1.0" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailAirFar3.ogg" volume="1.0" />
+        <ReduceAffliction identifier="sonarTailAirFar" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Water tails. -->
+  <Affliction identifier="sonarTailWaterVeryClose" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailWaterVeryClose1.ogg" volume="0.30" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailWaterVeryClose2.ogg" volume="0.30" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailWaterVeryClose3.ogg" volume="0.30" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailWaterVeryClose" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailWaterClose" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailWaterClose1.ogg" volume="0.50" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailWaterClose2.ogg" volume="0.50" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailWaterClose" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailWaterMedium" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailWaterMedium1.ogg" volume="0.60" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailWaterMedium2.ogg" volume="0.60" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailWaterMedium3.ogg" volume="0.60" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailWaterMedium" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailWaterFar" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailWaterFar1.ogg" volume="0.65" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailWaterFar2.ogg" volume="0.65" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailWaterFar" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Suit tails. -->
+  <Affliction identifier="sonarTailSuitVeryClose" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailSuitVeryClose1.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailSuitVeryClose2.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailSuitVeryClose3.ogg" volume="1.2" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailSuitVeryClose" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailSuitClose" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailSuitClose1.ogg" volume="0.70" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailSuitClose2.ogg" volume="0.70" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailSuitClose3.ogg" volume="0.70" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailSuitClose" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailSuitMedium" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailSuitMedium1.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailSuitMedium2.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailSuitMedium3.ogg" volume="1.1" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailSuitMedium" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailSuitFar" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailSuitFar1.ogg" volume="0.55" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailSuitFar2.ogg" volume="0.55" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailSuitFar3.ogg" volume="0.55" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailSuitFar" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarsoundsdirectional" maxstrength="100" showiconthreshold="1000">
+    <!-- Distance: Far. -->
+    <Effect minstrength="0" maxstrength="25">
+      <!-- Apply directional air sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional serversidelua="lteq 0" />
+        <Conditional InWater="false" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingAirFarDirectional" strength="1" />
+      </StatusEffect>
+      <!-- Apply directional water sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional serversidelua="lteq 0" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingWaterFarDirectional" strength="1" />
+      </StatusEffect>
+      <!-- Apply directional suit sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="sonarprotection" />
+        <Conditional serversidelua="lteq 0" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingSuitFarDirectional" strength="1" />
+      </StatusEffect>
+      <!-- Remove affliction. -->
+      <StatusEffect target="Character" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarsoundsdirectional" amount="1000" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Medium. -->
+    <Effect minstrength="25" maxstrength="50">
+      <!-- Apply directional air sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional serversidelua="lteq 0" />
+        <Conditional InWater="false" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingAirMediumDirectional" strength="1" />
+      </StatusEffect>
+      <!-- Apply directional water sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional serversidelua="lteq 0" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingWaterMediumDirectional" strength="1" />
+      </StatusEffect>
+      <!-- Apply directional suit sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="sonarprotection" />
+        <Conditional serversidelua="lteq 0" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingSuitMediumDirectional" strength="1" />
+      </StatusEffect>
+      <!-- Remove affliction. -->
+      <StatusEffect target="Character" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarsoundsdirectional" amount="1000" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Close. -->
+    <Effect minstrength="50" maxstrength="75">
+      <!-- Apply directional air sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional serversidelua="lteq 0" />
+        <Conditional InWater="false" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingAirMediumDirectional" strength="1" />
+      </StatusEffect>
+      <!-- Apply directional water sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional serversidelua="lteq 0" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingWaterCloseDirectional" strength="1" />
+      </StatusEffect>
+      <!-- Apply directional suit sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="sonarprotection" />
+        <Conditional serversidelua="lteq 0" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingSuitCloseDirectional" strength="1" />
+      </StatusEffect>
+      <!-- Remove affliction. -->
+      <StatusEffect target="Character" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarsoundsdirectional" amount="1000" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Very Close. -->
+    <Effect minstrength="75" maxstrength="100">
+      <!-- Apply directional air sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional sonarsoundsdirectional="gt 95" />
+        <Conditional serversidelua="lteq 0" />
+        <Conditional InWater="false" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingAirCloseDirectional" strength="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional sonarsoundsdirectional="lteq 95" />
+        <Conditional serversidelua="lteq 0" />
+        <Conditional InWater="false" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingAirMediumDirectional" strength="1" />
+      </StatusEffect>
+      <!-- Apply directional water sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional serversidelua="lteq 0" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingWaterVeryCloseDirectional" strength="1" />
+      </StatusEffect>
+      <!-- Apply directional suit sounds -->
+      <StatusEffect target="Character" disabledeltatime="true" comparison="and">
+        <Conditional HasStatusTag="sonarprotection" />
+        <Conditional serversidelua="lteq 0" />
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="sonarPingSuitVeryCloseDirectional" strength="1" />
+      </StatusEffect>
+      <!-- Remove affliction. -->
+      <StatusEffect target="Character" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarsoundsdirectional" amount="1000" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- ↓↓↓ DIRECTIONAL SOUNDS ↓↓↓ -->
+  <!-- Directional Air pings. -->
+  <Affliction identifier="sonarPingAirCloseDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingAirClose1_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingAirClose2_Directional.ogg" volume="1.0" />
+        <Affliction identifier="sonarTailAirCloseDirectional" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingAirCloseDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingAirMediumDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingAirMedium1_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingAirMedium2_Directional.ogg" volume="1.0" />
+        <Affliction identifier="sonarTailAirMediumDirectional" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingAirMediumDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingAirFarDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingAirFar1_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingAirFar2_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingAirFar3_Directional.ogg" volume="1.0" />
+        <Affliction identifier="sonarTailAirFarDirectional" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingAirFarDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Directional Water pings. -->
+  <Affliction identifier="sonarPingWaterVeryCloseDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingWaterMedium1_Directional.ogg" volume="0.9" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingWaterMedium2_Directional.ogg" volume="0.9" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingWaterMedium3_Directional.ogg" volume="0.9" dontmuffle="true" />
+        <Affliction identifier="sonarTailWaterVeryCloseDirectional" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingWaterVeryCloseDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingWaterCloseDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingWaterMedium1_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingWaterMedium2_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingWaterMedium3_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <Affliction identifier="sonarTailWaterCloseDirectional" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingWaterCloseDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingWaterMediumDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingWaterFar1_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingWaterFar2_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <Affliction identifier="sonarTailWaterMediumDirectional" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingWaterMediumDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingWaterFarDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingWaterFar1_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingWaterFar2_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <Affliction identifier="sonarTailWaterFarDirectional" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingWaterFarDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Directional Suit pings. -->
+  <Affliction identifier="sonarPingSuitVeryCloseDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingSuitMedium1_Directional.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingSuitMedium2_Directional.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingSuitMedium3_Directional.ogg" volume="1.2" dontmuffle="true" />
+        <Affliction identifier="sonarTailSuitVeryCloseDirectional" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingSuitVeryCloseDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingSuitCloseDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingSuitMedium1_Directional.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingSuitMedium2_Directional.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingSuitMedium3_Directional.ogg" volume="1.1" dontmuffle="true" />
+        <Affliction identifier="sonarTailSuitCloseDirectional" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingSuitCloseDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingSuitMediumDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingSuitFar1_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingSuitFar2_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingSuitFar3_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <Affliction identifier="sonarTailSuitMediumDirectional" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingSuitMediumDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarPingSuitFarDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingSuitFar1_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingSuitFar2_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarPingSuitFar3_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <Affliction identifier="sonarTailSuitFarDirectional" amount="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
+        <ReduceAffliction identifier="sonarPingSuitFarDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Directional Air tails. -->
+  <Affliction identifier="sonarTailAirCloseDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailAirClose1_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailAirClose2_Directional.ogg" volume="1.0" />
+        <ReduceAffliction identifier="sonarTailAirCloseDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailAirMediumDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailAirMedium1_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailAirMedium2_Directional.ogg" volume="1.0" />
+        <ReduceAffliction identifier="sonarTailAirMediumDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailAirFarDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailAirFar1_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailAirFar2_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailAirFar3_Directional.ogg" volume="1.0" />
+        <ReduceAffliction identifier="sonarTailAirFarDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Directional Water tails. -->
+  <Affliction identifier="sonarTailWaterVeryCloseDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailWaterMedium1_Directional.ogg" volume="0.9" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailWaterMedium2_Directional.ogg" volume="0.9" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailWaterMedium3_Directional.ogg" volume="0.9" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailWaterVeryCloseDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailWaterCloseDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailWaterMedium1_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailWaterMedium2_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailWaterMedium3_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailWaterCloseDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailWaterMediumDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailWaterFar1_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailWaterFar2_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailWaterMediumDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailWaterFarDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailWaterFar1_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailWaterFar2_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailWaterFarDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Directional Suit tails. -->
+  <Affliction identifier="sonarTailSuitVeryCloseDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailSuitMedium1_Directional.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailSuitMedium2_Directional.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailSuitMedium3_Directional.ogg" volume="1.2" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailSuitVeryCloseDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailSuitCloseDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailSuitMedium1_Directional.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailSuitMedium2_Directional.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailSuitMedium3_Directional.ogg" volume="1.1" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailSuitCloseDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailSuitMediumDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailSuitFar1_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailSuitFar2_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailSuitFar3_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailSuitMediumDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="sonarTailSuitFarDirectional" maxstrength="1" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
+        <Conditional IsLocalPlayer="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailSuitFar1_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailSuitFar2_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <sound file="%ModDir%/Improved SoNAR/Sounds/sonarTailSuitFar3_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <ReduceAffliction identifier="sonarTailSuitFarDirectional" amount="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+</Afflictions>

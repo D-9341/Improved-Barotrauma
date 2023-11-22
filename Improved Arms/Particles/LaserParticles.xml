@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<prefabs>
-  <laserweldingbeam drawontop="True" loopanim="True" animduration="1" blendstate="Additive" drawtarget="Both" endcolor="255,255,255,255" startcolor="0,255,0,255" growtime="0" sizechangemax="-2,-0.5" sizechangemin="-2,-0.1" startsizemax="1.2,1.1" startsizemin="1.0,0.9" restitution="0.8" friction="0.2" deleteoncollision="False" usecollision="False" collisionradius="1" velocitychangewater="0,0" velocitychange="0,0" waterdrag="0" drag="0" rotatetodirection="False" startrotationmax="0" startrotationmin="0" angularvelocitymax="0" angularvelocitymin="0" startdelaymax="0" startdelaymin="0" lifetime="0.1">
-    <sprite origin="0.5,0.5" sourcerect="0,0,244,49" texture="%ModDir%/Particles/LaserWeldingParticlesSmall.png" />
-  </laserweldingbeam>
-</prefabs>

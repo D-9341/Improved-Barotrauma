@@ -1,0 +1,792 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- ↓↓↓ Main afflictions/injuries applied by sonar. ↓↓↓ -->
+<Afflictions>
+  <!-- Acoustic trauma. -->
+  <Affliction name="Acoustic trauma" identifier="acoustictrauma" type="acoustictrauma" maxstrength="100" treatmentthreshold="1000" limbspecific="true" indicatorlimb="Head">
+    <icon texture="%ModDir%/Improved SoNAR/Icons/Afflictions.png" sourcerect="0,0,128,128" origin="0,0" />
+    <Description textidentifier="afflictiondescription.acoustictrauma" target="OtherCharacter" />
+    <Description textidentifier="afflictiondescription.acoustictrauma.self" target="Self" />
+    <Effect minstrength="0" maxstrength="1" multiplybymaxvitality="true">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="tinnitus1" strength="100" />
+        <ReduceAffliction identifier="acoustictrauma" strength="0.2" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="1" maxstrength="25" multiplybymaxvitality="true" minvitalitydecrease="0.0" maxvitalitydecrease="0.025">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <Affliction identifier="tinnitus1" strength="100" />
+        <ReduceAffliction identifier="tinnitus2" strength="100" />
+        <ReduceAffliction identifier="acoustictrauma" strength="0.2" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="25" maxstrength="50" multiplybymaxvitality="true" minvitalitydecrease="0.025" maxvitalitydecrease="0.050">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <Affliction identifier="tinnitus2" strength="100" />
+        <ReduceAffliction identifier="tinnitus1" strength="100" />
+        <ReduceAffliction identifier="tinnitus3" strength="100" />
+        <ReduceAffliction identifier="acoustictrauma" strength="0.2" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="50" maxstrength="75" multiplybymaxvitality="true" minvitalitydecrease="0.050" maxvitalitydecrease="0.075">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <Affliction identifier="tinnitus3" strength="100" />
+        <ReduceAffliction identifier="tinnitus2" strength="100" />
+        <ReduceAffliction identifier="tinnitus4" strength="100" />
+        <ReduceAffliction identifier="acoustictrauma" strength="0.2" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="75" maxstrength="100" multiplybymaxvitality="true" minvitalitydecrease="0.075" maxvitalitydecrease="0.1">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <Affliction identifier="tinnitus4" strength="100" />
+        <ReduceAffliction identifier="tinnitus3" strength="100" />
+        <ReduceAffliction identifier="acoustictrauma" strength="0.2" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Sound loops for Acoustic Trauma -->
+  <Affliction identifier="tinnitus1" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <!-- The reason each sound effect is in an affliction of its own is so the sounds stop playing temporarily when cortizide is injected. No idea why this is necessary. -->
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" comparison="and">
+        <Conditional IsLocalPlayer="True" />
+        <Conditional cortizideinjection="lteq 0" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/Tinnitus1.ogg" loop="true" volume="0.7" dontmuffle="true" />
+      </StatusEffect>
+      <!-- Remove tinnitus if accoustictrauma is treated. -->
+      <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <Conditional acoustictrauma="lteq 0" />
+        <Affliction identifier="tinnitus1" strength="-10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="tinnitus2" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" comparison="and">
+        <Conditional IsLocalPlayer="True" />
+        <Conditional cortizideinjection="lteq 0" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/Tinnitus2.ogg" loop="true" volume="0.6" dontmuffle="true" />
+      </StatusEffect>
+      <!-- Remove tinnitus if accoustictrauma is treated. -->
+      <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <Conditional acoustictrauma="lteq 0" />
+        <Affliction identifier="tinnitus2" strength="-10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="tinnitus3" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" comparison="and">
+        <Conditional IsLocalPlayer="True" />
+        <Conditional cortizideinjection="lteq 0" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/Tinnitus3.ogg" loop="true" volume="0.7" dontmuffle="true" />
+      </StatusEffect>
+      <!-- Remove tinnitus if accoustictrauma is treated. -->
+      <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <Conditional acoustictrauma="lteq 0" />
+        <Affliction identifier="tinnitus3" strength="-10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="tinnitus4" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" comparison="and">
+        <Conditional IsLocalPlayer="True" />
+        <Conditional cortizideinjection="lteq 0" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/Tinnitus4.ogg" loop="true" volume="0.7" dontmuffle="true" />
+      </StatusEffect>
+      <!-- Remove tinnitus if accoustictrauma is treated. -->
+      <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <Conditional acoustictrauma="lteq 0" />
+        <Affliction identifier="tinnitus4" strength="-10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Vibration damage -->
+  <Affliction name="Vibration damage" identifier="vibrationdamage" type="sonardamage" limbspecific="true" indicatorlimb="Torso" healcostmultiplier="2.5" maxstrength="100" treatmentthreshold="12" showiconthreshold="0" showinhealthscannerthreshold="0" damageoverlayalpha="1" causeofdeathdescription="afflictioncauseofdeath.vibrationdamage" selfcauseofdeathdescription="afflictioncauseofdeathself.vibrationdamage">
+    <icon texture="%ModDir%/Improved SoNAR/Icons/Afflictions.png" sourcerect="128,0,128,128" origin="0,0" />
+    <Description textidentifier="afflictiondescription.vibrationdamage" target="OtherCharacter" minstrength="0" maxstrength="33" />
+    <Description textidentifier="afflictiondescription.vibrationdamage.medium" target="OtherCharacter" minstrength="33" maxstrength="66" />
+    <Description textidentifier="afflictiondescription.vibrationdamage.high" target="OtherCharacter" minstrength="66" maxstrength="100" />
+    <Description textidentifier="afflictiondescription.vibrationdamage.self" target="Self" minstrength="0" maxstrength="33" />
+    <Description textidentifier="afflictiondescription.vibrationdamage.medium.self" target="Self" minstrength="33" maxstrength="66" />
+    <Description textidentifier="afflictiondescription.vibrationdamage.high.self" target="Self" minstrength="66" maxstrength="100" />
+    <Effect minstrength="0" maxstrength="5" multiplybymaxvitality="true" minvitalitydecrease="0.0" maxvitalitydecrease="0.05">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="vibrationdamage" strength="0.09" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="5" maxstrength="33" multiplybymaxvitality="true" minvitalitydecrease="0.05" maxvitalitydecrease="0.3" minbodytint="110,0,0,0" maxbodytint="110,0,0,85" minspeedmultiplier="1.0" maxspeedmultiplier="0.93">
+      <StatusEffect target="Character" targetlimb="LeftLeg,RightLeg" disabledeltatime="true" interval="1" delay="80">
+        <Affliction identifier="muscledamage" strength="0.15" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="LeftArm,RightArm" disabledeltatime="true" interval="1">
+        <Affliction identifier="nervedamage" strength="0.2" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="vibrationdamage" strength="0.08" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="33" maxstrength="66" multiplybymaxvitality="true" minvitalitydecrease="0.3" maxvitalitydecrease="0.6" minbodytint="110,0,0,85" maxbodytint="110,0,0,170" minspeedmultiplier="0.93" maxspeedmultiplier="0.86">
+      <StatusEffect target="Character" targetlimb="LeftLeg,RightLeg" disabledeltatime="true" interval="1" delay="45">
+        <Affliction identifier="muscledamage" strength="0.25" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="LeftArm,RightArm" disabledeltatime="true" interval="1">
+        <Affliction identifier="nervedamage" strength="0.25" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="vibrationdamage" strength="0.06" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="66" maxstrength="100" multiplybymaxvitality="true" minvitalitydecrease="0.6" maxvitalitydecrease="0.9" minbodytint="110,0,0,170" maxbodytint="110,0,0,255" minspeedmultiplier="0.86" maxspeedmultiplier="0.75">
+      <StatusEffect target="Character" targetlimb="LeftLeg,RightLeg" disabledeltatime="true" interval="1">
+        <Affliction identifier="muscledamage" strength="0.4" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="LeftArm,RightArm" disabledeltatime="true" interval="1">
+        <Affliction identifier="nervedamage" strength="0.4" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="vibrationdamage" strength="0.04" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Nerve damage -->
+  <Affliction name="Nerve damage" identifier="nervedamage" type="sonardamage" limbspecific="true" indicatorlimb="LeftArm,RightArm" healcostmultiplier="2.5" maxstrength="100" treatmentthreshold="100" showiconthreshold="1" showinhealthscannerthreshold="0">
+    <icon texture="%ModDir%/Improved SoNAR/Icons/Afflictions.png" sourcerect="128,128,128,128" origin="0,0" />
+    <Description textidentifier="afflictiondescription.nervedamage" target="OtherCharacter" />
+    <Description textidentifier="afflictiondescription.nervedamage.self" target="Self" />
+    <Effect minstrength="0" maxstrength="100" multiplybymaxvitality="true" minskillmultiplier="0.95" maxskillmultiplier="0.5">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="nervedamage" strength="0.02" />
+      </StatusEffect>
+      <!-- Integration with Neurotrauma amputation. -->
+      <StatusEffect target="Character" targetlimbs="RightArm" interval="1" disabledeltatime="true" comparison="or">
+        <Conditional tra_amputation="gt 0" />
+        <Conditional sra_amputation="gt 0" />
+        <Affliction identifier="nervedamage" strength="-1000" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimbs="LeftArm" interval="1" disabledeltatime="true" comparison="or">
+        <Conditional tla_amputation="gt 0" />
+        <Conditional sla_amputation="gt 0" />
+        <Affliction identifier="nervedamage" strength="-1000" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Rhabdomyolysis -->
+  <Affliction name="Rhabdomyolysis" identifier="muscledamage" type="sonardamage" limbspecific="true" indicatorlimb="LeftLeg,RightLeg" healcostmultiplier="4" maxstrength="100" treatmentthreshold="40" showiconthreshold="10" showinhealthscannerthreshold="5">
+    <icon texture="%ModDir%/Improved SoNAR/Icons/Afflictions.png" sourcerect="0,128,128,128" origin="0,0" />
+    <Description textidentifier="afflictiondescription.muscledamage" target="OtherCharacter" minstrength="0" maxstrength="60" />
+    <Description textidentifier="afflictiondescription.muscledamage.high" target="OtherCharacter" minstrength="60" maxstrength="100" />
+    <Description textidentifier="afflictiondescription.muscledamage.self" target="Self" minstrength="0" maxstrength="60" />
+    <Description textidentifier="afflictiondescription.muscledamage.high.self" target="Self" minstrength="60" maxstrength="100" />
+    <Effect minstrength="5" maxstrength="20" strengthchange="-0.02" multiplybymaxvitality="true" minvitalitydecrease="0.0" maxvitalitydecrease="0.1" minspeedmultiplier="0.85" maxspeedmultiplier="0.75">
+      <!-- Integration with Neurotrauma amputation. -->
+      <StatusEffect target="Character" targetlimbs="RightLeg" interval="1" disabledeltatime="true" comparison="or">
+        <Conditional trl_amputation="gt 0" />
+        <Conditional srl_amputation="gt 0" />
+        <Affliction identifier="muscledamage" strength="-1000" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimbs="LeftLeg" interval="1" disabledeltatime="true" comparison="or">
+        <Conditional tll_amputation="gt 0" />
+        <Conditional sll_amputation="gt 0" />
+        <Affliction identifier="muscledamage" strength="-1000" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="20" maxstrength="100" strengthchange="0.02" multiplybymaxvitality="true" minvitalitydecrease="0.1" maxvitalitydecrease="0.5" minspeedmultiplier="0.75" maxspeedmultiplier="0.10">
+      <!-- Integration with Neurotrauma amputation. -->
+      <StatusEffect target="Character" targetlimbs="RightLeg" interval="1" disabledeltatime="true" comparison="or">
+        <Conditional trl_amputation="gt 0" />
+        <Conditional srl_amputation="gt 0" />
+        <Affliction identifier="muscledamage" strength="-1000" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimbs="LeftLeg" interval="1" disabledeltatime="true" comparison="or">
+        <Conditional tll_amputation="gt 0" />
+        <Conditional sll_amputation="gt 0" />
+        <Affliction identifier="muscledamage" strength="-1000" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Ruptured lung -->
+  <Affliction name="Ruptured lung" identifier="rupturedlung" type="rupturedlung" maxstrength="100" treatmentthreshold="20" limbspecific="true" indicatorlimb="Torso" healcostmultiplier="3.5" showiconthreshold="5" showinhealthscannerthreshold="5" causeofdeathdescription="afflictioncauseofdeath.rupturedlung" selfcauseofdeathdescription="afflictioncauseofdeathself.rupturedlung">
+    <icon texture="%ModDir%/Improved SoNAR/Icons/Afflictions.png" sourcerect="256,0,128,128" origin="0,0" />
+    <Description textidentifier="afflictiondescription.rupturedlung" target="OtherCharacter" minstrength="0" maxstrength="25" />
+    <Description textidentifier="afflictiondescription.rupturedlung.high" target="OtherCharacter" minstrength="25" maxstrength="100" />
+    <Description textidentifier="afflictiondescription.rupturedlung.self" target="Self" minstrength="0" maxstrength="25" />
+    <Description textidentifier="afflictiondescription.rupturedlung.high.self" target="Self" minstrength="25" maxstrength="100" />
+    <Effect minstrength="0" maxstrength="100" multiplybymaxvitality="true" minvitalitydecrease="0.0" maxvitalitydecrease="1.0">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="rupturedlung" strength="0.03" />
+      </StatusEffect>
+      <!-- Integration with Neurotrauma organ transplants. -->
+      <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <Conditional lungremoved="gt 0" />
+        <ReduceAffliction identifier="rupturedlung" strength="1000" />
+      </StatusEffect>
+    </Effect>
+    <!-- Coughing up blood -->
+    <PeriodicEffect mininterval="15" maxinterval="27">
+      <StatusEffect target="Character" SpeedMultiplier="0.2" setvalue="true" duration="1.1" />
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="male" />
+        <Conditional IsUnconscious="false" />
+        <Conditional rupturedlung="gteq 25" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/male_cough1.ogg" selectionmode="Random" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/male_cough2.ogg" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/male_cough3.ogg" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/male_cough4.ogg" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="female" />
+        <Conditional IsUnconscious="false" />
+        <Conditional rupturedlung="gteq 25" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/female_cough1.ogg" selectionmode="Random" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/female_cough2.ogg" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/female_cough3.ogg" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/female_cough4.ogg" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional rupturedlung="gteq 25" />
+        <Conditional IsUnconscious="false" />
+        <Affliction identifier="stun" strength="0.25" />
+        <Affliction identifier="bloodloss" strength="6" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimbs="Head" duration="1" comparison="and">
+        <Conditional rupturedlung="gteq 25" />
+        <Conditional IsUnconscious="false" />
+        <Conditional HideFace="false" />
+        <Sound file="Content/Sounds/Damage/Gore1.ogg" selectionmode="Random" />
+        <Sound file="Content/Sounds/Damage/Gore5.ogg" />
+        <Sound file="Content/Sounds/Damage/Gore8.ogg" />
+        <ParticleEmitter particle="bloodsplash" copyentityangle="true" anglemin="-10" anglemax="10" particlespersecond="50" velocitymin="50" velocitymax="200" scalemin="0.1" scalemax="0.2" />
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="1.25" shockwave="false" underwaterbubble="false" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <!-- Wheezing and reduced oxygen -->
+    <PeriodicEffect mininterval="6" maxinterval="7">
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="male" />
+        <Conditional rupturedlung="gteq 10" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/male_wheeze1.ogg" volume="0.7" range="300" selectionmode="Random" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/male_wheeze2.ogg" volume="0.7" range="300" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/male_wheeze3.ogg" volume="0.7" range="300" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/male_wheeze4.ogg" volume="0.7" range="300" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/male_wheeze5.ogg" volume="0.7" range="300" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="female" />
+        <Conditional rupturedlung="gteq 10" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/female_wheeze1.ogg" volume="0.7" range="300" selectionmode="Random" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/female_wheeze2.ogg" volume="0.7" range="300" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/female_wheeze3.ogg" volume="0.7" range="300" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/female_wheeze4.ogg" volume="0.7" range="300" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/female_wheeze5.ogg" volume="0.7" range="300" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional rupturedlung="gteq 10" />
+        <Conditional IsUnconscious="false" />
+        <Affliction identifier="oxygenlow" strength="17" />
+      </StatusEffect>
+    </PeriodicEffect>
+  </Affliction>
+  <!-- Brain hemorrhage -->
+  <Affliction name="Brain hemorrhage" identifier="brainhemorrhage" type="brainhemorrhage" maxstrength="100" treatmentthreshold="40" limbspecific="true" indicatorlimb="Head" healcostmultiplier="0" basehealcost="650" showiconthreshold="33" showinhealthscannerthreshold="0" causeofdeathdescription="afflictioncauseofdeath.brainhemorrhage" selfcauseofdeathdescription="afflictioncauseofdeathself.brainhemorrhage">
+    <icon texture="%ModDir%/Improved SoNAR/Icons/Afflictions.png" sourcerect="384,0,128,128" origin="0,0" />
+    <Description textidentifier="afflictiondescription.brainhemorrhage" target="OtherCharacter" minstrength="0" maxstrength="25" />
+    <Description textidentifier="afflictiondescription.brainhemorrhage.medium" target="OtherCharacter" minstrength="25" maxstrength="99" />
+    <Description textidentifier="afflictiondescription.brainhemorrhage.high" target="OtherCharacter" minstrength="99" maxstrength="100" />
+    <Description textidentifier="afflictiondescription.brainhemorrhage.self" target="Self" minstrength="0" maxstrength="25" />
+    <Description textidentifier="afflictiondescription.brainhemorrhage.medium.self" target="Self" minstrength="25" maxstrength="100" />
+    <Effect minstrength="0" maxstrength="15" multiplybymaxvitality="true" minvitalitydecrease="0.0" maxvitalitydecrease="0.15" minscreendistort="0.0" maxscreendistort="0.15" minscreenblur="0.0" maxscreenblur="0.15" minradialdistort="0.0" maxradialdistort="0.15" minspeedmultiplier="1" maxspeedmultiplier="0.8">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="brainhemorrhage" strength="0.02" />
+      </StatusEffect>
+      <!-- Integration with Neurotrauma brain transplants & amputations. -->
+      <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="or">
+        <Conditional brainremoved="gt 0" />
+        <Conditional th_amputation="gt 0" />
+        <Conditional sh_amputation="gt 0" />
+        <ReduceAffliction type="brainhemorrhage" strength="1000" />
+        <Affliction identifier="removehemorrhagefx" strength="1000" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="15" maxstrength="99" multiplybymaxvitality="true" dialogflag="BrainHemorrhageLow" minvitalitydecrease="0.15" maxvitalitydecrease="1.0" minscreendistort="0.15" maxscreendistort="1.7" minscreenblur="0.15" maxscreenblur="2.0" mingrainstrength="0.15" maxgrainstrength="2.0" minradialdistort="0.15" maxradialdistort="1.7" minspeedmultiplier="0.8" maxspeedmultiplier="0.25">
+      <!-- Integration with Neurotrauma brain transplants & amputations. -->
+      <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="or">
+        <Conditional brainremoved="gt 0" />
+        <Conditional th_amputation="gt 0" />
+        <Conditional sh_amputation="gt 0" />
+        <ReduceAffliction type="brainhemorrhage" strength="1000" />
+        <Affliction identifier="removehemorrhagefx" strength="1000" />
+      </StatusEffect>
+      <!-- After 15%, the hemorrhaging advances by itself, leaving the patient with ~5 minutes to live. -->
+      <StatusEffect target="Character" targetlimb="Head" disabledeltatime="true" interval="1">
+        <Conditional mannainfluencehead="lteq 0" />
+        <Affliction identifier="brainhemorrhage" strength="0.28" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="Head" disabledeltatime="true" interval="1">
+        <Conditional brainhemorrhage="gteq 25" />
+        <Affliction identifier="photopsia" strength="0.9" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="Head" disabledeltatime="true" interval="1">
+        <Conditional brainhemorrhage="gteq 30" />
+        <Affliction identifier="ataxia" strength="0.8" />
+      </StatusEffect>
+      <StatusEffect target="Character">
+        <Conditional brainhemorrhage="gteq 40" />
+        <Affliction identifier="brainbleedoverlay" strength="1" />
+      </StatusEffect>
+      <StatusEffect target="Character">
+        <Conditional brainhemorrhage="gteq 50" />
+        <Affliction identifier="psychosis" strength="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="Head">
+        <Conditional brainhemorrhage="gteq 60" />
+        <Affliction identifier="myodesopsias" strength="2" />
+        <Affliction identifier="aphasia" strength="0.8" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="LeftArm,RightArm">
+        <Conditional brainhemorrhage="gteq 70" />
+        <Affliction identifier="nervedamage" strength="0.1" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="Head">
+        <Conditional brainhemorrhage="gteq 80" />
+        <Affliction identifier="opticneuritis" strength="3.5" />
+      </StatusEffect>
+      <!-- Sound loops -->
+      <StatusEffect target="Character" comparison="and">
+        <Conditional isLocalPlayer="true" />
+        <Conditional brainhemorrhage="gteq 15" />
+        <Conditional brainhemorrhage="lt 32" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/brainHemorrhageStage1.ogg" volume="1.0" dontmuffle="true" loop="true" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional isLocalPlayer="true" />
+        <Conditional brainhemorrhage="gteq 32" />
+        <Conditional brainhemorrhage="lt 49" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/brainHemorrhageStage2.ogg" volume="1.2" dontmuffle="true" loop="true" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional isLocalPlayer="true" />
+        <Conditional brainhemorrhage="gteq 49" />
+        <Conditional brainhemorrhage="lt 66" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/brainHemorrhageStage3.ogg" volume="1.4" dontmuffle="true" loop="true" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional isLocalPlayer="true" />
+        <Conditional brainhemorrhage="gteq 66" />
+        <Conditional brainhemorrhage="lt 83" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/brainHemorrhageStage4.ogg" volume="1.6" dontmuffle="true" loop="true" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional isLocalPlayer="true" />
+        <Conditional brainhemorrhage="gteq 83" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/brainHemorrhageStage5.ogg" volume="1.8" dontmuffle="true" loop="true" />
+      </StatusEffect>
+    </Effect>
+    <!-- Kills the patient at 100% -->
+    <Effect minstrength="99" maxstrength="100" multiplybymaxvitality="true" minvitalitydecrease="1.0" maxvitalitydecrease="2.0" minscreendistort="2" maxscreendistort="10" minscreenblur="2" maxscreenblur="10" minchromaticaberration="2" maxchromaticaberration="10" mingrainstrength="2" maxgrainstrength="10" minradialdistort="2" maxradialdistort="10">
+      <StatusEffect target="Character" targetlimb="Head">
+        <Affliction identifier="brainhemorrhage" strength="0.35" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional brainhemorrhage="gteq 97" />
+        <Conditional IsLocalPlayer="True" />
+        <ReduceAffliction identifier="blindness" strength="1000" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/brainDeath.ogg" loop="false" dontmuffle="true" volume="1.4" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Cortizide injection visuals -->
+  <Affliction identifier="cortizideinjection" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100">
+      <StatusEffect target="Character" interval="1">
+        <Affliction identifier="blurandabberation" strength="1" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.1" delay="2" comparison="and">
+        <Conditional isLocalPlayer="true" />
+        <Conditional cortizideinjection="gteq 90" />
+        <Explosion range="1" force="1" smoke="false" sparks="false" flames="false" shockwave="false" underwaterbubble="false" camerashake="100" camerashakerange="3000" flashrange="1000" flashduration="0.13" screencolor="255,0,0,60" screencolorrange="1000" screencolorduration="0.22" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.1" delay="10">
+        <Affliction identifier="cortizideinjection" strength="-10" />
+        <Affliction identifier="blurandabberation" strength="-10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <Affliction identifier="blurandabberation" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="20" minscreenblur="0" maxscreenblur="5" minchromaticaberration="0" maxchromaticaberration="5"></Effect>
+  </Affliction>
+  <Affliction identifier="removehemorrhagefx" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character">
+        <ReduceAffliction identifier="blindness" strength="100" />
+        <ReduceAffliction identifier="invertcontrols" strength="100" />
+        <ReduceAffliction identifier="psychosis" amount="100" />
+        <ReduceAffliction identifier="hallucinating" amount="100" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="removehemorrhagefx" strength="0.5" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Instant death -->
+  <Affliction identifier="cortizidedeath" maxstrength="2" limbspecific="true" indicatorlimb="head" karmachangeonapplied="-35" showiconthreshold="1000">
+    <Effect minstrength="0" maxstrength="1">
+      <StatusEffect target="Character" targetlimbs="Head" delay="0.0">
+        <Conditional isLocalPlayer="true" />
+        <Sound file="%ModDir%/Improved SoNAR/Sounds/cortizideDeath.ogg" dontmuffle="true" volume="1.5" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimbs="Head" delay="0.1">
+        <Explosion range="1" decal="blood" decalsize="2.8" flashrange="0" stun="0" force="0" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="100" camerashake="0">
+          <Affliction identifier="cortizidedeath" strength="1" />
+        </Explosion>
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="1" maxstrength="2" multiplybymaxvitality="true" minvitalitydecrease="2" maxvitalitydecrease="2" />
+  </Affliction>
+  <!-- ↓↓↓ Cosmetic Afflictions ↓↓↓ -->
+  <!-- Photopsia : Flash-like vision disturbances. -->
+  <Affliction name="Photopsia" identifier="photopsia" type="brainhemorrhage" maxstrength="100" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" showinhealthscannerthreshold="0" healableinmedicalclinic="false">
+    <icon texture="%ModDir%/Improved SoNAR/Icons/Afflictions.png" sourcerect="640,0,128,128" origin="0,0" />
+    <Effect minstrength="0" maxstrength="100">
+      <!-- Remove photopsia if brainhemorrhage is treated. -->
+      <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="and">
+        <Conditional brainhemorrhage="lteq 0" />
+        <Affliction identifier="photopsia" strength="-10" />
+      </StatusEffect>
+    </Effect>
+    <Description textidentifier="afflictiondescription.photopsia" target="OtherCharacter" />
+    <Description textidentifier="afflictiondescription.photopsia.self" target="Self" />
+    <PeriodicEffect mininterval="1" maxinterval="5">
+      <StatusEffect target="Character">
+        <Conditional brainhemorrhage="gteq 25" />
+        <Affliction identifier="flicker" strength="100" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <PeriodicEffect mininterval="9" maxinterval="18">
+      <StatusEffect target="Character">
+        <Conditional brainhemorrhage="gteq 35" />
+        <Affliction identifier="bigflash" strength="100" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <PeriodicEffect mininterval="8" maxinterval="14">
+      <StatusEffect target="Character">
+        <Conditional brainhemorrhage="gteq 45" />
+        <Affliction identifier="tallflash1" strength="100" />
+        <Affliction identifier="tallflash2" strength="100" />
+        <Affliction identifier="tallflash3" strength="100" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <PeriodicEffect mininterval="16" maxinterval="30">
+      <StatusEffect target="Character">
+        <Conditional brainhemorrhage="gteq 55" />
+        <Affliction identifier="peripheralorb" strength="100" />
+      </StatusEffect>
+    </PeriodicEffect>
+  </Affliction>
+  <!-- Aphasia : Trouble speaking or understanding speech. -->
+  <Affliction name="Aphasia" identifier="aphasia" type="brainhemorrhage" maxstrength="100" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" showinhealthscannerthreshold="0" healableinmedicalclinic="false">
+    <icon texture="%ModDir%/Improved SoNAR/Icons/Afflictions.png" sourcerect="768,0,128,128" origin="0,0" />
+    <Description textidentifier="afflictiondescription.aphasia" target="OtherCharacter" />
+    <Description textidentifier="afflictiondescription.aphasia.self" target="Self" />
+    <Effect minstrength="0" maxstrength="100" dialogflag="BrainHemorrhageMedium">
+      <!-- Remove aphasia if brainhemorrhage is treated. -->
+      <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="and">
+        <Conditional brainhemorrhage="lteq 0" />
+        <Conditional brainhemorrhagelowfx="lteq 0" />
+        <Conditional brainhemorrhagenofx="lteq 0" />
+        <Affliction identifier="aphasia" strength="-6" />
+      </StatusEffect>
+    </Effect>
+    <PeriodicEffect mininterval="3" maxinterval="6">
+      <StatusEffect target="Character" SpeechImpediment="100" setvalue="true" duration="2"></StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="male" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="Content/Characters/Human/male_damage1.ogg" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/male_damage2.ogg" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="female" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="Content/Characters/Human/female_damage1.ogg" selectionmode="Random" />
+        <Sound file="Content/Characters/Human/female_damage2.ogg" />
+      </StatusEffect>
+    </PeriodicEffect>
+  </Affliction>
+  <!-- Ataxia : Poor muslce control that leads to clumsy voluntary movements. -->
+  <Affliction name="Ataxia" identifier="ataxia" type="brainhemorrhage" maxstrength="100" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" showinhealthscannerthreshold="0" healableinmedicalclinic="false">
+    <icon texture="%ModDir%/Improved SoNAR/Icons/Afflictions.png" sourcerect="896,0,128,128" origin="0,0" />
+    <Description textidentifier="afflictiondescription.ataxia" target="OtherCharacter" />
+    <Description textidentifier="afflictiondescription.ataxia.self" target="Self" />
+    <Effect minstrength="0" maxstrength="100">
+      <!-- Remove ataxia if brainhemorrhage is treated. -->
+      <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <Conditional brainhemorrhage="lteq 0" />
+        <Affliction identifier="ataxia" strength="-8" />
+      </StatusEffect>
+    </Effect>
+    <!-- Repeatedly inverts the characters movement. -->
+    <PeriodicEffect mininterval="9" maxinterval="18">
+      <Conditional cortizideinjection="lteq 0" />
+      <StatusEffect target="Character">
+        <Affliction identifier="invertcontrols" strength="10" />
+      </StatusEffect>
+      <StatusEffect target="Character">
+        <Conditional invertcontrols="gteq 11" />
+        <ReduceAffliction identifier="invertcontrols" strength="1000" />
+      </StatusEffect>
+    </PeriodicEffect>
+    <!-- Convulsions -->
+    <PeriodicEffect mininterval="0.5" maxinterval="1.5">
+      <StatusEffect target="Character" disabledeltatime="true" stackable="false" delay="0" checkconditionalalways="false" comparison="and">
+        <Conditional brainhemorrhage="gteq 65" />
+        <Conditional isLocalPlayer="true" />
+        <Explosion range="1" flashrange="3000" flashduration="0.15" stun="0" structuredamage="0" itemdamage="0" force="20" severlimbsprobability="0.0" ballastfloradamage="0" smoke="false" flash="true" flames="false" shockwave="false" sparks="false" underwaterbubble="false" />
+      </StatusEffect>
+    </PeriodicEffect>
+  </Affliction>
+  <!-- Optic Neuritis : Temporary vision loss. -->
+  <Affliction name="Optic neuritis" identifier="opticneuritis" type="brainhemorrhage" maxstrength="100" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" showinhealthscannerthreshold="0" healableinmedicalclinic="false">
+    <icon texture="%ModDir%/Improved SoNAR/Icons/Afflictions.png" sourcerect="512,0,128,128" origin="0,0" />
+    <Description textidentifier="afflictiondescription.opticneuritis" target="OtherCharacter" />
+    <Description textidentifier="afflictiondescription.opticneuritis.self" target="Self" />
+    <Effect minstrength="0" maxstrength="100" dialogflag="BrainHemorrhageHigh">
+      <!-- Remove opticneuritis if brainhemorrhage is treated. -->
+      <StatusEffect target="Character" interval="1" disabledeltatime="true">
+        <Conditional brainhemorrhage="lteq 0" />
+        <Affliction identifier="opticneuritis" strength="-4" />
+      </StatusEffect>
+    </Effect>
+    <PeriodicEffect mininterval="11" maxinterval="18">
+      <StatusEffect target="Character" comparison="and">
+        <Conditional brainhemorrhage="lt 97" />
+        <Conditional cortizideinjection="lteq 0" />
+        <Affliction identifier="blindness" strength="100" />
+      </StatusEffect>
+    </PeriodicEffect>
+  </Affliction>
+  <!-- ↓↓↓ Elements of cosmetic afflictions ↓↓↓ -->
+  <!-- Big flash -->
+  <Affliction identifier="bigflash" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
+    <Effect minstrength="0" maxstrength="25" strengthchange="-200">
+      <StatusEffect target="Character">
+        <Affliction identifier="photopsia1" strength="100" />
+        <ReduceAffliction identifier="photopsia2" strength="1000" />
+      </StatusEffect>
+      <StatusEffect target="Character">
+        <Conditional bigflash="lteq 1" />
+        <ReduceAffliction identifier="photopsia1" strength="1000" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="25" maxstrength="50" strengthchange="-200">
+      <StatusEffect target="Character">
+        <Affliction identifier="photopsia2" strength="100" />
+        <ReduceAffliction identifier="photopsia3" strength="1000" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="50" maxstrength="75" strengthchange="-200">
+      <StatusEffect target="Character">
+        <Affliction identifier="photopsia3" strength="100" />
+        <ReduceAffliction identifier="photopsia4" strength="1000" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="75" maxstrength="100" strengthchange="-200">
+      <StatusEffect target="Character">
+        <Affliction identifier="photopsia4" strength="100" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Flickering -->
+  <Affliction identifier="flicker" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-300">
+      <StatusEffect target="Character">
+        <Affliction identifier="flickeroverlay" strength="100" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Flicker overlay -->
+  <Affliction identifier="flickeroverlay" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-300" />
+    <AfflictionOverlay texture="%ModDir%/Improved SoNAR/Icons/flicker.png" />
+  </Affliction>
+  <!-- Optic Neuritis overlay -->
+  <Affliction identifier="blindness" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="false">
+    <Effect minstrength="0" maxstrength="10" strengthchange="-5" minafflictionoverlayalphamultiplier="0" maxafflictionoverlayalphamultiplier="1" />
+    <Effect minstrength="10" maxstrength="100" strengthchange="-25" />
+    <AfflictionOverlay texture="%ModDir%/Improved SoNAR/Icons/blindness.png" />
+  </Affliction>
+  <!-- Photopsia frame overlays -->
+  <Affliction identifier="photopsia1" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true">
+    <Effect minstrength="0" maxstrength="100" />
+    <AfflictionOverlay texture="%ModDir%/Improved SoNAR/Icons/PhotopsiaOverlay1.png" />
+  </Affliction>
+  <Affliction identifier="photopsia2" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" />
+    <AfflictionOverlay texture="%ModDir%/Improved SoNAR/Icons/PhotopsiaOverlay2.png" />
+  </Affliction>
+  <Affliction identifier="photopsia3" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" />
+    <AfflictionOverlay texture="%ModDir%/Improved SoNAR/Icons/PhotopsiaOverlay3.png" />
+  </Affliction>
+  <Affliction identifier="photopsia4" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true">
+    <Effect minstrength="0" maxstrength="100" />
+    <AfflictionOverlay texture="%ModDir%/Improved SoNAR/Icons/PhotopsiaOverlay4.png" />
+  </Affliction>
+  <!-- Tall flash -->
+  <Affliction identifier="tallflash1" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-450" />
+    <AfflictionOverlay texture="%ModDir%/Improved SoNAR/Icons/TallFlash1.png" />
+  </Affliction>
+  <Affliction identifier="tallflash2" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-350" />
+    <AfflictionOverlay texture="%ModDir%/Improved SoNAR/Icons/TallFlash2.png" />
+  </Affliction>
+  <Affliction identifier="tallflash3" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-250" />
+    <AfflictionOverlay texture="%ModDir%/Improved SoNAR/Icons/TallFlash3.png" />
+  </Affliction>
+  <!-- Peripheral orb -->
+  <Affliction identifier="peripheralorb" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-800" />
+    <AfflictionOverlay texture="%ModDir%/Improved SoNAR/Icons/PeripheralOrbOverlay.png" />
+  </Affliction>
+  <!-- Manna Extract active -->
+  <Affliction name="Manna influence" identifier="mannainfluence" type="mannainfluence" limbspecific="true" isbuff="true" showiconthreshold="0" showinhealthscannerthreshold="0" maxstrength="1" iconcolors="184,125,224,255;199,90,176,255" afflictionoverlayalphaislinear="true">
+    <icon texture="%ModDir%/Improved SoNAR/Icons/Afflictions.png" sourcerect="0,512,128,128" origin="0,0" />
+    <Description textidentifier="afflictiondescription.mannainfluence" target="OtherCharacter" />
+    <Description textidentifier="afflictiondescription.mannainfluence.self" target="Self" />
+    <Effect minstrength="0" maxstrength="1" minchromaticaberration="0" maxchromaticaberration="1" resistancefor="damage,vibrationdamage" minresistance="0" maxresistance="0.07">
+      <StatusEffect target="Character" delay="36">
+        <ReduceAffliction identifier="mannainfluence" strength="0.5" />
+      </StatusEffect>
+    </Effect>
+    <AfflictionOverlay texture="%ModDir%/Improved SoNAR/Icons/MannaOverlay.png" />
+  </Affliction>
+  <!-- Affliction that tracks the usage of Manna and begins an overdose if used too frequently. -->
+  <Affliction identifier="mannausage" type="poison" limbspecific="false" treatmentthreshold="1000" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
+    <Effect minstrength="0" maxstrength="30">
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.1">
+        <ReduceAffliction identifier="mannausage" strength="0.08" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="30" maxstrength="40">
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.1">
+        <ReduceAffliction identifier="mannausage" strength="0.08" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.1">
+        <Conditional mannainfluence="gt 0" />
+        <Affliction identifier="mannaoverdose" amount="0.04" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="40" maxstrength="50">
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.1">
+        <ReduceAffliction identifier="mannausage" strength="0.1" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.1">
+        <Conditional mannainfluence="gt 0" />
+        <Affliction identifier="mannaoverdose" amount="0.07" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="50" maxstrength="60">
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.1">
+        <ReduceAffliction identifier="mannausage" strength="0.1" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.1">
+        <Conditional mannainfluence="gt 0" />
+        <Affliction identifier="mannaoverdose" amount="0.11" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="60" maxstrength="70">
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.1">
+        <ReduceAffliction identifier="mannausage" strength="0.12" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.1">
+        <Conditional mannainfluence="gt 0" />
+        <Affliction identifier="mannaoverdose" amount="0.16" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="70" maxstrength="80">
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.1">
+        <ReduceAffliction identifier="mannausage" strength="0.12" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.1">
+        <Conditional mannainfluence="gt 0" />
+        <Affliction identifier="mannaoverdose" amount="0.22" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="80" maxstrength="90">
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.1">
+        <ReduceAffliction identifier="mannausage" strength="0.14" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.1">
+        <Conditional mannainfluence="gt 0" />
+        <Affliction identifier="mannaoverdose" amount="0.29" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="90" maxstrength="100">
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.1">
+        <ReduceAffliction identifier="mannausage" strength="0.15" />
+      </StatusEffect>
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.1">
+        <Conditional mannainfluence="gt 0" />
+        <Affliction identifier="mannaoverdose" amount="0.36" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Manna Extract overdose -->
+  <Affliction name="Manna overdose" identifier="mannaoverdose" type="poison" maxstrength="200" limbspecific="false" indicatorlimb="Torso" healcostmultiplier="1.5" karmachangeonapplied="-10" treatmentthreshold="25" showiconthreshold="3" showinhealthscannerthreshold="0" iconcolors="199,90,176,255;210,45,45,255">
+    <icon texture="%ModDir%/Improved SoNAR/Icons/Afflictions.png" sourcerect="256,128,128,128" origin="0,0" />
+    <Description textidentifier="afflictiondescription.mannaoverdose" target="OtherCharacter" />
+    <Description textidentifier="afflictiondescription.mannaoverdose.self" target="Self" />
+    <Effect minstrength="0" maxstrength="100" multiplybymaxvitality="true" minchromaticaberration="0" maxchromaticaberration="1" minvitalitydecrease="0" maxvitalitydecrease="1" minspeedmultiplier="1" maxspeedmultiplier="1.3">
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.1">
+        <Conditional mannainfluence="lteq 0" />
+        <ReduceAffliction identifier="mannaoverdose" strength="0.05" />
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="100" maxstrength="200" multiplybymaxvitality="true" minchromaticaberration="1" maxchromaticaberration="10" minvitalitydecrease="1" maxvitalitydecrease="2" minspeedmultiplier="1" maxspeedmultiplier="0">
+      <StatusEffect target="Character" disabledeltatime="true" interval="0.1">
+        <Conditional mannainfluence="lteq 0" />
+        <ReduceAffliction identifier="mannaoverdose" strength="0.02" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Manna Extract active on head. This is used in the brainhemorrhage affliction to stop progression. -->
+  <Affliction name="Manna influence" identifier="mannainfluencehead" type="mannainfluence" limbspecific="true" isbuff="true" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" minchromaticaberration="0" maxchromaticaberration="2">
+      <StatusEffect target="Character" disabledeltatime="true" interval="1">
+        <ReduceAffliction identifier="mannainfluencehead" strength="0.5" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Myodesopsias overlay -->
+  <Affliction identifier="myodesopsias" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true">
+    <Effect minstrength="0" maxstrength="100">
+      <!-- Remove myodesopsias if brainhemorrhage is treated. -->
+      <StatusEffect target="Character">
+        <Conditional brainhemorrhage="lteq 0" />
+        <Affliction identifier="myodesopsias" strength="-20" />
+      </StatusEffect>
+    </Effect>
+    <AfflictionOverlay texture="%ModDir%/Improved SoNAR/Icons/MyodesopsiasOverlay.png" />
+  </Affliction>
+  <!-- Brain hemorrhage overlay -->
+  <Affliction identifier="brainbleedoverlay" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="true">
+    <Effect minstrength="0" maxstrength="100">
+      <!-- Remove overlay if brainhemorrhage is treated. -->
+      <StatusEffect target="Character">
+        <Conditional brainhemorrhage="lteq 30" />
+        <Affliction identifier="brainbleedoverlay" strength="-20" />
+      </StatusEffect>
+    </Effect>
+    <AfflictionOverlay texture="%ModDir%/Improved SoNAR/Icons/BrainHemorrhageOverlay.png" />
+  </Affliction>
+  <!-- Creature damage -->
+  <Affliction identifier="creaturedamage" showiconthreshold="10000" showinhealthscannerthreshold="10000" maxstrength="10000">
+    <Effect minstrength="0" maxstrength="10000" minvitalitydecrease="0" maxvitalitydecrease="17000"></Effect>
+  </Affliction>
+  <!-- Hidden affliction applied when Lua is running server-side. Used in conditionals to stop client-side code. -->
+  <Affliction identifier="serversidelua" limbspecific="false" showiconthreshold="100" showinhealthscannerthreshold="100" maxstrength="1" healableinmedicalclinic="false"></Affliction>
+</Afflictions>

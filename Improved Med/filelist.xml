@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Improved Med" modversion="1.0.13" corepackage="False" steamworkshopid="2654717838" gameversion="1.0.21.0">
-  <Afflictions file="%ModDir%/Xml/Afflictions.xml" />
-  <Item file="%ModDir%/Xml/items.xml" />
-  <Character file="%ModDir%/Characters/Human/Human.xml" />
-</contentpackage>

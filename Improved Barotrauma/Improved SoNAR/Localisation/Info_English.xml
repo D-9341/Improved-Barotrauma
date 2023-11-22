@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+  <loadingscreentip>The intensity of an active sonar ping is powerful enough to boil the water around the transducers.</loadingscreentip>
+  <loadingscreentip>It's recommended to wear an anechoic diving suit when working around a submarine. A typical diving suit will not protect you from active sonar.</loadingscreentip>
+  <loadingscreentip>A submarine's active sonar can reach volumes of 235db, which is roughly 724x times louder, and 3.16 billion times the intensity of a jet engine.</loadingscreentip>
+  <loadingscreentip>Sound waves travel four times further in the water. Low-frequency sounds, like the pings from a submarine's active sonar, penetrate even further.</loadingscreentip>
+  <loadingscreentip>When sound propagates from water to air, the intensity is reduced by 80db (256x quieter). This, combined with the anechoic tiled hull of a submarine, keeps submariners safe from active sonar.</loadingscreentip>
+  <loadingscreentip>Submarine hulls are coated with anechoic tiles, rubber tiles containing thousands of tiny voids, designed to absorb active sonar and attenuate sounds emitted from inside the vessel.</loadingscreentip>
+  <loadingscreentip>At close range, the intensity of an active sonar ping is enough to rupture organs and cause internal hemorrhaging.</loadingscreentip>
+  <loadingscreentip>Make sure none of your crewmates are outside the safety of the hull before enabling active sonar.</loadingscreentip>
+  <loadingscreentip>Inside the walls of a submarine, the crew are shielded from their active sonar. However, that shielding disappears once the hull is breached and the water flows in.</loadingscreentip>
+  <loadingscreentip>Turn off active sonar if the hull is breached. Your engineers will have a hard time repairing the leak if their eardrums are ruptured.</loadingscreentip>
+  <loadingscreentip>Be careful when diving near a submarine. A single sonar ping can cause hearing loss, tissue damage, and in extreme cases, ruptured organs and brain hemorrhaging.</loadingscreentip>
+  <loadingscreentip>It's recommended to bring an anechoic diving suit when activating beacon stations. While not as powerful as a submarine's, a sonar ping from a beacon can still cause serious injury.</loadingscreentip>
+  <loadingscreentip>Cortizide is the only way to save a patient from a sonar-induced brain hemorrhage.</loadingscreentip>
+  <loadingscreentip>Manna extract can temporarily stop the progression of a sonar-induced brain hemorrhage. After that, Cortizide is the only option.</loadingscreentip>
+  <loadingscreentip>It's not recommended to administer Manna Extract if the patient already has traces of it in their system.</loadingscreentip>
+  <loadingscreentip>Stay away from the ballast tanks when active sonar is enabled. The sound waves can easily propagate through the water-filled pipes.</loadingscreentip>
+  <loadingscreentip>If left untreated, vibration damage from active sonar can cause nerve damage and rhabdomyolysis in affected muscles.</loadingscreentip>
+  <loadingscreentip>With submarines being a way of life in Europa, medicine has advanced to treat unique sonar related injuries. Smart grafts for perforated organs, Cortizide for brain hemorrhages, and Manna Extract for tissue damage.</loadingscreentip>
+  <!-- Active sonar -->
+  <afflictionname.activesonar>Submarine sonar</afflictionname.activesonar>
+  <!-- Beacon station sonar -->
+  <afflictionname.activesonarbeacon>Beacon sonar</afflictionname.activesonarbeacon>
+  <!-- Acoustic Trauma -->
+  <afflictionname.acoustictrauma>Acoustic trauma</afflictionname.acoustictrauma>
+  <afflictiondescription.acoustictrauma>The patient's eardrums have been perforated, causing bleeding and tinnitus.</afflictiondescription.acoustictrauma>
+  <afflictiondescription.acoustictrauma.self>Your ears are ringing and dripping blood, you feel dizzy and confused.</afflictiondescription.acoustictrauma.self>
+  <afflictioncauseofdeath.acoustictrauma>Otogenic death</afflictioncauseofdeath.acoustictrauma>
+  <afflictioncauseofdeathself.acoustictrauma>You bled to death through your ears.</afflictioncauseofdeathself.acoustictrauma>
+  <!-- Vibration Damage -->
+  <afflictionname.vibrationdamage>Vibration damage</afflictionname.vibrationdamage>
+  <afflictiondescription.vibrationdamage>The patient is suffering from minor damage to their circulatory system caused by intense sonar vibrations.</afflictiondescription.vibrationdamage>
+  <afflictiondescription.vibrationdamage.medium>The patient has sustained serious damage to their arteries, nerves, and muscles.</afflictiondescription.vibrationdamage.medium>
+  <afflictiondescription.vibrationdamage.high>The patient's insides are in tatters. There is devastating damage to their arteries, nerves, muscles, and bones.</afflictiondescription.vibrationdamage.high>
+  <afflictiondescription.vibrationdamage.self>You feel a dull pain all over your body. Your skin is tingling like you've got pins and needles.</afflictiondescription.vibrationdamage.self>
+  <afflictiondescription.vibrationdamage.medium.self>Your extremities are numb and you feel needle sized sharp pains all over your body.</afflictiondescription.vibrationdamage.medium.self>
+  <afflictiondescription.vibrationdamage.high.self>You can't feel your limbs. All you feel is excruciating pain, like every cell in your body has been torn apart.</afflictiondescription.vibrationdamage.high.self>
+  <afflictioncauseofdeath.vibrationdamage>Catastrophic internal damage</afflictioncauseofdeath.vibrationdamage>
+  <afflictioncauseofdeathself.vibrationdamage>Your insides were torn apart.</afflictioncauseofdeathself.vibrationdamage>
+  <!-- Nerve Damage -->
+  <afflictionname.nervedamage>Nerve damage</afflictionname.nervedamage>
+  <afflictiondescription.nervedamage>The patient's nerves have been damaged by vibrations. Daily tasks are more difficult.</afflictiondescription.nervedamage>
+  <afflictiondescription.nervedamage.self>Your hands feel numb, your clumsiness causes you to work less efficiently.</afflictiondescription.nervedamage.self>
+  <!-- Rhabdomyolysis -->
+  <afflictionname.muscledamage>Rhabdomyolysis</afflictionname.muscledamage>
+  <afflictiondescription.muscledamage>The patient's muscles have begun to break down and spill into the bloodstream.</afflictiondescription.muscledamage>
+  <afflictiondescription.muscledamage.high>The majority of the patient's muscles have necrosed and dangerous amounts of proteins are spilling into the bloodstream.</afflictiondescription.muscledamage.high>
+  <afflictiondescription.muscledamage.self>You feel sluggish, your legs are swollen and aching.</afflictiondescription.muscledamage.self>
+  <afflictiondescription.muscledamage.high.self>Your legs feel frail. Walking is almost impossible, and the pain is immeasurable.</afflictiondescription.muscledamage.high.self>
+  <afflictioncauseofdeath.muscledamage>Kidney failure</afflictioncauseofdeath.muscledamage>
+  <afflictioncauseofdeathself.muscledamage>Your muscles released a lethal amount of proteins into your bloodstream.</afflictioncauseofdeathself.muscledamage>
+  <!-- Ruptured Lung -->
+  <afflictionname.rupturedlung>Ruptured lung</afflictionname.rupturedlung>
+  <afflictiondescription.rupturedlung>The patient's lungs have ruptured from sonar vibrations.</afflictiondescription.rupturedlung>
+  <afflictiondescription.rupturedlung.high>The patient's lungs have been torn apart by extreme vibrations, leading to hypoxemia and a high probability of asphyxiation.</afflictiondescription.rupturedlung.high>
+  <afflictiondescription.rupturedlung.self>There's a sharp pain in your chest. Breathing is more difficult.</afflictiondescription.rupturedlung.self>
+  <afflictiondescription.rupturedlung.high.self>You can barely breathe between coughing up blood, every inhale is met with agony.</afflictiondescription.rupturedlung.high.self>
+  <afflictioncauseofdeath.rupturedlung>Drowned in their own blood</afflictioncauseofdeath.rupturedlung>
+  <afflictioncauseofdeathself.rupturedlung>You drowned in your own blood due to severe lung damage.</afflictioncauseofdeathself.rupturedlung>
+  <!-- Brain Hemorrhage -->
+  <afflictionname.brainhemorrhage>Brain hemorrhage</afflictionname.brainhemorrhage>
+  <afflictiondescription.brainhemorrhage>The patient's brain is bleeding from exposure to active sonar. Luckily it doesn't seem to be getting any worse.</afflictiondescription.brainhemorrhage>
+  <afflictiondescription.brainhemorrhage.medium>Large portions of the patient's cerebrum have melted into sludge. The brain is drowning in its own blood, and it's only getting worse.</afflictiondescription.brainhemorrhage.medium>
+  <afflictiondescription.brainhemorrhage.high>The patient's brain has been melted by active sonar.</afflictiondescription.brainhemorrhage.high>
+  <afflictiondescription.brainhemorrhage.self>Your vision is blurred and your mind feels foggy.</afflictiondescription.brainhemorrhage.self>
+  <afflictiondescription.brainhemorrhage.medium.self>You can't think. You see flashes and taste metal. You want to scream, but you can't. You're losing control of all your motor functions, and reality is slowly slipping away.</afflictiondescription.brainhemorrhage.medium.self>
+  <afflictioncauseofdeath.brainhemorrhage>Brain death</afflictioncauseofdeath.brainhemorrhage>
+  <afflictioncauseofdeathself.brainhemorrhage>Your brain was melted by active sonar.</afflictioncauseofdeathself.brainhemorrhage>
+  <!-- Manna Influence -->
+  <afflictionname.mannainjection>Manna influence</afflictionname.mannainjection>
+  <afflictiondescription.mannainjection>This limb in under the healing influence of Manna Extract.</afflictiondescription.mannainjection>
+  <afflictiondescription.mannainjection.self>You feel a gentle pressure and comforting warmth beneath the skin.</afflictiondescription.mannainjection.self>
+  <!-- Manna Overdose -->
+  <afflictionname.mannaoverdose>Manna overdose</afflictionname.mannaoverdose>
+  <afflictiondescription.mannaoverdose>The patient has a dangerous amount of Manna in their blood.</afflictiondescription.mannaoverdose>
+  <afflictiondescription.mannaoverdose.self>You feel fantastic.</afflictiondescription.mannaoverdose.self>
+  <afflictioncauseofdeath.mannaoverdose>Died in ecstasy</afflictioncauseofdeath.mannaoverdose>
+  <afflictioncauseofdeathself.mannaoverdose>You made it, welcome to heaven.</afflictioncauseofdeathself.mannaoverdose>
+  <!-- Photopsia -->
+  <afflictionname.photopsia>Photopsia</afflictionname.photopsia>
+  <afflictiondescription.photopsia>The patient is experiencing visual anomalies in the form of flickering lights and bright flashes.</afflictiondescription.photopsia>
+  <afflictiondescription.photopsia.self>The lights seem to flicker, are you seeing things? Flashes of light fill your peripheral vision. Something is definitely wrong.</afflictiondescription.photopsia.self>
+  <!-- Ataxia -->
+  <afflictionname.ataxia>Ataxia</afflictionname.ataxia>
+  <afflictiondescription.ataxia>The patient's cerebellum is crippled, leading to involuntary muscle spasms and terrible coordination.</afflictiondescription.ataxia>
+  <afflictiondescription.ataxia.self>Your muscles seem to have a mind of their own. You keep lurching forward without warning, and when you try to walk, you end up back where you started.</afflictiondescription.ataxia.self>
+  <!-- Aphasia -->
+  <afflictionname.aphasia>Aphasia</afflictionname.aphasia>
+  <afflictiondescription.aphasia>The patient has received damage to the Broca's area of the brain, rendering them unable to speak in complete sentences.</afflictiondescription.aphasia>
+  <afflictiondescription.aphasia.self>You're unable to finish basic sentences and have extreme difficulty forming words, sometimes resorting to incoherent mumblings.</afflictiondescription.aphasia.self>
+  <!-- Blindness -->
+  <afflictionname.opticneuritis>Optic neuritis</afflictionname.opticneuritis>
+  <afflictiondescription.opticneuritis>The patient's occipital lobe is badly damaged, periodically blinding and disorienting the patient.</afflictiondescription.opticneuritis>
+  <afflictiondescription.opticneuritis.self>Your vision is periodically clouded with darkness. Is this the end?</afflictiondescription.opticneuritis.self>
+  <!-- Treatments -->
+  <entityname.manna>Manna Extract</entityname.manna>
+  <entitydescription.manna>Miracle liquid that fuses human hemoglobins with alien plasma to harness the natural resilience and healing properties of Europa's underwater inhabitants. Used for treating internal damage to the muscular and nervous system, and is capable of temporarily stopping a brain hemorrhage. It should be noted that repeated use produces diminishing returns and risks overdose.</entitydescription.manna>
+  <entityname.cortizide>Cortizide</entityname.cortizide>
+  <entitydescription.cortizide>A potent mixture of pain and pressure-relieving drugs with a host of nasty side effects. Typically injected into the cranium as a last resort to treat a brain hemorrhage.
+Warning: Administering into a healthy brain environment can cause a dangerous pressure buildup in the skull.</entitydescription.cortizide>
+  <entityname.smartgraft>Smart Graft</entityname.smartgraft>
+  <entitydescription.smartgraft>Genetically engineered connective tissue that inherits the patient's DNA to stimulate the regeneration of complex anatomical systems. Typically used for repairing perforated organs.</entitydescription.smartgraft>
+  <!-- Items -->
+  <entityname.anechoicdivingsuit>Anechoic Diving Suit</entityname.anechoicdivingsuit>
+  <entitydescription.anechoicdivingsuit>A stealthy, lightweight suit designed to absorb the sound waves of active sonar with its anechoic plating. It offers minor protection against damage and can withstand pressures of up to 6,000 meters.</entitydescription.anechoicdivingsuit>
+  <entityname.navremote>Nav Remote</entityname.navremote>
+  <entitydescription.navremote>A handheld device that can be used to remotely control the submarine's sonar and engines.</entitydescription.navremote>
+  <!-- Menu -->
+  <realsonarsettings>Real Sonar Settings</realsonarsettings>
+  <sonarpingvolume>Sonar Ping Volume</sonarpingvolume>
+  <airpingvolume>Air Ping Volume</airpingvolume>
+  <waterpingvolume>Water Ping Volume</waterpingvolume>
+  <suitpingvolume>Suit Ping Volume</suitpingvolume>
+  <tinnitusvolume>Tinnitus Volume</tinnitusvolume>
+  <distortionvolume>Distortion Volume</distortionvolume>
+  <!-- Dialogue -->
+  <dialoggetanechoicsuit>I need anechoic diving gear!</dialoggetanechoicsuit>
+  <dialoggetanechoicsuit>I need an anechoic suit to do repairs with the sonar on!</dialoggetanechoicsuit>
+  <dialoggetanechoicsuit>Need to find an anechoic suit!</dialoggetanechoicsuit>
+  <dialogcantfindanechoicsuit>I can't find an anechoic suit! Turn off the sonar!</dialogcantfindanechoicsuit>
+  <dialogcantfindanechoicsuit>There's no anechoic suits! I'm not going in there!</dialogcantfindanechoicsuit>
+  <dialogcantfindanechoicsuit>I'm not going in there until the sonar is off!</dialogcantfindanechoicsuit>
+  <dialogcantfindanechoicsuit>I don't have protection! Shut down the sonar!</dialogcantfindanechoicsuit>
+  <dialogcantfindanechoicsuit>I can't do repairs until the sonar is off!</dialogcantfindanechoicsuit>
+  <dialogturnoffsonar>Turn off the sonar!</dialogturnoffsonar>
+  <dialogturnoffsonar>My ears are bleeding from that damn sonar!</dialogturnoffsonar>
+  <dialogturnoffsonar>Shut off the sonar!</dialogturnoffsonar>
+  <dialogturnoffsonar>I'm caught in the sonar!</dialogturnoffsonar>
+  <dialogturnoffsonar>Jesus, that sonar is loud!</dialogturnoffsonar>
+  <dialogturnoffsonar>I'm in the water, disable the sonar!</dialogturnoffsonar>
+  <dialogturnoffsonar>Oh god, disable the sonar!</dialogturnoffsonar>
+  <dialogturnoffsonar>Someone turn off the sonar!</dialogturnoffsonar>
+</infotexts>

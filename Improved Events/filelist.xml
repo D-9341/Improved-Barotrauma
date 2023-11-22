@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Improved Events" modversion="1.0.8" corepackage="False" steamworkshopid="2640295754" gameversion="1.0.21.0">
-  <EventManagerSettings file="%ModDir%/EventManagerSettings.xml" />
-  <RandomEvents file="%ModDir%/randomevents.xml" />
-</contentpackage>

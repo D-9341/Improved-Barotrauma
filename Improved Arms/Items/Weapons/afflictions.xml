@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Afflictions>
-  <Affliction name="Отсутствие души" identifier="avadakedavra" description="Похоже, цель попала под луч Авады. Видимых повреждений нет" causeofdeathdescription="Душа отделена от тела" selfcauseofdeathdescription="В вас попали Авада Кедавра" indicatorlimb="Torso" maxstrength="1" showiconthreshold="1" isbuff="false">
-    <Effect minstrength="0" maxstrength="1" multiplybymaxvitality="true" minvitalitydecrease="1000000000000" maxvitalitydecrease="10000000000000000000000000000"></Effect>
-    <icon texture="%ModDir%/Items/Weapons/avadaicon.png" sourcerect="0,0,585,600" color="0,255,0,255" origin="0.49570778,0.5037937" />
-  </Affliction>
-</Afflictions>

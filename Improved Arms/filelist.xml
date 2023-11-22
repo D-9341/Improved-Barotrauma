@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Improved Arms" modversion="1.0.19" corepackage="False" steamworkshopid="2645873021" gameversion="1.0.21.0">
-  <Item file="%ModDir%/Items/Weapons/weapons.xml" />
-  <Particles file="%ModDir%/Particles/LaserParticlesBeam.xml" />
-  <Particles file="%ModDir%/Particles/LaserParticles.xml" />
-  <Afflictions file="%ModDir%/Items/Weapons/afflictions.xml" />
-</contentpackage>

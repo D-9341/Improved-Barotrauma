@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Conversations identifier="sonarconversations" Language="Simplified Chinese">
+  <!-- 声纳-->
+  <Conversation line="关掉声纳!" speaker="0" flags="SonarHigh" />
+  <Conversation line="我的耳朵都被那该死的声纳震出血了!" speaker="0" flags="SonarHigh" speakertags="rude" />
+  <Conversation line="把声纳关掉!" speaker="0" flags="SonarHigh" />
+  <Conversation line="关掉那该死的声呐!" speaker="0" flags="SonarHigh" />
+  <Conversation line="天啊，声纳的声音太大了!" speaker="0" flags="SonarHigh" />
+  <Conversation line="我在水里，关掉声纳!" speaker="0" flags="SonarHigh" speakertags="professional,tough" />
+  <Conversation line="天啊，关掉声纳!" speaker="0" flags="SonarHigh" speakertags="fearful" />
+  <Conversation line="嘿，我还在外面呢!" speaker="0" flags="SonarMedium" speakertags="crazy,joker" />
+  <Conversation line="谁能把声纳关了!" speaker="0" flags="SonarMedium" />
+  <Conversation line="注意主动声纳，我进入危险范围了!" speaker="0" flags="SonarLow" />
+  <Conversation line="小心，我在主动声纳范围内!" speaker="0" flags="SonarLow" />
+  <!-- 脑出血 低 -->
+  <Conversation line="嘿，我感觉不太好..." speaker="0" flags="BrainHemorrhageLow" />
+  <Conversation line="我觉得我有点不对劲..." speaker="0" flags="BrainHemorrhageLow" speakertags="fearful" />
+  <Conversation line="我的头好痛..." speaker="0" flags="BrainHemorrhageLow" />
+  <Conversation line="是我的错觉，还是灯光在闪烁?" speaker="0" flags="BrainHemorrhageLow" />
+  <Conversation line="为什么突然间什么都变模糊了?" speaker="0" flags="BrainHemorrhageLow" />
+  <Conversation line="有点不对劲..." speaker="0" flags="BrainHemorrhageLow" />
+  <!-- 脑出血 中 -->
+  <Conversation line="我需要科达灵，请给我一个..." speaker="0" flags="BrainHemorrhageMedium" allowedjobs="medicaldoctor" />
+  <Conversation line="谁来帮帮我!" speaker="0" flags="BrainHemorrhageMedium" speakertags="fearful" />
+  <Conversation line="我到底怎么了?" speaker="0" flags="BrainHemorrhageMedium" />
+  <Conversation line="天啊，我的头..." speaker="0" flags="BrainHemorrhageMedium" />
+  <Conversation line="天啊，越来越糟了!" speaker="0" flags="BrainHemorrhageMedium" speakertags="crazy,fearful" />
+  <Conversation line="我的头..." speaker="0" flags="BrainHemorrhageMedium" />
+  <Conversation line="我老是撞到东西!" speaker="0" flags="BrainHemorrhageMedium" speakertags="crazy,fearful,brokenenglish" />
+  <!-- 脑出血 高 -->
+  <Conversation line="请不要忘记我..." speaker="0" flags="BrainHemorrhageHigh" />
+  <Conversation line="我完了..." speaker="0" flags="BrainHemorrhageHigh" speakertags="fearful" />
+  <Conversation line="再见了." speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough" />
+  <Conversation line="我... 科达灵..." speaker="0" flags="BrainHemorrhageHigh" allowedjobs="medicaldoctor" />
+  <Conversation line="麻烦..." speaker="0" flags="BrainHemorrhageHigh" />
+  <Conversation line="救命..." speaker="0" flags="BrainHemorrhageHigh" />
+  <Conversation line="谁..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="关掉..." speaker="0" flags="BrainHemorrhageHigh" />
+    <Conversation line="那... 灯光?.." speaker="0" flags="BrainHemorrhageHigh" />
+  </Conversation>
+  <Conversation line="我..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="在..." speaker="0" flags="BrainHemorrhageHigh" />
+    <Conversation line="哪里?" speaker="0" flags="BrainHemorrhageHigh" />
+  </Conversation>
+  <Conversation line="爸爸?..." speaker="0" flags="BrainHemorrhageHigh" speakertags="joker,fearful">
+    <Conversation line="这是怎么回事?..." speaker="0" flags="BrainHemorrhageHigh" speakertags="joker,fearful" />
+  </Conversation>
+  <Conversation line="我吃饱了..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="最后..." speaker="0" flags="BrainHemorrhageHigh" speakertags="joker,rude" />
+  </Conversation>
+  <Conversation line="救..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="救我..." speaker="0" flags="BrainHemorrhageHigh" />
+  </Conversation>
+  <Conversation line="我..." speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough">
+    <Conversation line="还好吗?.." speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough" />
+  </Conversation>
+  <Conversation line="不要..." speaker="0" flags="BrainHemorrhageHigh" speakertags="crazy,fearful,joker">
+    <Conversation line="忘记..." speaker="0" flags="BrainHemorrhageHigh" speakertags="crazy,fearful,joker" />
+  </Conversation>
+  <Conversation line="这.太..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="黑了..." speaker="0" flags="BrainHemorrhageHigh" />
+  </Conversation>
+  <Conversation line="我..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="好冷..." speaker="0" flags="BrainHemorrhageHigh" />
+  </Conversation>
+  <Conversation line="终于..." speaker="0" flags="BrainHemorrhageHigh" speakertags="rude">
+    <Conversation line="解脱了..." speaker="0" flags="BrainHemorrhageHigh" speakertags="rude" />
+  </Conversation>
+  <Conversation line="请..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="救救..." speaker="0" flags="BrainHemorrhageHigh">
+      <Conversation line="我..." speaker="0" flags="BrainHemorrhageHigh" speakertags="fearful" />
+    </Conversation>
+  </Conversation>
+  <Conversation line="不要..." speaker="0" flags="BrainHemorrhageHigh">
+    <Conversation line="让我..." speaker="0" flags="BrainHemorrhageHigh">
+      <Conversation line="死在这里..." speaker="0" flags="BrainHemorrhageHigh" />
+    </Conversation>
+  </Conversation>
+  <Conversation line="我的..." speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough">
+    <Conversation line="时间..." speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough">
+      <Conversation line="到了..." speaker="0" flags="BrainHemorrhageHigh" speakertags="professional,tough" />
+    </Conversation>
+  </Conversation>
+  <Conversation line="我..." speaker="0" flags="BrainHemorrhageHigh" speakertags="brokenenglish,crazy,joker">
+    <Conversation line="不记得..." speaker="0" flags="BrainHemorrhageHigh" speakertags="brokenenglish,crazy,joker">
+      <Conversation line="我的遗言了..." speaker="0" flags="BrainHemorrhageHigh" speakertags="brokenenglish,crazy,joker" />
+    </Conversation>
+  </Conversation>
+  <Conversation line="差..." speaker="0" flags="BrainHemorrhageHigh" speakertags="crazy,joker,tough,rude">
+    <Conversation line="不多..." speaker="0" flags="BrainHemorrhageHigh" speakertags="crazy,joker,tough,rude">
+      <Conversation line="是时候了..." speaker="0" flags="BrainHemorrhageHigh" speakertags="crazy,joker,tough,rude" />
+    </Conversation>
+  </Conversation>
+</Conversations>
