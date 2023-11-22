@@ -7,7 +7,7 @@
     <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
       <sprite texture="%ModDir%/Improved Interactions/Backpacks/Medical Backpack.png" limb="Torso" depth="0.8" hidelimb="false" inherittexturescale="true" origin="1,0.5" sourcerect="6,14,53,124" />
       <StatusEffect type="OnWearing" target="This, Character">
-        <Affliction identifier="damagedeny" amount = "100"></Affliction>
+        <Affliction identifier="damagedeny" amount = "10"></Affliction>
       </StatusEffect>
     </Wearable>
   </Item>

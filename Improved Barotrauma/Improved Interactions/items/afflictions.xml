@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Afflictions>
-    <Affliction name="Отрицание урона" identifier="damagedeny" description="Ожерелье даёт вам защиту от урона. Но не думайте, что это панацея.." type="resistance" limbspecific="false" indicatorlimb="Torso" showiconthreshold=" 0.1" maxstrength="100" isbuff="true">
-        <Effect minstrength="0" maxstrength="100" resistancefor="damage" strengthchange="-10">
-          <StatusEffect target="Character">
+    <Affliction name="Отрицание урона" identifier="damagedeny" description="Ожерелье даёт вам защиту от урона. Но не думайте, что это панацея.." type="resistance" limbspecific="false" indicatorlimb="Torso" showiconthreshold="0.1" maxstrength="10" isbuff="true">
+        <Effect minstrength="0" maxstrength="10" resistancefor="damage" strengthchange="-5">
+          <StatusEffect target="Character"  disabledeltatime="true">
             <ReduceAffliction type="damage" amount="999" />
             <ReduceAffliction type="sonardamage" amount="999" />
             <ReduceAffliction type="burn" amount="999" />
@@ -17,7 +17,7 @@
             <ReduceAffliction type="rupturedlung" amount="999" />
             <ReduceAffliction type="brainhemorrhage" amount="999" />
             <ReduceAffliction type="bleeding" amount="999" />
-            <Affliction identifier="bloodloss" amount="1" />
+            <Affliction identifier="bloodloss" amount="0.8" />
           </StatusEffect>
         </Effect>
         <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="1,128,127,128" color="144,255,0,255" origin="-1.1926291E-07,0" />
