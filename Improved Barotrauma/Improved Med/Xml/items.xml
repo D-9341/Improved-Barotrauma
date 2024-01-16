@@ -57,6 +57,12 @@
       <StatusEffect tags="medical" type="OnUse" target="UseTarget" duration="10">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         <Affliction identifier="propitaleffect" amount="15" />
+        <Affliction identifier="analgesia" amount="5"/>
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="UseTarget" duration="10">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <Affliction identifier="propitaleffect" amount="5" />
+        <Affliction identifier="analgesia" amount="1"/>
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove />
@@ -111,10 +117,11 @@
       </StatusEffect>
       <StatusEffect type="OnUse" target="UseTarget" setvalue="true" delay="0" comparison="Or">
         <Conditional vt="gte 0.01" />
+        <Conditional vf="gte 0.01" />
         <Sound file="%ModDir%/Improved Med/Sound/Defib1.ogg" range="1000" />
       </StatusEffect>
       <StatusEffect type="OnUse" target="UseTarget" setvalue="true" delay="0" comparison="And">
-        <Conditional vt="eq 0" />
+        <Conditional vf="eq 0" />
         <Sound file="%ModDir%/Improved Med/Sound/Defib2.ogg" range="500" />
       </StatusEffect>
     </MeleeWeapon>

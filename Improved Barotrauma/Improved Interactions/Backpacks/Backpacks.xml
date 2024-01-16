@@ -31,7 +31,7 @@
       <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="1.1" setvalue="true" />
     </Wearable>
   </Item>
-  <Item name="Силовой рюкзак" identifier="power-backpack" category="Equipment" tags="mediumitem" scale="0.4" fireproof="true" waterproof="true" description="Портативный излучатель света с портами для зарядки аккумуляторов." impactsoundtag="impact_metal_light">
+  <Item name="Силовой рюкзак" identifier="power-backpack" category="Equipment" tags="mediumitem" scale="0.4" fireproof="true" waterproof="true" description="Портативный излучатель света с функцией зарядки аккумуляторов." impactsoundtag="impact_metal_light">
     <PreferredContainer primary="engcab" minamount="0" maxamount="2" spawnprobability="0.5" />
     <PreferredContainer primary="wreckstoragecab" minamount="0" maxamount="1" spawnprobability="0.06" />
     <PreferredContainer primary="outpostcrewcabinet" minamount="0" maxamount="1" spawnprobability="0.5" />

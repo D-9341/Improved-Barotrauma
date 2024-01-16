@@ -1,14 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Afflictions>
-  <Affliction name = 'Действие Коктейля Обдолбос' identifier = 'obdolboseffect' description = 'Ваши навыки умножены в 10 раз, скорость передвижения в 2 раза, но через некоторое время вы гарантированно умрёте.' limbspecific = 'false' indicatorlimb = 'Torso' showiconthreshold = '1' maxstrength = '100' isbuff = 'false' selfcauseofdeathdescription = 'Вы приняли коктейль Обдолбос' causeofdeathdescription = 'Многочисленные внутренние кровотечения от принятия Обдолбоса'>
-    <Effect minstrength = '0' maxstrength = '99' strengthchange = '0.1' minskillmultiplier = '10' maxskillmultiplier = '10'>
+  <Affliction name="Действие Коктейля Обдолбос" identifier="obdolboseffect"
+    description="Ваши навыки умножены в 10 раз, скорость передвижения в 2 раза, но через некоторое время вы гарантированно умрёте"
+    limbspecific="false" indicatorlimb="Torso" showiconthreshold="1" maxstrength="100"
+    isbuff="false" selfcauseofdeathdescription="Вы приняли коктейль Обдолбос"
+    causeofdeathdescription="Многочисленные внутренние кровотечения от принятия Обдолбоса">
+    <Effect minstrength="0" maxstrength="99" strengthchange="0.1" minskillmultiplier="10"
+      maxskillmultiplier="10">
       <StatusEffect target="Character" SpeedMultiplier="2" setvalue="true"></StatusEffect>
     </Effect>
-    <Effect minstrength = '99' maxstrength = '100' multiplybymaxvitality = 'true' minvitalitydecrease = '10000000' maxvitalitydecrease = '10000000000000000000'></Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="1,128,127,128" color="0,255,0,255" origin="-1.1926291E-07,0" />
+    <Effect minstrength="99" maxstrength="100" multiplybymaxvitality="true"
+      minvitalitydecrease="10000000" maxvitalitydecrease="10000000000000000000"></Effect>
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="1,128,127,128"
+      color="0,255,0,255" origin="-1.1926291E-07,0" />
   </Affliction>
-  <Affliction name="Регенерация от Препарата Пропитал" identifier="propitaleffect" description="Происходит стимуляция процессов регенерации за счет усиления биосинтеза пуриновых и пиримидиновых оснований, РНК, функциональных и ферментативных клеточных элементов." type="resistance" limbspecific="false" indicatorlimb="Torso" showiconthreshold="1" maxstrength="200" isbuff="true">
-    <Effect minstrength="0" maxstrength="200" resistancefor="damage" minradialdistort="0.1" maxradialdistort="1.0" minchromaticaberration="10" maxchromaticaberration="200" strengthchange="-1">
+  <Affliction name="Регенерация от Препарата Пропитал" identifier="propitaleffect"
+    description="Происходит стимуляция процессов регенерации за счет усиления биосинтеза пуриновых и пиримидиновых оснований, РНК, функциональных и ферментативных клеточных элементов"
+    type="resistance" limbspecific="false" indicatorlimb="Torso" showiconthreshold="1"
+    maxstrength="200" isbuff="true">
+    <Effect minstrength="0" maxstrength="200" resistancefor="damage" minradialdistort="0.1"
+      maxradialdistort="1.0" minchromaticaberration="10" maxchromaticaberration="200"
+      strengthchange="-1">
       <StatusEffect target="Character">
         <ReduceAffliction identifier="damage" amount="15" />
         <ReduceAffliction identifier="sonardamage" amount="15" />
@@ -16,9 +28,13 @@
         <ReduceAffliction identifier="internaldamage" amount="15" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="1,128,127,128" color="0,255,0,255" origin="-1.1926291E-07,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="1,128,127,128"
+      color="0,255,0,255" origin="-1.1926291E-07,0" />
   </Affliction>
-  <Affliction name="Тахикардия желудочков" identifier="vt" description="Обнаружен очень высокий пульс из-за низкого уровня кислорода или артериального давления." type="aritmia" limbspecific="false" indicatorlimb="Torso" showiconthreshold="25" maxstrength="100">
+  <Affliction name="Тахикардия желудочков" identifier="vt"
+    description="Обнаружен очень высокий пульс из-за низкого уровня кислорода или артериального давления."
+    type="aritmia" limbspecific="false" indicatorlimb="Torso" showiconthreshold="25"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="2" strengthchange="0.1">
       <StatusEffect target="Character" conditional="or">
         <Conditional speciesname="Husk" />
@@ -58,13 +74,17 @@
         <Affliction identifier="hypotension" amount="0.7" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="1,128,127,128" color="0,255,0,255" origin="-1.1926291E-07,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="1,128,127,128"
+      color="0,255,0,255" origin="-1.1926291E-07,0" />
   </Affliction>
-  <Affliction name="Фибриляция желудочков" identifier="vf" description="Обнаружена нерегулярная электрическая активность в сердечных мышцах" type="aritmia" limbspecific="false" indicatorlimb="Torso" showiconthreshold="0" maxstrength="100">
+  <Affliction name="Фибриляция желудочков" identifier="vf"
+    description="Обнаружена нерегулярная электрическая активность в сердечных мышцах" type="aritmia"
+    limbspecific="false" indicatorlimb="Torso" showiconthreshold="0" maxstrength="100">
     <StatusEffect target="Character">
       <ReduceAffliction identifier="vt" amount="999" setvalue="true" />
     </StatusEffect>
-    <Effect minstrength="0" maxstrength="2" minscreendistort="0.8" maxscreendistort="1.0" minscreenblur="0.8" maxscreenblur="1.0" strengthchange="10">
+    <Effect minstrength="0" maxstrength="2" minscreendistort="0.8" maxscreendistort="1.0"
+      minscreenblur="0.8" maxscreenblur="1.0" strengthchange="10">
       <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.1" />
       <StatusEffect target="Character">
         <Affliction identifier="hypotension" amount="1" />
@@ -80,7 +100,8 @@
         <ReduceAffliction identifier="vf" amount="999" />
       </StatusEffect>
     </Effect>
-    <Effect minstrength="2" maxstrength="20" minscreendistort="0.8" maxscreendistort="1.0" minscreenblur="0.8" maxscreenblur="1.0" strengthchange="2.5">
+    <Effect minstrength="2" maxstrength="20" minscreendistort="0.8" maxscreendistort="1.0"
+      minscreenblur="0.8" maxscreenblur="1.0" strengthchange="2.5">
       <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.1" />
       <StatusEffect target="Character">
         <ReduceAffliction identifier="vt" amount="9999" setvalue="true" />
@@ -88,7 +109,8 @@
         <Affliction identifier="stun" strength="15" probability="0.4" />
       </StatusEffect>
     </Effect>
-    <Effect minstrength="20" maxstrength="98" minscreendistort="0.8" maxscreendistort="1.0" minscreenblur="0.8" maxscreenblur="1.0" strengthchange="0.7">
+    <Effect minstrength="20" maxstrength="98" minscreendistort="0.8" maxscreendistort="1.0"
+      minscreenblur="0.8" maxscreenblur="1.0" strengthchange="0.7">
       <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.1" />
       <StatusEffect target="Character">
         <ReduceAffliction identifier="vt" amount="9999" setvalue="true" />
@@ -96,7 +118,8 @@
         <Affliction identifier="stun" strength="15" probability="0.4" />
       </StatusEffect>
     </Effect>
-    <Effect minstrength="98" maxstrength="99" minscreendistort="0.8" maxscreendistort="1.0" minscreenblur="0.8" maxscreenblur="1.0" strengthchange="1">
+    <Effect minstrength="98" maxstrength="99" minscreendistort="0.8" maxscreendistort="1.0"
+      minscreenblur="0.8" maxscreenblur="1.0" strengthchange="1">
       <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.1" />
       <ReduceAffliction identifier="vt" amount="9999" setvalue="true" />
       <StatusEffect target="Character" disabledeltatime="true">
@@ -106,7 +129,8 @@
         <Affliction identifier="asys" amount="3" />
       </StatusEffect>
     </Effect>
-    <Effect minstrength="99" maxstrength="100" minscreendistort="0.8" maxscreendistort="1.0" minscreenblur="0.8" maxscreenblur="1.0" strengthchange="1">
+    <Effect minstrength="99" maxstrength="100" minscreendistort="0.8" maxscreendistort="1.0"
+      minscreenblur="0.8" maxscreenblur="1.0" strengthchange="1">
       <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.1" />
       <StatusEffect target="Character">
         <Affliction identifier="hypotension" amount="1" />
@@ -115,9 +139,12 @@
         <ReduceAffliction identifier="vt" amount="9999" setvalue="true" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="0,0,128,128" color="0,255,0,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="0,0,128,128"
+      color="0,255,0,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Асистолия" identifier="asys" description="Отсутствует электрическая активность в сердечных мышцах" limbspecific="false" type="aritmia" indicatorlimb="Torso" showiconthreshold="0" maxstrength="100">
+  <Affliction name="Асистолия" identifier="asys"
+    description="Отсутствует электрическая активность в сердечных мышцах" limbspecific="false"
+    type="aritmia" indicatorlimb="Torso" showiconthreshold="0" maxstrength="100">
     <StatusEffect target="Character">
       <ReduceAffliction identifier="vt" amount="999" setvalue="true" />
     </StatusEffect>
@@ -136,7 +163,8 @@
         <Affliction identifier="vf" amount="50" />
       </StatusEffect>
     </Effect>
-    <Effect minstrength="2" maxstrength="100" strengthchange="0.5" minscreendistort="0.8" maxscreendistort="1.0" minscreenblur="0.8" maxscreenblur="1.0">
+    <Effect minstrength="2" maxstrength="100" strengthchange="0.5" minscreendistort="0.8"
+      maxscreendistort="1.0" minscreenblur="0.8" maxscreenblur="1.0">
       <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.1" />
       <StatusEffect target="Character">
         <ReduceAffliction identifier="vt" amount="9999" setvalue="true" />
@@ -153,9 +181,12 @@
         <ReduceAffliction identifier="asys" amount="999" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="128,0,128,128" color="106,106,198,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="128,0,128,128"
+      color="106,106,198,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Гипотония" identifier="hypotension" description="Пульс стал слабее" type="aritmia" limbspecific="false" indicatorlimb="Torso" activationthreshold="0" maxstrength="100">
+  <Affliction name="Гипотония" identifier="hypotension" description="Пульс стал слабее"
+    type="aritmia" limbspecific="false" indicatorlimb="Torso" activationthreshold="0"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="15" strengthchange="-0.3">
       <StatusEffect target="Character" conditional="or">
         <Conditional speciesname="Husk" />
@@ -199,10 +230,16 @@
         <Affliction identifier="stun" amount="5" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="128,128,128,128" color="68,157,198,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="128,128,128,128" color="68,157,198,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Церебральная гипоксия" identifier="hypoxia" description="У пациента наблюдаются признаки повреждения нервов и головного мозга" type="oxygenlow" causeofdeathdescription="Смерть мозга из-за отсутствия кислорода" selfcauseofdeathdescription="Вы умерли от церебральной гипоксии" limbspecific="false" indicatorlimb="Head" activationthreshold="0" maxstrength="200">
-    <Effect minstrength="0" maxstrength="50" strengthchange="-0.1" minscreendistort="0" maxscreendistort="0.1" minscreenblur="0.1" maxscreenblur="0.2">
+  <Affliction name="Церебральная гипоксия" identifier="hypoxia"
+    description="У пациента наблюдаются признаки повреждения нервов и головного мозга"
+    type="oxygenlow" causeofdeathdescription="Смерть мозга из-за отсутствия кислорода"
+    selfcauseofdeathdescription="Вы умерли от церебральной гипоксии" limbspecific="false"
+    indicatorlimb="Head" activationthreshold="0" maxstrength="200">
+    <Effect minstrength="0" maxstrength="50" strengthchange="-0.1" minscreendistort="0"
+      maxscreendistort="0.1" minscreenblur="0.1" maxscreenblur="0.2">
       <StatusEffect target="Character" conditional="or">
         <Conditional speciesname="Husk" />
         <Conditional speciesname="Humanhusk" />
@@ -213,8 +250,12 @@
         <ReduceAffliction identifier="hypoxia" amount="999" />
       </StatusEffect>
     </Effect>
-    <Effect minstrength="50" maxstrength="110" strengthchange="-0.05" minscreendistort="0.2" maxscreendistort="1" minscreenblur="0.6" maxscreenblur="1" minradialdistort="0.2" maxradialdistort="1"></Effect>
-    <Effect minstrength="110" maxstrength="185" strengthchange="-0.01" minscreendistort="0.8" maxscreendistort="1" minscreenblur="1" maxscreenblur="1" minradialdistort="0.8" maxradialdistort="1">
+    <Effect minstrength="50" maxstrength="110" strengthchange="-0.05" minscreendistort="0.2"
+      maxscreendistort="1" minscreenblur="0.6" maxscreenblur="1" minradialdistort="0.2"
+      maxradialdistort="1"></Effect>
+    <Effect minstrength="110" maxstrength="185" strengthchange="-0.01" minscreendistort="0.8"
+      maxscreendistort="1" minscreenblur="1" maxscreenblur="1" minradialdistort="0.8"
+      maxradialdistort="1">
       <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.5" />
       <StatusEffect target="Character">
         <Affliction identifier="respiratoryarrest" amount="3" probability="0.01" />
@@ -223,16 +264,23 @@
         <Affliction identifier="stun" amount="3" probability="0.01" setvalue="true" />
       </StatusEffect>
     </Effect>
-    <Effect minstrength="185" maxstrength="200" minscreendistort="0.8" maxscreendistort="1" minscreenblur="1" maxscreenblur="1" minradialdistort="0.8" maxradialdistort="1" minvitalitydecrease="30" maxvitalitydecrease="600">
+    <Effect minstrength="185" maxstrength="200" minscreendistort="0.8" maxscreendistort="1"
+      minscreenblur="1" maxscreenblur="1" minradialdistort="0.8" maxradialdistort="1"
+      minvitalitydecrease="30" maxvitalitydecrease="600">
       <StatusEffect target="Character">
         <Affliction identifier="stun" amount="15" setvalue="true" />
         <Affliction identifier="respiratoryarrest" amount="3" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128"
+      color="195,177,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Сердечно-лёгочная реанимация" identifier="cpr_buff" isbuff="true" limbspecific="true" indicatorlimb="Torso" activationthreshold="0" showiconthreshold="10" maxstrength="2">
-    <Effect minstrength="0" maxstrength="2" minvitalitydecrease="0" maxvitalitydecrease="0" strengthchange="-0.5" resistancefor="vt, internaldamage" minresistance="1.0" maxresistance="1.0">
+  <Affliction name="Сердечно-лёгочная реанимация" identifier="cpr_buff" isbuff="true"
+    limbspecific="true" indicatorlimb="Torso" activationthreshold="0" showiconthreshold="10"
+    maxstrength="2">
+    <Effect minstrength="0" maxstrength="2" minvitalitydecrease="0" maxvitalitydecrease="0"
+      strengthchange="-0.5" resistancefor="vt, internaldamage" minresistance="1.0"
+      maxresistance="1.0">
       <StatusEffect tags="medical" target="Character" checkconditionalalways="true">
         <ReduceAffliction identifier="hypotension" amount="1.5" />
         <ReduceAffliction identifier="vf" amount="1" />
@@ -241,10 +289,13 @@
         <ReduceAffliction identifier="oxygenlow" amount="5" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="195,104,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128"
+      color="195,104,60,255" origin="0,0" />
   </Affliction>
-  <!--Surgery incision-->
-  <Affliction name="Хирургический надрез" identifier="ll_si" description="Надрез скальпелем" limbspecific="True" type="surgeryincision" maxstrength="100">
+  <!--Surgery
+  incision-->
+  <Affliction name="Хирургический надрез" identifier="ll_si" description="Надрез скальпелем"
+    limbspecific="True" type="surgeryincision" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="100">
       <StatusEffect target="Character">
         <Affliction identifier="bloodloss" strength="0.7" />
@@ -252,9 +303,11 @@
         <Affliction identifier="traumaticshock" amount="2" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="0,256,128,128" color="139,60,42,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="0,256,128,128"
+      color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Хирургический надрез" identifier="rl_si" description="Надрез скальпелем" limbspecific="True" type="surgeryincision" maxstrength="100">
+  <Affliction name="Хирургический надрез" identifier="rl_si" description="Надрез скальпелем"
+    limbspecific="True" type="surgeryincision" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="100">
       <StatusEffect target="Character">
         <Affliction identifier="bloodloss" strength="0.7" />
@@ -262,9 +315,11 @@
         <Affliction identifier="traumaticshock" amount="2" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="0,256,128,128" color="139,60,42,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="0,256,128,128"
+      color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Хирургический надрез" identifier="surgeryincision3" description="Надрез скальпелем" limbspecific="True" type="surgeryincision" maxstrength="100">
+  <Affliction name="Хирургический надрез" identifier="surgeryincision3"
+    description="Надрез скальпелем" limbspecific="True" type="surgeryincision" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="100">
       <StatusEffect target="Character">
         <Affliction identifier="bloodloss" strength="0.7" />
@@ -272,9 +327,11 @@
         <Affliction identifier="traumaticshock" amount="2" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="0,256,128,128" color="139,60,42,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="0,256,128,128"
+      color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Хирургический надрез" identifier="surgeryincision4" description="Надрез скальпелем" limbspecific="True" type="surgeryincision" maxstrength="100">
+  <Affliction name="Хирургический надрез" identifier="surgeryincision4"
+    description="Надрез скальпелем" limbspecific="True" type="surgeryincision" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="100">
       <StatusEffect target="Character">
         <Affliction identifier="bloodloss" strength="0.7" />
@@ -282,9 +339,11 @@
         <Affliction identifier="traumaticshock" amount="2" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="0,256,128,128" color="139,60,42,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="0,256,128,128"
+      color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Хирургический надрез" identifier="surgeryincision5" description="Надрез скальпелем" limbspecific="True" type="surgeryincision" maxstrength="100">
+  <Affliction name="Хирургический надрез" identifier="surgeryincision5"
+    description="Надрез скальпелем" limbspecific="True" type="surgeryincision" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="100">
       <StatusEffect target="Character">
         <Affliction identifier="bloodloss" strength="0.7" />
@@ -292,9 +351,11 @@
         <Affliction identifier="traumaticshock" amount="2" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="0,256,128,128" color="139,60,42,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="0,256,128,128"
+      color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Хирургический надрез" identifier="surgeryincision6" description="Надрез скальпелем" limbspecific="True" type="surgeryincision" maxstrength="100">
+  <Affliction name="Хирургический надрез" identifier="surgeryincision6"
+    description="Надрез скальпелем" limbspecific="True" type="surgeryincision" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="100">
       <StatusEffect target="Character">
         <Affliction identifier="bloodloss" strength="0.7" />
@@ -302,118 +363,180 @@
         <Affliction identifier="traumaticshock" amount="2" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="0,256,128,128" color="139,60,42,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="0,256,128,128"
+      color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <!--Clamped bleeding-->
-  <Affliction name="Остановленное кровотечение" identifier="clampedbleeders1" description="Кровотечение из надреза остановлено с помощью зажима" limbspecific="true" type="clampedbleeders" maxstrength="100">
+  <!--Clamped
+  bleeding-->
+  <Affliction name="Остановленное кровотечение" identifier="clampedbleeders1"
+    description="Кровотечение из надреза остановлено с помощью зажима" limbspecific="true"
+    type="clampedbleeders" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="100">
       <StatusEffect target="Character">
         <Conditional table="eq 0" />
         <Affliction identifier="traumaticshock" amount="0.5" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="128,256,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="128,256,128,128" color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Остановленное кровотечение" identifier="clampedbleeders2" description="Кровотечение из надреза остановлено с помощью зажима" limbspecific="true" type="clampedbleeders" maxstrength="100">
+  <Affliction name="Остановленное кровотечение" identifier="clampedbleeders2"
+    description="Кровотечение из надреза остановлено с помощью зажима" limbspecific="true"
+    type="clampedbleeders" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="100">
       <StatusEffect target="Character">
         <Conditional table="eq 0" />
         <Affliction identifier="traumaticshock" amount="0.5" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="128,256,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="128,256,128,128" color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Остановленное кровотечение" identifier="clampedbleeders3" description="Кровотечение из надреза остановлено с помощью зажима" limbspecific="true" type="clampedbleeders" maxstrength="100">
+  <Affliction name="Остановленное кровотечение" identifier="clampedbleeders3"
+    description="Кровотечение из надреза остановлено с помощью зажима" limbspecific="true"
+    type="clampedbleeders" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="100">
       <StatusEffect target="Character">
         <Conditional table="eq 0" />
         <Affliction identifier="traumaticshock" amount="0.5" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="128,256,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="128,256,128,128" color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Остановленное кровотечение" identifier="clampedbleeders4" description="Кровотечение из надреза остановлено с помощью зажима" limbspecific="true" type="clampedbleeders" maxstrength="100">
+  <Affliction name="Остановленное кровотечение" identifier="clampedbleeders4"
+    description="Кровотечение из надреза остановлено с помощью зажима" limbspecific="true"
+    type="clampedbleeders" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="100">
       <StatusEffect target="Character">
         <Conditional table="eq 0" />
         <Affliction identifier="traumaticshock" amount="0.5" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="128,256,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="128,256,128,128" color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Остановленное кровотечение" identifier="clampedbleeders5" description="Кровотечение из надреза остановлено с помощью зажима" limbspecific="true" type="clampedbleeders" maxstrength="100">
+  <Affliction name="Остановленное кровотечение" identifier="clampedbleeders5"
+    description="Кровотечение из надреза остановлено с помощью зажима" limbspecific="true"
+    type="clampedbleeders" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="100">
       <StatusEffect target="Character">
         <Conditional table="eq 0" />
         <Affliction identifier="traumaticshock" amount="0.5" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="128,256,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="128,256,128,128" color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Остановленное кровотечение" identifier="clampedbleeders6" description="Кровотечение из надреза остановлено с помощью зажима" limbspecific="true" type="clampedbleeders" maxstrength="100">
+  <Affliction name="Остановленное кровотечение" identifier="clampedbleeders6"
+    description="Кровотечение из надреза остановлено с помощью зажима" limbspecific="true"
+    type="clampedbleeders" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="100">
       <StatusEffect target="Character">
         <Conditional table="eq 0" />
         <Affliction identifier="traumaticshock" amount="0.5" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="128,256,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="128,256,128,128" color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <!--Clamped arteries-->
-  <Affliction name="Зажатая артерия" identifier="arteriesclamp1" description="Артериальное кровотечение временно остановлено" limbspecific="true" maxstrength="100">
+  <!--Clamped
+  arteries-->
+  <Affliction name="Зажатая артерия" identifier="arteriesclamp1"
+    description="Артериальное кровотечение временно остановлено" limbspecific="true"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.1" />
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="640,128,128,128" color="10,193,114,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="640,128,128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Зажатая артерия" identifier="arteriesclamp2" description="Артериальное кровотечение временно остановлено" limbspecific="true" maxstrength="100">
+  <Affliction name="Зажатая артерия" identifier="arteriesclamp2"
+    description="Артериальное кровотечение временно остановлено" limbspecific="true"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.1" />
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="640,128,128,128" color="10,193,114,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="640,128,128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Зажатая артерия" identifier="arteriesclamp3" description="Артериальное кровотечение временно остановлено" limbspecific="true" maxstrength="100">
+  <Affliction name="Зажатая артерия" identifier="arteriesclamp3"
+    description="Артериальное кровотечение временно остановлено" limbspecific="true"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.1" />
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="640,128,128,128" color="10,193,114,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="640,128,128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Зажатая артерия" identifier="arteriesclamp4" description="Артериальное кровотечение временно остановлено" limbspecific="true" maxstrength="100">
+  <Affliction name="Зажатая артерия" identifier="arteriesclamp4"
+    description="Артериальное кровотечение временно остановлено" limbspecific="true"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.1" />
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="640,128,128,128" color="10,193,114,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="640,128,128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Зажатая артерия" identifier="arteriesclamp5" description="Артериальное кровотечение временно остановлено" limbspecific="true" maxstrength="100">
+  <Affliction name="Зажатая артерия" identifier="arteriesclamp5"
+    description="Артериальное кровотечение временно остановлено" limbspecific="true"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.1" />
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="640,128,128,128" color="10,193,114,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="640,128,128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Зажатая артерия" identifier="arteriesclamp6" description="Артериальное кровотечение временно остановлено" limbspecific="true" maxstrength="100">
+  <Affliction name="Зажатая артерия" identifier="arteriesclamp6"
+    description="Артериальное кровотечение временно остановлено" limbspecific="true"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.1" />
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="640,128,128,128" color="10,193,114,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="640,128,128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
   <!--Splint-->
-  <Affliction name="Наложена шина" identifier="boneclamp1" description="Конечность обездвижена с помощью шины" limbspecific="true" maxstrength="100" type="resistance" isbuff="true">
+  <Affliction name="Наложена шина" identifier="boneclamp1"
+    description="Конечность обездвижена с помощью шины" limbspecific="true" maxstrength="100"
+    type="resistance" isbuff="true">
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.1" />
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="384,128,128,128" color="10,193,114,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="384,128,128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Наложена шина" identifier="boneclamp2" description="Конечность обездвижена с помощью шины" limbspecific="true" maxstrength="100" type="resistance" isbuff="true">
+  <Affliction name="Наложена шина" identifier="boneclamp2"
+    description="Конечность обездвижена с помощью шины" limbspecific="true" maxstrength="100"
+    type="resistance" isbuff="true">
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.1" />
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="384,128,128,128" color="10,193,114,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="384,128,128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Наложена шина" identifier="boneclamp3" description="Конечность обездвижена с помощью шины" limbspecific="true" maxstrength="100" type="resistance" isbuff="true">
+  <Affliction name="Наложена шина" identifier="boneclamp3"
+    description="Конечность обездвижена с помощью шины" limbspecific="true" maxstrength="100"
+    type="resistance" isbuff="true">
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.1" />
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="384,128,128,128" color="10,193,114,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="384,128,128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Наложена шина" identifier="boneclamp4" description="Конечность обездвижена с помощью шины" limbspecific="true" maxstrength="100" type="resistance" isbuff="true">
+  <Affliction name="Наложена шина" identifier="boneclamp4"
+    description="Конечность обездвижена с помощью шины" limbspecific="true" maxstrength="100"
+    type="resistance" isbuff="true">
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.1" />
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="384,128,128,128" color="10,193,114,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="384,128,128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Наложена шина" identifier="boneclamp5" description="Конечность обездвижена с помощью шины" limbspecific="true" maxstrength="100" type="resistance" isbuff="true">
+  <Affliction name="Наложена шина" identifier="boneclamp5"
+    description="Конечность обездвижена с помощью шины" limbspecific="true" maxstrength="100"
+    type="resistance" isbuff="true">
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.1" />
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="384,128,128,128" color="10,193,114,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="384,128,128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Наложена шина" identifier="boneclamp6" description="Конечность обездвижена с помощью шины" limbspecific="true" maxstrength="100" type="resistance" isbuff="true">
+  <Affliction name="Наложена шина" identifier="boneclamp6"
+    description="Конечность обездвижена с помощью шины" limbspecific="true" maxstrength="100"
+    type="resistance" isbuff="true">
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.1" />
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="384,128,128,128" color="10,193,114,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="384,128,128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Наложена шина" identifier="boneclamp7" description="Конечность обездвижена с помощью шины" limbspecific="true" maxstrength="100" type="resistance" isbuff="true">
+  <Affliction name="Наложена шина" identifier="boneclamp7"
+    description="Конечность обездвижена с помощью шины" limbspecific="true" maxstrength="100"
+    type="resistance" isbuff="true">
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.1" />
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="384,128,128,128" color="10,193,114,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="384,128,128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Перевязан" identifier="bandaged" description="Защитные слои перевязочного материала предотвращают инфицирование раны" limbspecific="true" maxstrength="100" type="resistance" isbuff="true">
+  <Affliction name="Перевязан" identifier="bandaged"
+    description="Защитные слои перевязочного материала предотвращают инфицирование раны"
+    limbspecific="true" maxstrength="100" type="resistance" isbuff="true">
     <Effect minstrength="0" maxstrength="50" strengthchange="-0.1">
       <StatusEffect target="Limb">
         <Conditional infectedwound="lte 20" />
@@ -426,202 +549,274 @@
         <ReduceAffliction identifier="infectedwound" amount="0.85" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="768,128,128,128" color="10,193,114,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="768,128,128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Грудная клетка проткнута иглой" identifier="needlec" description="Нормализует давление в плевральной полости" limbspecific="false" indicatorlimb="Torso" maxstrength="100" type="resistance" isbuff="true">
+  <Affliction name="Грудная клетка проткнута иглой" identifier="needlec"
+    description="Нормализует давление в плевральной полости" limbspecific="false"
+    indicatorlimb="Torso" maxstrength="100" type="resistance" isbuff="true">
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.15">
       <StatusEffect target="Character">
         <ReduceAffliction identifier="pneumothorax" amount="10" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Мазь" identifier="ointmented" description="Слой антибиотического геля защищает и очищает рану от любых микробов" limbspecific="true" maxstrength="100" type="resistance" isbuff="true">
+  <Affliction name="Мазь" identifier="ointmented"
+    description="Слой антибиотического геля защищает и очищает рану от любых микробов"
+    limbspecific="true" maxstrength="100" type="resistance" isbuff="true">
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.3">
       <StatusEffect target="Limb">
         <ReduceAffliction identifier="infectedwound" amount="1.5" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,128,128,128" color="10,193,114,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="512,128,128,128" color="10,193,114,255" origin="0,0" />
   </Affliction>
-  <!--Drilled bones-->
-  <Affliction name="Просверленная кость" identifier="drilledbones1" description="Аккуратно просверленные отверстия для установки имплантата" limbspecific="true" maxstrength="100">
+  <!--Drilled
+  bones-->
+  <Affliction name="Просверленная кость" identifier="drilledbones1"
+    description="Аккуратно просверленные отверстия для установки имплантата" limbspecific="true"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="15">
       <StatusEffect target="Character">
         <Conditional table="eq 0" />
         <Affliction identifier="traumaticshock" amount="1.5" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="640,256,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="640,256,128,128" color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Просверленная кость" identifier="drilledbones2" description="Аккуратно просверленные отверстия для установки имплантата" limbspecific="true" maxstrength="100">
+  <Affliction name="Просверленная кость" identifier="drilledbones2"
+    description="Аккуратно просверленные отверстия для установки имплантата" limbspecific="true"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="15">
       <StatusEffect target="Character">
         <Conditional table="eq 0" />
         <Affliction identifier="traumaticshock" amount="1.5" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="640,256,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="640,256,128,128" color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Просверленная кость" identifier="drilledbones3" description="Аккуратно просверленные отверстия для установки имплантата" limbspecific="true" maxstrength="100">
+  <Affliction name="Просверленная кость" identifier="drilledbones3"
+    description="Аккуратно просверленные отверстия для установки имплантата" limbspecific="true"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="15">
       <StatusEffect target="Character">
         <Conditional table="eq 0" />
         <Affliction identifier="traumaticshock" amount="1.5" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="640,256,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="640,256,128,128" color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Просверленная кость" identifier="drilledbones4" description="Аккуратно просверленные отверстия для установки имплантата" limbspecific="true" maxstrength="100">
+  <Affliction name="Просверленная кость" identifier="drilledbones4"
+    description="Аккуратно просверленные отверстия для установки имплантата" limbspecific="true"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="15">
       <StatusEffect target="Character">
         <Conditional table="eq 0" />
         <Affliction identifier="traumaticshock" amount="1.5" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="640,256,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="640,256,128,128" color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Просверленная кость" identifier="drilledbones5" description="Аккуратно просверленные отверстия для установки имплантата" limbspecific="true" maxstrength="100">
+  <Affliction name="Просверленная кость" identifier="drilledbones5"
+    description="Аккуратно просверленные отверстия для установки имплантата" limbspecific="true"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="15">
       <StatusEffect target="Character">
         <Conditional table="eq 0" />
         <Affliction identifier="traumaticshock" amount="1.5" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="640,256,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="640,256,128,128" color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Просверленная кость" identifier="drilledbones6" description="Аккуратно просверленные отверстия для установки имплантата" limbspecific="true" maxstrength="100">
+  <Affliction name="Просверленная кость" identifier="drilledbones6"
+    description="Аккуратно просверленные отверстия для установки имплантата" limbspecific="true"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="15">
       <StatusEffect target="Character">
         <Conditional table="eq 0" />
         <Affliction identifier="traumaticshock" amount="1.5" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="640,256,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="640,256,128,128" color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <!--Retracted skin-->
-  <Affliction name="Оттянутая кожа" identifier="retractedskin1" description="Кожа открыта с помощью расширителя" limbspecific="true" type="retractedskin" maxstrength="100">
+  <!--Retracted
+  skin-->
+  <Affliction name="Оттянутая кожа" identifier="retractedskin1"
+    description="Кожа открыта с помощью расширителя" limbspecific="true" type="retractedskin"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="10">
       <StatusEffect target="Character">
         <Conditional table="eq 0" />
         <Affliction identifier="traumaticshock" amount="1" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="256,256,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="256,256,128,128" color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Оттянутая кожа" identifier="retractedskin2" description="Кожа открыта с помощью расширителя" limbspecific="true" type="retractedskin" maxstrength="100">
+  <Affliction name="Оттянутая кожа" identifier="retractedskin2"
+    description="Кожа открыта с помощью расширителя" limbspecific="true" type="retractedskin"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="10">
       <StatusEffect target="Character">
         <Conditional table="eq 0" />
         <Affliction identifier="traumaticshock" amount="1" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="256,256,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="256,256,128,128" color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Оттянутая кожа" identifier="retractedskin3" description="Кожа открыта с помощью расширителя" limbspecific="true" type="retractedskin" maxstrength="100">
+  <Affliction name="Оттянутая кожа" identifier="retractedskin3"
+    description="Кожа открыта с помощью расширителя" limbspecific="true" type="retractedskin"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="10">
       <StatusEffect target="Character">
         <Conditional table="eq 0" />
         <Affliction identifier="traumaticshock" amount="1" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="256,256,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="256,256,128,128" color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Оттянутая кожа" identifier="retractedskin4" description="Кожа открыта с помощью расширителя" limbspecific="true" type="retractedskin" maxstrength="100">
+  <Affliction name="Оттянутая кожа" identifier="retractedskin4"
+    description="Кожа открыта с помощью расширителя" limbspecific="true" type="retractedskin"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="10">
       <StatusEffect target="Character">
         <Conditional table="eq 0" />
         <Affliction identifier="traumaticshock" amount="1" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="256,256,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="256,256,128,128" color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Оттянутая кожа" identifier="retractedskin5" description="Кожа открыта с помощью расширителя" limbspecific="true" type="retractedskin" maxstrength="100">
+  <Affliction name="Оттянутая кожа" identifier="retractedskin5"
+    description="Кожа открыта с помощью расширителя" limbspecific="true" type="retractedskin"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="10">
       <StatusEffect target="Character">
         <Conditional table="eq 0" />
         <Affliction identifier="traumaticshock" amount="1" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="256,256,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="256,256,128,128" color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Оттянутая кожа" identifier="retractedskin6" description="Кожа открыта с помощью расширителя" limbspecific="true" type="retractedskin" maxstrength="100">
+  <Affliction name="Оттянутая кожа" identifier="retractedskin6"
+    description="Кожа открыта с помощью расширителя" limbspecific="true" type="retractedskin"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="10">
       <StatusEffect target="Character">
         <Conditional table="eq 0" />
         <Affliction identifier="traumaticshock" amount="1" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="256,256,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="256,256,128,128" color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <!--Stitched incision-->
-  <Affliction name="Зашитый надрез" identifier="suturedi1" description="Присутствуют швы" limbspecific="true" maxstrength="100">
+  <!--Stitched
+  incision-->
+  <Affliction name="Зашитый надрез" identifier="suturedi1" description="Присутствуют швы"
+    limbspecific="true" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,256,128,128" color="139,60,42,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="512,256,128,128" color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Зашитый надрез" identifier="suturedi2" description="Присутствуют швы" limbspecific="true" maxstrength="100">
+  <Affliction name="Зашитый надрез" identifier="suturedi2" description="Присутствуют швы"
+    limbspecific="true" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,256,128,128" color="139,60,42,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="512,256,128,128" color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Зашитый надрез" identifier="suturedi3" description="Присутствуют швы" limbspecific="true" maxstrength="100">
+  <Affliction name="Зашитый надрез" identifier="suturedi3" description="Присутствуют швы"
+    limbspecific="true" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,256,128,128" color="139,60,42,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="512,256,128,128" color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Зашитый надрез" identifier="suturedi4" description="Присутствуют швы" limbspecific="true" maxstrength="100">
+  <Affliction name="Зашитый надрез" identifier="suturedi4" description="Присутствуют швы"
+    limbspecific="true" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,256,128,128" color="139,60,42,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="512,256,128,128" color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Зашитый надрез" identifier="suturedi5" description="Присутствуют швы" limbspecific="true" maxstrength="100">
+  <Affliction name="Зашитый надрез" identifier="suturedi5" description="Присутствуют швы"
+    limbspecific="true" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,256,128,128" color="139,60,42,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="512,256,128,128" color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Зашитый надрез" identifier="suturedi6" description="Присутствуют швы" limbspecific="true" maxstrength="100">
+  <Affliction name="Зашитый надрез" identifier="suturedi6" description="Присутствуют швы"
+    limbspecific="true" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,256,128,128" color="139,60,42,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="512,256,128,128" color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Зашитая рана" identifier="suturedw" description="Присутствуют швы" limbspecific="true" maxstrength="100" type="damage">
-    <Effect minstrength="0" maxstrength="100" strengthchange="-0.2" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="0.8" />
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="384,256,128,128" color="139,60,42,255" origin="0,0" />
+  <Affliction name="Зашитая рана" identifier="suturedw" description="Присутствуют швы"
+    limbspecific="true" maxstrength="100" type="damage">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-0.2" multiplybymaxvitality="true"
+      minvitalitydecrease="0" maxvitalitydecrease="0.8" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="384,256,128,128" color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <!--Bones Sawed-->
-  <Affliction name="Распиленная кость" identifier="ll_boncut" description="Кости разрезаны пилой" limbspecific="true" maxstrength="100">
+  <!--Bones
+  Sawed-->
+  <Affliction name="Распиленная кость" identifier="ll_boncut" description="Кости разрезаны пилой"
+    limbspecific="true" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="10">
       <StatusEffect target="Character">
         <Conditional analgesia="eq 0" />
         <Affliction identifier="traumaticshock" amount="1.5" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="768,256,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="768,256,128,128" color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Распиленная кость" identifier="la_boncut" description="Кости разрезаны пилой" limbspecific="true" maxstrength="100">
+  <Affliction name="Распиленная кость" identifier="la_boncut" description="Кости разрезаны пилой"
+    limbspecific="true" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="10">
       <StatusEffect target="Character">
         <Conditional analgesia="eq 0" />
         <Affliction identifier="traumaticshock" amount="1.5" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="768,256,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="768,256,128,128" color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Распиленная кость" identifier="rl_boncut" description="Кости разрезаны пилой" limbspecific="true" maxstrength="100">
+  <Affliction name="Распиленная кость" identifier="rl_boncut" description="Кости разрезаны пилой"
+    limbspecific="true" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="10">
       <StatusEffect target="Character">
         <Conditional analgesia="eq 0" />
         <Affliction identifier="traumaticshock" amount="1.5" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="768,256,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="768,256,128,128" color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Распиленная кость" identifier="ra_boncut" description="Кости разрезаны пилой" limbspecific="true" maxstrength="100">
+  <Affliction name="Распиленная кость" identifier="ra_boncut" description="Кости разрезаны пилой"
+    limbspecific="true" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="10">
       <StatusEffect target="Character">
         <Conditional analgesia="eq 0" />
         <Affliction identifier="traumaticshock" amount="1.5" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="768,256,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="768,256,128,128" color="195,136,60,255" origin="0,0" />
   </Affliction>
   <!--Factures-->
-  <Affliction name="Перелом плечевой кости" identifier="ra_fracture" description="Плечевая кость сломана, двигать рукой стало слишком больно" limbspecific="true" type="fractures" maxstrength="100">
+  <Affliction name="Перелом плечевой кости" identifier="ra_fracture"
+    description="Плечевая кость сломана, двигать рукой стало слишком больно" limbspecific="true"
+    type="fractures" maxstrength="100">
     <Effect minstrength="0" maxstrength="6" strengthchange="1.5">
       <StatusEffect target="Character">
         <sound file="%ModDir%/Improved Med/Sound/bonebreak4.ogg" selectionmode="random" />
@@ -642,9 +837,12 @@
         <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Перелом плечевой кости" identifier="la_fracture" description="Плечевая кость сломана, двигать рукой стало слишком больно" limbspecific="true" type="fractures" maxstrength="100">
+  <Affliction name="Перелом плечевой кости" identifier="la_fracture"
+    description="Плечевая кость сломана, двигать рукой стало слишком больно" limbspecific="true"
+    type="fractures" maxstrength="100">
     <Effect minstrength="0" maxstrength="6" strengthchange="1.5">
       <StatusEffect target="Character">
         <sound file="%ModDir%/Improved Med/Sound/bonebreak4.ogg" selectionmode="random" />
@@ -665,9 +863,12 @@
         <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Перелом бедренной кости" identifier="rl_fracture" description="Бедренная кость сломана. Ходьба стала адом для жертвы" limbspecific="true" type="fractures" maxstrength="100">
+  <Affliction name="Перелом бедренной кости" identifier="rl_fracture"
+    description="Бедренная кость сломана. Ходьба стала адом для жертвы" limbspecific="true"
+    type="fractures" maxstrength="100">
     <Effect minstrength="0" maxstrength="6" strengthchange="1.5">
       <StatusEffect target="Character">
         <sound file="%ModDir%/Improved Med/Sound/bonebreak4.ogg" selectionmode="random" />
@@ -686,9 +887,12 @@
         <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Перелом бедренной кости" identifier="ll_fracture" description="Бедренная кость сломана. Ходьба стала адом для жертвы" limbspecific="true" type="fractures" maxstrength="100">
+  <Affliction name="Перелом бедренной кости" identifier="ll_fracture"
+    description="Бедренная кость сломана. Ходьба стала адом для жертвы" limbspecific="true"
+    type="fractures" maxstrength="100">
     <Effect minstrength="0" maxstrength="6" strengthchange="1.5">
       <StatusEffect target="Character">
         <sound file="%ModDir%/Improved Med/Sound/bonebreak4.ogg" selectionmode="random" />
@@ -707,9 +911,12 @@
         <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Перелом рёбер" identifier="t_fracture" description="Рёбра сломаны, затрудняя дыхание и протыкая лёгкие" limbspecific="true" type="fractures" maxstrength="100">
+  <Affliction name="Перелом рёбер" identifier="t_fracture"
+    description="Рёбра сломаны, затрудняя дыхание и протыкая лёгкие" limbspecific="true"
+    type="fractures" maxstrength="100">
     <Effect minstrength="0" maxstrength="6" strengthchange="1.5">
       <StatusEffect target="Character">
         <sound file="%ModDir%/Improved Med/Sound/bonebreak4.ogg" selectionmode="random" />
@@ -730,9 +937,11 @@
         <Affliction identifier="pneumothorax" amount="5" probability="0.3" />
       </StatusEffect>
     </PeriodicEffect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Перелом шеи" identifier="n_fracture" description="Шея сломана, вызывая паралич" limbspecific="true" type="fractures" maxstrength="100">
+  <Affliction name="Перелом шеи" identifier="n_fracture" description="Шея сломана, вызывая паралич"
+    limbspecific="true" type="fractures" maxstrength="100">
     <Effect minstrength="0" maxstrength="6" strengthchange="1.5">
       <StatusEffect target="Character">
         <sound file="%ModDir%/Improved Med/Sound/bonebreak4.ogg" selectionmode="random" />
@@ -753,9 +962,11 @@
         <Affliction identifier="t_paralysis" amount="5" probability="0.6" />
       </StatusEffect>
     </PeriodicEffect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Перелом черепа" identifier="h_fracture" description="Черепная коробка сломана" limbspecific="true" type="fractures" maxstrength="100">
+  <Affliction name="Перелом черепа" identifier="h_fracture" description="Черепная коробка сломана"
+    limbspecific="true" type="fractures" maxstrength="100">
     <Effect minstrength="0" maxstrength="6" strengthchange="1.5">
       <StatusEffect target="Character">
         <sound file="%ModDir%/Improved Med/Sound/bonebreak4.ogg" selectionmode="random" />
@@ -777,9 +988,12 @@
         <Affliction identifier="hypoxia" amount="30" probability="0.15" />
       </StatusEffect>
     </PeriodicEffect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Смещение" identifier="rl_dislocation" description="Кость смещена, вызывая затруднение в движении конечности" limbspecific="true" type="fractures" maxstrength="100">
+  <Affliction name="Смещение" identifier="rl_dislocation"
+    description="Кость смещена, вызывая затруднение в движении конечности" limbspecific="true"
+    type="fractures" maxstrength="100">
     <Effect minstrength="0" maxstrength="6" strengthchange="1.5">
       <StatusEffect target="Character">
         <sound file="%ModDir%/Improved Med/Sound/bonebreak4.ogg" selectionmode="random" />
@@ -797,9 +1011,12 @@
         <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Смещение" identifier="ll_dislocation" description="Кость смещена, вызывая затруднение в движении конечности" limbspecific="true" type="fractures" maxstrength="100">
+  <Affliction name="Смещение" identifier="ll_dislocation"
+    description="Кость смещена, вызывая затруднение в движении конечности" limbspecific="true"
+    type="fractures" maxstrength="100">
     <Effect minstrength="0" maxstrength="6" strengthchange="1.5">
       <StatusEffect target="Character">
         <sound file="%ModDir%/Improved Med/Sound/bonebreak4.ogg" selectionmode="random" />
@@ -817,9 +1034,12 @@
         <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Смещение" identifier="ra_dislocation" description="Кость смещена, вызывая затруднение в движении конечности" limbspecific="true" type="fractures" maxstrength="100">
+  <Affliction name="Смещение" identifier="ra_dislocation"
+    description="Кость смещена, вызывая затруднение в движении конечности" limbspecific="true"
+    type="fractures" maxstrength="100">
     <Effect minstrength="0" maxstrength="6" strengthchange="1.5">
       <StatusEffect target="Character">
         <sound file="%ModDir%/Improved Med/Sound/bonebreak4.ogg" selectionmode="random" />
@@ -841,9 +1061,12 @@
         <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Смещение" identifier="la_dislocation" description="Кость смещена, вызывая затруднение в движении конечности" limbspecific="true" type="fractures" maxstrength="100">
+  <Affliction name="Смещение" identifier="la_dislocation"
+    description="Кость смещена, вызывая затруднение в движении конечности" limbspecific="true"
+    type="fractures" maxstrength="100">
     <Effect minstrength="0" maxstrength="6" strengthchange="1.5">
       <StatusEffect target="Character">
         <sound file="%ModDir%/Improved Med/Sound/bonebreak4.ogg" selectionmode="random" />
@@ -865,14 +1088,18 @@
         <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <!--Arterial bleedings-->
-  <Affliction name="Бедренное артериальное кровотечение" identifier="ll_arterialcut" description="Кровь льётся из артерии" type="arterialcut" limbspecific="true" maxstrength="100">
+  <!--Arterial
+  bleedings-->
+  <Affliction name="Бедренное артериальное кровотечение" identifier="ll_arterialcut"
+    description="Кровь льётся из артерии" type="arterialcut" limbspecific="true" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="1">
       <StatusEffect target="Limb">
         <Conditional arteriesclamp1="eq 0" />
-        <ParticleEmitter particle="bloodsplash" particlespersecond="1" scalemin="0.5" scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+        <ParticleEmitter particle="bloodsplash" particlespersecond="1" scalemin="0.5"
+          scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
         <Affliction identifier="bloodloss" strength="1.5" />
       </StatusEffect>
       <StatusEffect target="Character" conditional="or">
@@ -883,16 +1110,21 @@
     <PeriodicEffect mininterval="6" maxinterval="6">
       <StatusEffect target="Character" comparison="and">
         <Conditional arteriesclamp1="eq 0" />
-        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="0.85" shockwave="false" underwaterbubble="false" />
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0"
+          severlimbsprobability="0.0" decal="blood" decalsize="0.85" shockwave="false"
+          underwaterbubble="false" />
       </StatusEffect>
     </PeriodicEffect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="896,0,128,128" color="139,60,42,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="896,0,128,128"
+      color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Бедренное артериальное кровотечение" identifier="rl_arterialcut" description="Кровь льётся из артерии" type="arterialcut" limbspecific="true" maxstrength="100">
+  <Affliction name="Бедренное артериальное кровотечение" identifier="rl_arterialcut"
+    description="Кровь льётся из артерии" type="arterialcut" limbspecific="true" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="1">
       <StatusEffect target="Limb">
         <Conditional arteriesclamp2="eq 0" />
-        <ParticleEmitter particle="bloodsplash" particlespersecond="1" scalemin="0.5" scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+        <ParticleEmitter particle="bloodsplash" particlespersecond="1" scalemin="0.5"
+          scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
         <Affliction identifier="bloodloss" strength="1.5" />
       </StatusEffect>
       <StatusEffect target="Character" conditional="or">
@@ -903,16 +1135,21 @@
     <PeriodicEffect mininterval="6" maxinterval="6">
       <Conditional arteriesclamp2="eq 0" />
       <StatusEffect target="Character" comparison="and">
-        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="0.85" shockwave="false" underwaterbubble="false" />
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0"
+          severlimbsprobability="0.0" decal="blood" decalsize="0.85" shockwave="false"
+          underwaterbubble="false" />
       </StatusEffect>
     </PeriodicEffect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="896,0,128,128" color="139,60,42,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="896,0,128,128"
+      color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Плечевое артериальное кровотечение" identifier="la_arterialcut" description="Кровь льётся из артерии" type="arterialcut" limbspecific="true" maxstrength="100">
+  <Affliction name="Плечевое артериальное кровотечение" identifier="la_arterialcut"
+    description="Кровь льётся из артерии" type="arterialcut" limbspecific="true" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="1">
       <StatusEffect target="Limb">
         <Conditional arteriesclamp3="eq 0" />
-        <ParticleEmitter particle="bloodsplash" particlespersecond="1" scalemin="0.5" scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+        <ParticleEmitter particle="bloodsplash" particlespersecond="1" scalemin="0.5"
+          scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
         <Affliction identifier="bloodloss" strength="1.5" />
       </StatusEffect>
       <StatusEffect target="Character" conditional="or">
@@ -923,16 +1160,21 @@
     <PeriodicEffect mininterval="6" maxinterval="6">
       <StatusEffect target="Character" comparison="and">
         <Conditional arteriesclamp3="eq 0" />
-        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="0.85" shockwave="false" underwaterbubble="false" />
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0"
+          severlimbsprobability="0.0" decal="blood" decalsize="0.85" shockwave="false"
+          underwaterbubble="false" />
       </StatusEffect>
     </PeriodicEffect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="896,0,128,128" color="139,60,42,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="896,0,128,128"
+      color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Плечевое артериальное кровотечение" identifier="ra_arterialcut" description="Кровь льётся из артерии" type="arterialcut" limbspecific="true" maxstrength="100">
+  <Affliction name="Плечевое артериальное кровотечение" identifier="ra_arterialcut"
+    description="Кровь льётся из артерии" type="arterialcut" limbspecific="true" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="1">
       <StatusEffect target="Limb">
         <Conditional arteriesclamp4="eq 0" />
-        <ParticleEmitter particle="bloodsplash" particlespersecond="1" scalemin="0.5" scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+        <ParticleEmitter particle="bloodsplash" particlespersecond="1" scalemin="0.5"
+          scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
         <Affliction identifier="bloodloss" strength="1.5" />
       </StatusEffect>
       <StatusEffect target="Character" conditional="or">
@@ -943,16 +1185,21 @@
     <PeriodicEffect mininterval="6" maxinterval="6">
       <StatusEffect target="Character" comparison="and">
         <Conditional arteriesclamp4="eq 0" />
-        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="0.85" shockwave="false" underwaterbubble="false" />
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0"
+          severlimbsprobability="0.0" decal="blood" decalsize="0.85" shockwave="false"
+          underwaterbubble="false" />
       </StatusEffect>
     </PeriodicEffect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="896,0,128,128" color="139,60,42,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="896,0,128,128"
+      color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Разрыв аорты" identifier="t_arterialcut" description="Кровь льётся из артерии" type="arterialcut" limbspecific="true" maxstrength="100">
+  <Affliction name="Разрыв аорты" identifier="t_arterialcut" description="Кровь льётся из артерии"
+    type="arterialcut" limbspecific="true" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="1">
       <StatusEffect target="Limb">
         <Conditional arteriesclamp5="eq 0" />
-        <ParticleEmitter particle="bloodsplash" particlespersecond="1" scalemin="0.5" scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+        <ParticleEmitter particle="bloodsplash" particlespersecond="1" scalemin="0.5"
+          scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
         <Affliction identifier="bloodloss" strength="2" />
       </StatusEffect>
       <StatusEffect target="Character" conditional="or">
@@ -963,16 +1210,21 @@
     <PeriodicEffect mininterval="6" maxinterval="6">
       <StatusEffect target="Character" comparison="and">
         <Conditional arteriesclamp5="eq 0" />
-        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="0.85" shockwave="false" underwaterbubble="false" />
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0"
+          severlimbsprobability="0.0" decal="blood" decalsize="0.85" shockwave="false"
+          underwaterbubble="false" />
       </StatusEffect>
     </PeriodicEffect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="896,0,128,128" color="139,60,42,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="896,0,128,128"
+      color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Кровотечение из сонной артерии" identifier="h_arterialcut" description="Кровь льётся из артерии" type="arterialcut" limbspecific="true" maxstrength="100">
+  <Affliction name="Кровотечение из сонной артерии" identifier="h_arterialcut"
+    description="Кровь льётся из артерии" type="arterialcut" limbspecific="true" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="1">
       <StatusEffect target="Limb">
         <Conditional arteriesclamp6="eq 0" />
-        <ParticleEmitter particle="bloodsplash" particlespersecond="1" scalemin="0.5" scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+        <ParticleEmitter particle="bloodsplash" particlespersecond="1" scalemin="0.5"
+          scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
         <Affliction identifier="bloodloss" strength="1.5" />
       </StatusEffect>
       <StatusEffect target="Character" conditional="or">
@@ -983,13 +1235,17 @@
     <PeriodicEffect mininterval="6" maxinterval="6">
       <StatusEffect target="Character" comparison="and">
         <Conditional arteriesclamp6="eq 0" />
-        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="0.85" shockwave="false" underwaterbubble="false" />
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0"
+          severlimbsprobability="0.0" decal="blood" decalsize="0.85" shockwave="false"
+          underwaterbubble="false" />
       </StatusEffect>
     </PeriodicEffect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="896,0,128,128" color="139,60,42,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="896,0,128,128"
+      color="139,60,42,255" origin="0,0" />
   </Affliction>
   <!--Nerves-->
-  <Affliction name="Повреждение нерва" identifier="nervecut1" description="" limbspecific="true" maxstrength="100">
+  <Affliction name="Повреждение нерва" identifier="nervecut1" description="" limbspecific="true"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="1">
       <StatusEffect tags="rleglock" target="Character" duration="0.1" stackable="false" />
       <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true" />
@@ -998,9 +1254,11 @@
         <Affliction identifier="stun" amount="1" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Повреждение нерва" identifier="nervecut2" description="" limbspecific="true" maxstrength="100">
+  <Affliction name="Повреждение нерва" identifier="nervecut2" description="" limbspecific="true"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="1">
       <StatusEffect tags="lleglock" target="Character" duration="0.1" stackable="false" />
       <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true" />
@@ -1009,64 +1267,83 @@
         <Affliction identifier="stun" amount="1" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Повреждение нерва" identifier="nervecut3" description="" limbspecific="true" maxstrength="100">
+  <Affliction name="Повреждение нерва" identifier="nervecut3" description="" limbspecific="true"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="1">
       <StatusEffect target="Character">
         <Conditional HasStatusTag="!equals rlock" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Повреждение нерва" identifier="nervecut4" description="" limbspecific="true" maxstrength="100">
+  <Affliction name="Повреждение нерва" identifier="nervecut4" description="" limbspecific="true"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="1">
       <StatusEffect target="Character">
         <Conditional HasStatusTag="!equals llock" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Повреждение нерва" identifier="nervecut5" description="" limbspecific="true" maxstrength="100">
+  <Affliction name="Повреждение нерва" identifier="nervecut5" description="" limbspecific="true"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="1"></Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Повреждение нерва" identifier="nervecut6" description="" limbspecific="true" maxstrength="100">
+  <Affliction name="Повреждение нерва" identifier="nervecut6" description="" limbspecific="true"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="1"></Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
   <!--Tendons-->
-  <Affliction name="Повреждение сухожилия" identifier="rl_clampcut" description="" limbspecific="true" maxstrength="100">
+  <Affliction name="Повреждение сухожилия" identifier="rl_clampcut" description=""
+    limbspecific="true" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="1">
       <StatusEffect tags="rleglock" target="Character" duration="0.1" stackable="false" />
       <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true" />
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Повреждение сухожилия" identifier="ll_clampcut" description="" limbspecific="true" maxstrength="100">
+  <Affliction name="Повреждение сухожилия" identifier="ll_clampcut" description=""
+    limbspecific="true" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="1">
       <StatusEffect tags="lleglock" target="Character" duration="0.1" stackable="false" />
       <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true" />
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Повреждение сухожилия" identifier="ra_clampcut" description="" limbspecific="true" maxstrength="100">
+  <Affliction name="Повреждение сухожилия" identifier="ra_clampcut" description=""
+    limbspecific="true" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="1">
       <StatusEffect target="Character">
         <Conditional HasStatusTag="!equals rlock" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Повреждение сухожилия" identifier="la_clampcut" description="" limbspecific="true" maxstrength="100">
+  <Affliction name="Повреждение сухожилия" identifier="la_clampcut" description=""
+    limbspecific="true" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="1">
       <StatusEffect target="Character">
         <Conditional HasStatusTag="!equals llock" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Травматический шок" identifier="traumaticshock" description="Пациент испытывает сильную боль и стресс" type="poison" limbspecific="false" indicatorlimb="Torso" activationthreshold="0" showiconthreshold="30" maxstrength="100">
+  <Affliction name="Травматический шок" identifier="traumaticshock"
+    description="Пациент испытывает сильную боль и стресс" type="poison" limbspecific="false"
+    indicatorlimb="Torso" activationthreshold="0" showiconthreshold="30" maxstrength="100">
     <Effect minstrength="0" maxstrength="30" strengthchange="-1">
       <StatusEffect target="Character" conditional="or">
         <Conditional speciesname="Husk" />
@@ -1119,11 +1396,17 @@
         <Affliction identifier="hypotension" amount="3" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="256,0,128,128" color="68,157,198,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="256,0,128,128"
+      color="68,157,198,255" origin="0,0" />
   </Affliction>
   <Override>
-    <OxygenLow name="Низкий уровень кислорода" identifier="oxygenlow" description="Кожа бледная, а губы начинают синеть" type="oxygenlow" causeofdeathdescription="Задохнулся" selfcauseofdeathdescription="Ты зоддофнулся" limbspecific="false" indicatorlimb="Torso" activationthreshold="1" karmachangeonapplied="-0.2" maxstrength="200">
-      <Effect minstrength="60" maxstrength="100" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="0">
+    <OxygenLow name="Низкий уровень кислорода" identifier="oxygenlow"
+      description="Кожа бледная, а губы начинают синеть" type="oxygenlow"
+      causeofdeathdescription="Задохнулся" selfcauseofdeathdescription="Ты зоддофнулся"
+      limbspecific="false" indicatorlimb="Torso" activationthreshold="1" karmachangeonapplied="-0.2"
+      maxstrength="200">
+      <Effect minstrength="60" maxstrength="100" multiplybymaxvitality="true"
+        minvitalitydecrease="0" maxvitalitydecrease="0">
         <StatusEffect target="Character">
           <Affliction identifier="hypoxia" amount="0.2" />
           <Affliction identifier="givein" amount="10" />
@@ -1133,7 +1416,8 @@
           <Affliction identifier="vt" amount="1" probability="0.01" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="100" maxstrength="200" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="0">
+      <Effect minstrength="100" maxstrength="200" multiplybymaxvitality="true"
+        minvitalitydecrease="0" maxvitalitydecrease="0">
         <StatusEffect target="Character">
           <Affliction identifier="hypoxia" amount="0.5" />
           <Affliction identifier="stun" amount="5" />
@@ -1152,12 +1436,18 @@
           <Affliction identifier="organdamage" amount="200" />
         </StatusEffect>
       </Effect>
-      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0" />
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128"
+        color="68,157,198,255" origin="0,0" />
     </OxygenLow>
   </Override>
   <Override>
-    <Bloodloss name="Кровопотеря" identifier="bloodloss" description="Пациент бледен и холоден. Его сердце бьется тревожно быстро." type="bloodloss" causeofdeathdescription="Вытекло слишком много крови" selfcauseofdeathdescription="Вы вытекли насмерть" limbspecific="false" indicatorlimb="Torso" activationthreshold="0" maxstrength="100">
-      <Effect minstrength="0" maxstrength="25" multiplybymaxvitality="false" strengthchange="-0.1" dialogflag="Bloodloss">
+    <Bloodloss name="Кровопотеря" identifier="bloodloss"
+      description="Пациент бледен и холоден. Его сердце бьется тревожно быстро." type="bloodloss"
+      causeofdeathdescription="Вытекло слишком много крови"
+      selfcauseofdeathdescription="Вы вытекли насмерть" limbspecific="false" indicatorlimb="Torso"
+      activationthreshold="0" maxstrength="100">
+      <Effect minstrength="0" maxstrength="25" multiplybymaxvitality="false" strengthchange="-0.1"
+        dialogflag="Bloodloss">
         <StatusEffect target="Character" conditional="or">
           <Conditional speciesname="Husk" />
           <Conditional speciesname="Humanhusk" />
@@ -1168,13 +1458,15 @@
           <ReduceAffliction identifier="bloodloss" amount="999" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="25" maxstrength="45" multiplybymaxvitality="false" strengthchange="-0.1" dialogflag="Bloodloss">
+      <Effect minstrength="25" maxstrength="45" multiplybymaxvitality="false" strengthchange="-0.1"
+        dialogflag="Bloodloss">
         <StatusEffect target="character">
           <Conditional afsaline="eq 0" />
           <Affliction identifier="hypotension" amount="0.3" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="45" maxstrength="80" multiplybymaxvitality="false" strengthchange="-0.1" dialogflag="Bloodloss">
+      <Effect minstrength="45" maxstrength="80" multiplybymaxvitality="false" strengthchange="-0.1"
+        dialogflag="Bloodloss">
         <StatusEffect target="Character" SpeedMultiplier="0.3" setvalue="true" />
         <StatusEffect target="character">
           <Affliction identifier="oxygenlow" amount="1" />
@@ -1188,7 +1480,8 @@
           <Affliction identifier="hypoxia" amount="0.05" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="80" maxstrength="100" multiplybymaxvitality="false" strengthchange="-0.1" dialogflag="Bloodloss">
+      <Effect minstrength="80" maxstrength="100" multiplybymaxvitality="false" strengthchange="-0.1"
+        dialogflag="Bloodloss">
         <StatusEffect target="character">
           <Affliction identifier="oxygenlow" amount="3" />
         </StatusEffect>
@@ -1205,26 +1498,40 @@
           <Affliction identifier="vt" amount="5" probability="0.1" />
         </StatusEffect>
       </Effect>
-      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="0,768,128,128" color="139,60,42,255" origin="0,0" />
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="0,768,128,128" color="139,60,42,255"
+        origin="0,0" />
     </Bloodloss>
   </Override>
   <Override>
-    <CPRSettings revivechanceperskill="0.02" revivechanceexponent="2" revivechancemin="0" revivechancemax="0" stabilizationperskill="0.15" stabilizationmin="1" stabilizationmax="5" damageskillthreshold="200" damageskillmultiplier="0.1" insufficientskillaffliction="cpr_buff"></CPRSettings>
+    <CPRSettings revivechanceperskill="0.02" revivechanceexponent="2" revivechancemin="0"
+      revivechancemax="0" stabilizationperskill="0.15" stabilizationmin="1" stabilizationmax="5"
+      damageskillthreshold="200" damageskillmultiplier="0.1" insufficientskillaffliction="cpr_buff"></CPRSettings>
   </Override>
   <Override>
-    <Affliction name="Отравление морбузином" identifier="morbusinepoisoning" description="Пациент не может дышать, и пульс быстро замедляется" type="poison" causeofdeathdescription="Умер от отравления морбузином" selfcauseofdeathdescription="Вы умерли от отравления морбузином" limbspecific="false" indicatorlimb="Torso" showinhealthscannerthreshold="90" showiconthreshold="110" karmachangeonapplied="-100" maxstrength="100">
+    <Affliction name="Отравление морбузином" identifier="morbusinepoisoning"
+      description="Пациент не может дышать, и пульс быстро замедляется" type="poison"
+      causeofdeathdescription="Умер от отравления морбузином"
+      selfcauseofdeathdescription="Вы умерли от отравления морбузином" limbspecific="false"
+      indicatorlimb="Torso" showinhealthscannerthreshold="90" showiconthreshold="110"
+      karmachangeonapplied="-100" maxstrength="100">
       <!-- Reduce oxygen intake for the victim, cause suffocation -->
       <!-- Becomes lethal in ~80 seconds -->
-      <Effect minstrength="0" maxstrength="20" minvitalitydecrease="0" maxvitalitydecrease="0" strengthchange="1" minscreendistort="0.0" maxscreendistort="1.0" minscreenblur="0.0" maxscreenblur="0.0" minchromaticaberration="0.0" maxchromaticaberration="0.4">
+      <Effect minstrength="0" maxstrength="20" minvitalitydecrease="0" maxvitalitydecrease="0"
+        strengthchange="1" minscreendistort="0.0" maxscreendistort="1.0" minscreenblur="0.0"
+        maxscreenblur="0.0" minchromaticaberration="0.0" maxchromaticaberration="0.4">
         <StatusEffect target="Character" SpeedMultiplier="0.8" setvalue="true" />
       </Effect>
-      <Effect minstrength="20" maxstrength="80" minvitalitydecrease="0" maxvitalitydecrease="0" strengthchange="1" minscreendistort="0.0" maxscreendistort="1.0" minscreenblur="0.0" maxscreenblur="0.8" minchromaticaberration="0.4" maxchromaticaberration="1.6">
+      <Effect minstrength="20" maxstrength="80" minvitalitydecrease="0" maxvitalitydecrease="0"
+        strengthchange="1" minscreendistort="0.0" maxscreendistort="1.0" minscreenblur="0.0"
+        maxscreenblur="0.8" minchromaticaberration="0.4" maxchromaticaberration="1.6">
         <StatusEffect target="Character" SpeedMultiplier="0.8" setvalue="true" />
         <StatusEffect target="Character">
           <Affliction identifier="coma" amount="0.4" setvalue="true" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="80" maxstrength="100" minvitalitydecrease="0" maxvitalitydecrease="0" strengthchange="1" minscreendistort="0.0" maxscreendistort="1.0" minscreenblur="0.8" maxscreenblur="1.0" minchromaticaberration="1.6" maxchromaticaberration="2.0">
+      <Effect minstrength="80" maxstrength="100" minvitalitydecrease="0" maxvitalitydecrease="0"
+        strengthchange="1" minscreendistort="0.0" maxscreendistort="1.0" minscreenblur="0.8"
+        maxscreenblur="1.0" minchromaticaberration="1.6" maxchromaticaberration="2.0">
         <StatusEffect target="Character" SpeedMultiplier="0.8" setvalue="true" />
         <StatusEffect target="Character">
           <Affliction identifier="coma" amount="0.4" />
@@ -1232,32 +1539,46 @@
           <Affliction identifier="coma" amount="0.5" />
         </StatusEffect>
       </Effect>
-      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128" color="106,106,106,255" origin="0,0" />
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128"
+        color="106,106,106,255" origin="0,0" />
     </Affliction>
   </Override>
   <Override>
-    <Affliction name="Отравление цианидом" identifier="cyanidepoisoning" description="Пациент в замешательстве и у него проблемы с дыханием. Его кожа красная, время от времени случаются мышечные спазмы" type="poison" causeofdeathdescription="Смерть от отравления цианидом" selfcauseofdeathdescription="Тебя отравили цианидом" limbspecific="false" indicatorlimb="Torso" showiconthreshold="40" treatmentthreshold="40" karmachangeonapplied="-50" maxstrength="100">
+    <Affliction name="Отравление цианидом" identifier="cyanidepoisoning"
+      description="Пациент в замешательстве и у него проблемы с дыханием. Его кожа красная, время от времени случаются мышечные спазмы"
+      type="poison" causeofdeathdescription="Смерть от отравления цианидом"
+      selfcauseofdeathdescription="Тебя отравили цианидом" limbspecific="false"
+      indicatorlimb="Torso" showiconthreshold="40" treatmentthreshold="40"
+      karmachangeonapplied="-50" maxstrength="100">
       <!-- Starts out fairly undetectable, only slows down player and blurs the screen gradually. -->
       <!-- At 40 strength, starts quickly affecting vitality, at 70 stuns the player. Lethal at 100. -->
-      <Effect minstrength="0" maxstrength="20" minvitalitydecrease="0" maxvitalitydecrease="0" strengthchange="1" minscreendistort="0.0" maxscreendistort="0.20" minscreenblur="0.0" maxscreenblur="0.20">
+      <Effect minstrength="0" maxstrength="20" minvitalitydecrease="0" maxvitalitydecrease="0"
+        strengthchange="1" minscreendistort="0.0" maxscreendistort="0.20" minscreenblur="0.0"
+        maxscreenblur="0.20">
         <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.8" />
         <StatusEffect target="Character">
           <Affliction identifier="oxygenlow" amount="2" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="20" maxstrength="40" minvitalitydecrease="0" maxvitalitydecrease="0" strengthchange="1" minscreendistort="0.2" maxscreendistort="0.4" minscreenblur="0.2" maxscreenblur="0.4">
+      <Effect minstrength="20" maxstrength="40" minvitalitydecrease="0" maxvitalitydecrease="0"
+        strengthchange="1" minscreendistort="0.2" maxscreendistort="0.4" minscreenblur="0.2"
+        maxscreenblur="0.4">
         <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.6" />
         <StatusEffect target="Character">
           <Affliction identifier="oxygenlow" amount="5" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="40" maxstrength="70" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="0.3" strengthchange="0.75" minscreendistort="0.4" maxscreendistort="0.6" minscreenblur="0.4" maxscreenblur="0.6">
+      <Effect minstrength="40" maxstrength="70" multiplybymaxvitality="true" minvitalitydecrease="0"
+        maxvitalitydecrease="0.3" strengthchange="0.75" minscreendistort="0.4"
+        maxscreendistort="0.6" minscreenblur="0.4" maxscreenblur="0.6">
         <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.3" />
         <StatusEffect target="Character">
           <Affliction identifier="oxygenlow" amount="10" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="70" maxstrength="100" multiplybymaxvitality="true" minvitalitydecrease="0.3" maxvitalitydecrease="0.5" strengthchange="0.5" minscreendistort="0.8" maxscreendistort="1.0" minscreenblur="0.8" maxscreenblur="1.0">
+      <Effect minstrength="70" maxstrength="100" multiplybymaxvitality="true"
+        minvitalitydecrease="0.3" maxvitalitydecrease="0.5" strengthchange="0.5"
+        minscreendistort="0.8" maxscreendistort="1.0" minscreenblur="0.8" maxscreenblur="1.0">
 
         <StatusEffect target="Character">
           <Affliction identifier="oxygenlow" amount="15" />
@@ -1266,14 +1587,24 @@
           <Affliction identifier="stun" amount="5" />
         </StatusEffect>
       </Effect>
-      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128" color="106,106,106,255" origin="0,0" />
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128"
+        color="106,106,106,255" origin="0,0" />
     </Affliction>
   </Override>
   <Override>
-    <Affliction name="Отравление страданитом" identifier="sufforinpoisoning" description="Без надлежащего лечения отравление страданитом приводит к бреду и быстрой смерти" type="poison" causeofdeathdescription="Смерть от отравления страданитом" selfcauseofdeathdescription="Тебя отравили страданитом" limbspecific="false" indicatorlimb="Torso" showiconthreshold="50" karmachangeonapplied="-50" maxstrength="100">
-      <!-- At first undetectable and shows no symptoms, then starts affecting character's vision. Quickly becomes lethal if left untreated. -->
-      <Effect minstrength="0" maxstrength="30" minvitalitydecrease="0" maxvitalitydecrease="0" strengthchange="2" minscreendistort="0.0" maxscreendistort="0.0" minscreenblur="0.0" maxscreenblur="0.0" minchromaticaberration="0.0" maxchromaticaberration="0.0"></Effect>
-      <Effect minstrength="30" maxstrength="90" minvitalitydecrease="0" maxvitalitydecrease="0" strengthchange="1" minscreendistort="0.0" maxscreendistort="0.0" minscreenblur="0.0" maxscreenblur="1.0" minchromaticaberration="0.0" maxchromaticaberration="0.0">
+    <Affliction name="Отравление страданитом" identifier="sufforinpoisoning"
+      description="Без надлежащего лечения отравление страданитом приводит к бреду и быстрой смерти"
+      type="poison" causeofdeathdescription="Смерть от отравления страданитом"
+      selfcauseofdeathdescription="Тебя отравили страданитом" limbspecific="false"
+      indicatorlimb="Torso" showiconthreshold="50" karmachangeonapplied="-50" maxstrength="100">
+      <!-- At first undetectable and shows no symptoms, then starts affecting character"s vision.
+      Quickly becomes lethal if left untreated. -->
+      <Effect minstrength="0" maxstrength="30" minvitalitydecrease="0" maxvitalitydecrease="0"
+        strengthchange="2" minscreendistort="0.0" maxscreendistort="0.0" minscreenblur="0.0"
+        maxscreenblur="0.0" minchromaticaberration="0.0" maxchromaticaberration="0.0"></Effect>
+      <Effect minstrength="30" maxstrength="90" minvitalitydecrease="0" maxvitalitydecrease="0"
+        strengthchange="1" minscreendistort="0.0" maxscreendistort="0.0" minscreenblur="0.0"
+        maxscreenblur="1.0" minchromaticaberration="0.0" maxchromaticaberration="0.0">
         <StatusEffect target="Character" comparison="And">
           <Conditional ishuman="true" />
           <Affliction identifier="invertcontrols" amount="5" />
@@ -1281,7 +1612,10 @@
           <Affliction identifier="bloodloss" amount="0.3" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="90" maxstrength="100" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="0" strengthchange="0.5" minscreendistort="0.0" maxscreendistort="0.0" minscreenblur="1.1" maxscreenblur="1.2" minchromaticaberration="0.0" maxchromaticaberration="0.0">
+      <Effect minstrength="90" maxstrength="100" multiplybymaxvitality="true"
+        minvitalitydecrease="0" maxvitalitydecrease="0" strengthchange="0.5" minscreendistort="0.0"
+        maxscreendistort="0.0" minscreenblur="1.1" maxscreenblur="1.2" minchromaticaberration="0.0"
+        maxchromaticaberration="0.0">
         <StatusEffect target="Character" comparison="And">
           <Conditional ishuman="true" />
           <Affliction identifier="invertcontrols" amount="5" />
@@ -1289,13 +1623,20 @@
           <Affliction identifier="bloodloss" amount="0.6" />
         </StatusEffect>
       </Effect>
-      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128" color="106,106,106,255" origin="0,0" />
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128"
+        color="106,106,106,255" origin="0,0" />
     </Affliction>
   </Override>
   <Override>
-    <Bleeding name="Кровотечение" identifier="bleeding" description="Кровь свободно льётся из рваной раны" type="bleeding" causeofdeathdescription="Потеряно слишком много крови" selfcauseofdeathdescription="Вытек насмерть" limbspecific="true" maxstrength="100" karmachangeonapplied="-1" damageoverlayalpha="1">
-      <Effect minstrength="0" maxstrength="95" minvitalitydecrease="0" maxvitalitydecrease="10" strengthchange="-0.1" />
-      <Effect minstrength="95" maxstrength="100" minvitalitydecrease="0" maxvitalitydecrease="10" strengthchange="0">
+    <Bleeding name="Кровотечение" identifier="bleeding"
+      description="Кровь свободно льётся из рваной раны" type="bleeding"
+      causeofdeathdescription="Потеряно слишком много крови"
+      selfcauseofdeathdescription="Вытек насмерть" limbspecific="true" maxstrength="100"
+      karmachangeonapplied="-1" damageoverlayalpha="1">
+      <Effect minstrength="0" maxstrength="95" minvitalitydecrease="0" maxvitalitydecrease="10"
+        strengthchange="-0.1" />
+      <Effect minstrength="95" maxstrength="100" minvitalitydecrease="0" maxvitalitydecrease="10"
+        strengthchange="0">
         <StatusEffect target="Limb">
           <Affliction identifier="ra_arterialcut" indicatorlimb="Limb" amount="1" />
           <Affliction identifier="rl_arterialcut" indicatorlimb="Limb" amount="1" />
@@ -1305,11 +1646,18 @@
           <Affliction identifier="t_arterialcut" indicatorlimb="Limb" amount="1" />
         </StatusEffect>
       </Effect>
-      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0" />
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,640,128,128"
+        color="139,60,42,255" origin="0,0" />
     </Bleeding>
-    <Bleeding name="Сильное кровотечение" identifier="bleedingnonstop" translationoverride="bleeding" description="Кровь свободно льётся из рваной раны" type="bleeding" causeofdeathdescription="Потеряно слишком много крови" selfcauseofdeathdescription="Вытек насмерть" limbspecific="true" maxstrength="100" karmachangeonapplied="-1" damageoverlayalpha="1">
-      <Effect minstrength="0" maxstrength="95" minvitalitydecrease="0" maxvitalitydecrease="10" strengthchange="0"></Effect>
-      <Effect minstrength="95" maxstrength="100" minvitalitydecrease="0" maxvitalitydecrease="10" strengthchange="0">
+    <Bleeding name="Сильное кровотечение" identifier="bleedingnonstop"
+      translationoverride="bleeding" description="Кровь свободно льётся из рваной раны"
+      type="bleeding" causeofdeathdescription="Потеряно слишком много крови"
+      selfcauseofdeathdescription="Вытек насмерть" limbspecific="true" maxstrength="100"
+      karmachangeonapplied="-1" damageoverlayalpha="1">
+      <Effect minstrength="0" maxstrength="95" minvitalitydecrease="0" maxvitalitydecrease="10"
+        strengthchange="0"></Effect>
+      <Effect minstrength="95" maxstrength="100" minvitalitydecrease="0" maxvitalitydecrease="10"
+        strengthchange="0">
         <StatusEffect target="Limb">
           <Affliction identifier="ra_arterialcut" indicatorlimb="Limb" amount="1" />
           <Affliction identifier="rl_arterialcut" indicatorlimb="Limb" amount="1" />
@@ -1319,28 +1667,46 @@
           <Affliction identifier="t_arterialcut" indicatorlimb="Limb" amount="1" />
         </StatusEffect>
       </Effect>
-      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0" />
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,640,128,128"
+        color="139,60,42,255" origin="0,0" />
     </Bleeding>
   </Override>
   <Override>
-    <InternalDamage name="Внутренние травмы" identifier="internaldamage" description="Некоторая область стала фиолетовой. Возможен перелом кости" type="damage" causeofdeathdescription="Смерть от внутренних травм" selfcauseofdeathdescription="Вы стали жертвой своих внутренних травм" limbspecific="true" maxstrength="200" damageoverlayalpha="1">
-      <Effect minstrength="0" maxstrength="50" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="0.5" />
-      <Effect minstrength="50" maxstrength="200" multiplybymaxvitality="true" minvitalitydecrease="0.5" maxvitalitydecrease="2"></Effect>
-      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,768,128,128" color="195,136,60,255" origin="0,0" />
+    <InternalDamage name="Внутренние травмы" identifier="internaldamage"
+      description="Некоторая область стала фиолетовой. Возможен перелом кости" type="damage"
+      causeofdeathdescription="Смерть от внутренних травм"
+      selfcauseofdeathdescription="Вы стали жертвой своих внутренних травм" limbspecific="true"
+      maxstrength="200" damageoverlayalpha="1">
+      <Effect minstrength="0" maxstrength="50" multiplybymaxvitality="true" minvitalitydecrease="0"
+        maxvitalitydecrease="0.5" />
+      <Effect minstrength="50" maxstrength="200" multiplybymaxvitality="true"
+        minvitalitydecrease="0.5" maxvitalitydecrease="2"></Effect>
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,768,128,128"
+        color="195,136,60,255" origin="0,0" />
     </InternalDamage>
   </Override>
-  <!--Blunt force trauma is received from crowbars, wrenches, etc.-->
+  <!--Blunt
+  force trauma is received from crowbars, wrenches, etc.-->
   <Override>
-    <InternalDamage name="Травма тупым предметом" identifier="blunttrauma" description="" type="damage" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="true" maxstrength="200" damageoverlayalpha="1">
-      <Effect minstrength="0" maxstrength="50" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="0.5" />
-      <Effect minstrength="50" maxstrength="200" multiplybymaxvitality="true" minvitalitydecrease="0.5" maxvitalitydecrease="2"></Effect>
-      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="768,896,128,128" color="195,136,60,255" origin="0,0" />
+    <InternalDamage name="Травма тупым предметом" identifier="blunttrauma" description=""
+      type="damage" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="true"
+      maxstrength="200" damageoverlayalpha="1">
+      <Effect minstrength="0" maxstrength="50" multiplybymaxvitality="true" minvitalitydecrease="0"
+        maxvitalitydecrease="0.5" />
+      <Effect minstrength="50" maxstrength="200" multiplybymaxvitality="true"
+        minvitalitydecrease="0.5" maxvitalitydecrease="2"></Effect>
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="768,896,128,128"
+        color="195,136,60,255" origin="0,0" />
     </InternalDamage>
   </Override>
-  <!--Lacerations are received from sharp damage sources-->
+  <!--Lacerations
+  are received from sharp damage sources-->
   <Override>
-    <InternalDamage name="Рваная рана" identifier="lacerations" description="" type="damage" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="true" maxstrength="200" damageoverlayalpha="1">
-      <Effect minstrength="0" maxstrength="10" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="0.1">
+    <InternalDamage name="Рваная рана" identifier="lacerations" description="" type="damage"
+      causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="true"
+      maxstrength="200" damageoverlayalpha="1">
+      <Effect minstrength="0" maxstrength="10" multiplybymaxvitality="true" minvitalitydecrease="0"
+        maxvitalitydecrease="0.1">
         <StatusEffect target="Limb" comparison="And">
           <Conditional ointmented="eq 0" immunity="lte 500" />
           <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="0.25" />
@@ -1349,7 +1715,8 @@
           <Affliction identifier="immunity" amount="-0.15" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="10" maxstrength="50" multiplybymaxvitality="true" minvitalitydecrease="0.1" maxvitalitydecrease="0.5">
+      <Effect minstrength="10" maxstrength="50" multiplybymaxvitality="true"
+        minvitalitydecrease="0.1" maxvitalitydecrease="0.5">
         <StatusEffect target="Limb" comparison="And">
           <Conditional ointmented="eq 0" immunity="lte 500" />
           <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="0.5" />
@@ -1358,7 +1725,8 @@
           <Affliction identifier="immunity" amount="-0.3" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="50" maxstrength="65" multiplybymaxvitality="true" minvitalitydecrease="0.5" maxvitalitydecrease="1">
+      <Effect minstrength="50" maxstrength="65" multiplybymaxvitality="true"
+        minvitalitydecrease="0.5" maxvitalitydecrease="1">
         <StatusEffect target="Limb" comparison="And">
           <Conditional ointmented="eq 0" immunity="lte 500" />
           <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="1" />
@@ -1367,7 +1735,8 @@
           <Affliction identifier="immunity" amount="-0.5" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="65" maxstrength="200" multiplybymaxvitality="true" minvitalitydecrease="0.5" maxvitalitydecrease="2">
+      <Effect minstrength="65" maxstrength="200" multiplybymaxvitality="true"
+        minvitalitydecrease="0.5" maxvitalitydecrease="2">
         <StatusEffect target="Limb" comparison="And">
           <Conditional ointmented="eq 0" immunity="lte 500" />
           <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="1" />
@@ -1376,13 +1745,18 @@
           <Affliction identifier="immunity" amount="-0.5" />
         </StatusEffect>
       </Effect>
-      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+        color="195,136,60,255" origin="0,0" />
     </InternalDamage>
   </Override>
-  <!--Bite wounds are monster specific-->
+  <!--Bite
+  wounds are monster specific-->
   <Override>
-    <InternalDamage name="Укусы" identifier="bitewounds" description="" type="damage" causeofdeathdescription="Загрызан" selfcauseofdeathdescription="Тебя загрызли" limbspecific="true" maxstrength="200" damageoverlayalpha="1">
-      <Effect minstrength="0" maxstrength="10" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="0.1">
+    <InternalDamage name="Укусы" identifier="bitewounds" description="" type="damage"
+      causeofdeathdescription="Загрызан" selfcauseofdeathdescription="Тебя загрызли"
+      limbspecific="true" maxstrength="200" damageoverlayalpha="1">
+      <Effect minstrength="0" maxstrength="10" multiplybymaxvitality="true" minvitalitydecrease="0"
+        maxvitalitydecrease="0.1">
         <StatusEffect target="Limb" comparison="And">
           <Conditional ointmented="eq 0" immunity="lte 500" />
           <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="0.3" />
@@ -1391,7 +1765,8 @@
           <Affliction identifier="immunity" amount="-0.15" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="10" maxstrength="50" multiplybymaxvitality="true" minvitalitydecrease="0.1" maxvitalitydecrease="0.5">
+      <Effect minstrength="10" maxstrength="50" multiplybymaxvitality="true"
+        minvitalitydecrease="0.1" maxvitalitydecrease="0.5">
         <StatusEffect target="Limb" comparison="And">
           <Conditional ointmented="eq 0" immunity="lte 500" />
           <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="0.5" />
@@ -1400,7 +1775,8 @@
           <Affliction identifier="immunity" amount="-0.3" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="50" maxstrength="200" multiplybymaxvitality="true" minvitalitydecrease="0.5" maxvitalitydecrease="2">
+      <Effect minstrength="50" maxstrength="200" multiplybymaxvitality="true"
+        minvitalitydecrease="0.5" maxvitalitydecrease="2">
         <StatusEffect target="Limb" comparison="And">
           <Affliction identifier="immunity" amount="-0.6" />
         </StatusEffect>
@@ -1409,12 +1785,16 @@
           <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="1" />
         </StatusEffect>
       </Effect>
-      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="0,512,128,128" color="195,136,60,255" origin="0,0" />
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="0,512,128,128"
+        color="195,136,60,255" origin="0,0" />
     </InternalDamage>
   </Override>
   <Override>
-    <InternalDamage name="Огнестрельное ранение" identifier="gunshotwound" description="" type="damage" causeofdeathdescription="Застрелен" selfcauseofdeathdescription="Ты застрелен" limbspecific="true" maxstrength="200" karmachangeonapplied="-1" damageoverlayalpha="1">
-      <Effect minstrength="0" maxstrength="10" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="0.1" dialogflag="GunshotWound">
+    <InternalDamage name="Огнестрельное ранение" identifier="gunshotwound" description=""
+      type="damage" causeofdeathdescription="Застрелен" selfcauseofdeathdescription="Ты застрелен"
+      limbspecific="true" maxstrength="200" karmachangeonapplied="-1" damageoverlayalpha="1">
+      <Effect minstrength="0" maxstrength="10" multiplybymaxvitality="true" minvitalitydecrease="0"
+        maxvitalitydecrease="0.1" dialogflag="GunshotWound">
         <StatusEffect target="Limb" comparison="And">
           <Conditional ointmented="eq 0" />
           <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="0.15" />
@@ -1423,7 +1803,8 @@
           <Affliction identifier="immunity" amount="-0.1" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="10" maxstrength="50" multiplybymaxvitality="true" minvitalitydecrease="0.1" maxvitalitydecrease="0.5" dialogflag="GunshotWound">
+      <Effect minstrength="10" maxstrength="50" multiplybymaxvitality="true"
+        minvitalitydecrease="0.1" maxvitalitydecrease="0.5" dialogflag="GunshotWound">
         <StatusEffect target="Limb" comparison="And">
           <Conditional ointmented="eq 0" />
           <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="0.45" />
@@ -1432,7 +1813,8 @@
           <Affliction identifier="immunity" amount="-0.5" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="50" maxstrength="200" multiplybymaxvitality="true" minvitalitydecrease="0.5" maxvitalitydecrease="2" dialogflag="GunshotWound">
+      <Effect minstrength="50" maxstrength="200" multiplybymaxvitality="true"
+        minvitalitydecrease="0.5" maxvitalitydecrease="2" dialogflag="GunshotWound">
         <StatusEffect target="Limb" comparison="And">
           <Conditional ointmented="eq 0" />
           <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="1" />
@@ -1441,38 +1823,56 @@
           <Affliction identifier="immunity" amount="-0.7" />
         </StatusEffect>
       </Effect>
-      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,768,128,128" color="195,60,60,255" origin="0,0" />
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,768,128,128"
+        color="195,60,60,255" origin="0,0" />
     </InternalDamage>
   </Override>
-  <!--Mainly for medical side effects-->
+  <!--Mainly
+  for medical side effects-->
   <Override>
-    <InternalDamage name="Повреждение органов" identifier="organdamage" description="" type="damage" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="false" indicatorlimb="Torso" maxstrength="200" damageoverlayalpha="1">
-      <Effect minstrength="0" maxstrength="200" multiplybymaxvitality="true" strengthchange="-0.03" minvitalitydecrease="0" maxvitalitydecrease="2" />
-      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,384,128,128" color="195,136,60,255" origin="0,0" />
+    <InternalDamage name="Повреждение органов" identifier="organdamage" description="" type="damage"
+      causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="false"
+      indicatorlimb="Torso" maxstrength="200" damageoverlayalpha="1">
+      <Effect minstrength="0" maxstrength="200" multiplybymaxvitality="true" strengthchange="-0.03"
+        minvitalitydecrease="0" maxvitalitydecrease="2" />
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,384,128,128"
+        color="195,136,60,255" origin="0,0" />
     </InternalDamage>
   </Override>
-  <!--For damage inflicted by explosions' blast waves and other sources that aren't quite blunt force trauma-->
+  <!--For
+  damage inflicted by explosions" blast waves and other sources that aren"t quite blunt force
+  trauma-->
   <Override>
-    <InternalDamage name="Повреждение глубоких тканей" identifier="explosiondamage" description="" type="damage" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="true" maxstrength="200" damageoverlayalpha="1">
-      <Effect minstrength="0" maxstrength="10" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="0.1" />
-      <Effect minstrength="10" maxstrength="45" multiplybymaxvitality="true" minvitalitydecrease="0.1" maxvitalitydecrease="0.45">
+    <InternalDamage name="Повреждение глубоких тканей" identifier="explosiondamage" description=""
+      type="damage" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="true"
+      maxstrength="200" damageoverlayalpha="1">
+      <Effect minstrength="0" maxstrength="10" multiplybymaxvitality="true" minvitalitydecrease="0"
+        maxvitalitydecrease="0.1" />
+      <Effect minstrength="10" maxstrength="45" multiplybymaxvitality="true"
+        minvitalitydecrease="0.1" maxvitalitydecrease="0.45">
         <StatusEffect target="Limb" comparison="And">
           <Conditional ointmented="eq 0" />
           <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="0.1" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="45" maxstrength="200" multiplybymaxvitality="true" minvitalitydecrease="0.45" maxvitalitydecrease="2">
+      <Effect minstrength="45" maxstrength="200" multiplybymaxvitality="true"
+        minvitalitydecrease="0.45" maxvitalitydecrease="2">
         <StatusEffect target="Limb" comparison="And">
           <Conditional ointmented="eq 0" />
           <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="0.15" />
         </StatusEffect>
       </Effect>
-      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,0,128,128" color="195,136,60,255" origin="0,0" />
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,0,128,128"
+        color="195,136,60,255" origin="0,0" />
     </InternalDamage>
   </Override>
   <Override>
-    <Burn name="Ожог" identifier="burn" description="Кожа красная и начала отшелушиваться. Пациент испытывает страшную боль" type="burn" causeofdeathdescription="Сгорел" selfcauseofdeathdescription="Тебя сожгли" limbspecific="true" maxstrength="200" burnoverlayalpha="1">
-      <Effect minstrength="0" maxstrength="20" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="0.1">
+    <Burn name="Ожог" identifier="burn"
+      description="Кожа красная и начала отшелушиваться. Пациент испытывает страшную боль"
+      type="burn" causeofdeathdescription="Сгорел" selfcauseofdeathdescription="Тебя сожгли"
+      limbspecific="true" maxstrength="200" burnoverlayalpha="1">
+      <Effect minstrength="0" maxstrength="20" multiplybymaxvitality="true" minvitalitydecrease="0"
+        maxvitalitydecrease="0.1">
         <StatusEffect target="Limb" comparison="And">
           <Conditional ointmented="eq 0" immunity="lte 500" />
           <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="0.15" />
@@ -1481,7 +1881,8 @@
           <Affliction identifier="immunity" amount="-0.1" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="20" maxstrength="50" multiplybymaxvitality="true" minvitalitydecrease="0.1" maxvitalitydecrease="0.25">
+      <Effect minstrength="20" maxstrength="50" multiplybymaxvitality="true"
+        minvitalitydecrease="0.1" maxvitalitydecrease="0.25">
         <StatusEffect target="Limb" comparison="And">
           <Conditional ointmented="eq 0" immunity="lte 500" />
           <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="0.45" />
@@ -1490,7 +1891,8 @@
           <Affliction identifier="immunity" amount="-0.45" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="50" maxstrength="100" multiplybymaxvitality="true" minvitalitydecrease="0.25" maxvitalitydecrease="0.50">
+      <Effect minstrength="50" maxstrength="100" multiplybymaxvitality="true"
+        minvitalitydecrease="0.25" maxvitalitydecrease="0.50">
         <StatusEffect target="Limb" comparison="And">
           <Conditional ointmented="eq 0" immunity="lte 500" />
           <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="0.8" />
@@ -1499,7 +1901,8 @@
           <Affliction identifier="immunity" amount="-0.95" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="100" maxstrength="150" multiplybymaxvitality="true" minvitalitydecrease="0.5" maxvitalitydecrease="0.75">
+      <Effect minstrength="100" maxstrength="150" multiplybymaxvitality="true"
+        minvitalitydecrease="0.5" maxvitalitydecrease="0.75">
         <StatusEffect target="Limb" comparison="And">
           <Conditional ointmented="eq 0" immunity="lte 500" />
           <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="1.3" />
@@ -1508,7 +1911,8 @@
           <Affliction identifier="immunity" amount="-1.15" />
         </StatusEffect>
       </Effect>
-      <Effect minstrength="150" maxstrength="200" multiplybymaxvitality="true" minvitalitydecrease="0.75" maxvitalitydecrease="2">
+      <Effect minstrength="150" maxstrength="200" multiplybymaxvitality="true"
+        minvitalitydecrease="0.75" maxvitalitydecrease="2">
         <StatusEffect target="Limb" comparison="And">
           <Conditional ointmented="eq 0" immunity="lte 500" />
           <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="1.8" />
@@ -1517,29 +1921,46 @@
           <Affliction identifier="immunity" amount="-1.75" />
         </StatusEffect>
       </Effect>
-      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="768,640,128,128" color="195,104,60,255" origin="0,0" />
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="768,640,128,128"
+        color="195,104,60,255" origin="0,0" />
     </Burn>
   </Override>
   <Override>
-    <Affliction name="Передозировка наркотиками" identifier="opiateoverdose" description="У пациента холодная кожа и суженные зрачки. Глотать или дышать стало труднее" type="poison" causeofdeathdescription="Умер от передозировки наркотиками" selfcauseofdeathdescription="А вот нехуй колоться!" limbspecific="false" indicatorlimb="Head" showiconthreshold="50" karmachangeonapplied="-1" maxstrength="100">
+    <Affliction name="Передозировка наркотиками" identifier="opiateoverdose"
+      description="У пациента холодная кожа и суженные зрачки. Глотать или дышать стало труднее"
+      type="poison" causeofdeathdescription="Умер от передозировки наркотиками"
+      selfcauseofdeathdescription="А вот нехуй колоться!" limbspecific="false" indicatorlimb="Head"
+      showiconthreshold="50" karmachangeonapplied="-1" maxstrength="100">
       <!-- No effects except slight distortion at this level -->
-      <Effect minstrength="0" maxstrength="50" strengthchange="-0.5" minchromaticaberration="0.0" maxchromaticaberration="1.0"></Effect>
+      <Effect minstrength="0" maxstrength="50" strengthchange="-0.5" minchromaticaberration="0.0"
+        maxchromaticaberration="1.0"></Effect>
       <!-- Starts to become lethal when strength is above 50 -->
-      <Effect minstrength="50" maxstrength="100" minvitalitydecrease="0" maxvitalitydecrease="400" minscreendistort="0.0" maxscreendistort="3.0" strengthchange="-0.25" minchromaticaberration="0.0" maxchromaticaberration="10.0" minradialdistort="0.0" maxradialdistort="10.0">
+      <Effect minstrength="50" maxstrength="100" minvitalitydecrease="0" maxvitalitydecrease="400"
+        minscreendistort="0.0" maxscreendistort="3.0" strengthchange="-0.25"
+        minchromaticaberration="0.0" maxchromaticaberration="10.0" minradialdistort="0.0"
+        maxradialdistort="10.0">
         <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true" />
       </Effect>
-      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,768,128,128" color="103,103,103,255" origin="0,0" />
+      <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,768,128,128"
+        color="103,103,103,255" origin="0,0" />
     </Affliction>
   </Override>
-  <Affliction name="Анальгезия" identifier="analgesia" description="Пациент не чувствителен к боли" type="resistance" isbuff="true" limbspecific="false" maxstrength="200">
-    <Effect minstrength="0" maxstrength="200" resistancefor="damage" minresistance="0" maxresistance="0.5" minscreendistort="0.0" maxscreendistort="0.0" minscreenblur="0.0" maxscreenblur="0.1" minradialdistort="0.0" maxradialdistort="1.0" minchromaticaberration="0" maxchromaticaberration="400" strengthchange="-0.3">
+  <Affliction name="Анальгезия" identifier="analgesia" description="Пациент не чувствителен к боли"
+    type="resistance" isbuff="true" limbspecific="false" maxstrength="200">
+    <Effect minstrength="0" maxstrength="200" resistancefor="damage" minresistance="0"
+      maxresistance="0.5" minscreendistort="0.0" maxscreendistort="0.0" minscreenblur="0.0"
+      maxscreenblur="0.1" minradialdistort="0.0" maxradialdistort="1.0" minchromaticaberration="0"
+      maxchromaticaberration="400" strengthchange="-0.3">
       <StatusEffect target="Character">
         <ReduceAffliction identifier="traumaticshock" amount="999" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="384,0,128,128" color="10,193,114,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="384,0,128,128"
+      color="10,193,114,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Анестезия" identifier="anesthesia" description="У пациента медикаментозная амнезия и седация" isbuff="true" limbspecific="false" maxstrength="100">
+  <Affliction name="Анестезия" identifier="anesthesia"
+    description="У пациента медикаментозная амнезия и седация" isbuff="true" limbspecific="false"
+    maxstrength="100">
     <Effect minstrength="0" maxstrength="15" strengthchange="0.3">
       <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true" />
     </Effect>
@@ -1565,13 +1986,17 @@
         <ReduceAffliction identifier="weirdthing" amount="3" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="384,0,128,128" color="10,193,114,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="384,0,128,128"
+      color="10,193,114,255" origin="0,0" />
   </Affliction>
-  <Affliction name="" identifier="table" description="" type="resistance" isbuff="true" limbspecific="false" maxstrength="3" showiconthreshold="10">
+  <Affliction name="" identifier="table" description="" type="resistance" isbuff="true"
+    limbspecific="false" maxstrength="3" showiconthreshold="10">
     <Effect minstrength="0" maxstrength="3" strengthchange="-1" />
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128"
+      color="10,193,114,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Иммунитет" identifier="immunity" description="" type="resistance" isbuff="true" limbspecific="false" maxstrength="600" showiconthreshold="700">
+  <Affliction name="Иммунитет" identifier="immunity" description="" type="resistance" isbuff="true"
+    limbspecific="false" maxstrength="600" showiconthreshold="700">
     <Effect minstrength="1" maxstrength="3" strengthchange="7" />
     <Effect minstrength="3" maxstrength="100" strengthchange="0.5">
       <StatusEffect target="Character" comparison="And">
@@ -1618,9 +2043,12 @@
         <ReduceAffliction identifier="infectedwound" amount="0.5" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128"
+      color="10,193,114,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Заражённая рана" identifier="infectedwound" description="В рану попала грязь, становясь опухшей и гнойной" type="infection" limbspecific="true" maxstrength="100" showiconthreshold="35">
+  <Affliction name="Заражённая рана" identifier="infectedwound"
+    description="В рану попала грязь, становясь опухшей и гнойной" type="infection"
+    limbspecific="true" maxstrength="100" showiconthreshold="35">
     <Effect minstrength="0" maxstrength="1" strengthchange="0">
       <StatusEffect target="Character" conditional="or">
         <Conditional speciesname="Husk" />
@@ -1666,42 +2094,56 @@
       </StatusEffect>
       <StatusEffect target="Limb" delay="2">
         <Conditional immunity="gte 450" />
-        <ReduceAffliction identifier="infectedwound" indicatorlimb="Limb" amount="2" probability="0.55" />
+        <ReduceAffliction identifier="infectedwound" indicatorlimb="Limb" amount="2"
+          probability="0.55" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="640,0,128,128" color="139,60,42,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="640,0,128,128"
+      color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Сепсис" identifier="sepsis" description="Болезнетворные бактерии в крови начали своё дело" type="infection" isbuff="False" limbspecific="false" indicatorlimb="Torso" maxstrength="100">
-    <Effect minstrength="0" maxstrength="15" strengthchange="0.1" minvitalitydecrease="0" maxvitalitydecrease="5">
+  <Affliction name="Сепсис" identifier="sepsis"
+    description="Болезнетворные бактерии в крови начали своё дело" type="infection" isbuff="False"
+    limbspecific="false" indicatorlimb="Torso" maxstrength="100">
+    <Effect minstrength="0" maxstrength="15" strengthchange="0.1" minvitalitydecrease="0"
+      maxvitalitydecrease="5">
       <StatusEffect target="Character">
         <Conditional ishuman="false" />
         <ReduceAffliction identifier="sepsis" amount="999" />
       </StatusEffect>
     </Effect>
-    <Effect minstrength="15" maxstrength="65" strengthchange="0.1" minvitalitydecrease="0" maxvitalitydecrease="40" />
-    <Effect minstrength="65" maxstrength="100" strengthchange="0.1" minvitalitydecrease="0" maxvitalitydecrease="60">
+    <Effect minstrength="15" maxstrength="65" strengthchange="0.1" minvitalitydecrease="0"
+      maxvitalitydecrease="40" />
+    <Effect minstrength="65" maxstrength="100" strengthchange="0.1" minvitalitydecrease="0"
+      maxvitalitydecrease="60">
       <StatusEffect target="Character">
         <Affliction identifier="organdamage" indicatorlimb="Limb" amount="0.5" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="768,0,128,128" color="139,60,42,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="768,0,128,128"
+      color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Некроз" identifier="necrosis" description="Мёртвые клетки начинают нарастать" type="necrosis" isbuff="False" limbspecific="True" maxstrength="100">
-    <Effect minstrength="0" maxstrength="15" strengthchange="0.1" minvitalitydecrease="0" maxvitalitydecrease="3">
+  <Affliction name="Некроз" identifier="necrosis" description="Мёртвые клетки начинают нарастать"
+    type="necrosis" isbuff="False" limbspecific="True" maxstrength="100">
+    <Effect minstrength="0" maxstrength="15" strengthchange="0.1" minvitalitydecrease="0"
+      maxvitalitydecrease="3">
       <StatusEffect target="Character">
         <Conditional ishuman="false" />
         <ReduceAffliction identifier="necrosis" amount="999" />
       </StatusEffect>
     </Effect>
-    <Effect minstrength="15" maxstrength="50" strengthchange="0.01" minvitalitydecrease="0" maxvitalitydecrease="15" />
-    <Effect minstrength="50" maxstrength="100" strengthchange="0.01" minvitalitydecrease="0" maxvitalitydecrease="25">
+    <Effect minstrength="15" maxstrength="50" strengthchange="0.01" minvitalitydecrease="0"
+      maxvitalitydecrease="15" />
+    <Effect minstrength="50" maxstrength="100" strengthchange="0.01" minvitalitydecrease="0"
+      maxvitalitydecrease="25">
       <StatusEffect target="Character">
         <Affliction identifier="sepsis" amount="0.5" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="256,128,128,128" color="139,60,42,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png"
+      sourcerect="256,128,128,128" color="139,60,42,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Адреналин" identifier="afadrenaline" description="" type="resistance" isbuff="true" limbspecific="false" showiconthreshold="200" maxstrength="100">
+  <Affliction name="Адреналин" identifier="afadrenaline" description="" type="resistance"
+    isbuff="true" limbspecific="false" showiconthreshold="200" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="-1">
       <StatusEffect target="Character">
         <ReduceAffliction identifier="vf" amount="10" />
@@ -1713,21 +2155,28 @@
         <ReduceAffliction identifier="hypotension" amount="10" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128"
+      color="10,193,114,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Физраствор" identifier="afsaline" description="" type="resistance" isbuff="true" limbspecific="false" showiconthreshold="200" maxstrength="100">
+  <Affliction name="Физраствор" identifier="afsaline" description="" type="resistance" isbuff="true"
+    limbspecific="false" showiconthreshold="200" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.2" />
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128"
+      color="10,193,114,255" origin="0,0" />
   </Affliction>
-  <Affliction name="ИВЛ" identifier="alv" description="" type="resistance" isbuff="true" limbspecific="false" showiconthreshold="200" maxstrength="100">
+  <Affliction name="ИВЛ" identifier="alv" description="" type="resistance" isbuff="true"
+    limbspecific="false" showiconthreshold="200" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="-6.8">
       <StatusEffect target="Character">
         <ReduceAffliction identifier="oxygenlow" amount="100" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128"
+      color="10,193,114,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Гемотрансфузионный шок" identifier="hemotransfusionshock" description="Пациент испытывает психическое возбуждение, смутную тревогу. Стесняющие дыхание боли в груди. одышка, ощущение нехватки воздуха" type="poison" limbspecific="false" showiconthreshold="10" maxstrength="100">
+  <Affliction name="Гемотрансфузионный шок" identifier="hemotransfusionshock"
+    description="Пациент испытывает психическое возбуждение, смутную тревогу. Стесняющие дыхание боли в груди. одышка, ощущение нехватки воздуха"
+    type="poison" limbspecific="false" showiconthreshold="10" maxstrength="100">
     <Effect minstrength="0" maxstrength="30" strengthchange="0.5" />
     <Effect minstrength="30" maxstrength="85" strengthchange="0.5">
       <StatusEffect target="Character">
@@ -1746,9 +2195,11 @@
         <ReduceAffliction identifier="hemotransfusionshock" amount="100" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="256,0,128,128" color="68,157,198,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="256,0,128,128"
+      color="68,157,198,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Поддайся страданиям" identifier="givein" type="paralysis" limbspecific="false" showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
+  <Affliction name="Поддайся страданиям" identifier="givein" type="paralysis" limbspecific="false"
+    showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
     <Effect minstrength="0" maxstrength="1" strengthchange="0">
       <StatusEffect target="Character" conditional="and">
         <Conditional oxygenlow="lt 20" />
@@ -1757,10 +2208,12 @@
       </StatusEffect>
     </Effect>
   </Affliction>
-  <Affliction name="чё" identifier="weirdthing" limbspecific="false" showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
+  <Affliction name="чё" identifier="weirdthing" limbspecific="false"
+    showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
     <Effect minstrength="0" maxstrength="1" strengthchange="0"></Effect>
   </Affliction>
-  <Affliction name="Кома" identifier="coma" description="Пациент находится в коме" limbspecific="false" indicatorlimb="Head" showiconthreshold="20" maxstrength="100">
+  <Affliction name="Кома" identifier="coma" description="Пациент находится в коме"
+    limbspecific="false" indicatorlimb="Head" showiconthreshold="20" maxstrength="100">
     <Effect minstrength="0" maxstrength="20" strengthchange="-0.1">
       <StatusEffect target="Character" SpeedMultiplier="0.3" setvalue="true" />
       <StatusEffect target="Character">
@@ -1788,14 +2241,23 @@
       <StatusEffect target="Character" disabledeltatime="true">
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128"
+      color="195,177,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Повреждённое лицо" identifier="rupturedface" description="Пациент испытывает некоторые проблемы с речью и принятием пищи" type="spaceherpes" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="20" maxstrength="100">
-    <Effect minstrength="0" maxstrength="30" minscreendistort="0.0" maxscreendistort="0.0" minradialdistort="0.0" maxradialdistort="0.0"></Effect>
-    <Effect minstrength="30" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0" minradialdistort="0.0" maxradialdistort="0.0" strengthchange="-1"></Effect>
-    <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,768,128,128" color="10,193,114,255" origin="0,0" />
+  <Affliction name="Повреждённое лицо" identifier="rupturedface"
+    description="Пациент испытывает некоторые проблемы с речью и принятием пищи" type="spaceherpes"
+    causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True"
+    showiconthreshold="20" maxstrength="100">
+    <Effect minstrength="0" maxstrength="30" minscreendistort="0.0" maxscreendistort="0.0"
+      minradialdistort="0.0" maxradialdistort="0.0"></Effect>
+    <Effect minstrength="30" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0"
+      minradialdistort="0.0" maxradialdistort="0.0" strengthchange="-1"></Effect>
+    <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,768,128,128"
+      color="10,193,114,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Инородное тело" identifier="foreignbody" description="Инородное тело застряло внутри" type="damage" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="10" maxstrength="100">
+  <Affliction name="Инородное тело" identifier="foreignbody"
+    description="Инородное тело застряло внутри" type="damage" causeofdeathdescription=""
+    selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="10" maxstrength="100">
     <Effect minstrength="0" maxstrength="15" strengthchange="-0.01"></Effect>
     <Effect minstrength="15" maxstrength="50">
       <StatusEffect target="Limb">
@@ -1819,11 +2281,16 @@
         <Affliction identifier="t_arterialcut" amount="100" probability="0.2" />
       </StatusEffect>
     </PeriodicEffect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,768,128,128" color="195,60,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,768,128,128" color="195,60,60,255"
+      origin="0,0" />
   </Affliction>
   <!-- I hate this long code (hnappinn)-->
-  <Affliction name="Травматическая ампутация" identifier="tra_amputation" description="Большая часть правой руки была оторвана" type="t_amputation" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="20" maxstrength="100">
-    <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0" minradialdistort="0.0" maxradialdistort="0.0">
+  <Affliction name="Травматическая ампутация" identifier="tra_amputation"
+    description="Большая часть правой руки была оторвана" type="t_amputation"
+    causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True"
+    showiconthreshold="20" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0"
+      minradialdistort="0.0" maxradialdistort="0.0">
       <StatusEffect target="Character">
         <Conditional HasStatusTag="!equals rlock" />
       </StatusEffect>
@@ -1831,10 +2298,15 @@
         <ReduceAffliction identifier="rap" amount="100" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Травматическая ампутация" identifier="tla_amputation" description="Большая часть левой руки была оторвана" type="t_amputation" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="20" maxstrength="100">
-    <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0" minradialdistort="0.0" maxradialdistort="0.0">
+  <Affliction name="Травматическая ампутация" identifier="tla_amputation"
+    description="Большая часть левой руки была оторвана" type="t_amputation"
+    causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True"
+    showiconthreshold="20" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0"
+      minradialdistort="0.0" maxradialdistort="0.0">
       <StatusEffect target="Character">
         <Conditional HasStatusTag="!equals llock" />
       </StatusEffect>
@@ -1842,10 +2314,15 @@
         <ReduceAffliction identifier="lap" amount="100" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Травматическая ампутация" identifier="trl_amputation" description="Большая часть правой ноги была оторвана" type="t_amputation" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="20" maxstrength="100">
-    <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0" minradialdistort="0.0" maxradialdistort="0.0">
+  <Affliction name="Травматическая ампутация" identifier="trl_amputation"
+    description="Большая часть правой ноги была оторвана" type="t_amputation"
+    causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True"
+    showiconthreshold="20" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0"
+      minradialdistort="0.0" maxradialdistort="0.0">
       <StatusEffect tags="rleglock" target="Character" duration="0.1" stackable="false" />
       <StatusEffect target="Character" comparison="And" SpeedMultiplier="0.5" setvalue="true" />
       <Conditional analgesia="lt 1" />
@@ -1857,10 +2334,15 @@
         <ReduceAffliction identifier="rlp" amount="100" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Травматическая ампутация" identifier="tll_amputation" description="Большая часть левой ноги была оторвана" type="t_amputation" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="20" maxstrength="100">
-    <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0" minradialdistort="0.0" maxradialdistort="0.0">
+  <Affliction name="Травматическая ампутация" identifier="tll_amputation"
+    description="Большая часть левой ноги была оторвана" type="t_amputation"
+    causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True"
+    showiconthreshold="20" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0"
+      minradialdistort="0.0" maxradialdistort="0.0">
       <StatusEffect tags="lleglock" target="Character" duration="0.1" stackable="false" />
       <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true" />
       <StatusEffect target="Character" comparison="And" disabledeltatime="True">
@@ -1871,30 +2353,48 @@
         <ReduceAffliction identifier="llp" amount="100" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Травматическая ампутация" identifier="th_amputation" description="Большая часть тканей головы была оторвана" type="t_amputation" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="20" maxstrength="100">
-    <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0" minradialdistort="0.0" maxradialdistort="0.0" multiplybymaxvitality="true" minvitalitydecrease="1" maxvitalitydecrease="10"></Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+  <Affliction name="Травматическая ампутация" identifier="th_amputation"
+    description="Большая часть тканей головы была оторвана" type="t_amputation"
+    causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True"
+    showiconthreshold="20" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0"
+      minradialdistort="0.0" maxradialdistort="0.0" multiplybymaxvitality="true"
+      minvitalitydecrease="1" maxvitalitydecrease="10"></Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Хирургическая ампутация" identifier="sra_amputation" description="Правая рука была ампутирована" type="s_amputation" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="20" maxstrength="100">
-    <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0" minradialdistort="0.0" maxradialdistort="0.0">
+  <Affliction name="Хирургическая ампутация" identifier="sra_amputation"
+    description="Правая рука была ампутирована" type="s_amputation" causeofdeathdescription=""
+    selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="20" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0"
+      minradialdistort="0.0" maxradialdistort="0.0">
       <StatusEffect target="Character">
         <Conditional HasStatusTag="!equals rlock" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Хирургическая ампутация" identifier="sla_amputation" description="Левая рука была ампутирована" type="s_amputation" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="20" maxstrength="100">
-    <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0" minradialdistort="0.0" maxradialdistort="0.0">
+  <Affliction name="Хирургическая ампутация" identifier="sla_amputation"
+    description="Левая рука была ампутирована" type="s_amputation" causeofdeathdescription=""
+    selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="20" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0"
+      minradialdistort="0.0" maxradialdistort="0.0">
       <StatusEffect target="Character">
         <Conditional HasStatusTag="!equals llock" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Хирургическая ампутация" identifier="srl_amputation" description="Правая нога была ампутирована" type="s_amputation" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="20" maxstrength="100">
-    <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0" minradialdistort="0.0" maxradialdistort="0.0">
+  <Affliction name="Хирургическая ампутация" identifier="srl_amputation"
+    description="Правая нога была ампутирована" type="s_amputation" causeofdeathdescription=""
+    selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="20" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0"
+      minradialdistort="0.0" maxradialdistort="0.0">
       <StatusEffect tags="rleglock" target="Character" duration="0.1" stackable="false" />
       <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true" />
       <StatusEffect target="Character" comparison="And" disabledeltatime="True">
@@ -1902,10 +2402,14 @@
         <Affliction identifier="stun" amount="1" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Хирургическая ампутация" identifier="sll_amputation" description="Левая нога была ампутирована" type="s_amputation" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="20" maxstrength="100">
-    <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0" minradialdistort="0.0" maxradialdistort="0.0">
+  <Affliction name="Хирургическая ампутация" identifier="sll_amputation"
+    description="Левая нога была ампутирована" type="s_amputation" causeofdeathdescription=""
+    selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="20" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0"
+      minradialdistort="0.0" maxradialdistort="0.0">
       <StatusEffect tags="lleglock" target="Character" duration="0.1" stackable="false" />
       <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true" />
       <StatusEffect target="Character" comparison="And" disabledeltatime="True">
@@ -1913,13 +2417,21 @@
         <Affliction identifier="stun" amount="1" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Хирургическая ампутация" identifier="sh_amputation" description="Скальп ампутирован" type="s_amputation" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="20" maxstrength="100">
-    <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0" minradialdistort="0.0" maxradialdistort="0.0"></Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+  <Affliction name="Хирургическая ампутация" identifier="sh_amputation"
+    description="Скальп ампутирован" type="s_amputation" causeofdeathdescription=""
+    selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="20" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0"
+      minradialdistort="0.0" maxradialdistort="0.0"></Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Протез - левая нога" identifier="llp" description="Левая нога протезирована имплантантом с усиленными сухожилиями, позволяя владельцу быстрее бегать и наделяя иммунитетом к некоторым недугам" isbuff="true" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="20" maxstrength="100">
+  <Affliction name="Протез - левая нога" identifier="llp"
+    description="Левая нога протезирована имплантантом с усиленными сухожилиями, позволяя владельцу быстрее бегать и наделяя иммунитетом к некоторым недугам"
+    isbuff="true" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True"
+    showiconthreshold="20" maxstrength="100">
     <Effect minstrength="0" maxstrength="100">
       <Conditional identifier="rlp" amount="gt 0" />
       <StatusEffect target="Character" SpeedMultiplier="1.2" setvalue="true"></StatusEffect>
@@ -1937,9 +2449,13 @@
         <ReduceAffliction identifier="necrosis" amount="999"></ReduceAffliction>
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Протез - правая нога" identifier="rlp" description="Правая нога протезирована имплантантом с усиленными сухожилиями, позволяя владельцу быстрее бегать и наделяя иммунитетом к некоторым недугам" isbuff="true" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="20" maxstrength="100">
+  <Affliction name="Протез - правая нога" identifier="rlp"
+    description="Правая нога протезирована имплантантом с усиленными сухожилиями, позволяя владельцу быстрее бегать и наделяя иммунитетом к некоторым недугам"
+    isbuff="true" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True"
+    showiconthreshold="20" maxstrength="100">
     <Effect minstrength="0" maxstrength="100">
       <Conditional identifier="llp" amount="gt 0" />
       <StatusEffect target="Character" SpeedMultiplier="1.2" setvalue="true"></StatusEffect>
@@ -1957,10 +2473,15 @@
         <ReduceAffliction identifier="necrosis" amount="999"></ReduceAffliction>
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Протез - левая рука" identifier="lap" description="Левая рука протезирована имплантантом с титановыми вставками на костях, наделяя иммунитетом к некоторым недугам и улучшенными моторными функциями" isbuff="true" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="20" maxstrength="100">
-    <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0" minradialdistort="0.0" maxradialdistort="0.0" maxskillmultiplier="1.3">
+  <Affliction name="Протез - левая рука" identifier="lap"
+    description="Левая рука протезирована имплантантом с титановыми вставками на костях, наделяя иммунитетом к некоторым недугам и улучшенными моторными функциями"
+    isbuff="true" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True"
+    showiconthreshold="20" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0"
+      minradialdistort="0.0" maxradialdistort="0.0" maxskillmultiplier="1.3">
       <StatusEffect target="Limb" disabledeltatime="True">
         <ReduceAffliction identifier="nervedamage" amount="999"></ReduceAffliction>
         <ReduceAffliction identifier="la_arterialcut" amount="999"></ReduceAffliction>
@@ -1975,10 +2496,15 @@
         <ReduceAffliction identifier="necrosis" amount="999"></ReduceAffliction>
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Протез - правая рука" identifier="rap" description="Правая рука протезирова имплантантом с титановыми вставками на костях, наделяя иммунитетом к некоторым недугам и улучшенными моторными функциями" isbuff="true" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="20" maxstrength="100">
-    <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0" minradialdistort="0.0" maxradialdistort="0.0" maxskillmultiplier="1.3">
+  <Affliction name="Протез - правая рука" identifier="rap"
+    description="Правая рука протезирова имплантантом с титановыми вставками на костях, наделяя иммунитетом к некоторым недугам и улучшенными моторными функциями"
+    isbuff="true" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True"
+    showiconthreshold="20" maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.0"
+      minradialdistort="0.0" maxradialdistort="0.0" maxskillmultiplier="1.3">
       <StatusEffect target="Limb" disabledeltatime="True">
         <ReduceAffliction identifier="nervedamage" amount="999"></ReduceAffliction>
         <ReduceAffliction identifier="ra_arterialcut" amount="999"></ReduceAffliction>
@@ -1993,9 +2519,14 @@
         <ReduceAffliction identifier="necrosis" amount="999"></ReduceAffliction>
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Травма спинного мозга" identifier="t_paralysis" description="Пациент парализован и не чувствует тело" type="amputation" causeofdeathdescription="Не выдержал жизненных невзгод" selfcauseofdeathdescription="Вы не выдержали жизненных невзгод" limbspecific="True" showiconthreshold="20" maxstrength="100">
+  <Affliction name="Травма спинного мозга" identifier="t_paralysis"
+    description="Пациент парализован и не чувствует тело" type="amputation"
+    causeofdeathdescription="Не выдержал жизненных невзгод"
+    selfcauseofdeathdescription="Вы не выдержали жизненных невзгод" limbspecific="True"
+    showiconthreshold="20" maxstrength="100">
     <Effect minstrength="0" maxstrength="100">
       <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0" />
       <StatusEffect target="Character">
@@ -2008,9 +2539,13 @@
         <Conditional HasStatusTag="!equals rlock" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Тампонада сердца" identifier="tamponade" description="В результате ранения сердца кровь скапливается в перикарде и сдавливает сердце" type="damage" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="0" maxstrength="100">
+  <Affliction name="Тампонада сердца" identifier="tamponade"
+    description="В результате ранения сердца кровь скапливается в перикарде и сдавливает сердце"
+    type="damage" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True"
+    showiconthreshold="0" maxstrength="100">
     <Effect minstrength="0" maxstrength="20" strengthchange="0.25"></Effect>
     <Effect minstrength="20" maxstrength="80" strengthchange="0.25">
       <StatusEffect target="Character">
@@ -2027,9 +2562,12 @@
         <Affliction identifier="hypotension" amount="0.75" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Пневмоторакс" identifier="pneumothorax" description="Пациенту трудно дышать" type="damage" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="0" maxstrength="100">
+  <Affliction name="Пневмоторакс" identifier="pneumothorax" description="Пациенту трудно дышать"
+    type="damage" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True"
+    showiconthreshold="0" maxstrength="100">
     <Effect minstrength="0" maxstrength="20" strengthchange="0.2" />
     <Effect minstrength="20" maxstrength="85" strengthchange="0.2">
       <StatusEffect target="Character">
@@ -2073,17 +2611,24 @@
       </StatusEffect>
       <StatusEffect target="Character" targetlimbs="Head" comparison="And" duration="0.3">
         <Conditional pneumothorax="gt 80" HideFace="eq False" />
-        <ParticleEmitter particle="blooddrop" copyentityangle="true" anglemin="-10" anglemax="10" particlespersecond="10" velocitymin="50" velocitymax="200" scalemin="0.1" scalemax="0.2" />
-        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="0.45" shockwave="false" underwaterbubble="false" />
+        <ParticleEmitter particle="blooddrop" copyentityangle="true" anglemin="-10" anglemax="10"
+          particlespersecond="10" velocitymin="50" velocitymax="200" scalemin="0.1" scalemax="0.2" />
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0"
+          severlimbsprobability="0.0" decal="blood" decalsize="0.45" shockwave="false"
+          underwaterbubble="false" />
       </StatusEffect>
       <StatusEffect target="Character">
         <Conditional pneumothorax="gt 20" />
         <Affliction identifier="oxygenlow" strength="50" />
       </StatusEffect>
     </PeriodicEffect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128"
+      color="195,136,60,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Внутреннее кровотечение" identifier="internalbleeding" description="У пациента наблюдается кровопотеря и рвота с кровью" type="bleeding" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True" showiconthreshold="0" maxstrength="100">
+  <Affliction name="Внутреннее кровотечение" identifier="internalbleeding"
+    description="У пациента наблюдается кровопотеря и рвота с кровью" type="bleeding"
+    causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="True"
+    showiconthreshold="0" maxstrength="100">
     <Effect minstrength="0" maxstrength="30" strengthchange="0.2" />
     <StatusEffect target="Character">
       <Affliction identifier="bloodloss" amount="0.2" />
@@ -2099,7 +2644,8 @@
       </StatusEffect>
     </Effect>
     <PeriodicEffect mininterval="32" maxinterval="64">
-      <StatusEffect target="Character" comparison="and" SpeedMultiplier="0.0" setvalue="true" duration="1.7">
+      <StatusEffect target="Character" comparison="and" SpeedMultiplier="0.0" setvalue="true"
+        duration="1.7">
         <Conditional ishuman="true" />
         <Conditional ismale="true" />
         <Sound file="Content/Sounds/HUMAN_chokeMale1.ogg" selectionmode="Random" />
@@ -2117,34 +2663,46 @@
         <Affliction identifier="stun" strength="0.1" />
       </StatusEffect>
       <StatusEffect target="Character" targetlimbs="Head" duration="1">
-        <ParticleEmitter particle="bloodsplash" copyentityangle="true" anglemin="-20" anglemax="5" particlespersecond="2" velocitymin="60" velocitymax="250" scalemin="0.2" scalemax="0.4" />
-        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="1.25" shockwave="false" underwaterbubble="false" />
+        <ParticleEmitter particle="bloodsplash" copyentityangle="true" anglemin="-20" anglemax="5"
+          particlespersecond="2" velocitymin="60" velocitymax="250" scalemin="0.2" scalemax="0.4" />
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0"
+          severlimbsprobability="0.0" decal="blood" decalsize="1.25" shockwave="false"
+          underwaterbubble="false" />
         <Conditional HideFace="eq False" />
       </StatusEffect>
     </PeriodicEffect>
     <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="640,256,128,128" origin="0,0" />
   </Affliction>
   <Override>
-    <Affliction name="Дезориентация" identifier="invertcontrols" description="Вестибулярный аппарат пациента не работает" type="invertcontrols" causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="false" showiconthreshold="100" maxstrength="100">
-      <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.5" minradialdistort="0.0" maxradialdistort="0.5" strengthchange="-1.0">
+    <Affliction name="Дезориентация" identifier="invertcontrols"
+      description="Вестибулярный аппарат пациента не работает" type="invertcontrols"
+      causeofdeathdescription="" selfcauseofdeathdescription="" limbspecific="false"
+      showiconthreshold="100" maxstrength="100">
+      <Effect minstrength="0" maxstrength="100" minscreendistort="0.0" maxscreendistort="0.5"
+        minradialdistort="0.0" maxradialdistort="0.5" strengthchange="-1.0">
         <StatusEffect target="Character" SpeedMultiplier="0.7" setvalue="true" />
       </Effect>
     </Affliction>
   </Override>
-  <Affliction name="Остановка дыхания" identifier="respiratoryarrest" description="Пациент не дышит" type="oxygenlow" limbspecific="false" indicatorlimb="Head" showiconthreshold="0" maxstrength="3">
+  <Affliction name="Остановка дыхания" identifier="respiratoryarrest" description="Пациент не дышит"
+    type="oxygenlow" limbspecific="false" indicatorlimb="Head" showiconthreshold="0" maxstrength="3">
     <Effect minstrength="0" maxstrength="3" strengthchange="-0.2">
       <StatusEffect target="Character">
         <Conditional Health="gt 0" />
         <Affliction identifier="oxygenlow" amount="10.5" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128"
+      color="68,157,198,255" origin="0,0" />
   </Affliction>
-  <Affliction name="чё" identifier="weirdthing8" limbspecific="false" showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
+  <Affliction name="чё" identifier="weirdthing8" limbspecific="false"
+    showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
     <Effect minstrength="0" maxstrength="1" strengthchange="0"></Effect>
   </Affliction>
-  <!--Tweezers magic-->
-  <Affliction name="чё?" identifier="weirdthing11" limbspecific="True" showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
+  <!--Tweezers
+  magic-->
+  <Affliction name="чё?" identifier="weirdthing11" limbspecific="True"
+    showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
     <Effect minstrength="0" maxstrength="1" strengthchange="-100">
       <StatusEffect target="limb" disabledeltatime="True">
         <Affliction identifier="lacerations" amount="5" />
@@ -2154,9 +2712,11 @@
         <ReduceAffliction identifier="necrosis" amount="5" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128"
+      color="68,157,198,255" origin="0,0" />
   </Affliction>
-  <Affliction name="чё!?" identifier="weirdthing12" limbspecific="True" showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
+  <Affliction name="чё!?" identifier="weirdthing12" limbspecific="True"
+    showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
     <Effect minstrength="0" maxstrength="1" strengthchange="-100">
       <StatusEffect target="limb" disabledeltatime="True">
         <Affliction identifier="lacerations" amount="5" />
@@ -2166,9 +2726,11 @@
         <ReduceAffliction identifier="necrosis" amount="5" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128"
+      color="68,157,198,255" origin="0,0" />
   </Affliction>
-  <Affliction name="чё?!?" identifier="weirdthing13" limbspecific="True" showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
+  <Affliction name="чё?!?" identifier="weirdthing13" limbspecific="True"
+    showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
     <Effect minstrength="0" maxstrength="1" strengthchange="-100">
       <StatusEffect target="limb" disabledeltatime="True">
         <Affliction identifier="lacerations" amount="5" />
@@ -2178,9 +2740,11 @@
         <ReduceAffliction identifier="necrosis" amount="5" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128"
+      color="68,157,198,255" origin="0,0" />
   </Affliction>
-  <Affliction name="чё?!?" identifier="weirdthing14" limbspecific="True" showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
+  <Affliction name="чё?!?" identifier="weirdthing14" limbspecific="True"
+    showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
     <Effect minstrength="0" maxstrength="1" strengthchange="-100">
       <StatusEffect target="limb" disabledeltatime="True">
         <Affliction identifier="lacerations" amount="5" />
@@ -2190,9 +2754,11 @@
         <ReduceAffliction identifier="necrosis" amount="5" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128"
+      color="68,157,198,255" origin="0,0" />
   </Affliction>
-  <Affliction name="чё?!?" identifier="weirdthing15" limbspecific="True" showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
+  <Affliction name="чё?!?" identifier="weirdthing15" limbspecific="True"
+    showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
     <Effect minstrength="0" maxstrength="1" strengthchange="-100">
       <StatusEffect target="limb" disabledeltatime="True">
         <Affliction identifier="lacerations" amount="5" />
@@ -2202,9 +2768,11 @@
         <ReduceAffliction identifier="necrosis" amount="5" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128"
+      color="68,157,198,255" origin="0,0" />
   </Affliction>
-  <Affliction name="чё?!?" identifier="weirdthing16" limbspecific="True" showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
+  <Affliction name="чё?!?" identifier="weirdthing16" limbspecific="True"
+    showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
     <Effect minstrength="0" maxstrength="1" strengthchange="-100">
       <StatusEffect target="limb" disabledeltatime="True">
         <Affliction identifier="lacerations" amount="5" />
@@ -2214,10 +2782,13 @@
         <ReduceAffliction identifier="necrosis" amount="5" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128"
+      color="68,157,198,255" origin="0,0" />
   </Affliction>
-  <!--Severed limbs spawn-->
-  <Affliction name="чё?!?" identifier="weirdthing21" limbspecific="True" showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
+  <!--Severed
+  limbs spawn-->
+  <Affliction name="чё?!?" identifier="weirdthing21" limbspecific="True"
+    showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
     <Effect minstrength="0" maxstrength="1" strengthchange="-100" disabledeltatime="True">
       <StatusEffect target="Character">
         <Affliction identifier="severepain" amount="100" />
@@ -2227,9 +2798,11 @@
         <SpawnItem identifier="lleg" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128"
+      color="68,157,198,255" origin="0,0" />
   </Affliction>
-  <Affliction name="чё?!?" identifier="weirdthing22" limbspecific="True" showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
+  <Affliction name="чё?!?" identifier="weirdthing22" limbspecific="True"
+    showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
     <Effect minstrength="0" maxstrength="1" strengthchange="-100" disabledeltatime="True">
       <StatusEffect target="Character">
         <Affliction identifier="severepain" amount="100" />
@@ -2239,9 +2812,11 @@
         <SpawnItem identifier="rleg" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128"
+      color="68,157,198,255" origin="0,0" />
   </Affliction>
-  <Affliction name="чё?!?" identifier="weirdthing23" limbspecific="True" showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
+  <Affliction name="чё?!?" identifier="weirdthing23" limbspecific="True"
+    showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
     <Effect minstrength="0" maxstrength="1" strengthchange="-100" disabledeltatime="True">
       <StatusEffect target="Character">
         <Affliction identifier="severepain" amount="100" />
@@ -2251,9 +2826,11 @@
         <SpawnItem identifier="larm" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128"
+      color="68,157,198,255" origin="0,0" />
   </Affliction>
-  <Affliction name="чё?!?" identifier="weirdthing24" limbspecific="True" showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
+  <Affliction name="чё?!?" identifier="weirdthing24" limbspecific="True"
+    showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
     <Effect minstrength="0" maxstrength="1" strengthchange="-100" disabledeltatime="True">
       <StatusEffect target="Character">
         <Affliction identifier="severepain" amount="100" />
@@ -2263,18 +2840,22 @@
         <SpawnItem identifier="rarm" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128"
+      color="68,157,198,255" origin="0,0" />
   </Affliction>
-  <Affliction name="чё?!?" identifier="weirdthing25" limbspecific="True" showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
+  <Affliction name="чё?!?" identifier="weirdthing25" limbspecific="True"
+    showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
     <Effect minstrength="0" maxstrength="1" strengthchange="-100" disabledeltatime="True">
       <StatusEffect target="Character">
         <Affliction identifier="severepain" amount="100" />
         <Affliction identifier="th_amputation" amount="99999" />
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128"
+      color="68,157,198,255" origin="0,0" />
   </Affliction>
-  <Affliction name="Острая сильная боль" identifier="severepain" limbspecific="False" maxstrength="5">
+  <Affliction name="Острая сильная боль" identifier="severepain" limbspecific="False"
+    maxstrength="5">
     <Effect minstrength="0" maxstrength="2" strengthchange="-1">
       <StatusEffect target="Character" comparison="and">
         <Conditional ishuman="true" />
@@ -2291,7 +2872,8 @@
         <Sound file="%ModDir%/Improved Med/Sound/Voice/woman_agony3.ogg" />
       </StatusEffect>
     </Effect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="256,0,128,128" color="68,157,198,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="256,0,128,128"
+      color="68,157,198,255" origin="0,0" />
   </Affliction>
   <Affliction name="Боль" identifier="pain" limbspecific="True" maxstrength="100">
     <Effect minstrength="0" maxstrength="10" strengthchange="-0.1" />
@@ -2316,6 +2898,7 @@
         <Sound file="Content/Sounds/HUMAN_chokeFemale3.ogg" />
       </StatusEffect>
     </PeriodicEffect>
-    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="256,0,128,128" color="68,157,198,255" origin="0,0" />
+    <icon texture="%ModDir%/Improved Med/Images/AfflictionIconAtlas.png" sourcerect="256,0,128,128"
+      color="68,157,198,255" origin="0,0" />
   </Affliction>
 </Afflictions>
