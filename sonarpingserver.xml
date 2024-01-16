@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- IMPORTANT NOTE: This file is almost an exact copy of sonarpingclient.xml but without the <Conditional serversidelua="lteq 0"/> conditional.
+                     This version of the file is used exclusively by the server when running server-side Lua. -->
+<Afflictions>
+  <!-- Nav Terminal ping -->
+  <Affliction name="Active sonar" identifier="activesonarlua" type="activesonar" maxstrength="200" karmachangeonapplied="-1" showiconthreshold="1000" limbspecific="false">
+    <!-- Distance: Far. -->
+    <Effect minstrength="0" maxstrength="25" strengthchange="-65">
+      <StatusEffect target="Character" targetlimb="Head" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="acoustictrauma" strength="6" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Medium. -->
+    <Effect minstrength="25" maxstrength="50" strengthchange="-65">
+      <StatusEffect target="Character" targetlimb="Head" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="acoustictrauma" strength="11" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="Torso" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="vibrationdamage" strength="7" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="false" />
+        <Affliction identifier="creaturedamage" strength="5" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Close. -->
+    <Effect minstrength="50" maxstrength="75" strengthchange="-65">
+      <StatusEffect target="Character" targetlimb="Head" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="acoustictrauma" strength="16" />
+        <Affliction identifier="brainhemorrhage" strength="3" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="Torso" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="oxygenlow" strength="20" />
+        <Affliction identifier="rupturedlung" strength="12" />
+        <Affliction identifier="vibrationdamage" strength="10" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="male" />
+        <Conditional InWater="True" />
+        <Conditional IsLocalPlayer="true" />
+        <Conditional ishuman="true" />
+        <Conditional activesonarlua="gteq 50" />
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="%ModDir%/Sounds/male_drown1.ogg" loop="false" volume="1.0" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/male_drown2.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/male_drown3.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/male_drown4.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/male_drown5.ogg" loop="false" volume="1.0" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="female" />
+        <Conditional InWater="true" />
+        <Conditional IsLocalPlayer="true" />
+        <Conditional ishuman="true" />
+        <Conditional activesonarlua="gteq 50" />
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="%ModDir%/Sounds/female_drown1.ogg" loop="false" volume="1.0" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/female_drown2.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/female_drown3.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/female_drown4.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/female_drown5.ogg" loop="false" volume="1.0" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="false" />
+        <Affliction identifier="creaturedamage" strength="15" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Very close. -->
+    <Effect minstrength="75" maxstrength="200" strengthchange="-65">
+      <StatusEffect target="Character" targetlimb="Head" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="acoustictrauma" strength="20" />
+        <Affliction identifier="brainhemorrhage" strength="22" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="Torso" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="oxygenlow" strength="30" />
+        <Affliction identifier="rupturedlung" strength="16" />
+        <Affliction identifier="vibrationdamage" strength="12" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional InWater="true" />
+        <Conditional IsLocalPlayer="true" />
+        <Conditional activesonarlua="gteq 75" />
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Sound file="%ModDir%/Sounds/sonarDistortion1.ogg" loop="false" volume="1.0" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/sonarDistortion2.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/sonarDistortion3.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/sonarDistortion4.ogg" loop="false" volume="1.0" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="false" />
+        <Affliction identifier="creaturedamage" strength="25" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Sonar Monitor ping. -->
+  <Affliction name="Beacon station sonar" identifier="activesonarbeaconlua" type="activesonar" maxstrength="200" karmachangeonapplied="-1" showiconthreshold="1000" limbspecific="false">
+    <!-- Distance: Far. -->
+    <Effect minstrength="0" maxstrength="25" strengthchange="-65">
+      <StatusEffect target="Character" targetlimb="Head" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="acoustictrauma" strength="3" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Medium. -->
+    <Effect minstrength="25" maxstrength="50" strengthchange="-65">
+      <StatusEffect target="Character" targetlimb="Head" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="acoustictrauma" strength="5.5" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="Torso" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="vibrationdamage" strength="3.5" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="false" />
+        <Affliction identifier="creaturedamage" strength="2" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Close. -->
+    <Effect minstrength="50" maxstrength="75" strengthchange="-65">
+      <StatusEffect target="Character" targetlimb="Head" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="acoustictrauma" strength="8" />
+        <Affliction identifier="brainhemorrhage" strength="1.5" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="Torso" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="oxygenlow" strength="20" />
+        <Affliction identifier="rupturedlung" strength="6" />
+        <Affliction identifier="vibrationdamage" strength="5" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="male" />
+        <Conditional InWater="True" />
+        <Conditional IsLocalPlayer="true" />
+        <Conditional ishuman="true" />
+        <Conditional activesonarbeaconlua="gteq 50" />
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="%ModDir%/Sounds/male_drown1.ogg" loop="false" volume="1.0" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/male_drown2.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/male_drown3.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/male_drown4.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/male_drown5.ogg" loop="false" volume="1.0" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="female" />
+        <Conditional InWater="true" />
+        <Conditional IsLocalPlayer="true" />
+        <Conditional ishuman="true" />
+        <Conditional activesonarbeaconlua="gteq 50" />
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="%ModDir%/Sounds/female_drown1.ogg" loop="false" volume="1.0" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/female_drown2.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/female_drown3.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/female_drown4.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/female_drown5.ogg" loop="false" volume="1.0" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="false" />
+        <Affliction identifier="creaturedamage" strength="5" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Very close. -->
+    <Effect minstrength="75" maxstrength="200" strengthchange="-65">
+      <StatusEffect target="Character" targetlimb="Head" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="acoustictrauma" strength="10" />
+        <Affliction identifier="brainhemorrhage" strength="11" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="Torso" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="oxygenlow" strength="30" />
+        <Affliction identifier="rupturedlung" strength="8" />
+        <Affliction identifier="vibrationdamage" strength="6" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional InWater="true" />
+        <Conditional IsLocalPlayer="true" />
+        <Conditional activesonarbeaconlua="gteq 75" />
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Sound file="%ModDir%/Sounds/sonarDistortion1.ogg" loop="false" volume="0.8" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/sonarDistortion2.ogg" loop="false" volume="0.8" />
+        <Sound file="%ModDir%/Sounds/sonarDistortion3.ogg" loop="false" volume="0.8" />
+        <Sound file="%ModDir%/Sounds/sonarDistortion4.ogg" loop="false" volume="0.8" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="false" />
+        <Affliction identifier="creaturedamage" strength="10" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+  <!-- Shuttle Terminal ping -->
+  <Affliction name="Shuttle active sonar" identifier="activesonarshuttlelua" type="activesonar" maxstrength="200" karmachangeonapplied="-1" showiconthreshold="1000" limbspecific="false">
+    <!-- Distance: Far. -->
+    <Effect minstrength="0" maxstrength="25" strengthchange="-65">
+      <StatusEffect target="Character" targetlimb="Head" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="acoustictrauma" strength="4.5" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Medium. -->
+    <Effect minstrength="25" maxstrength="50" strengthchange="-65">
+      <StatusEffect target="Character" targetlimb="Head" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="acoustictrauma" strength="8.25" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="Torso" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="vibrationdamage" strength="5.25" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="false" />
+        <Affliction identifier="creaturedamage" strength="5" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Close. -->
+    <Effect minstrength="50" maxstrength="75" strengthchange="-65">
+      <StatusEffect target="Character" targetlimb="Head" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="acoustictrauma" strength="12" />
+        <Affliction identifier="brainhemorrhage" strength="2.25" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="Torso" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="oxygenlow" strength="20" />
+        <Affliction identifier="rupturedlung" strength="9" />
+        <Affliction identifier="vibrationdamage" strength="7.5" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="male" />
+        <Conditional InWater="True" />
+        <Conditional IsLocalPlayer="true" />
+        <Conditional ishuman="true" />
+        <Conditional activesonarshuttlelua="gteq 50" />
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="%ModDir%/Sounds/male_drown1.ogg" loop="false" volume="1.0" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/male_drown2.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/male_drown3.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/male_drown4.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/male_drown5.ogg" loop="false" volume="1.0" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional hasspecifiertag="female" />
+        <Conditional InWater="true" />
+        <Conditional IsLocalPlayer="true" />
+        <Conditional ishuman="true" />
+        <Conditional activesonarshuttlelua="gteq 50" />
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Conditional IsUnconscious="false" />
+        <Sound file="%ModDir%/Sounds/female_drown1.ogg" loop="false" volume="1.0" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/female_drown2.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/female_drown3.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/female_drown4.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/female_drown5.ogg" loop="false" volume="1.0" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="false" />
+        <Affliction identifier="creaturedamage" strength="10" />
+      </StatusEffect>
+    </Effect>
+    <!-- Distance: Very close. -->
+    <Effect minstrength="75" maxstrength="200" strengthchange="-65">
+      <StatusEffect target="Character" targetlimb="Head" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="acoustictrauma" strength="15" />
+        <Affliction identifier="brainhemorrhage" strength="16.5" />
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimb="Torso" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="true" />
+        <Affliction identifier="oxygenlow" strength="30" />
+        <Affliction identifier="rupturedlung" strength="12" />
+        <Affliction identifier="vibrationdamage" strength="9" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional InWater="true" />
+        <Conditional IsLocalPlayer="true" />
+        <Conditional activesonarshuttlelua="gteq 75" />
+        <Conditional HasStatusTag="! sonarprotection" />
+        <Sound file="%ModDir%/Sounds/sonarDistortion1.ogg" loop="false" volume="1.0" selectionmode="Random" />
+        <Sound file="%ModDir%/Sounds/sonarDistortion2.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/sonarDistortion3.ogg" loop="false" volume="1.0" />
+        <Sound file="%ModDir%/Sounds/sonarDistortion4.ogg" loop="false" volume="1.0" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional InWater="true" />
+        <Conditional ishuman="false" />
+        <Affliction identifier="creaturedamage" strength="15" />
+      </StatusEffect>
+    </Effect>
+  </Affliction>
+</Afflictions>
