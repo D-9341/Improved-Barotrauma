@@ -30,7 +30,7 @@
         <Conditional serversidelua="lteq 0" />
         <Conditional InWater="true" />
         <Conditional ishuman="false" />
-        <Affliction identifier="creaturedamage" strength="5" />
+        <Affliction identifier="creaturedamage" strength="0.65" />
       </StatusEffect>
     </Effect>
     <!-- Distance: Close. -->
@@ -59,11 +59,11 @@
         <Conditional activesonar="gteq 50" />
         <Conditional HasStatusTag="! sonarprotection" />
         <Conditional IsUnconscious="false" />
-        <Sound file="%ModDir%/Sounds/male_drown1.ogg" loop="false" volume="1.0" selectionmode="Random" />
-        <Sound file="%ModDir%/Sounds/male_drown2.ogg" loop="false" volume="1.0" />
-        <Sound file="%ModDir%/Sounds/male_drown3.ogg" loop="false" volume="1.0" />
-        <Sound file="%ModDir%/Sounds/male_drown4.ogg" loop="false" volume="1.0" />
-        <Sound file="%ModDir%/Sounds/male_drown5.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/male_drown1.ogg" loop="false" volume="1.0" selectionmode="Random" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/male_drown2.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/male_drown3.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/male_drown4.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/male_drown5.ogg" loop="false" volume="1.0" />
       </StatusEffect>
       <StatusEffect target="Character" comparison="and">
         <Conditional serversidelua="lteq 0" />
@@ -74,17 +74,17 @@
         <Conditional activesonar="gteq 50" />
         <Conditional HasStatusTag="! sonarprotection" />
         <Conditional IsUnconscious="false" />
-        <Sound file="%ModDir%/Sounds/female_drown1.ogg" loop="false" volume="1.0" selectionmode="Random" />
-        <Sound file="%ModDir%/Sounds/female_drown2.ogg" loop="false" volume="1.0" />
-        <Sound file="%ModDir%/Sounds/female_drown3.ogg" loop="false" volume="1.0" />
-        <Sound file="%ModDir%/Sounds/female_drown4.ogg" loop="false" volume="1.0" />
-        <Sound file="%ModDir%/Sounds/female_drown5.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/female_drown1.ogg" loop="false" volume="1.0" selectionmode="Random" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/female_drown2.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/female_drown3.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/female_drown4.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/female_drown5.ogg" loop="false" volume="1.0" />
       </StatusEffect>
       <StatusEffect target="Character" comparison="and">
         <Conditional serversidelua="lteq 0" />
         <Conditional InWater="true" />
         <Conditional ishuman="false" />
-        <Affliction identifier="creaturedamage" strength="15" />
+        <Affliction identifier="creaturedamage" strength="1.25" />
       </StatusEffect>
     </Effect>
     <!-- Distance: Very close. -->
@@ -111,16 +111,16 @@
         <Conditional IsLocalPlayer="true" />
         <Conditional activesonar="gteq 75" />
         <Conditional HasStatusTag="! sonarprotection" />
-        <Sound file="%ModDir%/Sounds/sonarDistortion1.ogg" loop="false" volume="1.0" selectionmode="Random" />
-        <Sound file="%ModDir%/Sounds/sonarDistortion2.ogg" loop="false" volume="1.0" />
-        <Sound file="%ModDir%/Sounds/sonarDistortion3.ogg" loop="false" volume="1.0" />
-        <Sound file="%ModDir%/Sounds/sonarDistortion4.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/sonarDistortion1.ogg" loop="false" volume="1.0" selectionmode="Random" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/sonarDistortion2.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/sonarDistortion3.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/sonarDistortion4.ogg" loop="false" volume="1.0" />
       </StatusEffect>
       <StatusEffect target="Character" comparison="and">
         <Conditional serversidelua="lteq 0" />
         <Conditional InWater="true" />
         <Conditional ishuman="false" />
-        <Affliction identifier="creaturedamage" strength="25" />
+        <Affliction identifier="creaturedamage" strength="2" />
       </StatusEffect>
     </Effect>
   </Affliction>
@@ -153,7 +153,7 @@
         <Conditional serversidelua="lteq 0" />
         <Conditional InWater="true" />
         <Conditional ishuman="false" />
-        <Affliction identifier="creaturedamage" strength="2" />
+        <Affliction identifier="creaturedamage" strength="0.325" />
       </StatusEffect>
     </Effect>
     <!-- Distance: Close. -->
@@ -182,11 +182,11 @@
         <Conditional activesonarbeacon="gteq 50" />
         <Conditional HasStatusTag="! sonarprotection" />
         <Conditional IsUnconscious="false" />
-        <Sound file="%ModDir%/Sounds/male_drown1.ogg" loop="false" volume="1.0" selectionmode="Random" />
-        <Sound file="%ModDir%/Sounds/male_drown2.ogg" loop="false" volume="1.0" />
-        <Sound file="%ModDir%/Sounds/male_drown3.ogg" loop="false" volume="1.0" />
-        <Sound file="%ModDir%/Sounds/male_drown4.ogg" loop="false" volume="1.0" />
-        <Sound file="%ModDir%/Sounds/male_drown5.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/male_drown1.ogg" loop="false" volume="1.0" selectionmode="Random" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/male_drown2.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/male_drown3.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/male_drown4.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/male_drown5.ogg" loop="false" volume="1.0" />
       </StatusEffect>
       <StatusEffect target="Character" comparison="and">
         <Conditional serversidelua="lteq 0" />
@@ -197,17 +197,17 @@
         <Conditional activesonarbeacon="gteq 50" />
         <Conditional HasStatusTag="! sonarprotection" />
         <Conditional IsUnconscious="false" />
-        <Sound file="%ModDir%/Sounds/female_drown1.ogg" loop="false" volume="1.0" selectionmode="Random" />
-        <Sound file="%ModDir%/Sounds/female_drown2.ogg" loop="false" volume="1.0" />
-        <Sound file="%ModDir%/Sounds/female_drown3.ogg" loop="false" volume="1.0" />
-        <Sound file="%ModDir%/Sounds/female_drown4.ogg" loop="false" volume="1.0" />
-        <Sound file="%ModDir%/Sounds/female_drown5.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/female_drown1.ogg" loop="false" volume="1.0" selectionmode="Random" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/female_drown2.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/female_drown3.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/female_drown4.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/female_drown5.ogg" loop="false" volume="1.0" />
       </StatusEffect>
       <StatusEffect target="Character" comparison="and">
         <Conditional serversidelua="lteq 0" />
         <Conditional InWater="true" />
         <Conditional ishuman="false" />
-        <Affliction identifier="creaturedamage" strength="5" />
+        <Affliction identifier="creaturedamage" strength="0.625" />
       </StatusEffect>
     </Effect>
     <!-- Distance: Very close. -->
@@ -234,16 +234,16 @@
         <Conditional IsLocalPlayer="true" />
         <Conditional activesonarbeacon="gteq 75" />
         <Conditional HasStatusTag="! sonarprotection" />
-        <Sound file="%ModDir%/Sounds/sonarDistortion1.ogg" loop="false" volume="0.8" selectionmode="Random" />
-        <Sound file="%ModDir%/Sounds/sonarDistortion2.ogg" loop="false" volume="0.8" />
-        <Sound file="%ModDir%/Sounds/sonarDistortion3.ogg" loop="false" volume="0.8" />
-        <Sound file="%ModDir%/Sounds/sonarDistortion4.ogg" loop="false" volume="0.8" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/sonarDistortion1.ogg" loop="false" volume="0.8" selectionmode="Random" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/sonarDistortion2.ogg" loop="false" volume="0.8" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/sonarDistortion3.ogg" loop="false" volume="0.8" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/sonarDistortion4.ogg" loop="false" volume="0.8" />
       </StatusEffect>
       <StatusEffect target="Character" comparison="and">
         <Conditional serversidelua="lteq 0" />
         <Conditional InWater="true" />
         <Conditional ishuman="false" />
-        <Affliction identifier="creaturedamage" strength="10" />
+        <Affliction identifier="creaturedamage" strength="1" />
       </StatusEffect>
     </Effect>
   </Affliction>
@@ -276,7 +276,7 @@
         <Conditional serversidelua="lteq 0" />
         <Conditional InWater="true" />
         <Conditional ishuman="false" />
-        <Affliction identifier="creaturedamage" strength="5" />
+        <Affliction identifier="creaturedamage" strength="0.4875" />
       </StatusEffect>
     </Effect>
     <!-- Distance: Close. -->
@@ -305,11 +305,11 @@
         <Conditional activesonarshuttle="gteq 50" />
         <Conditional HasStatusTag="! sonarprotection" />
         <Conditional IsUnconscious="false" />
-        <Sound file="%ModDir%/Sounds/male_drown1.ogg" loop="false" volume="1.0" selectionmode="Random" />
-        <Sound file="%ModDir%/Sounds/male_drown2.ogg" loop="false" volume="1.0" />
-        <Sound file="%ModDir%/Sounds/male_drown3.ogg" loop="false" volume="1.0" />
-        <Sound file="%ModDir%/Sounds/male_drown4.ogg" loop="false" volume="1.0" />
-        <Sound file="%ModDir%/Sounds/male_drown5.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/male_drown1.ogg" loop="false" volume="1.0" selectionmode="Random" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/male_drown2.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/male_drown3.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/male_drown4.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/male_drown5.ogg" loop="false" volume="1.0" />
       </StatusEffect>
       <StatusEffect target="Character" comparison="and">
         <Conditional serversidelua="lteq 0" />
@@ -320,17 +320,17 @@
         <Conditional activesonarshuttle="gteq 50" />
         <Conditional HasStatusTag="! sonarprotection" />
         <Conditional IsUnconscious="false" />
-        <Sound file="%ModDir%/Sounds/female_drown1.ogg" loop="false" volume="1.0" selectionmode="Random" />
-        <Sound file="%ModDir%/Sounds/female_drown2.ogg" loop="false" volume="1.0" />
-        <Sound file="%ModDir%/Sounds/female_drown3.ogg" loop="false" volume="1.0" />
-        <Sound file="%ModDir%/Sounds/female_drown4.ogg" loop="false" volume="1.0" />
-        <Sound file="%ModDir%/Sounds/female_drown5.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/female_drown1.ogg" loop="false" volume="1.0" selectionmode="Random" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/female_drown2.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/female_drown3.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/female_drown4.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/female_drown5.ogg" loop="false" volume="1.0" />
       </StatusEffect>
       <StatusEffect target="Character" comparison="and">
         <Conditional serversidelua="lteq 0" />
         <Conditional InWater="true" />
         <Conditional ishuman="false" />
-        <Affliction identifier="creaturedamage" strength="10" />
+        <Affliction identifier="creaturedamage" strength="0.9375" />
       </StatusEffect>
     </Effect>
     <!-- Distance: Very close. -->
@@ -357,16 +357,16 @@
         <Conditional IsLocalPlayer="true" />
         <Conditional activesonarshuttle="gteq 75" />
         <Conditional HasStatusTag="! sonarprotection" />
-        <Sound file="%ModDir%/Sounds/sonarDistortion1.ogg" loop="false" volume="1.0" selectionmode="Random" />
-        <Sound file="%ModDir%/Sounds/sonarDistortion2.ogg" loop="false" volume="1.0" />
-        <Sound file="%ModDir%/Sounds/sonarDistortion3.ogg" loop="false" volume="1.0" />
-        <Sound file="%ModDir%/Sounds/sonarDistortion4.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/sonarDistortion1.ogg" loop="false" volume="1.0" selectionmode="Random" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/sonarDistortion2.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/sonarDistortion3.ogg" loop="false" volume="1.0" />
+        <Sound file="d%ModDir%/Improved Sonar/Sounds/sonarDistortion4.ogg" loop="false" volume="1.0" />
       </StatusEffect>
       <StatusEffect target="Character" comparison="and">
         <Conditional serversidelua="lteq 0" />
         <Conditional InWater="true" />
         <Conditional ishuman="false" />
-        <Affliction identifier="creaturedamage" strength="15" />
+        <Affliction identifier="creaturedamage" strength="1.5" />
       </StatusEffect>
     </Effect>
   </Affliction>
@@ -393,7 +393,7 @@
         <Conditional InWater="true" />
         <Conditional HasStatusTag="! sonarprotection" />
         <Conditional isLocalPlayer="true" />
-        <Explosion range="1" flash="false" stun="0.2" force="5" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="45" />
+        <Explosion range="1" flash="false" stun="0.2" force="0" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="45" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
         <ReduceAffliction identifier="sonarimpact" strength="1000" />
@@ -415,7 +415,7 @@
         <Conditional InWater="true" />
         <Conditional HasStatusTag="! sonarprotection" />
         <Conditional isLocalPlayer="true" />
-        <Explosion range="1" flash="false" stun="0.4" force="10" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="80" />
+        <Explosion range="1" flash="false" stun="0.4" force="0" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="80" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
         <ReduceAffliction identifier="sonarimpact" strength="1000" />
@@ -444,7 +444,7 @@
         <Conditional InWater="true" />
         <Conditional HasStatusTag="! sonarprotection" />
         <Conditional isLocalPlayer="true" />
-        <Explosion range="1" flash="false" stun="0.0" force="3" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="30" />
+        <Explosion range="1" flash="false" stun="0.0" force="0" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="30" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
         <ReduceAffliction identifier="sonarimpactbeacon" strength="1000" />
@@ -466,7 +466,7 @@
         <Conditional InWater="true" />
         <Conditional HasStatusTag="! sonarprotection" />
         <Conditional isLocalPlayer="true" />
-        <Explosion range="1" flash="false" stun="0.0" force="7" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="60" />
+        <Explosion range="1" flash="false" stun="0.0" force="0" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="60" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
         <ReduceAffliction identifier="sonarimpactbeacon" strength="1000" />
@@ -495,7 +495,7 @@
         <Conditional InWater="true" />
         <Conditional HasStatusTag="! sonarprotection" />
         <Conditional isLocalPlayer="true" />
-        <Explosion range="1" flash="false" stun="0.1" force="4" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="37.5" />
+        <Explosion range="1" flash="false" stun="0.1" force="0" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="37.5" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
         <ReduceAffliction identifier="sonarimpactshuttle" strength="1000" />
@@ -517,7 +517,7 @@
         <Conditional InWater="true" />
         <Conditional HasStatusTag="! sonarprotection" />
         <Conditional isLocalPlayer="true" />
-        <Explosion range="1" flash="false" stun="0.2" force="8.5" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="70" />
+        <Explosion range="1" flash="false" stun="0.2" force="0" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="70" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
         <ReduceAffliction identifier="sonarimpactshuttle" strength="1000" />
@@ -528,7 +528,7 @@
   <!-- Sonar hit (used in Vanilla Package only) -->
   <Affliction identifier="sonaroverlay" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="false">
     <Effect minstrength="0" maxstrength="100" strengthchange="-75" mingrainstrength="0" maxgrainstrength="20" minscreenblur="0" maxscreenblur="20" minradialdistort="0" maxradialdistort="20" minscreendistort="0" maxscreendistort="20" minafflictionoverlayalphamultiplier="0" maxafflictionoverlayalphamultiplier="2"></Effect>
-    <AfflictionOverlay texture="%ModDir%/Icons/sonarImpact.png" />
+    <AfflictionOverlay texture="d%ModDir%/Improved Sonar/Icons/sonarImpact.png" />
   </Affliction>
   <Affliction identifier="sonarvisuals" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="200" afflictionoverlayalphaislinear="false">
     <Effect minstrength="0" maxstrength="25" strengthchange="-75" mingrainstrength="0" maxgrainstrength="0.2" minscreenblur="0" maxscreenblur="0.6" minafflictionoverlayalphamultiplier="0" maxafflictionoverlayalphamultiplier="0"></Effect>
@@ -541,7 +541,7 @@
     <Effect minstrength="78" maxstrength="100" strengthchange="-50" mingrainstrength="12" maxgrainstrength="20" minscreenblur="12" maxscreenblur="20" minradialdistort="12" maxradialdistort="20" minscreendistort="12" maxscreendistort="20" minafflictionoverlayalphamultiplier="1" maxafflictionoverlayalphamultiplier="2"></Effect>
     <!-- This block exists in case impact intensity is increased in config -->
     <Effect minstrength="100" maxstrength="200" strengthchange="-120" mingrainstrength="20" maxgrainstrength="30" minscreenblur="20" maxscreenblur="30" minradialdistort="20" maxradialdistort="30" minscreendistort="20" maxscreendistort="30" minchromaticaberration="20" maxchromaticaberration="40" minbodytint="150,0,0,0" maxbodytint="200,0,0,200" minfacetint="150,0,0,0" maxfacetint="200,0,0,200" minafflictionoverlayalphamultiplier="2" maxafflictionoverlayalphamultiplier="3"></Effect>
-    <AfflictionOverlay texture="%ModDir%/Icons/sonarImpact.png" />
+    <AfflictionOverlay texture="d%ModDir%/Improved Sonar/Icons/sonarImpact.png" />
   </Affliction>
   <Affliction identifier="sonarvisualsbeacon" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="200" afflictionoverlayalphaislinear="false">
     <Effect minstrength="0" maxstrength="25" strengthchange="-75" mingrainstrength="0" maxgrainstrength="0.2" minscreenblur="0" maxscreenblur="0.6" minchromaticaberration="0" maxchromaticaberration="0.8" minafflictionoverlayalphamultiplier="0" maxafflictionoverlayalphamultiplier="0"></Effect>
@@ -554,7 +554,7 @@
     <Effect minstrength="78" maxstrength="100" strengthchange="-50" mingrainstrength="15" maxgrainstrength="20" minscreenblur="12" maxscreenblur="20" minradialdistort="8" maxradialdistort="13" minscreendistort="7" maxscreendistort="11" minchromaticaberration="15" maxchromaticaberration="20" minafflictionoverlayalphamultiplier="1" maxafflictionoverlayalphamultiplier="2"></Effect>
     <!-- This block exists in case impact intensity is increased in config -->
     <Effect minstrength="100" maxstrength="200" strengthchange="-120" mingrainstrength="20" maxgrainstrength="30" minscreenblur="20" maxscreenblur="30" minradialdistort="13" maxradialdistort="20" minscreendistort="11" maxscreendistort="20" minchromaticaberration="20" maxchromaticaberration="40" minbodytint="150,0,0,0" maxbodytint="200,0,0,200" minfacetint="150,0,0,0" maxfacetint="200,0,0,200" minafflictionoverlayalphamultiplier="2" maxafflictionoverlayalphamultiplier="3"></Effect>
-    <AfflictionOverlay texture="%ModDir%/Icons/sonarImpact2.png" />
+    <AfflictionOverlay texture="d%ModDir%/Improved Sonar/Icons/sonarImpact2.png" />
   </Affliction>
   <Affliction identifier="sonarvisualsshuttle" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="200" afflictionoverlayalphaislinear="false">
     <Effect minstrength="0" maxstrength="25" strengthchange="-75" mingrainstrength="0" maxgrainstrength="0.2" minscreenblur="0" maxscreenblur="0.6" minafflictionoverlayalphamultiplier="0" maxafflictionoverlayalphamultiplier="0"></Effect>
@@ -567,7 +567,7 @@
     <Effect minstrength="78" maxstrength="100" strengthchange="-50" mingrainstrength="12" maxgrainstrength="20" minscreenblur="20" maxscreenblur="30" minradialdistort="16" maxradialdistort="25" minscreendistort="8" maxscreendistort="15" minafflictionoverlayalphamultiplier="1" maxafflictionoverlayalphamultiplier="2"></Effect>
     <!-- This block exists in case impact intensity is increased in config -->
     <Effect minstrength="100" maxstrength="200" strengthchange="-120" mingrainstrength="20" maxgrainstrength="30" minscreenblur="30" maxscreenblur="50" minradialdistort="20" maxradialdistort="30" minscreendistort="20" maxscreendistort="30" minchromaticaberration="20" maxchromaticaberration="40" minbodytint="150,0,0,0" maxbodytint="200,0,0,200" minfacetint="150,0,0,0" maxfacetint="200,0,0,200" minafflictionoverlayalphamultiplier="2" maxafflictionoverlayalphamultiplier="3"></Effect>
-    <AfflictionOverlay texture="%ModDir%/Icons/sonarImpact3.png" />
+    <AfflictionOverlay texture="d%ModDir%/Improved Sonar/Icons/sonarImpact3.png" />
   </Affliction>
   <!-- Temporary slow effect after being hit by sonar -->
   <Affliction identifier="sonarslow" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
@@ -591,7 +591,7 @@
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true" stackable="false" comparison="and">
         <Conditional HasStatusTag="! sonarprotection" />
         <Conditional isLocalPlayer="true" />
-        <Explosion range="1" flash="false" stun="0.0" force="1" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="3.5" />
+        <Explosion range="1" flash="false" stun="0.0" force="0" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="3.5" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.3" disabledeltatime="true">
         <ReduceAffliction identifier="sonarshakestun" strength="1000" />
@@ -601,7 +601,7 @@
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true" stackable="false" comparison="and">
         <Conditional HasStatusTag="! sonarprotection" />
         <Conditional isLocalPlayer="true" />
-        <Explosion range="1" flash="false" stun="0.2" force="1" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="28" />
+        <Explosion range="1" flash="false" stun="0.2" force="0" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="28" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.4" disabledeltatime="true">
         <ReduceAffliction identifier="sonarshakestun" strength="1000" />
@@ -615,7 +615,7 @@
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true" stackable="false" comparison="and">
         <Conditional HasStatusTag="! sonarprotection" />
         <Conditional isLocalPlayer="true" />
-        <Explosion range="1" flash="false" stun="0.4" force="1" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="59" />
+        <Explosion range="1" flash="false" stun="0.4" force="0" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="59" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.5" disabledeltatime="true">
         <ReduceAffliction identifier="sonarshakestun" strength="1000" />
@@ -630,7 +630,7 @@
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true" stackable="false" comparison="and">
         <Conditional HasStatusTag="! sonarprotection" />
         <Conditional isLocalPlayer="true" />
-        <Explosion range="1" flash="false" stun="0.4" force="1" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="102" />
+        <Explosion range="1" flash="false" stun="0.4" force="0" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="102" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.5" disabledeltatime="true">
         <ReduceAffliction identifier="sonarshakestun" strength="1000" />
@@ -643,7 +643,7 @@
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true" stackable="false" comparison="and">
         <Conditional HasStatusTag="! sonarprotection" />
         <Conditional isLocalPlayer="true" />
-        <Explosion range="1" flash="false" stun="0.0" force="1" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="1.7" />
+        <Explosion range="1" flash="false" stun="0.0" force="0" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="1.7" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.3" disabledeltatime="true">
         <ReduceAffliction identifier="sonarshakestunbeacon" strength="1000" />
@@ -667,7 +667,7 @@
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true" stackable="false" comparison="and">
         <Conditional HasStatusTag="! sonarprotection" />
         <Conditional isLocalPlayer="true" />
-        <Explosion range="1" flash="false" stun="0.0" force="1" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="42.5" />
+        <Explosion range="1" flash="false" stun="0.0" force="0" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="42.5" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.5" disabledeltatime="true">
         <ReduceAffliction identifier="sonarshakestunbeacon" strength="1000" />
@@ -682,7 +682,7 @@
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true" stackable="false" comparison="and">
         <Conditional HasStatusTag="! sonarprotection" />
         <Conditional isLocalPlayer="true" />
-        <Explosion range="1" flash="false" stun="0.0" force="1" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="68" />
+        <Explosion range="1" flash="false" stun="0.0" force="0" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="68" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.5" disabledeltatime="true">
         <ReduceAffliction identifier="sonarshakestunbeacon" strength="1000" />
@@ -695,7 +695,7 @@
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true" stackable="false" comparison="and">
         <Conditional HasStatusTag="! sonarprotection" />
         <Conditional isLocalPlayer="true" />
-        <Explosion range="1" flash="false" stun="0.0" force="1" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="2.5" />
+        <Explosion range="1" flash="false" stun="0.0" force="0" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="2.5" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.3" disabledeltatime="true">
         <ReduceAffliction identifier="sonarshakestunshuttle" strength="1000" />
@@ -705,7 +705,7 @@
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true" stackable="false" comparison="and">
         <Conditional HasStatusTag="! sonarprotection" />
         <Conditional isLocalPlayer="true" />
-        <Explosion range="1" flash="false" stun="0.0" force="1" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="23.3" />
+        <Explosion range="1" flash="false" stun="0.0" force="0" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="23.3" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.4" disabledeltatime="true">
         <ReduceAffliction identifier="sonarshakestunshuttle" strength="1000" />
@@ -719,7 +719,7 @@
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true" stackable="false" comparison="and">
         <Conditional HasStatusTag="! sonarprotection" />
         <Conditional isLocalPlayer="true" />
-        <Explosion range="1" flash="false" stun="0.2" force="1" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="51" />
+        <Explosion range="1" flash="false" stun="0.2" force="0" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="51" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.5" disabledeltatime="true">
         <ReduceAffliction identifier="sonarshakestunshuttle" strength="1000" />
@@ -734,7 +734,7 @@
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true" stackable="false" comparison="and">
         <Conditional HasStatusTag="! sonarprotection" />
         <Conditional isLocalPlayer="true" />
-        <Explosion range="1" flash="false" stun="0.4" force="1" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="85" />
+        <Explosion range="1" flash="false" stun="0.4" force="0" flames="false" smoke="false" shockwave="false" sparks="false" underwaterbubble="false" ignorecover="true" severlimbsprobability="0.0" camerashakerange="1000" camerashake="85" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.5" disabledeltatime="true">
         <ReduceAffliction identifier="sonarshakestunshuttle" strength="1000" />

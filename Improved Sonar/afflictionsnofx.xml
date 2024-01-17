@@ -4,7 +4,7 @@
 <Afflictions>
   <!-- Brain hemorrhage -->
   <Affliction name="Brain hemorrhage" identifier="brainhemorrhagenofx" type="brainhemorrhage" maxstrength="100" treatmentthreshold="40" limbspecific="true" indicatorlimb="Head" healcostmultiplier="0" basehealcost="650" showiconthreshold="33" showinhealthscannerthreshold="0" causeofdeathdescription="afflictioncauseofdeath.brainhemorrhage" selfcauseofdeathdescription="afflictioncauseofdeathself.brainhemorrhage">
-    <icon texture="%ModDir%/Icons/Afflictions.png" sourcerect="384,0,128,128" origin="0,0" />
+    <icon texture="%ModDir%/Improved Sonar/Icons/Afflictions.png" sourcerect="384,0,128,128" origin="0,0" />
     <Description textidentifier="afflictiondescription.brainhemorrhage" target="OtherCharacter" minstrength="0" maxstrength="25" />
     <Description textidentifier="afflictiondescription.brainhemorrhage.medium" target="OtherCharacter" minstrength="25" maxstrength="99" />
     <Description textidentifier="afflictiondescription.brainhemorrhage.high" target="OtherCharacter" minstrength="99" maxstrength="100" />
@@ -58,30 +58,30 @@
         <Conditional isLocalPlayer="true" />
         <Conditional brainhemorrhagenofx="gteq 15" />
         <Conditional brainhemorrhagenofx="lt 32" />
-        <Sound file="%ModDir%/Sounds/brainHemorrhageStage1.ogg" volume="1.0" dontmuffle="true" loop="true" />
+        <Sound file="%ModDir%/Improved Sonar/Sounds/brainHemorrhageStage1.ogg" volume="1.0" dontmuffle="true" loop="true" />
       </StatusEffect>
       <StatusEffect target="Character" comparison="and">
         <Conditional isLocalPlayer="true" />
         <Conditional brainhemorrhagenofx="gteq 32" />
         <Conditional brainhemorrhagenofx="lt 49" />
-        <Sound file="%ModDir%/Sounds/brainHemorrhageStage2.ogg" volume="1.2" dontmuffle="true" loop="true" />
+        <Sound file="%ModDir%/Improved Sonar/Sounds/brainHemorrhageStage2.ogg" volume="1.2" dontmuffle="true" loop="true" />
       </StatusEffect>
       <StatusEffect target="Character" comparison="and">
         <Conditional isLocalPlayer="true" />
         <Conditional brainhemorrhagenofx="gteq 49" />
         <Conditional brainhemorrhagenofx="lt 66" />
-        <Sound file="%ModDir%/Sounds/brainHemorrhageStage3.ogg" volume="1.4" dontmuffle="true" loop="true" />
+        <Sound file="%ModDir%/Improved Sonar/Sounds/brainHemorrhageStage3.ogg" volume="1.4" dontmuffle="true" loop="true" />
       </StatusEffect>
       <StatusEffect target="Character" comparison="and">
         <Conditional isLocalPlayer="true" />
         <Conditional brainhemorrhagenofx="gteq 66" />
         <Conditional brainhemorrhagenofx="lt 83" />
-        <Sound file="%ModDir%/Sounds/brainHemorrhageStage4.ogg" volume="1.6" dontmuffle="true" loop="true" />
+        <Sound file="%ModDir%/Improved Sonar/Sounds/brainHemorrhageStage4.ogg" volume="1.6" dontmuffle="true" loop="true" />
       </StatusEffect>
       <StatusEffect target="Character" comparison="and">
         <Conditional isLocalPlayer="true" />
         <Conditional brainhemorrhagenofx="gteq 83" />
-        <Sound file="%ModDir%/Sounds/brainHemorrhageStage5.ogg" volume="1.8" dontmuffle="true" loop="true" />
+        <Sound file="%ModDir%/Improved Sonar/Sounds/brainHemorrhageStage5.ogg" volume="1.8" dontmuffle="true" loop="true" />
       </StatusEffect>
     </Effect>
     <!-- Kills the patient at 100% -->
@@ -92,7 +92,7 @@
       <StatusEffect target="Character" comparison="and">
         <Conditional brainhemorrhagenofx="gteq 97" />
         <Conditional IsLocalPlayer="True" />
-        <Sound file="%ModDir%/Sounds/brainDeath.ogg" loop="false" dontmuffle="true" volume="1.4" />
+        <Sound file="%ModDir%/Improved Sonar/Sounds/brainDeath.ogg" loop="false" dontmuffle="true" volume="1.4" />
       </StatusEffect>
     </Effect>
   </Affliction>
@@ -121,7 +121,7 @@
   <!-- ↓↓↓ Cosmetic Afflictions ↓↓↓ -->
   <!-- Ataxia : Poor muslce control that leads to clumsy voluntary movements. -->
   <Affliction name="Ataxia" identifier="ataxianofx" type="ataxia" maxstrength="100" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" showinhealthscannerthreshold="0" healableinmedicalclinic="false">
-    <icon texture="%ModDir%/Icons/Afflictions.png" sourcerect="896,0,128,128" origin="0,0" />
+    <icon texture="%ModDir%/Improved Sonar/Icons/Afflictions.png" sourcerect="896,0,128,128" origin="0,0" />
     <Description textidentifier="afflictiondescription.ataxia" target="OtherCharacter" />
     <Description textidentifier="afflictiondescription.ataxia.self" target="Self" />
     <Effect minstrength="0" maxstrength="100">
