@@ -358,7 +358,7 @@
     </ItemContainer>
   </Item>
   <Item name="Пуля 5.7mm" identifier="57"
-    description="Патрон высокого калибра, способный успокоить буйный экипаж. Наносит двойной заброневой урон."
+    description="Патрон высокого калибра, способный успокоить буйный экипаж. Игнорирует броню"
     category="Weapon" maxstacksize="20" interactthroughwalls="true"
     cargocontaineridentifier="metalcrate" allowasextracargo="true" Scale="0.5"
     tags="smallitem,handcannonammo,pistolammoitem" impactsoundtag="impact_metal_light">
@@ -428,7 +428,7 @@
     <Body width="106" height="49" density="70" />
     <Holdable slots="Any,LeftHand,RightHand" controlpose="true" aimpos="90,10" handle1="-30,-4"
       msg="ItemMsgPickUpSelect" />
-    <RangedWeapon reload="0.45" barrelpos="20,6" spread="0" unskilledspread="8" combatPriority="90"
+    <RangedWeapon reload="0.45" barrelpos="20,6" spread="0" unskilledspread="4" combatPriority="90"
       drawhudwhenequipped="true" crosshairscale="0.2">
       <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
       <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
@@ -507,7 +507,7 @@
       <RequiredItems items="shotgunammo" type="Contained" msg="ItemMsgAmmoRequired" />
       <RequiredSkill identifier="weapons" level="60" />
     </RangedWeapon>
-    <ItemContainer capacity="1" maxstacksize="6" itempos="27,10" iteminterval="0,-4"
+    <ItemContainer capacity="1" maxstacksize="8" itempos="27,10" iteminterval="0,-4"
       hideitems="true" containedstateindicatorstyle="bullet">
       <Containable items="shotgunammo" />
     </ItemContainer>
@@ -564,7 +564,7 @@
     </Projectile>
   </Item>
   <Item name="Mk47" identifier="mk47"
-    description="Основанный на базе AR-10 автомат, стреляющий патронами калибра 7.62x39."
+    description="Основанный на базе AR-10 автомат, стреляющий патронами калибра 7.62x39"
     category="Equipment" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,gunsmith"
     Scale="0.35" impactsoundtag="impact_metal_light">
     <Price baseprice="1500">

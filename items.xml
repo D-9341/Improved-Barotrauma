@@ -21,36 +21,36 @@
       <RequiredItem identifier="titaniumaluminiumalloy" />
       <RequiredItem identifier="rubber" amount="6" />
     </Fabricate>
-    <InventoryIcon texture="%ModDir%/Improved Sonar/Icons/anechoic_diving_suit_icon.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
-    <Sprite name="Diving Suit Item" texture="%ModDir%/Improved Sonar/Icons/Anechoic_DivingSuit_Items.png" sourcerect="0,0,152,122" depth="0.55" origin="0.5,0.5" />
-    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir%/Improved Sonar/Icons/Anechoic_DivingSuit_Items.png" sourcerect="173,0,74,180" depth="0.55" origin="0.5,0.5" />
-    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Improved Sonar/Icons/divingsuitcontainerwindow.png" sourcerect="0,0,77,214" depth="0.55" origin="-0.12,-0.14" />
-    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir%/Improved Sonar/Icons/Anechoic_DivingSuit_Items.png" sourcerect="0,186,215,69" depth="0.55" origin="0.6,0.5" />
+    <InventoryIcon texture="%ModDir%/Icons/anechoic_diving_suit_icon.png" sourcerect="0,0,128,128" origin="0.5,0.5" />
+    <Sprite name="Diving Suit Item" texture="%ModDir%/Icons/Anechoic_DivingSuit_Items.png" sourcerect="0,0,152,122" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="%ModDir%/Icons/Anechoic_DivingSuit_Items.png" sourcerect="173,0,74,180" depth="0.55" origin="0.5,0.5" />
+    <ContainedSprite name="Diving Suit Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="%ModDir%/Icons/divingsuitcontainerwindow.png" sourcerect="0,0,77,214" depth="0.55" origin="-0.12,-0.14" />
+    <ContainedSprite name="Diving Suit In Horizontal Locker" allowedcontainertags="divingsuitcontainerhorizontal" texture="%ModDir%/Icons/Anechoic_DivingSuit_Items.png" sourcerect="0,186,215,69" depth="0.55" origin="0.6,0.5" />
     <Body radius="45" width="34" density="15" />
     <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
-      <sprite name="Diving Suit Helmet Wearable" texture="%ModDir%/Improved Sonar/Icons/headgear.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" hidelimb="false" hideotherwearables="true" sourcerect="0,0,94,95" origin="0.5,0.5">
+      <sprite name="Diving Suit Helmet Wearable" texture="%ModDir%/Icons/headgear.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.65" hidelimb="false" hideotherwearables="true" sourcerect="0,0,94,95" origin="0.5,0.5">
         <LightComponent range="200.0" lightcolor="250,224,165,255" powerconsumption="10" IsOn="true" allowingameediting="false">
           <Upgrade gameversion="0.1300.0.3" allowingameediting="false" />
           <StatusEffect type="OnWearing" target="This,Character" Voltage="1.0" setvalue="true">
             <Conditional IsDead="false" />
           </StatusEffect>
-          <LightTexture texture="%ModDir%/Improved Sonar/Icons/divinghelmetlight.png" origin="0.105, 0.5" size="1.0,1.0" />
+          <LightTexture texture="%ModDir%/Icons/divinghelmetlight.png" origin="0.105, 0.5" size="1.0,1.0" />
         </LightComponent>
       </sprite>
-      <sprite name="Anechoic Diving Suit Torso" texture="%ModDir%/Improved Sonar/Icons/anechoic_DivingSuit.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Anechoic Diving Suit Right Hand" texture="%ModDir%/Improved Sonar/Icons/anechoic_DivingSuit.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Anechoic Diving Suit Left Hand" texture="%ModDir%/Improved Sonar/Icons/anechoic_DivingSuit.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Anechoic Diving Suit Right Lower Arm" texture="%ModDir%/Improved Sonar/Icons/anechoic_DivingSuit.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Anechoic Diving Suit Left Lower Arm" texture="%ModDir%/Improved Sonar/Icons/anechoic_DivingSuit.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Anechoic Diving Suit Right Upper Arm" texture="%ModDir%/Improved Sonar/Icons/anechoic_DivingSuit.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Anechoic Diving Suit Left Upper Arm" texture="%ModDir%/Improved Sonar/Icons/anechoic_DivingSuit.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Anechoic Diving Suit Waist" texture="%ModDir%/Improved Sonar/Icons/anechoic_DivingSuit.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Anechoic Diving Suit Right Thigh" texture="%ModDir%/Improved Sonar/Icons/anechoic_DivingSuit.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Anechoic Diving Suit Left Thigh" texture="%ModDir%/Improved Sonar/Icons/anechoic_DivingSuit.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Anechoic Diving Suit Right Leg" texture="%ModDir%/Improved Sonar/Icons/anechoic_DivingSuit.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Anechoic Diving Suit Left Leg" texture="%ModDir%/Improved Sonar/Icons/anechoic_DivingSuit.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Anechoic Diving Suit Left Shoe" texture="%ModDir%/Improved Sonar/Icons/anechoic_DivingSuit.png" limb="LeftFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
-      <sprite name="Anechoic Diving Suit Right Shoe" texture="%ModDir%/Improved Sonar/Icons/anechoic_DivingSuit.png" limb="RightFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Anechoic Diving Suit Torso" texture="%ModDir%/Icons/anechoic_DivingSuit.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Anechoic Diving Suit Right Hand" texture="%ModDir%/Icons/anechoic_DivingSuit.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Anechoic Diving Suit Left Hand" texture="%ModDir%/Icons/anechoic_DivingSuit.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Anechoic Diving Suit Right Lower Arm" texture="%ModDir%/Icons/anechoic_DivingSuit.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Anechoic Diving Suit Left Lower Arm" texture="%ModDir%/Icons/anechoic_DivingSuit.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Anechoic Diving Suit Right Upper Arm" texture="%ModDir%/Icons/anechoic_DivingSuit.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Anechoic Diving Suit Left Upper Arm" texture="%ModDir%/Icons/anechoic_DivingSuit.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Anechoic Diving Suit Waist" texture="%ModDir%/Icons/anechoic_DivingSuit.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Anechoic Diving Suit Right Thigh" texture="%ModDir%/Icons/anechoic_DivingSuit.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Anechoic Diving Suit Left Thigh" texture="%ModDir%/Icons/anechoic_DivingSuit.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Anechoic Diving Suit Right Leg" texture="%ModDir%/Icons/anechoic_DivingSuit.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Anechoic Diving Suit Left Leg" texture="%ModDir%/Icons/anechoic_DivingSuit.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Anechoic Diving Suit Left Shoe" texture="%ModDir%/Icons/anechoic_DivingSuit.png" limb="LeftFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Anechoic Diving Suit Right Shoe" texture="%ModDir%/Icons/anechoic_DivingSuit.png" limb="RightFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
       <StatusEffect type="OnWearing" target="Character" tags="sonarprotection" duration="0.1" />
       <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
       <StatusEffect type="OnWearing" target="Character" HideFace="false" ObstructVision="true" PressureProtection="6000.0" SpeedMultiplier="0.9" LowPassMultiplier="0.01" setvalue="true" disabledeltatime="true">

@@ -1,5 +1,5 @@
 RealSonar = {}
-RealSonar.Path = table.pack(...)[5]
+RealSonar.Path = table.pack(...)[1]
 RealSonar.sonarItems = {}
 RealSonar.EnemySub = nil
 RealSonar.LITE = false

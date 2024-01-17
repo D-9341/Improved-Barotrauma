@@ -5,26 +5,26 @@
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="128,960,64,64" origin="0.5,0.45" />
       <Upgrade gameversion="0.10.0.0" scale="*0.5" />
       <Upgrade gameversion="0.14.4.0" positiony="+30" />
-      <Sprite texture="%ModDir%/Improved Sonar/UI/CommandDevices.png" depth="0.8" sourcerect="0,0,384,304" origin="0.5,0.5" />
-      <BrokenSprite texture="%ModDir%/Improved Sonar/UI/CommandDevices.png" sourcerect="0,320,384,304" depth="0.8" maxcondition="80" fadein="true" origin="0.5,0.5" />
-      <BrokenSprite texture="%ModDir%/Improved Sonar/UI/CommandDevices.png" sourcerect="0,640,384,304" depth="0.8" maxcondition="0" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/UI/CommandDevices.png" depth="0.8" sourcerect="0,0,384,304" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir%/UI/CommandDevices.png" sourcerect="0,320,384,304" depth="0.8" maxcondition="80" fadein="true" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir%/UI/CommandDevices.png" sourcerect="0,640,384,304" depth="0.8" maxcondition="0" origin="0.5,0.5" />
       <Steering minvoltage="0.5" canbeselected="true" powerconsumption="10" linkuitocomponent="Sonar" msg="ItemMsgInteractSelect" allowuioverlap="true" hudlayer="-1">
         <GuiFrame relativesize="0.55,0.59" anchor="Center" style="OuterGlow" color="0,0,0,0.8" relativeoffset="0.1,-0.05" draggable="false" />
         <StatusEffect type="InWater" target="This" condition="-0.5" />
         <StatusEffect type="OnBroken" target="This">
-          <sound file="%ModDir%/Improved Sonar/Sounds/powerDown.ogg" range="3000.0" volume="2" />
+          <sound file="%ModDir%/Sounds/powerDown.ogg" range="3000.0" volume="2" />
         </StatusEffect>
-        <poweronsound file="%ModDir%/Improved Sonar/Sounds/sonarPowerOn1.ogg" range="3000" loop="false" />
-        <MaintainPosIndicator texture="%ModDir%/Improved Sonar/UI/NavUI.png" sourcerect="82,0,93,93" />
-        <MaintainPosOriginIndicator texture="%ModDir%/Improved Sonar/UI/NavUI.png" sourcerect="0,0,66,66" />
-        <SteeringIndicator texture="%ModDir%/Improved Sonar/UI/NavUI.png" sourcerect="0,135,362,16" origin="0,0.5" />
+        <poweronsound file="%ModDir%/Sounds/sonarPowerOn1.ogg" range="3000" loop="false" />
+        <MaintainPosIndicator texture="%ModDir%/UI/NavUI.png" sourcerect="82,0,93,93" />
+        <MaintainPosOriginIndicator texture="%ModDir%/UI/NavUI.png" sourcerect="0,0,66,66" />
+        <SteeringIndicator texture="%ModDir%/UI/NavUI.png" sourcerect="0,135,362,16" origin="0,0.5" />
         <LightComponent range="10.0" lightcolor="255,255,255,0" powerconsumption="5" IsOn="true" castshadows="false" alphablend="false" allowingameediting="false">
           <Upgrade gameversion="0.9.600.0" lightcolor="255,255,255,0" />
-          <sprite texture="%ModDir%/Improved Sonar/UI/navigatorLights.png" depth="0.025" sourcerect="0,0,384,304" origin="0.5,0.5" alpha="1.0" />
+          <sprite texture="%ModDir%/UI/navigatorLights.png" depth="0.025" sourcerect="0,0,384,304" origin="0.5,0.5" alpha="1.0" />
         </LightComponent>
         <LightComponent range="10.0" lightcolor="255,255,255,0" powerconsumption="5" IsOn="true" castshadows="false" alphablend="false" blinkfrequency="1" allowingameediting="false">
           <Upgrade gameversion="0.9.600.0" lightcolor="255,255,255,0" />
-          <sprite texture="%ModDir%/Improved Sonar/UI/navigatorLights.png" depth="0.025" sourcerect="400,0,384,304" origin="0.5,0.5" alpha="1.0" />
+          <sprite texture="%ModDir%/UI/navigatorLights.png" depth="0.025" sourcerect="400,0,384,304" origin="0.5,0.5" alpha="1.0" />
         </LightComponent>
       </Steering>
       <!-- Sonar range increased from 100m > 120m. AI now detect sonar at 100m instead of 80m. -->
@@ -51,21 +51,21 @@
         </StatusEffect>
         <!-- Extremely far sonar ambience that plays outside the range of any afflictions. -->
         <StatusEffect type="OnUse">
-          <sound file="%ModDir%/Improved Sonar/Sounds/sonarAmbience1.ogg" type="OnUse" range="24000.0" volume="0.8" selectionmode="random" />
-          <sound file="%ModDir%/Improved Sonar/Sounds/sonarAmbience2.ogg" type="OnUse" range="24000.0" volume="0.8" />
-          <sound file="%ModDir%/Improved Sonar/Sounds/sonarAmbience3.ogg" type="OnUse" range="24000.0" volume="0.8" />
+          <sound file="%ModDir%/Sounds/sonarAmbience1.ogg" type="OnUse" range="24000.0" volume="0.8" selectionmode="random" />
+          <sound file="%ModDir%/Sounds/sonarAmbience2.ogg" type="OnUse" range="24000.0" volume="0.8" />
+          <sound file="%ModDir%/Sounds/sonarAmbience3.ogg" type="OnUse" range="24000.0" volume="0.8" />
         </StatusEffect>
         <GuiFrame relativesize="0.55,0.59" anchor="Center" relativeoffset="0.1,-0.05" draggable="false" />
-        <PingCircle texture="%ModDir%/Improved Sonar/UI/pingCircle.png" origin="0.5,0.5" />
-        <DirectionalPingCircle texture="%ModDir%/Improved Sonar/UI/directionalPingCircle.png" origin="0.0,0.5" />
-        <ScreenOverlay texture="%ModDir%/Improved Sonar/UI/sonarOverlay.png" origin="0.5,0.5" />
-        <ScreenBackground texture="%ModDir%/Improved Sonar/UI/sonarBackground.png" origin="0.5,0.5" />
-        <DirectionalPingBackground texture="%ModDir%/Improved Sonar/UI/directionalPingBackground.png" origin="0.5,0.5" />
-        <DirectionalPingButton index="0" texture="%ModDir%/Improved Sonar/UI/directionalPingButton.png" sourcerect="0,0,91,266" origin="-4.5275,0.5" />
-        <DirectionalPingButton index="1" texture="%ModDir%/Improved Sonar/UI/directionalPingButton.png" sourcerect="133,0,91,266" origin="-4.5275,0.5" />
-        <DirectionalPingButton index="2" texture="%ModDir%/Improved Sonar/UI/directionalPingButton.png" sourcerect="266,0,91,266" origin="-4.5275,0.5" />
-        <Blip texture="%ModDir%/Improved Sonar/UI/sonarBlip.png" origin="0.5,0.5" />
-        <LineSprite texture="%ModDir%/Improved Sonar/UI/NavUI.png" sourcerect="181,141,109,4" origin="0,0.5" />
+        <PingCircle texture="%ModDir%/UI/pingCircle.png" origin="0.5,0.5" />
+        <DirectionalPingCircle texture="%ModDir%/UI/directionalPingCircle.png" origin="0.0,0.5" />
+        <ScreenOverlay texture="%ModDir%/UI/sonarOverlay.png" origin="0.5,0.5" />
+        <ScreenBackground texture="%ModDir%/UI/sonarBackground.png" origin="0.5,0.5" />
+        <DirectionalPingBackground texture="%ModDir%/UI/directionalPingBackground.png" origin="0.5,0.5" />
+        <DirectionalPingButton index="0" texture="%ModDir%/UI/directionalPingButton.png" sourcerect="0,0,91,266" origin="-4.5275,0.5" />
+        <DirectionalPingButton index="1" texture="%ModDir%/UI/directionalPingButton.png" sourcerect="133,0,91,266" origin="-4.5275,0.5" />
+        <DirectionalPingButton index="2" texture="%ModDir%/UI/directionalPingButton.png" sourcerect="266,0,91,266" origin="-4.5275,0.5" />
+        <Blip texture="%ModDir%/UI/sonarBlip.png" origin="0.5,0.5" />
+        <LineSprite texture="%ModDir%/UI/NavUI.png" sourcerect="181,141,109,4" origin="0,0.5" />
         <icon identifier="outpost" texture="Content/UI/MainIconsAtlas.png" sourcerect="352,398,16,8" origin="0.5,0.5" />
         <icon identifier="submarine" texture="Content/UI/MainIconsAtlas.png" sourcerect="353,407,14,6" origin="0.5,0.5" />
         <icon identifier="shuttle" texture="Content/UI/MainIconsAtlas.png" sourcerect="336,407,8,6" origin="0.5,0.5" />
@@ -134,9 +134,9 @@
       <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="128,960,64,64" origin="0.5,0.45" />
       <Upgrade gameversion="0.10.0.0" scale="0.5" />
       <Upgrade gameversion="0.14.4.0" positiony="+53" />
-      <Sprite texture="%ModDir%/Improved Sonar/UI/CommandDevices.png" depth="0.8" sourcerect="0,0,384,212" origin="0.5,0.5" />
-      <BrokenSprite texture="%ModDir%/Improved Sonar/UI/CommandDevices.png" sourcerect="0,320,384,212" depth="0.8" maxcondition="80" fadein="true" origin="0.5,0.5" />
-      <BrokenSprite texture="%ModDir%/Improved Sonar/UI/CommandDevices.png" sourcerect="0,640,384,212" depth="0.8" maxcondition="0" origin="0.5,0.5" />
+      <Sprite texture="%ModDir%/UI/CommandDevices.png" depth="0.8" sourcerect="0,0,384,212" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir%/UI/CommandDevices.png" sourcerect="0,320,384,212" depth="0.8" maxcondition="80" fadein="true" origin="0.5,0.5" />
+      <BrokenSprite texture="%ModDir%/UI/CommandDevices.png" sourcerect="0,640,384,212" depth="0.8" maxcondition="0" origin="0.5,0.5" />
       <aitarget sightrange="200" soundrange="6500" staticsight="true" fadeouttime="5" />
       <Sonar MaxSoundRange="8000" range="8000" canbeselected="true" powerconsumption="100" displaybordersize="-0.1" allowuioverlap="true" hudlayer="-1" rightlayout="true">
         <!-- General pings -->
@@ -160,21 +160,21 @@
         </StatusEffect>
         <!-- Extremely far sonar ambience that plays outside the range of any afflictions. -->
         <StatusEffect type="OnUse">
-          <sound file="%ModDir%/Improved Sonar/Sounds/sonarAmbience1.ogg" type="OnUse" range="16000.0" volume="0.8" selectionmode="random" />
-          <sound file="%ModDir%/Improved Sonar/Sounds/sonarAmbience2.ogg" type="OnUse" range="16000.0" volume="0.8" />
-          <sound file="%ModDir%/Improved Sonar/Sounds/sonarAmbience3.ogg" type="OnUse" range="16000.0" volume="0.8" />
+          <sound file="%ModDir%/Sounds/sonarAmbience1.ogg" type="OnUse" range="16000.0" volume="0.8" selectionmode="random" />
+          <sound file="%ModDir%/Sounds/sonarAmbience2.ogg" type="OnUse" range="16000.0" volume="0.8" />
+          <sound file="%ModDir%/Sounds/sonarAmbience3.ogg" type="OnUse" range="16000.0" volume="0.8" />
         </StatusEffect>
         <GuiFrame relativesize="0.55,0.59" anchor="Center" style="OuterGlow" color="0,0,0,0.8" relativeoffset="0.1,-0.05" />
-        <PingCircle texture="%ModDir%/Improved Sonar/UI/pingCircle2.png" origin="0.5,0.5" />
-        <DirectionalPingCircle texture="%ModDir%/Improved Sonar/UI/directionalPingCircle2.png" origin="0.0,0.5" />
-        <ScreenOverlay texture="%ModDir%/Improved Sonar/UI/sonarOverlay2.png" origin="0.5,0.5" />
-        <ScreenBackground texture="%ModDir%/Improved Sonar/UI/sonarBackground2.png" origin="0.5,0.5" />
-        <DirectionalPingBackground texture="%ModDir%/Improved Sonar/UI/directionalPingBackground2.png" origin="0.5,0.5" />
-        <DirectionalPingButton index="0" texture="%ModDir%/Improved Sonar/UI/directionalPingButton2.png" sourcerect="0,0,91,266" origin="-4.5275,0.5" />
-        <DirectionalPingButton index="1" texture="%ModDir%/Improved Sonar/UI/directionalPingButton2.png" sourcerect="133,0,91,266" origin="-4.5275,0.5" />
-        <DirectionalPingButton index="2" texture="%ModDir%/Improved Sonar/UI/directionalPingButton2.png" sourcerect="266,0,91,266" origin="-4.5275,0.5" />
-        <Blip texture="%ModDir%/Improved Sonar/UI/sonarBlip2.png" origin="0.5,0.5" />
-        <LineSprite texture="%ModDir%/Improved Sonar/UI/NavUI.png" sourcerect="181,141,109,4" origin="0,0.5" />
+        <PingCircle texture="%ModDir%/UI/pingCircle2.png" origin="0.5,0.5" />
+        <DirectionalPingCircle texture="%ModDir%/UI/directionalPingCircle2.png" origin="0.0,0.5" />
+        <ScreenOverlay texture="%ModDir%/UI/sonarOverlay2.png" origin="0.5,0.5" />
+        <ScreenBackground texture="%ModDir%/UI/sonarBackground2.png" origin="0.5,0.5" />
+        <DirectionalPingBackground texture="%ModDir%/UI/directionalPingBackground2.png" origin="0.5,0.5" />
+        <DirectionalPingButton index="0" texture="%ModDir%/UI/directionalPingButton2.png" sourcerect="0,0,91,266" origin="-4.5275,0.5" />
+        <DirectionalPingButton index="1" texture="%ModDir%/UI/directionalPingButton2.png" sourcerect="133,0,91,266" origin="-4.5275,0.5" />
+        <DirectionalPingButton index="2" texture="%ModDir%/UI/directionalPingButton2.png" sourcerect="266,0,91,266" origin="-4.5275,0.5" />
+        <Blip texture="%ModDir%/UI/sonarBlip2.png" origin="0.5,0.5" />
+        <LineSprite texture="%ModDir%/UI/NavUI.png" sourcerect="181,141,109,4" origin="0,0.5" />
         <icon identifier="outpost" texture="Content/UI/MainIconsAtlas.png" sourcerect="352,398,16,8" origin="0.5,0.5" />
         <icon identifier="submarine" texture="Content/UI/MainIconsAtlas.png" sourcerect="353,407,14,6" origin="0.5,0.5" />
         <icon identifier="shuttle" texture="Content/UI/MainIconsAtlas.png" sourcerect="336,407,8,6" origin="0.5,0.5" />
@@ -223,9 +223,9 @@
       <Steering minvoltage="0.5" canbeselected="true" powerconsumption="10" linkuitocomponent="Sonar" msg="ItemMsgInteractSelect" allowuioverlap="true" hudlayer="-1">
         <GuiFrame relativesize="0.55,0.59" anchor="Center" style="OuterGlow" color="0,0,0,0.8" relativeoffset="0.1,-0.05" draggable="false" />
         <StatusEffect type="InWater" target="This" condition="-0.5" />
-        <MaintainPosIndicator texture="%ModDir%/Improved Sonar/UI/NavUI2.png" sourcerect="82,0,93,93" />
-        <MaintainPosOriginIndicator texture="%ModDir%/Improved Sonar/UI/NavUI2.png" sourcerect="0,0,66,66" />
-        <SteeringIndicator texture="%ModDir%/Improved Sonar/UI/NavUI2.png" sourcerect="0,135,362,16" origin="0,0.5" />
+        <MaintainPosIndicator texture="%ModDir%/UI/NavUI2.png" sourcerect="82,0,93,93" />
+        <MaintainPosOriginIndicator texture="%ModDir%/UI/NavUI2.png" sourcerect="0,0,66,66" />
+        <SteeringIndicator texture="%ModDir%/UI/NavUI2.png" sourcerect="0,135,362,16" origin="0,0.5" />
         <poweronsound file="Content/Items/PowerOnLight2.ogg" range="1000" loop="false" />
       </Steering>
       <aitarget sightrange="200" soundrange="8000" staticsight="true" fadeouttime="5" />
@@ -251,21 +251,21 @@
         </StatusEffect>
         <!-- Extremely far sonar ambience that plays outside the range of any afflictions. -->
         <StatusEffect type="OnUse">
-          <sound file="%ModDir%/Improved Sonar/Sounds/sonarAmbienceShuttle1.ogg" type="OnUse" range="20000.0" volume="0.5" selectionmode="random" />
-          <sound file="%ModDir%/Improved Sonar/Sounds/sonarAmbienceShuttle2.ogg" type="OnUse" range="20000.0" volume="0.6" />
-          <sound file="%ModDir%/Improved Sonar/Sounds/sonarAmbienceShuttle3.ogg" type="OnUse" range="20000.0" volume="0.7" />
+          <sound file="%ModDir%/Sounds/sonarAmbienceShuttle1.ogg" type="OnUse" range="20000.0" volume="0.5" selectionmode="random" />
+          <sound file="%ModDir%/Sounds/sonarAmbienceShuttle2.ogg" type="OnUse" range="20000.0" volume="0.6" />
+          <sound file="%ModDir%/Sounds/sonarAmbienceShuttle3.ogg" type="OnUse" range="20000.0" volume="0.7" />
         </StatusEffect>
         <GuiFrame relativesize="0.55,0.59" anchor="Center" relativeoffset="0.1,-0.05" draggable="false" />
-        <PingCircle texture="%ModDir%/Improved Sonar/UI/pingCircle3.png" origin="0.5,0.5" />
-        <DirectionalPingCircle texture="%ModDir%/Improved Sonar/UI/directionalPingCircle3.png" origin="0.0,0.5" />
-        <ScreenOverlay texture="%ModDir%/Improved Sonar/UI/sonarOverlay3.png" origin="0.5,0.5" />
-        <ScreenBackground texture="%ModDir%/Improved Sonar/UI/sonarBackground3.png" origin="0.5,0.5" />
-        <DirectionalPingBackground texture="%ModDir%/Improved Sonar/UI/directionalPingBackground3.png" origin="0.5,0.5" />
-        <DirectionalPingButton index="0" texture="%ModDir%/Improved Sonar/UI/directionalPingButton3.png" sourcerect="0,0,91,266" origin="-4.5275,0.5" />
-        <DirectionalPingButton index="1" texture="%ModDir%/Improved Sonar/UI/directionalPingButton3.png" sourcerect="133,0,91,266" origin="-4.5275,0.5" />
-        <DirectionalPingButton index="2" texture="%ModDir%/Improved Sonar/UI/directionalPingButton3.png" sourcerect="266,0,91,266" origin="-4.5275,0.5" />
-        <Blip texture="%ModDir%/Improved Sonar/UI/sonarBlip3.png" origin="0.5,0.5" />
-        <LineSprite texture="%ModDir%/Improved Sonar/UI/NavUI.png" sourcerect="181,141,109,4" origin="0,0.5" />
+        <PingCircle texture="%ModDir%/UI/pingCircle3.png" origin="0.5,0.5" />
+        <DirectionalPingCircle texture="%ModDir%/UI/directionalPingCircle3.png" origin="0.0,0.5" />
+        <ScreenOverlay texture="%ModDir%/UI/sonarOverlay3.png" origin="0.5,0.5" />
+        <ScreenBackground texture="%ModDir%/UI/sonarBackground3.png" origin="0.5,0.5" />
+        <DirectionalPingBackground texture="%ModDir%/UI/directionalPingBackground3.png" origin="0.5,0.5" />
+        <DirectionalPingButton index="0" texture="%ModDir%/UI/directionalPingButton3.png" sourcerect="0,0,91,266" origin="-4.5275,0.5" />
+        <DirectionalPingButton index="1" texture="%ModDir%/UI/directionalPingButton3.png" sourcerect="133,0,91,266" origin="-4.5275,0.5" />
+        <DirectionalPingButton index="2" texture="%ModDir%/UI/directionalPingButton3.png" sourcerect="266,0,91,266" origin="-4.5275,0.5" />
+        <Blip texture="%ModDir%/UI/sonarBlip3.png" origin="0.5,0.5" />
+        <LineSprite texture="%ModDir%/UI/NavUI.png" sourcerect="181,141,109,4" origin="0,0.5" />
         <icon identifier="outpost" texture="Content/UI/MainIconsAtlas.png" sourcerect="352,398,16,8" origin="0.5,0.5" />
         <icon identifier="submarine" texture="Content/UI/MainIconsAtlas.png" sourcerect="353,407,14,6" origin="0.5,0.5" />
         <icon identifier="shuttle" texture="Content/UI/MainIconsAtlas.png" sourcerect="336,407,8,6" origin="0.5,0.5" />

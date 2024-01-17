@@ -20,18 +20,18 @@
       <Item identifier="antibleeding2" />
       <Item identifier="elastin" />
     </Deconstruct>
-    <InventoryIcon texture="%ModDir%/Improved Sonar/Icons/medicineIcons.png" sourcerect="64,0,64,64" origin="0.5,0.5" />
-    <Sprite texture="%ModDir%/Improved Sonar/Icons/medicines.png" sourcerect="37,0,37,69" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="%ModDir%/Icons/medicineIcons.png" sourcerect="64,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Icons/medicines.png" sourcerect="37,0,37,69" depth="0.6" origin="0.5,0.5" />
     <Body width="25" height="40" density="15" />
     <SuitableTreatment identifier="rupturedlung" suitability="100" />
     <SuitableTreatment identifier="acoustictrauma" suitability="50" />
     <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="10" reload="1.0" msg="ItemMsgPickUpSelect">
       <RequiredSkill identifier="medical" level="35" />
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true">
-        <Sound file="%ModDir%/Improved Sonar/Sounds/smartGraft1.ogg" range="500" selectionmode="random" />
-        <Sound file="%ModDir%/Improved Sonar/Sounds/smartGraft2.ogg" range="500" />
-        <Sound file="%ModDir%/Improved Sonar/Sounds/smartGraft3.ogg" range="500" />
-        <Sound file="%ModDir%/Improved Sonar/Sounds/smartGraft4.ogg" range="500" />
+        <Sound file="%ModDir%/Sounds/smartGraft1.ogg" range="500" selectionmode="random" />
+        <Sound file="%ModDir%/Sounds/smartGraft2.ogg" range="500" />
+        <Sound file="%ModDir%/Sounds/smartGraft3.ogg" range="500" />
+        <Sound file="%ModDir%/Sounds/smartGraft4.ogg" range="500" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnSuccess" target="This, Limb" duration="25.0">
         <ReduceAffliction type="rupturedlung" amount="3" />
@@ -77,8 +77,8 @@
       <Item identifier="adrenaline" />
       <Item identifier="deusizine" />
     </Deconstruct>
-    <InventoryIcon texture="%ModDir%/Improved Sonar/Icons/medicineIcons.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
-    <Sprite texture="%ModDir%/Improved Sonar/Icons/medicines.png" sourcerect="0,0,37,69" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="%ModDir%/Icons/medicineIcons.png" sourcerect="0,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Icons/medicines.png" sourcerect="0,0,37,69" depth="0.6" origin="0.5,0.5" />
     <Body width="35" height="65" density="15" />
     <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
       <RequiredSkill identifier="medical" level="70" />
@@ -91,12 +91,12 @@
       <StatusEffect type="OnFailure" target="UseTarget, Limb" comparison="and">
         <Conditional isLocalPlayer="true" />
         <Conditional limbtype="eq head" />
-        <Sound file="%ModDir%/Improved Sonar/Sounds/cortizideInjection.ogg" dontmuffle="true" volume="1.5" />
+        <Sound file="%ModDir%/Sounds/cortizideInjection.ogg" dontmuffle="true" volume="1.5" />
       </StatusEffect>
       <StatusEffect type="OnSuccess" target="UseTarget, Limb" comparison="and">
         <Conditional isLocalPlayer="true" />
         <Conditional limbtype="eq head" />
-        <Sound file="%ModDir%/Improved Sonar/Sounds/cortizideInjection.ogg" dontmuffle="true" volume="1.5" />
+        <Sound file="%ModDir%/Sounds/cortizideInjection.ogg" dontmuffle="true" volume="1.5" />
       </StatusEffect>
       <!-- Apply "cortizideinjection" if administered to the head. This affliction handles the visuals. -->
       <StatusEffect tags="medical" type="OnSuccess" target="This, Limb" disabledeltatime="true" interval="1" multiplyafflictionsbymaxvitality="true" comparison="and">
@@ -253,8 +253,8 @@
     <SuitableTreatment identifier="mannainfluence" suitability="-1000" />
     <SuitableTreatment identifier="mannausage" suitability="-1000" />
     <SuitableTreatment identifier="mannaoverdose" suitability="-1000" />
-    <InventoryIcon texture="%ModDir%/Improved Sonar/Icons/medicineIcons.png" sourcerect="128,0,64,64" origin="0.5,0.5" />
-    <Sprite texture="%ModDir%/Improved Sonar/Icons/medicines.png" sourcerect="74,0,74,69" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="%ModDir%/Icons/medicineIcons.png" sourcerect="128,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Icons/medicines.png" sourcerect="74,0,74,69" depth="0.6" origin="0.5,0.5" />
     <Body width="80" height="42" density="11" />
     <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
       <RequiredSkill identifier="medical" level="35" />

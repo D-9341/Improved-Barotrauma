@@ -140,8 +140,8 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingAirClose1.ogg" volume="1.0" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingAirClose2.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarPingAirClose1.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarPingAirClose2.ogg" volume="1.0" />
         <Affliction identifier="sonarTailAirClose" amount="1" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
@@ -153,8 +153,8 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingAirMedium1.ogg" volume="1.0" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingAirMedium2.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarPingAirMedium1.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarPingAirMedium2.ogg" volume="1.0" />
         <Affliction identifier="sonarTailAirMedium" amount="1" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
@@ -166,9 +166,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingAirFar1.ogg" volume="1.0" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingAirFar2.ogg" volume="1.0" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingAirFar3.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarPingAirFar1.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarPingAirFar2.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarPingAirFar3.ogg" volume="1.0" />
         <Affliction identifier="sonarTailAirFar" amount="1" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
@@ -181,9 +181,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingWaterVeryClose1.ogg" volume="0.30" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingWaterVeryClose2.ogg" volume="0.30" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingWaterVeryClose3.ogg" volume="0.30" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterVeryClose1.ogg" volume="0.30" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterVeryClose2.ogg" volume="0.30" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterVeryClose3.ogg" volume="0.30" dontmuffle="true" />
         <Affliction identifier="sonarTailWaterVeryClose" amount="1" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
@@ -195,8 +195,8 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingWaterClose1.ogg" volume="0.50" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingWaterClose2.ogg" volume="0.50" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterClose1.ogg" volume="0.50" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterClose2.ogg" volume="0.50" dontmuffle="true" />
         <Affliction identifier="sonarTailWaterClose" amount="1" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
@@ -208,9 +208,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingWaterMedium1.ogg" volume="0.60" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingWaterMedium2.ogg" volume="0.60" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingWaterMedium3.ogg" volume="0.60" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterMedium1.ogg" volume="0.60" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterMedium2.ogg" volume="0.60" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterMedium3.ogg" volume="0.60" dontmuffle="true" />
         <Affliction identifier="sonarTailWaterMedium" amount="1" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
@@ -222,8 +222,8 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingWaterFar1.ogg" volume="0.65" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingWaterFar2.ogg" volume="0.65" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterFar1.ogg" volume="0.65" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterFar2.ogg" volume="0.65" dontmuffle="true" />
         <Affliction identifier="sonarTailWaterFar" amount="1" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
@@ -236,9 +236,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingSuitVeryClose1.ogg" volume="1.2" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingSuitVeryClose2.ogg" volume="1.2" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingSuitVeryClose3.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitVeryClose1.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitVeryClose2.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitVeryClose3.ogg" volume="1.2" dontmuffle="true" />
         <Affliction identifier="sonarTailSuitVeryClose" amount="1" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
@@ -250,9 +250,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingSuitClose1.ogg" volume="0.70" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingSuitClose2.ogg" volume="0.70" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingSuitClose3.ogg" volume="0.70" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitClose1.ogg" volume="0.70" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitClose2.ogg" volume="0.70" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitClose3.ogg" volume="0.70" dontmuffle="true" />
         <Affliction identifier="sonarTailSuitClose" amount="1" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
@@ -264,9 +264,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingSuitMedium1.ogg" volume="1.1" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingSuitMedium2.ogg" volume="1.1" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingSuitMedium3.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitMedium1.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitMedium2.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitMedium3.ogg" volume="1.1" dontmuffle="true" />
         <Affliction identifier="sonarTailSuitMedium" amount="1" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
@@ -278,9 +278,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingSuitFar1.ogg" volume="0.55" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingSuitFar2.ogg" volume="0.55" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingSuitFar3.ogg" volume="0.55" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitFar1.ogg" volume="0.55" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitFar2.ogg" volume="0.55" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitFar3.ogg" volume="0.55" dontmuffle="true" />
         <Affliction identifier="sonarTailSuitFar" amount="1" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
@@ -313,8 +313,8 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailAirClose1.ogg" volume="1.0" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailAirClose2.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarTailAirClose1.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarTailAirClose2.ogg" volume="1.0" />
         <ReduceAffliction identifier="sonarTailAirClose" amount="10" />
       </StatusEffect>
     </Effect>
@@ -323,8 +323,8 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailAirMedium1.ogg" volume="1.0" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailAirMedium2.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarTailAirMedium1.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarTailAirMedium2.ogg" volume="1.0" />
         <ReduceAffliction identifier="sonarTailAirMedium" amount="10" />
       </StatusEffect>
     </Effect>
@@ -333,9 +333,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailAirFar1.ogg" volume="1.0" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailAirFar2.ogg" volume="1.0" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailAirFar3.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarTailAirFar1.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarTailAirFar2.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarTailAirFar3.ogg" volume="1.0" />
         <ReduceAffliction identifier="sonarTailAirFar" amount="10" />
       </StatusEffect>
     </Effect>
@@ -345,9 +345,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailWaterVeryClose1.ogg" volume="0.30" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailWaterVeryClose2.ogg" volume="0.30" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailWaterVeryClose3.ogg" volume="0.30" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterVeryClose1.ogg" volume="0.30" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterVeryClose2.ogg" volume="0.30" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterVeryClose3.ogg" volume="0.30" dontmuffle="true" />
         <ReduceAffliction identifier="sonarTailWaterVeryClose" amount="10" />
       </StatusEffect>
     </Effect>
@@ -356,8 +356,8 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailWaterClose1.ogg" volume="0.50" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailWaterClose2.ogg" volume="0.50" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterClose1.ogg" volume="0.50" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterClose2.ogg" volume="0.50" dontmuffle="true" />
         <ReduceAffliction identifier="sonarTailWaterClose" amount="10" />
       </StatusEffect>
     </Effect>
@@ -366,9 +366,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailWaterMedium1.ogg" volume="0.60" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailWaterMedium2.ogg" volume="0.60" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailWaterMedium3.ogg" volume="0.60" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterMedium1.ogg" volume="0.60" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterMedium2.ogg" volume="0.60" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterMedium3.ogg" volume="0.60" dontmuffle="true" />
         <ReduceAffliction identifier="sonarTailWaterMedium" amount="10" />
       </StatusEffect>
     </Effect>
@@ -377,8 +377,8 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailWaterFar1.ogg" volume="0.65" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailWaterFar2.ogg" volume="0.65" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterFar1.ogg" volume="0.65" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterFar2.ogg" volume="0.65" dontmuffle="true" />
         <ReduceAffliction identifier="sonarTailWaterFar" amount="10" />
       </StatusEffect>
     </Effect>
@@ -388,9 +388,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailSuitVeryClose1.ogg" volume="1.2" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailSuitVeryClose2.ogg" volume="1.2" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailSuitVeryClose3.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitVeryClose1.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitVeryClose2.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitVeryClose3.ogg" volume="1.2" dontmuffle="true" />
         <ReduceAffliction identifier="sonarTailSuitVeryClose" amount="10" />
       </StatusEffect>
     </Effect>
@@ -399,9 +399,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailSuitClose1.ogg" volume="0.70" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailSuitClose2.ogg" volume="0.70" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailSuitClose3.ogg" volume="0.70" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitClose1.ogg" volume="0.70" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitClose2.ogg" volume="0.70" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitClose3.ogg" volume="0.70" dontmuffle="true" />
         <ReduceAffliction identifier="sonarTailSuitClose" amount="10" />
       </StatusEffect>
     </Effect>
@@ -410,9 +410,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailSuitMedium1.ogg" volume="1.1" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailSuitMedium2.ogg" volume="1.1" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailSuitMedium3.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitMedium1.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitMedium2.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitMedium3.ogg" volume="1.1" dontmuffle="true" />
         <ReduceAffliction identifier="sonarTailSuitMedium" amount="10" />
       </StatusEffect>
     </Effect>
@@ -421,9 +421,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailSuitFar1.ogg" volume="0.55" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailSuitFar2.ogg" volume="0.55" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailSuitFar3.ogg" volume="0.55" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitFar1.ogg" volume="0.55" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitFar2.ogg" volume="0.55" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitFar3.ogg" volume="0.55" dontmuffle="true" />
         <ReduceAffliction identifier="sonarTailSuitFar" amount="10" />
       </StatusEffect>
     </Effect>
@@ -564,8 +564,8 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingAirClose1_Directional.ogg" volume="1.0" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingAirClose2_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarPingAirClose1_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarPingAirClose2_Directional.ogg" volume="1.0" />
         <Affliction identifier="sonarTailAirCloseDirectional" amount="1" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
@@ -577,8 +577,8 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingAirMedium1_Directional.ogg" volume="1.0" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingAirMedium2_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarPingAirMedium1_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarPingAirMedium2_Directional.ogg" volume="1.0" />
         <Affliction identifier="sonarTailAirMediumDirectional" amount="1" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
@@ -590,9 +590,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingAirFar1_Directional.ogg" volume="1.0" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingAirFar2_Directional.ogg" volume="1.0" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingAirFar3_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarPingAirFar1_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarPingAirFar2_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarPingAirFar3_Directional.ogg" volume="1.0" />
         <Affliction identifier="sonarTailAirFarDirectional" amount="1" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
@@ -605,9 +605,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingWaterMedium1_Directional.ogg" volume="0.9" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingWaterMedium2_Directional.ogg" volume="0.9" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingWaterMedium3_Directional.ogg" volume="0.9" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterMedium1_Directional.ogg" volume="0.9" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterMedium2_Directional.ogg" volume="0.9" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterMedium3_Directional.ogg" volume="0.9" dontmuffle="true" />
         <Affliction identifier="sonarTailWaterVeryCloseDirectional" amount="1" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
@@ -619,9 +619,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingWaterMedium1_Directional.ogg" volume="0.8" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingWaterMedium2_Directional.ogg" volume="0.8" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingWaterMedium3_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterMedium1_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterMedium2_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterMedium3_Directional.ogg" volume="0.8" dontmuffle="true" />
         <Affliction identifier="sonarTailWaterCloseDirectional" amount="1" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
@@ -633,8 +633,8 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingWaterFar1_Directional.ogg" volume="0.8" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingWaterFar2_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterFar1_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterFar2_Directional.ogg" volume="0.8" dontmuffle="true" />
         <Affliction identifier="sonarTailWaterMediumDirectional" amount="1" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
@@ -646,8 +646,8 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingWaterFar1_Directional.ogg" volume="0.7" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingWaterFar2_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterFar1_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingWaterFar2_Directional.ogg" volume="0.7" dontmuffle="true" />
         <Affliction identifier="sonarTailWaterFarDirectional" amount="1" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
@@ -660,9 +660,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingSuitMedium1_Directional.ogg" volume="1.2" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingSuitMedium2_Directional.ogg" volume="1.2" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingSuitMedium3_Directional.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitMedium1_Directional.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitMedium2_Directional.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitMedium3_Directional.ogg" volume="1.2" dontmuffle="true" />
         <Affliction identifier="sonarTailSuitVeryCloseDirectional" amount="1" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
@@ -674,9 +674,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingSuitMedium1_Directional.ogg" volume="1.1" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingSuitMedium2_Directional.ogg" volume="1.1" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingSuitMedium3_Directional.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitMedium1_Directional.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitMedium2_Directional.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitMedium3_Directional.ogg" volume="1.1" dontmuffle="true" />
         <Affliction identifier="sonarTailSuitCloseDirectional" amount="1" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
@@ -688,9 +688,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingSuitFar1_Directional.ogg" volume="0.8" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingSuitFar2_Directional.ogg" volume="0.8" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingSuitFar3_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitFar1_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitFar2_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitFar3_Directional.ogg" volume="0.8" dontmuffle="true" />
         <Affliction identifier="sonarTailSuitMediumDirectional" amount="1" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
@@ -702,9 +702,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingSuitFar1_Directional.ogg" volume="0.7" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingSuitFar2_Directional.ogg" volume="0.7" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarPingSuitFar3_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitFar1_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitFar2_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarPingSuitFar3_Directional.ogg" volume="0.7" dontmuffle="true" />
         <Affliction identifier="sonarTailSuitFarDirectional" amount="1" />
       </StatusEffect>
       <StatusEffect target="Character" delay="0.1" disabledeltatime="true">
@@ -717,8 +717,8 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailAirClose1_Directional.ogg" volume="1.0" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailAirClose2_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarTailAirClose1_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarTailAirClose2_Directional.ogg" volume="1.0" />
         <ReduceAffliction identifier="sonarTailAirCloseDirectional" amount="10" />
       </StatusEffect>
     </Effect>
@@ -727,8 +727,8 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailAirMedium1_Directional.ogg" volume="1.0" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailAirMedium2_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarTailAirMedium1_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarTailAirMedium2_Directional.ogg" volume="1.0" />
         <ReduceAffliction identifier="sonarTailAirMediumDirectional" amount="10" />
       </StatusEffect>
     </Effect>
@@ -737,9 +737,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailAirFar1_Directional.ogg" volume="1.0" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailAirFar2_Directional.ogg" volume="1.0" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailAirFar3_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarTailAirFar1_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarTailAirFar2_Directional.ogg" volume="1.0" />
+        <sound file="%ModDir%/Sounds/sonarTailAirFar3_Directional.ogg" volume="1.0" />
         <ReduceAffliction identifier="sonarTailAirFarDirectional" amount="10" />
       </StatusEffect>
     </Effect>
@@ -749,9 +749,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailWaterMedium1_Directional.ogg" volume="0.9" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailWaterMedium2_Directional.ogg" volume="0.9" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailWaterMedium3_Directional.ogg" volume="0.9" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterMedium1_Directional.ogg" volume="0.9" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterMedium2_Directional.ogg" volume="0.9" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterMedium3_Directional.ogg" volume="0.9" dontmuffle="true" />
         <ReduceAffliction identifier="sonarTailWaterVeryCloseDirectional" amount="10" />
       </StatusEffect>
     </Effect>
@@ -760,9 +760,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailWaterMedium1_Directional.ogg" volume="0.8" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailWaterMedium2_Directional.ogg" volume="0.8" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailWaterMedium3_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterMedium1_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterMedium2_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterMedium3_Directional.ogg" volume="0.8" dontmuffle="true" />
         <ReduceAffliction identifier="sonarTailWaterCloseDirectional" amount="10" />
       </StatusEffect>
     </Effect>
@@ -771,8 +771,8 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailWaterFar1_Directional.ogg" volume="0.8" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailWaterFar2_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterFar1_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterFar2_Directional.ogg" volume="0.8" dontmuffle="true" />
         <ReduceAffliction identifier="sonarTailWaterMediumDirectional" amount="10" />
       </StatusEffect>
     </Effect>
@@ -781,8 +781,8 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailWaterFar1_Directional.ogg" volume="0.7" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailWaterFar2_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterFar1_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailWaterFar2_Directional.ogg" volume="0.7" dontmuffle="true" />
         <ReduceAffliction identifier="sonarTailWaterFarDirectional" amount="10" />
       </StatusEffect>
     </Effect>
@@ -792,9 +792,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailSuitMedium1_Directional.ogg" volume="1.2" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailSuitMedium2_Directional.ogg" volume="1.2" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailSuitMedium3_Directional.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitMedium1_Directional.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitMedium2_Directional.ogg" volume="1.2" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitMedium3_Directional.ogg" volume="1.2" dontmuffle="true" />
         <ReduceAffliction identifier="sonarTailSuitVeryCloseDirectional" amount="10" />
       </StatusEffect>
     </Effect>
@@ -803,9 +803,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailSuitMedium1_Directional.ogg" volume="1.1" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailSuitMedium2_Directional.ogg" volume="1.1" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailSuitMedium3_Directional.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitMedium1_Directional.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitMedium2_Directional.ogg" volume="1.1" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitMedium3_Directional.ogg" volume="1.1" dontmuffle="true" />
         <ReduceAffliction identifier="sonarTailSuitCloseDirectional" amount="10" />
       </StatusEffect>
     </Effect>
@@ -814,9 +814,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailSuitFar1_Directional.ogg" volume="0.8" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailSuitFar2_Directional.ogg" volume="0.8" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailSuitFar3_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitFar1_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitFar2_Directional.ogg" volume="0.8" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitFar3_Directional.ogg" volume="0.8" dontmuffle="true" />
         <ReduceAffliction identifier="sonarTailSuitMediumDirectional" amount="10" />
       </StatusEffect>
     </Effect>
@@ -825,9 +825,9 @@
     <Effect minstrength="0" maxstrength="1">
       <StatusEffect target="Character" delay="1.98" disabledeltatime="true" stackable="false">
         <Conditional IsLocalPlayer="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailSuitFar1_Directional.ogg" volume="0.7" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailSuitFar2_Directional.ogg" volume="0.7" dontmuffle="true" />
-        <sound file="%ModDir%/Improved Sonar/Sounds/sonarTailSuitFar3_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitFar1_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitFar2_Directional.ogg" volume="0.7" dontmuffle="true" />
+        <sound file="%ModDir%/Sounds/sonarTailSuitFar3_Directional.ogg" volume="0.7" dontmuffle="true" />
         <ReduceAffliction identifier="sonarTailSuitFarDirectional" amount="10" />
       </StatusEffect>
     </Effect>

@@ -3,7 +3,7 @@
 <Afflictions>
   <!-- Brain hemorrhage -->
   <Affliction name="Brain hemorrhage" identifier="brainhemorrhagelowfx" type="brainhemorrhage" maxstrength="100" treatmentthreshold="40" limbspecific="true" indicatorlimb="Head" healcostmultiplier="0" basehealcost="650" showiconthreshold="33" showinhealthscannerthreshold="0" causeofdeathdescription="afflictioncauseofdeath.brainhemorrhage" selfcauseofdeathdescription="afflictioncauseofdeathself.brainhemorrhage">
-    <icon texture="%ModDir%/Improved Sonar/Icons/Afflictions.png" sourcerect="384,0,128,128" origin="0,0" />
+    <icon texture="%ModDir%/Icons/Afflictions.png" sourcerect="384,0,128,128" origin="0,0" />
     <Description textidentifier="afflictiondescription.brainhemorrhage" target="OtherCharacter" minstrength="0" maxstrength="25" />
     <Description textidentifier="afflictiondescription.brainhemorrhage.medium" target="OtherCharacter" minstrength="25" maxstrength="99" />
     <Description textidentifier="afflictiondescription.brainhemorrhage.high" target="OtherCharacter" minstrength="99" maxstrength="100" />
@@ -70,30 +70,30 @@
         <Conditional isLocalPlayer="true" />
         <Conditional brainhemorrhagelowfx="gteq 15" />
         <Conditional brainhemorrhagelowfx="lt 32" />
-        <Sound file="%ModDir%/Improved Sonar/Sounds/brainHemorrhageStage1.ogg" volume="1.0" dontmuffle="true" loop="true" />
+        <Sound file="%ModDir%/Sounds/brainHemorrhageStage1.ogg" volume="1.0" dontmuffle="true" loop="true" />
       </StatusEffect>
       <StatusEffect target="Character" comparison="and">
         <Conditional isLocalPlayer="true" />
         <Conditional brainhemorrhagelowfx="gteq 32" />
         <Conditional brainhemorrhagelowfx="lt 49" />
-        <Sound file="%ModDir%/Improved Sonar/Sounds/brainHemorrhageStage2.ogg" volume="1.2" dontmuffle="true" loop="true" />
+        <Sound file="%ModDir%/Sounds/brainHemorrhageStage2.ogg" volume="1.2" dontmuffle="true" loop="true" />
       </StatusEffect>
       <StatusEffect target="Character" comparison="and">
         <Conditional isLocalPlayer="true" />
         <Conditional brainhemorrhagelowfx="gteq 49" />
         <Conditional brainhemorrhagelowfx="lt 66" />
-        <Sound file="%ModDir%/Improved Sonar/Sounds/brainHemorrhageStage3.ogg" volume="1.4" dontmuffle="true" loop="true" />
+        <Sound file="%ModDir%/Sounds/brainHemorrhageStage3.ogg" volume="1.4" dontmuffle="true" loop="true" />
       </StatusEffect>
       <StatusEffect target="Character" comparison="and">
         <Conditional isLocalPlayer="true" />
         <Conditional brainhemorrhagelowfx="gteq 66" />
         <Conditional brainhemorrhagelowfx="lt 83" />
-        <Sound file="%ModDir%/Improved Sonar/Sounds/brainHemorrhageStage4.ogg" volume="1.6" dontmuffle="true" loop="true" />
+        <Sound file="%ModDir%/Sounds/brainHemorrhageStage4.ogg" volume="1.6" dontmuffle="true" loop="true" />
       </StatusEffect>
       <StatusEffect target="Character" comparison="and">
         <Conditional isLocalPlayer="true" />
         <Conditional brainhemorrhagelowfx="gteq 83" />
-        <Sound file="%ModDir%/Improved Sonar/Sounds/brainHemorrhageStage5.ogg" volume="1.8" dontmuffle="true" loop="true" />
+        <Sound file="%ModDir%/Sounds/brainHemorrhageStage5.ogg" volume="1.8" dontmuffle="true" loop="true" />
       </StatusEffect>
     </Effect>
     <!-- Kills the patient at 100% -->
@@ -105,7 +105,7 @@
         <Conditional brainhemorrhagelowfx="gteq 97" />
         <Conditional IsLocalPlayer="True" />
         <ReduceAffliction identifier="blindnesslowfx" strength="1000" />
-        <Sound file="%ModDir%/Improved Sonar/Sounds/brainDeath.ogg" loop="false" dontmuffle="true" volume="1.4" />
+        <Sound file="%ModDir%/Sounds/brainDeath.ogg" loop="false" dontmuffle="true" volume="1.4" />
       </StatusEffect>
     </Effect>
   </Affliction>
@@ -148,7 +148,7 @@
   <!-- ↓↓↓ Cosmetic Afflictions ↓↓↓ -->
   <!-- Photopsia : Flash-like vision disturbances. -->
   <Affliction name="Photopsia" identifier="photopsialowfx" type="brainhemorrhage" maxstrength="100" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" showinhealthscannerthreshold="0" healableinmedicalclinic="false">
-    <icon texture="%ModDir%/Improved Sonar/Icons/Afflictions.png" sourcerect="640,0,128,128" origin="0,0" />
+    <icon texture="%ModDir%/Icons/Afflictions.png" sourcerect="640,0,128,128" origin="0,0" />
     <Effect minstrength="0" maxstrength="100">
       <!-- Remove photopsia if brainhemorrhage is treated. -->
       <StatusEffect target="Character" interval="1" disabledeltatime="true" comparison="and">
@@ -187,7 +187,7 @@
   </Affliction>
   <!-- Ataxia : Poor muslce control that leads to clumsy voluntary movements. -->
   <Affliction name="Ataxia" identifier="ataxialowfx" type="ataxia" maxstrength="100" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" showinhealthscannerthreshold="0" healableinmedicalclinic="false">
-    <icon texture="%ModDir%/Improved Sonar/Icons/Afflictions.png" sourcerect="896,0,128,128" origin="0,0" />
+    <icon texture="%ModDir%/Icons/Afflictions.png" sourcerect="896,0,128,128" origin="0,0" />
     <Description textidentifier="afflictiondescription.ataxia" target="OtherCharacter" />
     <Description textidentifier="afflictiondescription.ataxia.self" target="Self" />
     <Effect minstrength="0" maxstrength="100">
@@ -223,7 +223,7 @@
   </Affliction>
   <!-- Optic Neuritis : Temporary vision loss. -->
   <Affliction name="Optic neuritis" identifier="opticneuritislowfx" type="brainhemorrhage" maxstrength="100" limbspecific="true" indicatorlimb="Head" showiconthreshold="0" showinhealthscannerthreshold="0" healableinmedicalclinic="false">
-    <icon texture="%ModDir%/Improved Sonar/Icons/Afflictions.png" sourcerect="512,0,128,128" origin="0,0" />
+    <icon texture="%ModDir%/Icons/Afflictions.png" sourcerect="512,0,128,128" origin="0,0" />
     <Description textidentifier="afflictiondescription.opticneuritis" target="OtherCharacter" />
     <Description textidentifier="afflictiondescription.opticneuritis.self" target="Self" />
     <Effect minstrength="0" maxstrength="100" dialogflag="BrainHemorrhageHigh">
@@ -285,48 +285,48 @@
   <!-- Flicker overlay -->
   <Affliction identifier="flickeroverlaylowfx" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="-80" minafflictionoverlayalphamultiplier="0.8" maxafflictionoverlayalphamultiplier="0.8" />
-    <AfflictionOverlay texture="%ModDir%/Improved Sonar/Icons/flicker.png" />
+    <AfflictionOverlay texture="%ModDir%/Icons/flicker.png" />
   </Affliction>
   <!-- Optic Neuritis overlay -->
   <Affliction identifier="blindnesslowfx" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="false">
     <Effect minstrength="0" maxstrength="10" strengthchange="-5" minafflictionoverlayalphamultiplier="0" maxafflictionoverlayalphamultiplier="0.2" />
     <Effect minstrength="10" maxstrength="100" strengthchange="-25" minafflictionoverlayalphamultiplier="0.2" maxafflictionoverlayalphamultiplier="0.5" />
-    <AfflictionOverlay texture="%ModDir%/Improved Sonar/Icons/blindness.png" />
+    <AfflictionOverlay texture="%ModDir%/Icons/blindness.png" />
   </Affliction>
   <!-- Photopsia frame overlays -->
   <Affliction identifier="photopsia1lowfx" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="false">
     <Effect minstrength="0" maxstrength="100" minafflictionoverlayalphamultiplier="0.0" maxafflictionoverlayalphamultiplier="0.5" />
-    <AfflictionOverlay texture="%ModDir%/Improved Sonar/Icons/PhotopsiaOverlay1.png" />
+    <AfflictionOverlay texture="%ModDir%/Icons/PhotopsiaOverlay1.png" />
   </Affliction>
   <Affliction identifier="photopsia2lowfx" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" minafflictionoverlayalphamultiplier="0.4" maxafflictionoverlayalphamultiplier="0.5" />
-    <AfflictionOverlay texture="%ModDir%/Improved Sonar/Icons/PhotopsiaOverlay2.png" />
+    <AfflictionOverlay texture="%ModDir%/Icons/PhotopsiaOverlay2.png" />
   </Affliction>
   <Affliction identifier="photopsia3lowfx" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100">
     <Effect minstrength="0" maxstrength="100" minafflictionoverlayalphamultiplier="0.4" maxafflictionoverlayalphamultiplier="0.5" />
-    <AfflictionOverlay texture="%ModDir%/Improved Sonar/Icons/PhotopsiaOverlay3.png" />
+    <AfflictionOverlay texture="%ModDir%/Icons/PhotopsiaOverlay3.png" />
   </Affliction>
   <Affliction identifier="photopsia4lowfx" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="false">
     <Effect minstrength="0" maxstrength="100" minafflictionoverlayalphamultiplier="0.0" maxafflictionoverlayalphamultiplier="0.5" />
-    <AfflictionOverlay texture="%ModDir%/Improved Sonar/Icons/PhotopsiaOverlay4.png" />
+    <AfflictionOverlay texture="%ModDir%/Icons/PhotopsiaOverlay4.png" />
   </Affliction>
   <!-- Tall flash -->
   <Affliction identifier="tallflash1lowfx" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="false">
     <Effect minstrength="0" maxstrength="100" strengthchange="-350" minafflictionoverlayalphamultiplier="0.0" maxafflictionoverlayalphamultiplier="0.5" />
-    <AfflictionOverlay texture="%ModDir%/Improved Sonar/Icons/TallFlash1.png" />
+    <AfflictionOverlay texture="%ModDir%/Icons/TallFlash1.png" />
   </Affliction>
   <Affliction identifier="tallflash2lowfx" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="false">
     <Effect minstrength="0" maxstrength="100" strengthchange="-250" minafflictionoverlayalphamultiplier="0.0" maxafflictionoverlayalphamultiplier="0.5" />
-    <AfflictionOverlay texture="%ModDir%/Improved Sonar/Icons/TallFlash2.png" />
+    <AfflictionOverlay texture="%ModDir%/Icons/TallFlash2.png" />
   </Affliction>
   <Affliction identifier="tallflash3lowfx" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="false">
     <Effect minstrength="0" maxstrength="100" strengthchange="-150" minafflictionoverlayalphamultiplier="0.0" maxafflictionoverlayalphamultiplier="0.5" />
-    <AfflictionOverlay texture="%ModDir%/Improved Sonar/Icons/TallFlash3.png" />
+    <AfflictionOverlay texture="%ModDir%/Icons/TallFlash3.png" />
   </Affliction>
   <!-- Peripheral orb -->
   <Affliction identifier="peripheralorblowfx" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="false">
     <Effect minstrength="0" maxstrength="100" strengthchange="-400" minafflictionoverlayalphamultiplier="0.0" maxafflictionoverlayalphamultiplier="0.5" />
-    <AfflictionOverlay texture="%ModDir%/Improved Sonar/Icons/PeripheralOrbOverlay.png" />
+    <AfflictionOverlay texture="%ModDir%/Icons/PeripheralOrbOverlay.png" />
   </Affliction>
   <!-- Myodesopsias overlay -->
   <Affliction identifier="myodesopsiaslowfx" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="false">
@@ -337,7 +337,7 @@
         <Affliction identifier="myodesopsiaslowfx" strength="-10" />
       </StatusEffect>
     </Effect>
-    <AfflictionOverlay texture="%ModDir%/Improved Sonar/Icons/MyodesopsiasOverlay.png" />
+    <AfflictionOverlay texture="%ModDir%/Icons/MyodesopsiasOverlay.png" />
   </Affliction>
   <!-- Brain hemorrhage overlay -->
   <Affliction identifier="brainbleedoverlaylowfx" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="false">
@@ -348,6 +348,6 @@
         <Affliction identifier="brainbleedoverlaylowfx" strength="-10" />
       </StatusEffect>
     </Effect>
-    <AfflictionOverlay texture="%ModDir%/Improved Sonar/Icons/BrainHemorrhageOverlay.png" />
+    <AfflictionOverlay texture="%ModDir%/Icons/BrainHemorrhageOverlay.png" />
   </Affliction>
 </Afflictions>
