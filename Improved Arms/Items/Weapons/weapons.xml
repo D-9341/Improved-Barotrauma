@@ -533,7 +533,7 @@
       <RequiredItem identifier="aluminium" />
       <RequiredItem identifier="aluminium" />
     </Fabricate>
-    <Sprite texture="%ModDir%/Improved Arms/Items/Weapons/магазин.png" depth="0.54"
+    <Sprite texture="%ModDir%/Improved Arms/Items/Weapons/mag.png" depth="0.54"
       sourcerect="6,2,35,46" origin="0.5,0.5" />
     <Body width="115" height="88" density="50" />
     <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
