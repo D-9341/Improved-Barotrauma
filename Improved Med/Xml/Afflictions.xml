@@ -22,7 +22,7 @@
       maxradialdistort="1.0" minchromaticaberration="10" maxchromaticaberration="200"
       strengthchange="-1">
       <StatusEffect target="Character">
-        <ReduceAffliction identifier="damage" amount="15" />
+        <ReduceAffliction type="damage" amount="15" />
         <ReduceAffliction identifier="sonardamage" amount="15" />
         <ReduceAffliction identifier="burn" amount="15" />
         <ReduceAffliction identifier="internaldamage" amount="15" />

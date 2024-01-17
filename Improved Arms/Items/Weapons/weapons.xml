@@ -64,7 +64,7 @@
       <!-- mechanic skill 20 required to use the item -->
       <RequiredSkill identifier="mechanical" level="20" />
       <!-- if the skill requirement isn't met the welding fuel will be used 3 times as fast -->
-      <StatusEffect type="OnFailure" Condition="-3.0" targets="battreycell" targettype="Contained" />
+      <StatusEffect type="OnFailure" Condition="-3.0" targets="batterycell" targettype="Contained" />
       <StatusEffect type="OnFailure" Condition="-1.5" targets="fulguriumbatterycell"
         targettype="Contained" />
       <LightComponent Flicker="0.5" LightColor="1.0,0.3,0.4,1.0">
